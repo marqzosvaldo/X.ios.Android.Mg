@@ -21,6 +21,10 @@ namespace maringuizarapp.iOS{
 		public override void ViewDidLoad() {
 			base.ViewDidLoad();
 
+			var uniqueID = UIKit.UIDevice.CurrentDevice.IdentifierForVendor.AsString();
+
+			Console.WriteLine("UniqueID " + uniqueID);
+			Console.WriteLine(uniqueID.Substring(0,8));
 
 			buttonLogin.TouchUpInside += ButtonLogin_TouchUpInside;
 

@@ -71,7 +71,7 @@ namespace maringuizarapp.Service {
 
 
 			Debug.WriteLine("precio venta del elemento 0: "+respuesta[0].precioventa1.ToString());
-						Debug.WriteLine("tamaño de la lista: " + respuesta.Count);
+			Debug.WriteLine("tamaño de la lista: " + respuesta.Count);
 
 
 

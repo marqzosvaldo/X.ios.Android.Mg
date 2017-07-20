@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
+//Mac pruebas  F0:27:65:E8:19:69
 namespace maringuizarapp.iOS
 {
 	public partial class ItemsTableViewController : UITableViewController {
@@ -101,7 +102,7 @@ namespace maringuizarapp.iOS
 
 			if (result != null) {
 				Console.WriteLine("Scaned Barcode " + result.Text);
-				searchBarItems.Text = result.Text.ToLower();
+				searchBarItems.Text = result.Text.ToLower().Trim();//
 				SearchOn(searchBarItems.Text);
 			}
 		}
