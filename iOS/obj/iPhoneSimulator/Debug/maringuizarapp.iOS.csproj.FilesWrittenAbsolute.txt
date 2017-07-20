@@ -1,0 +1,40 @@
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/ibtool/_BundleResourceWithLogicalName.items
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/actool/_PartialAppManifest.items
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/actool/_BundleResourceWithLogicalName.items
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/optimized/delivery.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/optimized/items.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/optimized/calendar (3).png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/optimized/user (2).png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/optimized/shopping-cart (1).png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/optimized/settings (2).png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/optimized/barcode.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/optimized/barcode (1).png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/optimized/logout.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/optimized/logonav.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/optimized/
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Debug/maringuizarapp.iOS.pdb
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Debug/maringuizarapp.iOS.exe
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/maringuizarapp.iOS.exe
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/maringuizarapp.iOS.pdb
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Debug/ZXing.Net.Mobile.Core.dll
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Debug/zxing.portable.dll
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Debug/ZXingNetMobile.dll
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Debug/maringuizarapp.dll
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Debug/maringuizarapp.pdb
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.xml
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool/_BundleResourceWithLogicalName.items
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/actool/_PartialAppManifest.items
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/actool/_BundleResourceWithLogicalName.items
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/optimized/delivery.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/optimized/items.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/optimized/calendar (3).png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/optimized/user (2).png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/optimized/shopping-cart (1).png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/optimized/settings (2).png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/optimized/barcode.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/optimized/barcode (1).png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/optimized/logout.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/optimized/logonav.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/optimized/

@@ -1,0 +1,14 @@
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Release/maringuizarapp.iOS.app:/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/mtouch-cache/32/Link/maringuizarapp.iOS.exe
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Release/maringuizarapp.iOS.app:/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/mtouch-cache/32/Link/mscorlib.dll
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Release/maringuizarapp.iOS.app:/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/mtouch-cache/32/Link/Xamarin.iOS.dll
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Release/maringuizarapp.iOS.app:/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/mtouch-cache/32/Link/System.dll
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Release/maringuizarapp.iOS.app:/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/mtouch-cache/32/Link/Mono.Security.dll
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Release/maringuizarapp.iOS.app:/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/mtouch-cache/32/Link/System.Xml.dll
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Release/maringuizarapp.iOS.app:/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/mtouch-cache/32/Link/System.Core.dll
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Release/maringuizarapp.iOS.app:/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/mtouch-cache/32/Link/maringuizarapp.dll
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Release/maringuizarapp.iOS.app:/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/mtouch-cache/32/Link/System.Net.Http.dll
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Release/maringuizarapp.iOS.app:/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/mtouch-cache/32/Link/Newtonsoft.Json.dll
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Release/maringuizarapp.iOS.app:/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/mtouch-cache/32/Link/System.Xml.Linq.dll
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Release/maringuizarapp.iOS.app:/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/mtouch-cache/32/Link/System.Runtime.Serialization.dll
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Release/maringuizarapp.iOS.app:/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/mtouch-cache/32/Link/Microsoft.CSharp.dll
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Release/maringuizarapp.iOS.app:/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/mtouch-cache/32/Link/Mono.CSharp.dll

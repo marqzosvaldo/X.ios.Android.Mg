@@ -1,0 +1,17 @@
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Release/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Release/ibtool/_BundleResourceWithLogicalName.items
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Release/actool/_PartialAppManifest.items
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Release/actool/_BundleResourceWithLogicalName.items
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Release/optimized/delivery.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Release/optimized/items.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Release/optimized/calendar (3).png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Release/optimized/user (2).png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Release/optimized/shopping-cart (1).png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Release/optimized/settings (2).png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Release/optimized/
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Release/maringuizarapp.iOS.pdb
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Release/maringuizarapp.iOS.exe
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Release/maringuizarapp.iOS.exe
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Release/maringuizarapp.iOS.pdb
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Release/maringuizarapp.dll
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Release/Newtonsoft.Json.dll

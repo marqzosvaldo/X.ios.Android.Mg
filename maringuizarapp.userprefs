@@ -1,0 +1,38 @@
+﻿<Properties StartupConfiguration="{8AEF7C35-F08C-4229-9F79-B827FAC94B04}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/ItemsCellController.cs">
+    <Files>
+      <File FileName="iOS/LoginViewController.cs" Line="93" Column="5" NotebookId="2" />
+      <File FileName="iOS/AppDelegate.cs" Line="82" Column="1" NotebookId="2" />
+      <File FileName="iOS/RootViewController.cs" Line="22" Column="1" NotebookId="2" />
+      <File FileName="iOS/Info.plist" NotebookId="2" />
+      <File FileName="iOS/ProductDetailsViewController.cs" Line="61" Column="1" NotebookId="2" />
+      <File FileName="iOS/LoginTestViewController.cs" Line="34" Column="3" NotebookId="2" />
+      <File FileName="iOS/ItemsTableViewController.cs" Line="308" Column="4" NotebookId="2" />
+      <File FileName="maringuizarapp/Cart.cs" Line="12" Column="4" NotebookId="2" />
+    </Files>
+    <FloatingWindows>
+      <FloatingWindow WindowId="1" X="1296" Y="22" Width="900" Height="978">
+        <Files>
+          <File FileName="iOS/ItemsTableViewSource.cs" Line="41" Column="4" />
+          <File FileName="maringuizarapp/Service/Service.cs" Line="54" Column="43" />
+          <File FileName="maringuizarapp/Model/Producto.cs" Line="24" Column="19" />
+          <File FileName="maringuizarapp/Model/DetailProductStock.cs" Line="14" Column="1" />
+          <File FileName="maringuizarapp/Model/Session.cs" Line="20" Column="1" />
+          <File FileName="iOS/ItemsCellController.cs" Line="31" Column="4" />
+        </Files>
+      </FloatingWindow>
+      <FloatingWindow WindowId="2" X="2228" Y="22" Width="701" Height="693">
+        <Files>
+          <File FileName="maringuizarapp/Model/ProductsGeneral.cs" Line="7" Column="29" NotebookId="1" />
+        </Files>
+      </FloatingWindow>
+    </FloatingWindows>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.maringuizarapp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.ADC756A6-2E6B-425C-9FCF-769721B32443" />
+  <MultiItemStartupConfigurations />
+</Properties>

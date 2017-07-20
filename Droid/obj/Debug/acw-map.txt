@@ -1,0 +1,4 @@
+maringuizarapp.Droid.MainActivity, maringuizarapp.Droid;md550dc2e7fa2051892c05cf53419471620.MainActivity
+maringuizarapp.Droid.MainActivity, maringuizarapp.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md550dc2e7fa2051892c05cf53419471620.MainActivity
+maringuizarapp.Droid.MainActivity;md550dc2e7fa2051892c05cf53419471620.MainActivity
+maringuizarapp.droid.MainActivity;md550dc2e7fa2051892c05cf53419471620.MainActivity

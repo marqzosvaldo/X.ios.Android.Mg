@@ -1,0 +1,17 @@
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Debug/maringuizarapp.iOS.exe
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Debug/maringuizarapp.iOS.pdb
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Debug/maringuizarapp.dll
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Debug/maringuizarapp.pdb
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Debug/maringuizarapp.dll.config
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.xml
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/ibtool/_BundleResourceWithLogicalName.items
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/actool/_PartialAppManifest.items
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/actool/_BundleResourceWithLogicalName.items
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/optimized/delivery.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/optimized/items.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/optimized/
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/maringuizarapp.iOS.csprojResolveAssemblyReference.cache
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/maringuizarapp.iOS.csproj.CoreCompileInputs.cache
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/maringuizarapp.iOS.exe
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/maringuizarapp.iOS.pdb
