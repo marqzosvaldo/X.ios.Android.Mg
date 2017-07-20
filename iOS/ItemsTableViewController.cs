@@ -114,29 +114,38 @@ namespace maringuizarapp.iOS
 
 		public async override void ViewWillAppear(bool animated) {
 			base.ViewWillAppear(animated);
-			Service.Service servicio = new Service.Service();
-			var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+			try {
 
-			if (File.Exists(documents + "/allItems.json") == false) {
-				
-				var ok = File.Exists(documents + "/allItems.json");
-				long ll = tx.Length;
+				Service.Service servicio = new Service.Service();
+				var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
-				Console.WriteLine("Peso de archivo " + ll + " " + ok);
+				if (File.Exists(documents + "/allItems.json") == false) {
+								
+					var ok = File.Exists(documents + "/allItems.json");
+					long ll = tx.Length;
+
+					Console.WriteLine("Peso de archivo " + ll + " " + ok);
 
 
-			}
-			if (File.Exists(documents + "/allItems.json")) {
-				
-				tx = System.IO.File.ReadAllText(documents + "/allItems.json");//Aun falta validar que el archivo exista en la carpeta
-
-				if (lstProducto == null) { 
-					lstProducto = servicio.serializeStringJson(tx);
 				}
-
-
+				if (File.Exists(documents + "/allItems.json")) {
 				
+					tx = System.IO.File.ReadAllText(documents + "/allItems.json");//Aun falta validar que el archivo exista en la carpeta
+
+					if (lstProducto == null) { 
+						lstProducto = servicio.serializeStringJson(tx);
+					}
 			}
+			}
+			catch(Exception e) {
+				Console.WriteLine(e);
+				var sessioErrorAlert = UIAlertController.Create("No hay datos locales", "Presione el boton actualizar, para descargar localmente", UIAlertControllerStyle.Alert);
+
+				sessioErrorAlert.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Default, null));
+				PresentViewController(sessioErrorAlert, true, null);
+			}
+
+
 
 
 
@@ -284,21 +293,36 @@ namespace maringuizarapp.iOS
 		public void SearchOn(string str) {
 			try {
 				//var sh = names.Where(x => x.ToLower().Contains("i")).ToList();
+				if (filter == true ) {
+					//Fitrando lista de productos por Refacciones y Accesorios
+					var ar = lstProducto.Where(x => x.GRUPO.ToLower().Contains("refacciones") || x.GRUPO.ToLower().Contains("accesorios")).ToList();
+					//Filtrando la lista filtrada De Refacciones y Accesorio por IDCODIGO
+					ar = ar.Where(x => x.IDCODIGO.ToLower().Contains(str)).ToList();
+					Console.WriteLine("CONTENIDO AR = " + ar.Count);
+					//searchItems = ar; //provisiional para row selectedç
+					searchItems = ar;
 
-				//Filtrando producos por IDCODIGO de la listaProducto
-				var sh = lstProducto.Where(x => x.IDCODIGO.ToLower().Contains(str)).ToList();
-				//var ar = from item in lstProducto where item.GRUPO.Contains("ACCESORIOS") select new =
+					TableView.DataSource = new ItemsTableViewSource(ar);
+					TableView.ReloadData();
+				} else {
+					if (filter == false) { 
+						//Filtrando producos por IDCODIGO de la listaProducto
+						var sh = lstProducto.Where(x => x.IDCODIGO.ToLower().Contains(str)).ToList();
+						searchItems = sh;
+						TableView.DataSource = new ItemsTableViewSource(sh);
+						TableView.ReloadData();
+											//var ar = from item in lstProducto where item.GRUPO.Contains("ACCESORIOS") select new =
 
-				//Filtrando todos los productos que pertenecen al grupo Refacciones y Accesorios
-				var ar = lstProducto.Where(x => x.GRUPO.ToLower().Contains("refacciones") || x.GRUPO.ToLower().Contains("accesorios")).ToList();
-				Console.WriteLine("CONTENIDO AR = " + ar.Count);
-
-				searchItems = sh; //provisiional para row selected
-				TableView.DataSource = new ItemsTableViewSource(sh);
-				TableView.ReloadData();
+											//Filtrando todos los productos que pertenecen al grupo Refacciones y Accesorios
 
 
-				Console.WriteLine("Cantidad de busqueda "+ sh.Count);
+
+						Console.WriteLine("Cantidad de busqueda "+ sh.Count);
+					}
+
+				}
+
+
 			}
 			catch(Exception e) {
 				Console.WriteLine("Error!!!" +e);
@@ -322,7 +346,7 @@ namespace maringuizarapp.iOS
 
 				//Console.WriteLine(jsonStr);
 
-				var sessioErrorAlert = UIAlertController.Create("Json Guardado", "OK", UIAlertControllerStyle.Alert);
+				var sessioErrorAlert = UIAlertController.Create("Datos Guardados", "Los datos se han guardado correctamente.", UIAlertControllerStyle.Alert);
 				sessioErrorAlert.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Default, null));
 
 				tx = System.IO.File.ReadAllText(documents + "/allItems.json");//Aun falta validar que el archivo exista en la carpeta
