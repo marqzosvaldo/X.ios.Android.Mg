@@ -9047,7 +9047,7 @@ _mono_aot_file_info:
 	.long 472,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0
-	.byte 184,250,139,212,30,166,155,105,83,202,246,66,145,107,23,127
+	.byte 54,62,36,156,63,63,208,46,216,186,42,83,25,203,98,57
 	.globl _mono_aot_module_ZXing_Net_Mobile_Core_info
 	.align 2
 _mono_aot_module_ZXing_Net_Mobile_Core_info:

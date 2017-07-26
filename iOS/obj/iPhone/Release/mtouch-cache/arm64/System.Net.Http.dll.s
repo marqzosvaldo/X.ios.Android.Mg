@@ -761,11 +761,11 @@ System_Net_Http_HttpClient__SendAsyncWorkerd__48_MoveNext:
 .word 0xaa1803f7
 .word 0x394102e0
 .word 0x34000140
-.word 0xd291f7a0
+.word 0xd2923620
 .word 0xf2a00020
 bl _p_26
 .word 0xaa0003e2
-.word 0xd2801e40
+.word 0xd2801e60
 .word 0xf2a04000
 .word 0xd2800001
 bl _mono_create_corlib_exception_2
@@ -814,11 +814,11 @@ bl _p_28
 .word 0xf94087a0
 .word 0x39410000
 .word 0x34000140
-.word 0xd291f7a0
+.word 0xd2923620
 .word 0xf2a00020
 bl _p_26
 .word 0xaa0003e2
-.word 0xd2801e40
+.word 0xd2801e60
 .word 0xf2a04000
 .word 0xd2800001
 bl _mono_create_corlib_exception_2
@@ -1397,7 +1397,7 @@ bl _p_42
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
-.word 0xd2801de0
+.word 0xd2801e00
 .word 0xaa1103e1
 bl _p_43
 
@@ -2246,7 +2246,7 @@ System_Net_Http_HttpClientHandler__SendAsyncd__63_MoveNext:
 .word 0xf9402030
 .word 0xd63f0200
 .word 0xaa0003e1
-.word 0xd2801e40
+.word 0xd2801e60
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_20
@@ -2439,7 +2439,7 @@ ldr x0, [x16, #424]
 adrp x16, mono_aot_System_Net_Http_got@PAGE+0
 add x16, x16, mono_aot_System_Net_Http_got@PAGEOFF
 ldr x15, [x16, #608]
-.word 0x928012f0
+.word 0x92800ef0
 .word 0xf2bffff0
 .word 0xf8706830
 .word 0xd63f0200
@@ -3427,7 +3427,7 @@ bl _p_43
 .word 0xd2801100
 .word 0xaa1103e1
 bl _p_43
-.word 0xd2801de0
+.word 0xd2801e00
 .word 0xaa1103e1
 bl _p_43
 
@@ -3515,7 +3515,7 @@ System_Net_Http_HttpContent_get_LoadedBufferLength:
 .word 0xf9400801
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf9408430
+.word 0xf9408830
 .word 0xd63f0200
 .word 0xaa0003e1
 .word 0xd2800000
@@ -4113,7 +4113,7 @@ System_Net_Http_HttpContent_FixedMemoryStream_CheckOverflow_int:
 .word 0xf9000fa1
 .word 0xaa1903e0
 .word 0xf9400321
-.word 0xf9408430
+.word 0xf9408830
 .word 0xd63f0200
 .word 0xb9801ba1
 .word 0x93407c21
@@ -4233,7 +4233,7 @@ System_Net_Http_HttpContent__LoadIntoBufferAsyncd__17_MoveNext:
 .word 0xf9402030
 .word 0xd63f0200
 .word 0xaa0003e1
-.word 0xd2801e40
+.word 0xd2801e60
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_20
@@ -4360,7 +4360,7 @@ bl _p_34
 .word 0xd2800001
 .word 0xd2800002
 .word 0xf9400063
-.word 0xf9404470
+.word 0xf9404870
 .word 0xd63f0200
 .word 0x14000013
 .word 0xf9004ba0
@@ -4549,7 +4549,7 @@ bl _p_34
 .word 0xf9400b21
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf9408430
+.word 0xf9408830
 .word 0xd63f0200
 .word 0xb50000c0
 
@@ -4561,13 +4561,13 @@ ldr x0, [x16, #840]
 .word 0xf9400b21
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf940a030
+.word 0xf940a430
 .word 0xd63f0200
 .word 0xaa0003fa
 .word 0xf9400b21
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf9408430
+.word 0xf9408830
 .word 0xd63f0200
 .word 0x93407c18
 .word 0xb9009bbf
@@ -6417,13 +6417,13 @@ bl _p_5
 .word 0xb9003b00
 .word 0xaa1903e0
 .word 0xf9400321
-.word 0xf9408c30
+.word 0xf9409030
 .word 0xd63f0200
 .word 0x53001c00
 .word 0x340000c0
 .word 0xaa1903e0
 .word 0xf9400321
-.word 0xf9408030
+.word 0xf9408430
 .word 0xd63f0200
 .word 0xf9002300
 .word 0xa94167b8
@@ -6520,7 +6520,7 @@ System_Net_Http_StreamContent_SerializeToStreamAsync_System_IO_Stream_System_Net
 .word 0xf9401721
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf9408c30
+.word 0xf9409030
 .word 0xd63f0200
 .word 0x53001c00
 .word 0x34000340
@@ -6529,7 +6529,7 @@ System_Net_Http_StreamContent_SerializeToStreamAsync_System_IO_Stream_System_Net
 .word 0xaa0303e0
 .word 0xd2800002
 .word 0xf9400063
-.word 0xf9404470
+.word 0xf9404870
 .word 0xd63f0200
 .word 0x14000003
 .word 0xd280003e
@@ -6543,7 +6543,7 @@ System_Net_Http_StreamContent_SerializeToStreamAsync_System_IO_Stream_System_Net
 .word 0xf9400fa1
 .word 0xf94017a3
 .word 0xf9400084
-.word 0xf9407090
+.word 0xf9407490
 .word 0xd63f0200
 .word 0xf9400bb9
 .word 0x910003bf
@@ -6575,7 +6575,7 @@ System_Net_Http_StreamContent_TryComputeLength_long_:
 .word 0xf9401401
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf9408c30
+.word 0xf9409030
 .word 0xd63f0200
 .word 0x53001c00
 .word 0x350000c0
@@ -6588,7 +6588,7 @@ System_Net_Http_StreamContent_TryComputeLength_long_:
 .word 0xf9401401
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf9408430
+.word 0xf9408830
 .word 0xd63f0200
 .word 0xf9400ba1
 .word 0xf9402021
@@ -9097,7 +9097,7 @@ bl _p_161
 adrp x16, mono_aot_System_Net_Http_got@PAGE+0
 add x16, x16, mono_aot_System_Net_Http_got@PAGEOFF
 ldr x15, [x16, #1344]
-.word 0x92800ef0
+.word 0x928012f0
 .word 0xf2bffff0
 .word 0xf8706850
 .word 0xd63f0200
@@ -9116,7 +9116,7 @@ bl _p_162
 adrp x16, mono_aot_System_Net_Http_got@PAGE+0
 add x16, x16, mono_aot_System_Net_Http_got@PAGEOFF
 ldr x15, [x16, #1344]
-.word 0x92800ef0
+.word 0x928012f0
 .word 0xf2bffff0
 .word 0xf8706850
 .word 0xd63f0200
@@ -9197,7 +9197,7 @@ bl _p_164
 adrp x16, mono_aot_System_Net_Http_got@PAGE+0
 add x16, x16, mono_aot_System_Net_Http_got@PAGEOFF
 ldr x15, [x16, #1352]
-.word 0x92800ef0
+.word 0x928012f0
 .word 0xf2bffff0
 .word 0xf8706850
 .word 0xd63f0200
@@ -10386,7 +10386,7 @@ bl System_Net_Http_Headers_NameValueHeaderValue__ctor_System_Net_Http_Headers_Na
 adrp x16, mono_aot_System_Net_Http_got@PAGE+0
 add x16, x16, mono_aot_System_Net_Http_got@PAGEOFF
 ldr x15, [x16, #1352]
-.word 0x92800ef0
+.word 0x928012f0
 .word 0xf2bffff0
 .word 0xf8706850
 .word 0xd63f0200
@@ -12314,7 +12314,7 @@ bl _p_201
 .word 0xaa0003ef
 .word 0xaa1a03e0
 .word 0xf9400341
-.word 0x928012f0
+.word 0x92800ef0
 .word 0xf2bffff0
 .word 0xf8706830
 .word 0xd63f0200
@@ -12537,7 +12537,7 @@ System_Net_Http_Headers_HeaderInfo_get_Separator:
 .word 0xa9be7bfd
 .word 0x910003fd
 .word 0xf9000ba0
-.word 0xd2801dc0
+.word 0xd2801de0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
 bl _p_20
@@ -15782,7 +15782,7 @@ bl _p_262
 adrp x16, mono_aot_System_Net_Http_got@PAGE+0
 add x16, x16, mono_aot_System_Net_Http_got@PAGEOFF
 ldr x15, [x16, #608]
-.word 0x928012f0
+.word 0x92800ef0
 .word 0xf2bffff0
 .word 0xf8706830
 .word 0xd63f0200
@@ -16261,7 +16261,7 @@ bl _p_132
 adrp x16, mono_aot_System_Net_Http_got@PAGE+0
 add x16, x16, mono_aot_System_Net_Http_got@PAGEOFF
 ldr x15, [x16, #608]
-.word 0x928012f0
+.word 0x92800ef0
 .word 0xf2bffff0
 .word 0xf8706830
 .word 0xd63f0200
@@ -17425,7 +17425,7 @@ bl System_Net_Http_Headers_HttpHeaders__GetEnumeratord__19_System_IDisposable_Di
 .word 0x910003bf
 .word 0xa8d17bfd
 .word 0xd65f03c0
-.word 0xd2801de0
+.word 0xd2801e00
 .word 0xaa1103e1
 bl _p_43
 
@@ -17454,7 +17454,7 @@ ldr x1, [x16, #3344]
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
-.word 0xd2801de0
+.word 0xd2801e00
 .word 0xaa1103e1
 bl _p_43
 
@@ -17488,7 +17488,7 @@ System_Net_Http_Headers_HttpHeaders__GetEnumeratord__19_System_Collections_IEnum
 .word 0xa9be7bfd
 .word 0x910003fd
 .word 0xf9000ba0
-.word 0xd2801dc0
+.word 0xd2801de0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
 bl _p_20
@@ -18400,7 +18400,7 @@ bl _p_316
 .word 0xd2801100
 .word 0xaa1103e1
 bl _p_43
-.word 0xd2801de0
+.word 0xd2801e00
 .word 0xaa1103e1
 bl _p_43
 
@@ -20031,7 +20031,7 @@ bl System_Net_Http_Headers_NameValueHeaderValue__ctor_System_Net_Http_Headers_Na
 adrp x16, mono_aot_System_Net_Http_got@PAGE+0
 add x16, x16, mono_aot_System_Net_Http_got@PAGEOFF
 ldr x15, [x16, #1352]
-.word 0x92800ef0
+.word 0x928012f0
 .word 0xf2bffff0
 .word 0xf8706850
 .word 0xd63f0200
@@ -21884,7 +21884,7 @@ bl _p_341
 adrp x16, mono_aot_System_Net_Http_got@PAGE+0
 add x16, x16, mono_aot_System_Net_Http_got@PAGEOFF
 ldr x15, [x16, #1352]
-.word 0x92800ef0
+.word 0x928012f0
 .word 0xf2bffff0
 .word 0xf8706850
 .word 0xd63f0200
@@ -24584,7 +24584,7 @@ bl _p_362
 adrp x16, mono_aot_System_Net_Http_got@PAGE+4096
 add x16, x16, mono_aot_System_Net_Http_got@PAGEOFF
 ldr x15, [x16, #40]
-.word 0x92800ef0
+.word 0x928012f0
 .word 0xf2bffff0
 .word 0xf8706850
 .word 0xd63f0200
@@ -25248,7 +25248,7 @@ bl _p_369
 adrp x16, mono_aot_System_Net_Http_got@PAGE+4096
 add x16, x16, mono_aot_System_Net_Http_got@PAGEOFF
 ldr x15, [x16, #40]
-.word 0x92800ef0
+.word 0x928012f0
 .word 0xf2bffff0
 .word 0xf8706850
 .word 0xd63f0200
@@ -27316,7 +27316,7 @@ bl System_Net_Http_Headers_NameValueHeaderValue__ctor_System_Net_Http_Headers_Na
 adrp x16, mono_aot_System_Net_Http_got@PAGE+0
 add x16, x16, mono_aot_System_Net_Http_got@PAGEOFF
 ldr x15, [x16, #1352]
-.word 0x92800ef0
+.word 0x928012f0
 .word 0xf2bffff0
 .word 0xf8706850
 .word 0xd63f0200
@@ -27724,7 +27724,7 @@ bl _p_5
 .word 0x910003bf
 .word 0xa8cc7bfd
 .word 0xd65f03c0
-.word 0xd2801de0
+.word 0xd2801e00
 .word 0xaa1103e1
 bl _p_43
 
@@ -27904,7 +27904,7 @@ bl _p_5
 .word 0x910003bf
 .word 0xa8cc7bfd
 .word 0xd65f03c0
-.word 0xd2801de0
+.word 0xd2801e00
 .word 0xaa1103e1
 bl _p_43
 
@@ -33645,7 +33645,7 @@ System_Nullable_1_bool_get_Value:
 .word 0xa8c27bfd
 .word 0xd65f03c0
 .loc 2 105 0
-.word 0xd2947f60
+.word 0xd294ab20
 bl _p_26
 .word 0xaa0003e1
 .word 0xd2801c40
@@ -34159,7 +34159,7 @@ bl _p_538
 .word 0xa8c67bfd
 .word 0xd65f03c0
 .loc 3 259 0
-.word 0xd29b30e0
+.word 0xd29b5ca0
 bl _p_26
 .word 0xaa0003e1
 .word 0xd2801c40
@@ -34167,7 +34167,7 @@ bl _p_26
 bl _mono_create_corlib_exception_1
 bl _p_20
 .loc 3 261 0
-.word 0xd29b3ba0
+.word 0xd29b6760
 bl _p_26
 .word 0xaa0003e1
 .word 0xd2801c40
@@ -34570,7 +34570,7 @@ System_Nullable_1_long_get_Value:
 .word 0xa8c27bfd
 .word 0xd65f03c0
 .loc 2 105 0
-.word 0xd2947f60
+.word 0xd294ab20
 bl _p_26
 .word 0xaa0003e1
 .word 0xd2801c40
@@ -36012,10 +36012,10 @@ System_Array_InternalArray__ICollection_Clear:
 .word 0xa9be7bfd
 .word 0x910003fd
 .word 0xf9000ba0
-.word 0xd299f0a0
+.word 0xd29a1c60
 bl _p_26
 .word 0xaa0003e1
-.word 0xd2801dc0
+.word 0xd2801de0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_20
@@ -36034,10 +36034,10 @@ System_Array_InternalArray__ICollection_Add_T_REF_T_REF:
 .word 0xf90013af
 .word 0xf9000ba0
 .word 0xf9000fa1
-.word 0xd299f6a0
+.word 0xd29a2260
 bl _p_26
 .word 0xaa0003e1
-.word 0xd2801dc0
+.word 0xd2801de0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_20
@@ -36056,10 +36056,10 @@ System_Array_InternalArray__ICollection_Remove_T_REF_T_REF:
 .word 0xf90013af
 .word 0xf9000ba0
 .word 0xf9000fa1
-.word 0xd299f6a0
+.word 0xd29a2260
 bl _p_26
 .word 0xaa0003e1
-.word 0xd2801dc0
+.word 0xd2801de0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_20
@@ -36130,10 +36130,10 @@ bl _p_549
 .word 0xa8c47bfd
 .word 0xd65f03c0
 .loc 3 99 0
-.word 0xd299fe20
+.word 0xd29a29e0
 bl _p_26
 .word 0xaa0003e1
-.word 0xd2801f60
+.word 0xd2801f80
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_20
@@ -36228,7 +36228,7 @@ bl _p_550
 .word 0xa8c67bfd
 .word 0xd65f03c0
 .loc 3 124 0
-.word 0xd286fc40
+.word 0xd28709c0
 bl _p_26
 .word 0xaa0003e1
 .word 0xd2801120
@@ -36236,15 +36236,15 @@ bl _p_26
 bl _mono_create_corlib_exception_1
 bl _p_20
 .loc 3 129 0
-.word 0xd299fe20
+.word 0xd29a29e0
 bl _p_26
 .word 0xaa0003e1
-.word 0xd2801f60
+.word 0xd2801f80
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_20
 .loc 3 131 0
-.word 0xd29a0920
+.word 0xd29a34e0
 bl _p_26
 .word 0xaa0003e1
 .word 0xd2801100
@@ -36252,10 +36252,10 @@ bl _p_26
 bl _mono_create_corlib_exception_1
 bl _p_20
 .loc 3 135 0
-.word 0xd299fe20
+.word 0xd29a29e0
 bl _p_26
 .word 0xaa0003e1
-.word 0xd2801f60
+.word 0xd2801f80
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_20
@@ -36263,7 +36263,7 @@ bl _p_20
 .word 0xd2820880
 bl _p_26
 .word 0xf9002ba0
-.word 0xd29a2180
+.word 0xd29a4d40
 bl _p_26
 .word 0xaa0003e2
 .word 0xf9402ba1
@@ -36663,7 +36663,7 @@ System_Nullable_1_System_TimeSpan_get_Value:
 .word 0xa8c37bfd
 .word 0xd65f03c0
 .loc 2 105 0
-.word 0xd2947f60
+.word 0xd294ab20
 bl _p_26
 .word 0xaa0003e1
 .word 0xd2801c40
@@ -41530,7 +41530,7 @@ System_Nullable_1_System_Net_Http_Headers_Token_get_Value:
 .word 0xa8c37bfd
 .word 0xd65f03c0
 .loc 2 105 0
-.word 0xd2947f60
+.word 0xd294ab20
 bl _p_26
 .word 0xaa0003e1
 .word 0xd2801c40
@@ -42374,7 +42374,7 @@ System_Nullable_1_System_DateTimeOffset_get_Value:
 .word 0xa8c37bfd
 .word 0xd65f03c0
 .loc 2 105 0
-.word 0xd2947f60
+.word 0xd294ab20
 bl _p_26
 .word 0xaa0003e1
 .word 0xd2801c40
@@ -43003,7 +43003,7 @@ System_Nullable_1_double_get_Value:
 .word 0xa8c27bfd
 .word 0xd65f03c0
 .loc 2 105 0
-.word 0xd2947f60
+.word 0xd294ab20
 bl _p_26
 .word 0xaa0003e1
 .word 0xd2801c40
@@ -45279,7 +45279,7 @@ System_Runtime_CompilerServices_AsyncTaskMethodBuilder_1_System_Net_Http_HttpRes
 .word 0xd2800e02
 bl _p_22
 .word 0x14000009
-.word 0xd29b4b80
+.word 0xd29b8a00
 .word 0xf2a00020
 bl _p_26
 .word 0xaa0003e1
@@ -45538,7 +45538,7 @@ System_Runtime_CompilerServices_AsyncTaskMethodBuilder_1_System_Net_Http_HttpRes
 .word 0xd2801402
 bl _p_22
 .word 0x14000009
-.word 0xd29b4b80
+.word 0xd29b8a00
 .word 0xf2a00020
 bl _p_26
 .word 0xaa0003e1
@@ -46018,7 +46018,7 @@ System_Runtime_CompilerServices_AsyncTaskMethodBuilder_Start_System_Net_Http_Htt
 .word 0xf9401c00
 .word 0xf9002fa0
 .word 0x14000009
-.word 0xd29b4b80
+.word 0xd29b8a00
 .word 0xf2a00020
 bl _p_26
 .word 0xaa0003e1
@@ -46088,7 +46088,7 @@ System_Runtime_CompilerServices_AsyncTaskMethodBuilder_1_string_Start_System_Net
 .word 0xf9401800
 .word 0xf9002ba0
 .word 0x14000009
-.word 0xd29b4b80
+.word 0xd29b8a00
 .word 0xf2a00020
 bl _p_26
 .word 0xaa0003e1
@@ -46644,7 +46644,7 @@ bl _p_611
 .word 0xaa0003ef
 .word 0xaa1a03e0
 .word 0xf9400341
-.word 0x928012f0
+.word 0x92800ef0
 .word 0xf2bffff0
 .word 0xf8706830
 .word 0xd63f0200
@@ -46809,7 +46809,7 @@ ldr x15, [x16, #336]
 .word 0xa8c67bfd
 .word 0xd65f03c0
 .loc 7 124 0
-.word 0xd291efe0
+.word 0xd2921ba0
 bl _p_26
 .word 0xaa0003e1
 .word 0xd2801120
@@ -48099,11 +48099,11 @@ bl _p_630
 .word 0xa8c67bfd
 .word 0xd65f03c0
 .loc 8 356 0
-.word 0xd29423a0
+.word 0xd2946220
 .word 0xf2a00020
 bl _p_26
 .word 0xf9002ba0
-.word 0xd29427a0
+.word 0xd2946620
 .word 0xf2a00020
 bl _p_26
 .word 0xaa0003e2
@@ -48185,11 +48185,11 @@ bl _p_630
 .word 0xa8c77bfd
 .word 0xd65f03c0
 .loc 8 386 0
-.word 0xd29423a0
+.word 0xd2946220
 .word 0xf2a00020
 bl _p_26
 .word 0xf90033a0
-.word 0xd29427a0
+.word 0xd2946620
 .word 0xf2a00020
 bl _p_26
 .word 0xaa0003e2
@@ -48258,7 +48258,7 @@ bl _p_632
 .word 0xa8c77bfd
 .word 0xd65f03c0
 .loc 8 397 0
-.word 0xd2943c40
+.word 0xd2947ac0
 .word 0xf2a00020
 bl _p_26
 .word 0xaa0003e1
@@ -48267,7 +48267,7 @@ bl _p_26
 bl _mono_create_corlib_exception_1
 bl _p_20
 .loc 8 401 0
-.word 0xd2943e80
+.word 0xd2947d00
 .word 0xf2a00020
 bl _p_26
 .word 0xaa0003e1
@@ -48276,11 +48276,11 @@ bl _p_26
 bl _mono_create_corlib_exception_1
 bl _p_20
 .loc 8 406 0
-.word 0xd29423a0
+.word 0xd2946220
 .word 0xf2a00020
 bl _p_26
 .word 0xf9002ba0
-.word 0xd29427a0
+.word 0xd2946620
 .word 0xf2a00020
 bl _p_26
 .word 0xaa0003e2
@@ -48356,7 +48356,7 @@ bl _p_632
 .word 0xa8c87bfd
 .word 0xd65f03c0
 .loc 8 422 0
-.word 0xd2943c40
+.word 0xd2947ac0
 .word 0xf2a00020
 bl _p_26
 .word 0xaa0003e1
@@ -48365,7 +48365,7 @@ bl _p_26
 bl _mono_create_corlib_exception_1
 bl _p_20
 .loc 8 426 0
-.word 0xd2943e80
+.word 0xd2947d00
 .word 0xf2a00020
 bl _p_26
 .word 0xaa0003e1
@@ -48374,11 +48374,11 @@ bl _p_26
 bl _mono_create_corlib_exception_1
 bl _p_20
 .loc 8 430 0
-.word 0xd29423a0
+.word 0xd2946220
 .word 0xf2a00020
 bl _p_26
 .word 0xf90033a0
-.word 0xd29427a0
+.word 0xd2946620
 .word 0xf2a00020
 bl _p_26
 .word 0xaa0003e2
@@ -48455,7 +48455,7 @@ bl _p_636
 .word 0x910003bf
 .word 0xa8c37bfd
 .word 0xd65f03c0
-.word 0xd2801de0
+.word 0xd2801e00
 .word 0xaa1103e1
 bl _p_43
 
@@ -48997,7 +48997,7 @@ bl _p_5
 .word 0x910003bf
 .word 0xa8c57bfd
 .word 0xd65f03c0
-.word 0xd29423a0
+.word 0xd2946220
 .word 0xf2a00020
 bl _p_26
 .word 0xaa0003e1
@@ -49654,7 +49654,7 @@ bl _p_668
 .word 0xa8ca7bfd
 .word 0xd65f03c0
 .loc 9 820 0
-.word 0xd2944400
+.word 0xd2948280
 .word 0xf2a00020
 bl _p_26
 .word 0xaa0003e1
@@ -49662,7 +49662,7 @@ bl _p_26
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_20
-.word 0xd2944100
+.word 0xd2947f80
 .word 0xf2a00020
 .loc 9 817 0
 bl _p_26
@@ -49923,7 +49923,7 @@ bl _p_637
 .word 0xa8c47bfd
 .word 0xd65f03c0
 .loc 4 610 0
-.word 0xd29529c0
+.word 0xd2956840
 .word 0xf2a00020
 bl _p_26
 .word 0xaa0003e1
@@ -50049,7 +50049,7 @@ bl _p_646
 .word 0xa8c47bfd
 .word 0xd65f03c0
 .loc 4 649 0
-.word 0xd294eb60
+.word 0xd29529e0
 .word 0xf2a00020
 bl _p_26
 .word 0xaa0003e1
@@ -50058,7 +50058,7 @@ bl _p_26
 bl _mono_create_corlib_exception_1
 bl _p_20
 .loc 4 675 0
-.word 0xd29529c0
+.word 0xd2956840
 .word 0xf2a00020
 bl _p_26
 .word 0xaa0003e1
@@ -50818,7 +50818,7 @@ bl _p_679
 .word 0xaa0003ef
 .word 0xaa1803e0
 .word 0xf9400301
-.word 0x928012f0
+.word 0x92800ef0
 .word 0xf2bffff0
 .word 0xf8706830
 .word 0xd63f0200
@@ -50829,7 +50829,7 @@ bl _p_679
 .word 0xaa0003ef
 .word 0xaa1903e0
 .word 0xf9400321
-.word 0x928012f0
+.word 0x92800ef0
 .word 0xf2bffff0
 .word 0xf8706830
 .word 0xd63f0200
@@ -50882,7 +50882,7 @@ bl _p_681
 .word 0xf94047a2
 .word 0xaa1a03e0
 .word 0xf9400343
-.word 0x928010f0
+.word 0x928007f0
 .word 0xf2bffff0
 .word 0xf8706870
 .word 0xd63f0200
@@ -51181,7 +51181,7 @@ bl _p_690
 .word 0xaa0003ef
 .word 0xaa1a03e0
 .word 0xf9400341
-.word 0x928012f0
+.word 0x92800ef0
 .word 0xf2bffff0
 .word 0xf8706830
 .word 0xd63f0200
@@ -52897,7 +52897,7 @@ bl _p_715
 .word 0xa8c67bfd
 .word 0xd65f03c0
 .loc 3 3042 0
-.word 0xd286fc40
+.word 0xd28709c0
 bl _p_26
 .word 0xaa0003e1
 .word 0xd2801120
@@ -59975,13 +59975,13 @@ _mono_aot_file_info:
 	.align 3
 	.quad unbox_trampoline_addresses
 
-	.long 682,11192,717,910,66,391195135,0,38100
+	.long 682,11192,717,910,66,391195135,0,38104
 	.long 128,8,8,10,0,26,54088,15976
 	.long 15608,12352,0,14000,15472,13088,0,9152
 	.long 1272,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0
-	.byte 233,0,242,181,206,46,72,223,238,220,75,21,72,113,151,42
+	.byte 2,115,66,136,101,184,99,250,14,45,114,191,245,82,174,118
 	.globl _mono_aot_module_System_Net_Http_info
 	.align 3
 _mono_aot_module_System_Net_Http_info:

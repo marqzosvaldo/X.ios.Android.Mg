@@ -16,18 +16,26 @@ namespace maringuizarapp.iOS
 		UIKit.UILabel labelPrecioCostoFijo { get; set; }
 
 		[Outlet]
+		UIKit.UIButton stockButton { get; set; }
+
+		[Outlet]
 		UIKit.UITextView textViewDescripción { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (textViewDescripción != null) {
-				textViewDescripción.Dispose ();
-				textViewDescripción = null;
+			if (stockButton != null) {
+				stockButton.Dispose ();
+				stockButton = null;
 			}
 
 			if (labelPrecioCostoFijo != null) {
 				labelPrecioCostoFijo.Dispose ();
 				labelPrecioCostoFijo = null;
+			}
+
+			if (textViewDescripción != null) {
+				textViewDescripción.Dispose ();
+				textViewDescripción = null;
 			}
 		}
 	}

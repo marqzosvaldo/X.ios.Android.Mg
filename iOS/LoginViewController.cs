@@ -72,6 +72,7 @@ namespace maringuizarapp.iOS{
 					var appDelegate =  UIApplication.SharedApplication.Delegate as AppDelegate;
 					var rootViewController = new RootViewController();
 					var productsView = (TabBarViewController)Storyboard.InstantiateViewController("TabBarViewController");
+
 					appDelegate.SetRootViewController(productsView, true);
 
 				} else {

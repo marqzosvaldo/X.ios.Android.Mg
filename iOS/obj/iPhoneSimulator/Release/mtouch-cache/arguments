@@ -12,7 +12,7 @@
 	--sdk \
 	10.3 \
 	--targetver \
-	8.0 \
+	9.0 \
 	--http-message-handler=HttpClientHandler \
 	"--abi=i386,x86_64" \
 	--symbollist \
@@ -26,6 +26,18 @@
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Xamarin.iOS.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Microsoft.CSharp.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.IO.Compression.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Net.Http.dll \
+	-r \
+	/Users/osvaldo/Projects/maringuizarapp/packages/ZXing.Net.Mobile.2.2.9/lib/Xamarin.iOS10/ZXing.Net.Mobile.Core.dll \
+	-r \
+	/Users/osvaldo/Projects/maringuizarapp/packages/ZXing.Net.Mobile.2.2.9/lib/Xamarin.iOS10/zxing.portable.dll \
+	-r \
+	/Users/osvaldo/Projects/maringuizarapp/packages/ZXing.Net.Mobile.2.2.9/lib/Xamarin.iOS10/ZXingNetMobile.dll \
 	-r \
 	/Users/osvaldo/Projects/maringuizarapp/maringuizarapp/bin/Release/maringuizarapp.dll \
 	-r \
@@ -296,6 +308,12 @@
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.Xsl.Primitives.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/netstandard.dll \
+	-r \
+	/Users/osvaldo/Projects/maringuizarapp/packages/ZXing.Net.Mobile.2.2.9/lib/Xamarin.iOS10/ZXing.Net.Mobile.Core.dll \
+	-r \
+	/Users/osvaldo/Projects/maringuizarapp/packages/ZXing.Net.Mobile.2.2.9/lib/Xamarin.iOS10/zxing.portable.dll \
+	-r \
+	/Users/osvaldo/Projects/maringuizarapp/packages/ZXing.Net.Mobile.2.2.9/lib/Xamarin.iOS10/ZXingNetMobile.dll \
 	-r \
 	/Users/osvaldo/Projects/maringuizarapp/maringuizarapp/bin/Release/maringuizarapp.dll \
 	-r \

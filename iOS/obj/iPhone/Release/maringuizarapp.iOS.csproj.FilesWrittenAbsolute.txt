@@ -8,10 +8,17 @@
 /Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/optimized/user (2).png
 /Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/optimized/shopping-cart (1).png
 /Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/optimized/settings (2).png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/optimized/barcode.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/optimized/barcode (1).png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/optimized/logout.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/optimized/logonav.png
 /Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/optimized/
 /Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Release/maringuizarapp.iOS.pdb
 /Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Release/maringuizarapp.iOS.exe
 /Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/maringuizarapp.iOS.exe
 /Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/maringuizarapp.iOS.pdb
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Release/ZXing.Net.Mobile.Core.dll
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Release/zxing.portable.dll
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Release/ZXingNetMobile.dll
 /Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Release/maringuizarapp.dll
 /Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Release/Newtonsoft.Json.dll

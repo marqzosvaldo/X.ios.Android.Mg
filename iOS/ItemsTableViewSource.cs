@@ -32,7 +32,7 @@ namespace maringuizarapp.iOS {
 
 			cell.NombreCorto =lstProducts[indexPath.Row].NOMBRECORTO;
 			cell.Existencia = lstProducts[indexPath.Row].EXISTENCIA.ToString();
-			//cell.PrecioVenta = "$"+ lstProducts[indexPath.Row].precioventa1.ToString();
+			cell.PrecioVenta = "$"+ lstProducts[indexPath.Row].precioventa1.ToString();
 			cell.IDCodigo = lstProducts[indexPath.Row].IDCODIGO;
 			cell.Grupo = lstProducts[indexPath.Row].GRUPO;
 			cell.Accessory = UITableViewCellAccessory.DisclosureIndicator;

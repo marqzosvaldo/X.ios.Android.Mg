@@ -5694,7 +5694,7 @@ runtime_version:
 .section __TEXT, __const
 	.align 2
 assembly_guid:
-	.asciz "DCF67FA7-B933-426A-A0B5-A00717748A8E"
+	.asciz "2823BABB-3310-4061-92A5-57E0218106F0"
 .section __TEXT, __const
 	.align 2
 assembly_name:
@@ -5777,7 +5777,7 @@ _mono_aot_file_info:
 	.long 224,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0
-	.byte 231,117,63,163,244,105,27,216,2,184,99,62,55,77,177,233
+	.byte 20,210,158,6,177,15,188,243,40,96,179,59,77,171,163,114
 	.globl _mono_aot_module_maringuizarapp_info
 	.align 2
 _mono_aot_module_maringuizarapp_info:

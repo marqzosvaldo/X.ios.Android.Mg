@@ -15,3 +15,10 @@
 /Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Release/maringuizarapp.iOS.pdb
 /Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Release/maringuizarapp.dll
 /Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Release/Newtonsoft.Json.dll
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Release/optimized/barcode.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Release/optimized/barcode (1).png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Release/optimized/logout.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Release/optimized/logonav.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Release/ZXing.Net.Mobile.Core.dll
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Release/zxing.portable.dll
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Release/ZXingNetMobile.dll

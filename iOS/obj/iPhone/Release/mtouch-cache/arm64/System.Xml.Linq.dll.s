@@ -638,7 +638,7 @@ System_Xml_Linq_NameSerializer_System_Runtime_Serialization_ISerializable_GetObj
 .word 0xf9000fa1
 .word 0xf90013a2
 .word 0xf90017a3
-.word 0xd2801dc0
+.word 0xd2801de0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
 bl _p_10
@@ -1837,7 +1837,7 @@ bl System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_TryAdd_TValue_REF_TVa
 .word 0xa8c57bfd
 .word 0xd65f03c0
 .loc 1 713 0
-.word 0xd2801ec0
+.word 0xd2801ee0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
 bl _p_10
@@ -2113,7 +2113,7 @@ bl _p_1
 .word 0xd2801b80
 .word 0xaa1103e1
 bl _p_11
-.word 0xd2801de0
+.word 0xd2801e00
 .word 0xaa1103e1
 bl _p_11
 
@@ -3579,7 +3579,7 @@ System_Xml_Linq_XObject__Annotationsd__16_1_T_REF_System_Collections_IEnumerator
 .word 0xa9be7bfd
 .word 0x910003fd
 .word 0xf9000ba0
-.word 0xd2801dc0
+.word 0xd2801de0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
 bl _p_10
@@ -4744,7 +4744,7 @@ ldr x1, [x16, #680]
 .word 0xd2801c20
 .word 0xaa1103e1
 bl _p_11
-.word 0xd2801de0
+.word 0xd2801e00
 .word 0xaa1103e1
 bl _p_11
 
@@ -8404,7 +8404,7 @@ System_Xml_Linq_XContainer__Nodesd__18_System_Collections_IEnumerator_Reset:
 .word 0xa9be7bfd
 .word 0x910003fd
 .word 0xf9000ba0
-.word 0xd2801dc0
+.word 0xd2801de0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
 bl _p_10
@@ -10362,7 +10362,7 @@ System_Xml_Linq_XElement__GetAttributesd__105_System_Collections_IEnumerator_Res
 .word 0xa9be7bfd
 .word 0x910003fd
 .word 0xf9000ba0
-.word 0xd2801dc0
+.word 0xd2801de0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
 bl _p_10
@@ -16444,7 +16444,7 @@ bl _p_175
 .word 0xa8c67bfd
 .word 0xd65f03c0
 .loc 1 713 0
-.word 0xd2801ec0
+.word 0xd2801ee0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
 bl _p_10
@@ -16889,7 +16889,7 @@ bl _mono_gsharedvt_value_copy
 .word 0xd2801b80
 .word 0xaa1103e1
 bl _p_11
-.word 0xd2801de0
+.word 0xd2801e00
 .word 0xaa1103e1
 bl _p_11
 
@@ -18150,7 +18150,7 @@ bl _p_206
 .word 0xf9400fa0
 .word 0xb9800000
 .word 0xf9000fbf
-.word 0xd2801dc0
+.word 0xd2801de0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
 bl _p_10
@@ -18858,10 +18858,10 @@ System_Array_InternalArray__ICollection_Clear:
 .word 0xa9be7bfd
 .word 0x910003fd
 .word 0xf9000ba0
-.word 0xd299f0a0
+.word 0xd29a1c60
 bl _p_221
 .word 0xaa0003e1
-.word 0xd2801dc0
+.word 0xd2801de0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_10
@@ -18880,10 +18880,10 @@ System_Array_InternalArray__ICollection_Add_T_REF_T_REF:
 .word 0xf90013af
 .word 0xf9000ba0
 .word 0xf9000fa1
-.word 0xd299f6a0
+.word 0xd29a2260
 bl _p_221
 .word 0xaa0003e1
-.word 0xd2801dc0
+.word 0xd2801de0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_10
@@ -18902,10 +18902,10 @@ System_Array_InternalArray__ICollection_Remove_T_REF_T_REF:
 .word 0xf90013af
 .word 0xf9000ba0
 .word 0xf9000fa1
-.word 0xd299f6a0
+.word 0xd29a2260
 bl _p_221
 .word 0xaa0003e1
-.word 0xd2801dc0
+.word 0xd2801de0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_10
@@ -18976,10 +18976,10 @@ bl _p_222
 .word 0xa8c47bfd
 .word 0xd65f03c0
 .loc 2 99 0
-.word 0xd299fe20
+.word 0xd29a29e0
 bl _p_221
 .word 0xaa0003e1
-.word 0xd2801f60
+.word 0xd2801f80
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_10
@@ -19074,7 +19074,7 @@ bl _p_223
 .word 0xa8c67bfd
 .word 0xd65f03c0
 .loc 2 124 0
-.word 0xd286fc40
+.word 0xd28709c0
 bl _p_221
 .word 0xaa0003e1
 .word 0xd2801120
@@ -19082,15 +19082,15 @@ bl _p_221
 bl _mono_create_corlib_exception_1
 bl _p_10
 .loc 2 129 0
-.word 0xd299fe20
+.word 0xd29a29e0
 bl _p_221
 .word 0xaa0003e1
-.word 0xd2801f60
+.word 0xd2801f80
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_10
 .loc 2 131 0
-.word 0xd29a0920
+.word 0xd29a34e0
 bl _p_221
 .word 0xaa0003e1
 .word 0xd2801100
@@ -19098,10 +19098,10 @@ bl _p_221
 bl _mono_create_corlib_exception_1
 bl _p_10
 .loc 2 135 0
-.word 0xd299fe20
+.word 0xd29a29e0
 bl _p_221
 .word 0xaa0003e1
-.word 0xd2801f60
+.word 0xd2801f80
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_10
@@ -19109,7 +19109,7 @@ bl _p_10
 .word 0xd2820880
 bl _p_221
 .word 0xf9002ba0
-.word 0xd29a2180
+.word 0xd29a4d40
 bl _p_221
 .word 0xaa0003e2
 .word 0xf9402ba1
@@ -21886,7 +21886,7 @@ _mono_aot_file_info:
 	.long 440,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0
-	.byte 175,120,248,80,87,184,124,232,139,124,187,222,249,245,230,130
+	.byte 212,188,117,147,1,59,180,45,19,122,135,219,30,143,1,185
 	.globl _mono_aot_module_System_Xml_Linq_info
 	.align 3
 _mono_aot_module_System_Xml_Linq_info:

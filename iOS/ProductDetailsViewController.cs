@@ -32,10 +32,14 @@ namespace maringuizarapp.iOS{
 		public override void ViewDidLoad() {
 			base.ViewDidLoad();
 			this.Title = "Detalles";
+			stockButton.TouchUpInside += StockButton_TouchUpInside;
 
+			stockButton.Enabled = false;
+			stockButton.BackgroundColor = UIColor.Gray;
 			labelPrecioCostoFijo.Text = precioCostoFijo;
 			textViewDescripción.Text = descripcion;
 		}
+
 
 		public async  override void ViewWillAppear(bool animated) {
 			base.ViewWillAppear(animated);
@@ -45,12 +49,24 @@ namespace maringuizarapp.iOS{
 				Console.WriteLine("IdProducto"+idProduct +"  adasd" +idProducto);
 				lstDetailProductStock = await servicio.DetailStock(idProducto);
 				Console.WriteLine("Stock detalle " + lstDetailProductStock.Count);
-
+				if (lstDetailProductStock.Count > 0) {
+					stockButton.Enabled = true;
+					stockButton.BackgroundColor = UIColor.FromRGB(255,38,0);
+				}
 
 			}
 			catch {
 				Console.WriteLine("Fallo solicitar stockDetail");
 			}
+
+		}
+
+		void StockButton_TouchUpInside(object sender, EventArgs e) {
+			var productStock= (StockTableViewController)Storyboard.InstantiateViewController("StockTableViewController");
+			Console.WriteLine("Enviando: "+ lstDetailProductStock.Count);
+			productStock.StockList = lstDetailProductStock;
+			this.NavigationController.PushViewController(productStock, true);
+
 
 		}
 
