@@ -1,18 +1,21 @@
 /Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
-/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/device-builds/ipad3.1-9.3.5/ibtool/_BundleResourceWithLogicalName.items
-/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/device-builds/ipad3.1-9.3.5/actool/_PartialAppManifest.items
-/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/device-builds/ipad3.1-9.3.5/actool/_BundleResourceWithLogicalName.items
-/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/device-builds/ipad3.1-9.3.5/optimized/delivery.png
-/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/device-builds/ipad3.1-9.3.5/optimized/items.png
-/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/device-builds/ipad3.1-9.3.5/optimized/calendar (3).png
-/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/device-builds/ipad3.1-9.3.5/optimized/user (2).png
-/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/device-builds/ipad3.1-9.3.5/optimized/shopping-cart (1).png
-/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/device-builds/ipad3.1-9.3.5/optimized/settings (2).png
-/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/device-builds/ipad3.1-9.3.5/optimized/barcode.png
-/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/device-builds/ipad3.1-9.3.5/optimized/barcode (1).png
-/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/device-builds/ipad3.1-9.3.5/optimized/logout.png
-/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/device-builds/ipad3.1-9.3.5/optimized/logonav.png
-/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/device-builds/ipad3.1-9.3.5/optimized/
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/ibtool/_BundleResourceWithLogicalName.items
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/actool/_PartialAppManifest.items
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/actool/_BundleResourceWithLogicalName.items
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/optimized/delivery.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/optimized/items.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/optimized/calendar (3).png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/optimized/user (2).png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/optimized/shopping-cart (1).png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/optimized/settings (2).png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/optimized/barcode.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/optimized/barcode (1).png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/optimized/logout.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/optimized/logonav.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/optimized/barcodeItem.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/optimized/warehouse.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/optimized/barcode-product.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/optimized/
 /Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Debug/maringuizarapp.iOS.pdb
 /Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Debug/maringuizarapp.iOS.exe
 /Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/maringuizarapp.iOS.exe

@@ -24,6 +24,36 @@
 				<integer>9</integer>
 			</dict>
 		</array>
+		<key>3UW-PO-umO</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>3UW-PO-umO</string>
+				</array>
+				<key>message</key>
+				<string>“View Controller“ is unreachable because it has no entry points, and no identifier for runtime access via -[UIStoryboard instantiateViewControllerWithIdentifier:].</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>7FQ-bj-7W3</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>7FQ-bj-7W3</string>
+				</array>
+				<key>message</key>
+				<string>“Root View Controller“ is unreachable because it has no entry points, and no identifier for runtime access via -[UIStoryboard instantiateViewControllerWithIdentifier:].</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
 		<key>8w6-N2-HV9</key>
 		<array>
 			<dict>
@@ -39,12 +69,72 @@
 				<integer>9</integer>
 			</dict>
 		</array>
-		<key>UdG-Ck-7b8</key>
+		<key>AAf-Hf-tDR</key>
 		<array>
 			<dict>
 				<key>affected-objects</key>
 				<array>
-					<string>UdG-Ck-7b8</string>
+					<string>AAf-Hf-tDR</string>
+				</array>
+				<key>message</key>
+				<string>“View Controller“ is unreachable because it has no entry points, and no identifier for runtime access via -[UIStoryboard instantiateViewControllerWithIdentifier:].</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>Arm-IO-kDs</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>Arm-IO-kDs</string>
+				</array>
+				<key>message</key>
+				<string>Prototype table cells must have reuse identifiers</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>fFj-DF-Gal</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>fFj-DF-Gal</string>
+				</array>
+				<key>message</key>
+				<string>“Navigation Controller“ is unreachable because it has no entry points, and no identifier for runtime access via -[UIStoryboard instantiateViewControllerWithIdentifier:].</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>nDq-f7-uOc</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>nDq-f7-uOc</string>
+				</array>
+				<key>message</key>
+				<string>“Navigation Controller“ is unreachable because it has no entry points, and no identifier for runtime access via -[UIStoryboard instantiateViewControllerWithIdentifier:].</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>rnY-GQ-DCp</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>rnY-GQ-DCp</string>
 				</array>
 				<key>message</key>
 				<string>Prototype table cells must have reuse identifiers</string>

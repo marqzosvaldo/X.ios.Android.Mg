@@ -8,6 +8,8 @@ using UIKit;
 using maringuizarapp.Service;
 using maringuizarapp.Model;
 using System.Collections.Generic;
+//Mac pruebas  F0:27:65:E8:19:69
+
 
 namespace maringuizarapp.iOS{
 	public partial class LoginViewController : UIViewController{
@@ -25,6 +27,7 @@ namespace maringuizarapp.iOS{
 
 			Console.WriteLine("UniqueID " + uniqueID);
 			Console.WriteLine(uniqueID.Substring(0,8));
+			labelUIDevice.Text = uniqueID.Substring(0,8);
 
 			buttonLogin.TouchUpInside += ButtonLogin_TouchUpInside;
 
@@ -53,6 +56,13 @@ namespace maringuizarapp.iOS{
 			string uuid = labelUIDevice.Text;
 
 			Console.WriteLine("Unique ID "+ uuid);
+
+			var uniqueID = UIKit.UIDevice.CurrentDevice.IdentifierForVendor.AsString();//Obteniendo UuniqueID de iPhone
+			uniqueID = uniqueID.Substring(0, 8);//Cortando el uniqueID a 8 digitos
+
+			labelUIDevice.Text = uniqueID;
+			//uuid = "F0:27:65:E8:19:69"; //Pruebas
+			                    
 
 
 

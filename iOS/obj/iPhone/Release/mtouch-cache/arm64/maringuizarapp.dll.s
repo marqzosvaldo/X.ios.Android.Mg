@@ -8363,7 +8363,7 @@ _mono_aot_file_info:
 	.long 216,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0
-	.byte 62,223,75,226,143,205,103,147,109,55,146,39,1,170,189,136
+	.byte 159,147,222,52,64,105,2,5,33,55,147,135,69,108,189,4
 	.globl _mono_aot_module_maringuizarapp_info
 	.align 3
 _mono_aot_module_maringuizarapp_info:

@@ -13,5 +13,5 @@
 /Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Debug/maringuizarapp.iOS.app:/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/mtouch-cache/32/Link/Microsoft.CSharp.dll
 /Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Debug/maringuizarapp.iOS.app:/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/mtouch-cache/32/Link/Mono.CSharp.dll
 /Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Debug/maringuizarapp.iOS.app:/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/mtouch-cache/32/Link/zxing.portable.dll
-/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Debug/maringuizarapp.iOS.app:/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/mtouch-cache/32/Link/ZXingNetMobile.dll
 /Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Debug/maringuizarapp.iOS.app:/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/mtouch-cache/32/Link/ZXing.Net.Mobile.Core.dll
+/Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Debug/maringuizarapp.iOS.app:/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Debug/mtouch-cache/32/Link/ZXingNetMobile.dll

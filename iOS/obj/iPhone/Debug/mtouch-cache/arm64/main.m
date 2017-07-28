@@ -15,8 +15,8 @@ extern void *mono_aot_module_System_Runtime_Serialization_info;
 extern void *mono_aot_module_Microsoft_CSharp_info;
 extern void *mono_aot_module_Mono_CSharp_info;
 extern void *mono_aot_module_zxing_portable_info;
-extern void *mono_aot_module_ZXingNetMobile_info;
 extern void *mono_aot_module_ZXing_Net_Mobile_Core_info;
+extern void *mono_aot_module_ZXingNetMobile_info;
 
 void xamarin_register_modules_impl ()
 {
@@ -35,8 +35,8 @@ void xamarin_register_modules_impl ()
 	mono_aot_register_module (mono_aot_module_Microsoft_CSharp_info);
 	mono_aot_register_module (mono_aot_module_Mono_CSharp_info);
 	mono_aot_register_module (mono_aot_module_zxing_portable_info);
-	mono_aot_register_module (mono_aot_module_ZXingNetMobile_info);
 	mono_aot_register_module (mono_aot_module_ZXing_Net_Mobile_Core_info);
+	mono_aot_register_module (mono_aot_module_ZXingNetMobile_info);
 
 }
 

@@ -13,7 +13,6 @@
 #import <QuartzCore/CAEmitterBehavior.h>
 #import <AVFoundation/AVFoundation.h>
 #import <CloudKit/CloudKit.h>
-#import <CoreGraphics/CoreGraphics.h>
 
 @protocol CALayerDelegate;
 @class __MonoMac_NSActionDispatcher;
@@ -24,16 +23,17 @@
 @class maringuizarapp_iOS_NamesTableViewSource;
 @class ItemsCellController;
 @class maringuizarapp_iOS_ItemsTableViewSource;
-@class ProductDetailsViewController;
 @class RootViewController;
 @class PrincipalNavViewController;
+@class StockTableViewController;
+@class maringuizarapp_iOS_StockTableViewSource;
+@class StockCellController;
 @class AppDelegate;
 @class LoginTestViewController;
 @class LoginViewController;
 @class SearchProductsViewController;
 @class ItemsTableViewController;
-@class UIKit_UIScrollView__UIScrollViewDelegate;
-@class UIKit_UITextView__UITextViewDelegate;
+@class ProductDetailsViewController;
 @class __NSObject_Disposer;
 @class __UIGestureRecognizerToken;
 @class __UIGestureRecognizerParameterlessToken;

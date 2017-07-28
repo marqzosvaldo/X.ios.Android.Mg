@@ -57,6 +57,10 @@ namespace maringuizarapp.iOS{
 			}
 			catch {
 				Console.WriteLine("Fallo solicitar stockDetail");
+				var stockErrorAlert = UIAlertController.Create("Error de Red", "Necesita conectarse para solicitar estos datos", UIAlertControllerStyle.Alert);
+
+
+				stockErrorAlert.AddAction (UIAlertAction.Create ("Ok", UIAlertActionStyle.Default, null));
 			}
 
 		}
