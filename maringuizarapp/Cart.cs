@@ -8,6 +8,8 @@ namespace maringuizarapp {
 		List<ProductsGeneral> CartProduct;
 		ProductsGeneral itemProduct;
 
+
+
 		public void cartAdd(string idProducto) { 
 			
 		}
@@ -23,7 +25,7 @@ namespace maringuizarapp {
 			
 		}
 
-		public void cartGetProduct() { 
+		public void cartGetProduct(string id) { 
 			
 		}
 

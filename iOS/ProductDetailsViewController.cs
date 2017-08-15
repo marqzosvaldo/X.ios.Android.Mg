@@ -33,13 +33,21 @@ namespace maringuizarapp.iOS{
 			base.ViewDidLoad();
 			this.Title = "Detalles";
 			stockButton.TouchUpInside += StockButton_TouchUpInside;
+			addItemToCart.Clicked += AddItemToCart_Clicked;
 
 			stockButton.Enabled = false;
 			stockButton.BackgroundColor = UIColor.Gray;
 			labelPrecioCostoFijo.Text = precioCostoFijo;
 			textViewDescripción.Text = descripcion;
 		}
+		Int32 badgeCount = 0;
+		void AddItemToCart_Clicked(object sender, EventArgs e) {
+			Console.WriteLine("clicked!");
+			badgeCount ++;
 
+			this.TabBarController.ViewControllers[2].TabBarItem.BadgeValue = badgeCount.ToString();
+
+		}
 
 		public async  override void ViewWillAppear(bool animated) {
 			base.ViewWillAppear(animated);

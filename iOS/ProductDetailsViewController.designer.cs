@@ -13,6 +13,9 @@ namespace maringuizarapp.iOS
 	partial class ProductDetailsViewController
 	{
 		[Outlet]
+		UIKit.UIBarButtonItem addItemToCart { get; set; }
+
+		[Outlet]
 		UIKit.UILabel labelPrecioCostoFijo { get; set; }
 
 		[Outlet]
@@ -23,14 +26,19 @@ namespace maringuizarapp.iOS
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (stockButton != null) {
-				stockButton.Dispose ();
-				stockButton = null;
+			if (addItemToCart != null) {
+				addItemToCart.Dispose ();
+				addItemToCart = null;
 			}
 
 			if (labelPrecioCostoFijo != null) {
 				labelPrecioCostoFijo.Dispose ();
 				labelPrecioCostoFijo = null;
+			}
+
+			if (stockButton != null) {
+				stockButton.Dispose ();
+				stockButton = null;
 			}
 
 			if (textViewDescripción != null) {

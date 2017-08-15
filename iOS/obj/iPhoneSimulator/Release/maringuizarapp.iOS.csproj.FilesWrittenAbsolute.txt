@@ -22,3 +22,6 @@
 /Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Release/ZXing.Net.Mobile.Core.dll
 /Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Release/zxing.portable.dll
 /Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Release/ZXingNetMobile.dll
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Release/optimized/barcodeItem.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Release/optimized/warehouse.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Release/optimized/barcode-product.png

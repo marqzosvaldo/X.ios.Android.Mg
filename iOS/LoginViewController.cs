@@ -61,7 +61,10 @@ namespace maringuizarapp.iOS{
 			uniqueID = uniqueID.Substring(0, 8);//Cortando el uniqueID a 8 digitos
 
 			labelUIDevice.Text = uniqueID;
+			labelUIDevice.Text  = "F0:27:65:E8:19:69";
+
 			//uuid = "F0:27:65:E8:19:69"; //Pruebas
+
 			                    
 
 

@@ -1,118 +1,85 @@
-objc[59334]: Class VCWeakObjectHolder is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/PrivateFrameworks/GameKitServices.framework/Frameworks/ViceroyTrace.framework/ViceroyTrace (0x128f41ca8) and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/PrivateFrameworks/GameKitServices.framework/Frameworks/AVConference.framework/AVConference (0x128e73cd0). One of the two will be used. Which one is undefined.
-objc[59334]: Class PLBuildVersion is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/PrivateFrameworks/AssetsLibraryServices.framework/AssetsLibraryServices (0x126bc6cc0) and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/PrivateFrameworks/PhotoLibraryServices.framework/PhotoLibraryServices (0x1269dd6f0). One of the two will be used. Which one is undefined.
-2017-07-01 19:00:11.336 maringuizarapp.iOS[59334:1799410] Iniciando sesion...
-2017-07-01 19:00:11.337 maringuizarapp.iOS[59334:1799410] Unique ID F0:27:65:E8:19:69
-2017-07-01 19:00:12.470 maringuizarapp.iOS[59334:1799410] Session Iniciada Exitosamente!
-2017-07-01 19:00:12.632 maringuizarapp.iOS[59334:1799410] Iniciando ItemsTableViewController...
-2017-07-01 19:00:16.894 maringuizarapp.iOS[59334:1799410] Error de Newtonsoft.Json.JsonSerializationException: Error converting value {null} to type 'System.Double'. Path '[803].PRECIOCOSTOFIJO', line 1, position 207828. ---> System.InvalidCastException: Null object cannot be converted to a value type.
-  at System.Convert.ChangeType (System.Object value, System.Type conversionType, System.IFormatProvider provider) [0x00029] in <2f4074c3120b4d80802e10af84b67d41>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType) [0x0007c] in <4415f70934fb425193d84661eecab9c2>:0 
-   --- End of inner exception stack trace ---
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType) [0x000bd] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal (Newtonsoft.Json.JsonReader reader, System.Type objectType, Newtonsoft.Json.Serialization.JsonContract contract, Newtonsoft.Json.Serialization.JsonProperty member, Newtonsoft.Json.Serialization.JsonContainerContract containerContract, Newtonsoft.Json.Serialization.JsonProperty containerMember, System.Object existingValue) [0x00108] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue (Newtonsoft.Json.Serialization.JsonProperty property, Newtonsoft.Json.JsonConverter propertyConverter, Newtonsoft.Json.Serialization.JsonContainerContract containerContract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, Newtonsoft.Json.JsonReader reader, System.Object target) [0x00061] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject (System.Object newObject, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonObjectContract contract, Newtonsoft.Json.Serialization.JsonProperty member, System.String id) [0x00269] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject (Newtonsoft.Json.JsonReader reader, System.Type objectType, Newtonsoft.Json.Serialization.JsonContract contract, Newtonsoft.Json.Serialization.JsonProperty member, Newtonsoft.Json.Serialization.JsonContainerContract containerContract, Newtonsoft.Json.Serialization.JsonProperty containerMember, System.Object existingValue) [0x00158] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal (Newtonsoft.Json.JsonReader reader, System.Type objectType, Newtonsoft.Json.Serialization.JsonContract contract, Newtonsoft.Json.Serialization.JsonProperty member, Newtonsoft.Json.Serialization.JsonContainerContract containerContract, Newtonsoft.Json.Serialization.JsonProperty containerMember, System.Object existingValue) [0x0006d] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateList (System.Collections.IList list, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonArrayContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id) [0x0016f] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList (Newtonsoft.Json.JsonReader reader, System.Type objectType, Newtonsoft.Json.Serialization.JsonContract contract, Newtonsoft.Json.Serialization.JsonProperty member, System.Object existingValue, System.String id) [0x000dc] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal (Newtonsoft.Json.JsonReader reader, System.Type objectType, Newtonsoft.Json.Serialization.JsonContract contract, Newtonsoft.Json.Serialization.JsonProperty member, Newtonsoft.Json.Serialization.JsonContainerContract containerContract, Newtonsoft.Json.Serialization.JsonProperty containerMember, System.Object existingValue) [0x0007f] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize (Newtonsoft.Json.JsonReader reader, System.Type objectType, System.Boolean checkAdditionalContent) [0x000dc] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.JsonSerializer.DeserializeInternal (Newtonsoft.Json.JsonReader reader, System.Type objectType) [0x00053] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.JsonSerializer.Deserialize (Newtonsoft.Json.JsonReader reader, System.Type objectType) [0x00000] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.JsonConvert.DeserializeObject (System.String value, System.Type type, Newtonsoft.Json.JsonSerializerSettings settings) [0x0002d] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.JsonConvert.DeserializeObject[T] (System.String value, Newtonsoft.Json.JsonSerializerSettings settings) [0x00000] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.JsonConvert.DeserializeObject[T] (System.String value) [0x00000] in <4415f70934fb425193d84661eecab9c2>:0 
-  at maringuizarapp.Service.Service+<ProductoAsync>d__6.MoveNext () [0x000be] in <78f128211345445fa17ed40e71b8504d>:0 
---- End of stack trace from previous location where exception was thrown ---
-  at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw () [0x0000c] in <2f4074c3120b4d80802e10af84b67d41>:0 
-  at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess (System.Threading.Tasks.Task task) [0x0003e] in <2f4074c3120b4d80802e10af84b67d41>:0 
-  at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification (System.Threading.Tasks.Task task) [0x00028] in <2f4074c3120b4d80802e10af84b67d41>:0 
-  at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd (System.Threading.Tasks.Task task) [0x00008] in <2f4074c3120b4d80802e10af84b67d41>:0 
-  at System.Runtime.CompilerServices.TaskAwaiter`1[TResult].GetResult () [0x00000] in <2f4074c3120b4d80802e10af84b67d41>:0 
-  at maringuizarapp.iOS.ItemsTableViewController+<ProductoReadyAsync>d__7.MoveNext () [0x00075] in <6d4be1c077f747ff8cf49e0c1d6d8511>:0 
-2017-07-01 19:00:16.896 maringuizarapp.iOS[59334:1799410] READY ASYNC false
-2017-07-01 19:00:27.816 maringuizarapp.iOS[59334:1799410] Error de Newtonsoft.Json.JsonSerializationException: Error converting value {null} to type 'System.Double'. Path '[803].PRECIOCOSTOFIJO', line 1, position 207828. ---> System.InvalidCastException: Null object cannot be converted to a value type.
-  at System.Convert.ChangeType (System.Object value, System.Type conversionType, System.IFormatProvider provider) [0x00029] in <2f4074c3120b4d80802e10af84b67d41>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType) [0x0007c] in <4415f70934fb425193d84661eecab9c2>:0 
-   --- End of inner exception stack trace ---
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType) [0x000bd] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal (Newtonsoft.Json.JsonReader reader, System.Type objectType, Newtonsoft.Json.Serialization.JsonContract contract, Newtonsoft.Json.Serialization.JsonProperty member, Newtonsoft.Json.Serialization.JsonContainerContract containerContract, Newtonsoft.Json.Serialization.JsonProperty containerMember, System.Object existingValue) [0x00108] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue (Newtonsoft.Json.Serialization.JsonProperty property, Newtonsoft.Json.JsonConverter propertyConverter, Newtonsoft.Json.Serialization.JsonContainerContract containerContract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, Newtonsoft.Json.JsonReader reader, System.Object target) [0x00061] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject (System.Object newObject, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonObjectContract contract, Newtonsoft.Json.Serialization.JsonProperty member, System.String id) [0x00269] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject (Newtonsoft.Json.JsonReader reader, System.Type objectType, Newtonsoft.Json.Serialization.JsonContract contract, Newtonsoft.Json.Serialization.JsonProperty member, Newtonsoft.Json.Serialization.JsonContainerContract containerContract, Newtonsoft.Json.Serialization.JsonProperty containerMember, System.Object existingValue) [0x00158] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal (Newtonsoft.Json.JsonReader reader, System.Type objectType, Newtonsoft.Json.Serialization.JsonContract contract, Newtonsoft.Json.Serialization.JsonProperty member, Newtonsoft.Json.Serialization.JsonContainerContract containerContract, Newtonsoft.Json.Serialization.JsonProperty containerMember, System.Object existingValue) [0x0006d] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateList (System.Collections.IList list, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonArrayContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id) [0x0016f] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList (Newtonsoft.Json.JsonReader reader, System.Type objectType, Newtonsoft.Json.Serialization.JsonContract contract, Newtonsoft.Json.Serialization.JsonProperty member, System.Object existingValue, System.String id) [0x000dc] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal (Newtonsoft.Json.JsonReader reader, System.Type objectType, Newtonsoft.Json.Serialization.JsonContract contract, Newtonsoft.Json.Serialization.JsonProperty member, Newtonsoft.Json.Serialization.JsonContainerContract containerContract, Newtonsoft.Json.Serialization.JsonProperty containerMember, System.Object existingValue) [0x0007f] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize (Newtonsoft.Json.JsonReader reader, System.Type objectType, System.Boolean checkAdditionalContent) [0x000dc] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.JsonSerializer.DeserializeInternal (Newtonsoft.Json.JsonReader reader, System.Type objectType) [0x00053] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.JsonSerializer.Deserialize (Newtonsoft.Json.JsonReader reader, System.Type objectType) [0x00000] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.JsonConvert.DeserializeObject (System.String value, System.Type type, Newtonsoft.Json.JsonSerializerSettings settings) [0x0002d] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.JsonConvert.DeserializeObject[T] (System.String value, Newtonsoft.Json.JsonSerializerSettings settings) [0x00000] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.JsonConvert.DeserializeObject[T] (System.String value) [0x00000] in <4415f70934fb425193d84661eecab9c2>:0 
-  at maringuizarapp.Service.Service+<ProductoAsync>d__6.MoveNext () [0x000be] in <78f128211345445fa17ed40e71b8504d>:0 
---- End of stack trace from previous location where exception was thrown ---
-  at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw () [0x0000c] in <2f4074c3120b4d80802e10af84b67d41>:0 
-  at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess (System.Threading.Tasks.Task task) [0x0003e] in <2f4074c3120b4d80802e10af84b67d41>:0 
-  at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification (System.Threading.Tasks.Task task) [0x00028] in <2f4074c3120b4d80802e10af84b67d41>:0 
-  at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd (System.Threading.Tasks.Task task) [0x00008] in <2f4074c3120b4d80802e10af84b67d41>:0 
-  at System.Runtime.CompilerServices.TaskAwaiter`1[TResult].GetResult () [0x00000] in <2f4074c3120b4d80802e10af84b67d41>:0 
-  at maringuizarapp.iOS.SearchProductsViewController+<ProductoReadyAsync>d__5.MoveNext () [0x00075] in <6d4be1c077f747ff8cf49e0c1d6d8511>:0 
-2017-07-01 19:00:27.816 maringuizarapp.iOS[59334:1799410] READY ASYNC false
-2017-07-01 19:00:30.030 maringuizarapp.iOS[59334:1799410] Error de Newtonsoft.Json.JsonSerializationException: Error converting value {null} to type 'System.Double'. Path '[803].PRECIOCOSTOFIJO', line 1, position 207828. ---> System.InvalidCastException: Null object cannot be converted to a value type.
-  at System.Convert.ChangeType (System.Object value, System.Type conversionType, System.IFormatProvider provider) [0x00029] in <2f4074c3120b4d80802e10af84b67d41>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType) [0x0007c] in <4415f70934fb425193d84661eecab9c2>:0 
-   --- End of inner exception stack trace ---
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType) [0x000bd] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal (Newtonsoft.Json.JsonReader reader, System.Type objectType, Newtonsoft.Json.Serialization.JsonContract contract, Newtonsoft.Json.Serialization.JsonProperty member, Newtonsoft.Json.Serialization.JsonContainerContract containerContract, Newtonsoft.Json.Serialization.JsonProperty containerMember, System.Object existingValue) [0x00108] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue (Newtonsoft.Json.Serialization.JsonProperty property, Newtonsoft.Json.JsonConverter propertyConverter, Newtonsoft.Json.Serialization.JsonContainerContract containerContract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, Newtonsoft.Json.JsonReader reader, System.Object target) [0x00061] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject (System.Object newObject, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonObjectContract contract, Newtonsoft.Json.Serialization.JsonProperty member, System.String id) [0x00269] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject (Newtonsoft.Json.JsonReader reader, System.Type objectType, Newtonsoft.Json.Serialization.JsonContract contract, Newtonsoft.Json.Serialization.JsonProperty member, Newtonsoft.Json.Serialization.JsonContainerContract containerContract, Newtonsoft.Json.Serialization.JsonProperty containerMember, System.Object existingValue) [0x00158] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal (Newtonsoft.Json.JsonReader reader, System.Type objectType, Newtonsoft.Json.Serialization.JsonContract contract, Newtonsoft.Json.Serialization.JsonProperty member, Newtonsoft.Json.Serialization.JsonContainerContract containerContract, Newtonsoft.Json.Serialization.JsonProperty containerMember, System.Object existingValue) [0x0006d] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateList (System.Collections.IList list, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonArrayContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id) [0x0016f] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList (Newtonsoft.Json.JsonReader reader, System.Type objectType, Newtonsoft.Json.Serialization.JsonContract contract, Newtonsoft.Json.Serialization.JsonProperty member, System.Object existingValue, System.String id) [0x000dc] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal (Newtonsoft.Json.JsonReader reader, System.Type objectType, Newtonsoft.Json.Serialization.JsonContract contract, Newtonsoft.Json.Serialization.JsonProperty member, Newtonsoft.Json.Serialization.JsonContainerContract containerContract, Newtonsoft.Json.Serialization.JsonProperty containerMember, System.Object existingValue) [0x0007f] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize (Newtonsoft.Json.JsonReader reader, System.Type objectType, System.Boolean checkAdditionalContent) [0x000dc] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.JsonSerializer.DeserializeInternal (Newtonsoft.Json.JsonReader reader, System.Type objectType) [0x00053] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.JsonSerializer.Deserialize (Newtonsoft.Json.JsonReader reader, System.Type objectType) [0x00000] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.JsonConvert.DeserializeObject (System.String value, System.Type type, Newtonsoft.Json.JsonSerializerSettings settings) [0x0002d] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.JsonConvert.DeserializeObject[T] (System.String value, Newtonsoft.Json.JsonSerializerSettings settings) [0x00000] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.JsonConvert.DeserializeObject[T] (System.String value) [0x00000] in <4415f70934fb425193d84661eecab9c2>:0 
-  at maringuizarapp.Service.Service+<ProductoAsync>d__6.MoveNext () [0x000be] in <78f128211345445fa17ed40e71b8504d>:0 
---- End of stack trace from previous location where exception was thrown ---
-  at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw () [0x0000c] in <2f4074c3120b4d80802e10af84b67d41>:0 
-  at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess (System.Threading.Tasks.Task task) [0x0003e] in <2f4074c3120b4d80802e10af84b67d41>:0 
-  at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification (System.Threading.Tasks.Task task) [0x00028] in <2f4074c3120b4d80802e10af84b67d41>:0 
-  at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd (System.Threading.Tasks.Task task) [0x00008] in <2f4074c3120b4d80802e10af84b67d41>:0 
-  at System.Runtime.CompilerServices.TaskAwaiter`1[TResult].GetResult () [0x00000] in <2f4074c3120b4d80802e10af84b67d41>:0 
-  at maringuizarapp.iOS.ItemsTableViewController+<ProductoReadyAsync>d__7.MoveNext () [0x00075] in <6d4be1c077f747ff8cf49e0c1d6d8511>:0 
-2017-07-01 19:00:30.031 maringuizarapp.iOS[59334:1799410] READY ASYNC false
-2017-07-01 19:00:34.301 maringuizarapp.iOS[59334:1799410] Error de Newtonsoft.Json.JsonSerializationException: Error converting value {null} to type 'System.Double'. Path '[803].PRECIOCOSTOFIJO', line 1, position 207828. ---> System.InvalidCastException: Null object cannot be converted to a value type.
-  at System.Convert.ChangeType (System.Object value, System.Type conversionType, System.IFormatProvider provider) [0x00029] in <2f4074c3120b4d80802e10af84b67d41>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType) [0x0007c] in <4415f70934fb425193d84661eecab9c2>:0 
-   --- End of inner exception stack trace ---
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType) [0x000bd] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal (Newtonsoft.Json.JsonReader reader, System.Type objectType, Newtonsoft.Json.Serialization.JsonContract contract, Newtonsoft.Json.Serialization.JsonProperty member, Newtonsoft.Json.Serialization.JsonContainerContract containerContract, Newtonsoft.Json.Serialization.JsonProperty containerMember, System.Object existingValue) [0x00108] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue (Newtonsoft.Json.Serialization.JsonProperty property, Newtonsoft.Json.JsonConverter propertyConverter, Newtonsoft.Json.Serialization.JsonContainerContract containerContract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, Newtonsoft.Json.JsonReader reader, System.Object target) [0x00061] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject (System.Object newObject, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonObjectContract contract, Newtonsoft.Json.Serialization.JsonProperty member, System.String id) [0x00269] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject (Newtonsoft.Json.JsonReader reader, System.Type objectType, Newtonsoft.Json.Serialization.JsonContract contract, Newtonsoft.Json.Serialization.JsonProperty member, Newtonsoft.Json.Serialization.JsonContainerContract containerContract, Newtonsoft.Json.Serialization.JsonProperty containerMember, System.Object existingValue) [0x00158] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal (Newtonsoft.Json.JsonReader reader, System.Type objectType, Newtonsoft.Json.Serialization.JsonContract contract, Newtonsoft.Json.Serialization.JsonProperty member, Newtonsoft.Json.Serialization.JsonContainerContract containerContract, Newtonsoft.Json.Serialization.JsonProperty containerMember, System.Object existingValue) [0x0006d] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateList (System.Collections.IList list, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonArrayContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id) [0x0016f] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList (Newtonsoft.Json.JsonReader reader, System.Type objectType, Newtonsoft.Json.Serialization.JsonContract contract, Newtonsoft.Json.Serialization.JsonProperty member, System.Object existingValue, System.String id) [0x000dc] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal (Newtonsoft.Json.JsonReader reader, System.Type objectType, Newtonsoft.Json.Serialization.JsonContract contract, Newtonsoft.Json.Serialization.JsonProperty member, Newtonsoft.Json.Serialization.JsonContainerContract containerContract, Newtonsoft.Json.Serialization.JsonProperty containerMember, System.Object existingValue) [0x0007f] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize (Newtonsoft.Json.JsonReader reader, System.Type objectType, System.Boolean checkAdditionalContent) [0x000dc] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.JsonSerializer.DeserializeInternal (Newtonsoft.Json.JsonReader reader, System.Type objectType) [0x00053] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.JsonSerializer.Deserialize (Newtonsoft.Json.JsonReader reader, System.Type objectType) [0x00000] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.JsonConvert.DeserializeObject (System.String value, System.Type type, Newtonsoft.Json.JsonSerializerSettings settings) [0x0002d] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.JsonConvert.DeserializeObject[T] (System.String value, Newtonsoft.Json.JsonSerializerSettings settings) [0x00000] in <4415f70934fb425193d84661eecab9c2>:0 
-  at Newtonsoft.Json.JsonConvert.DeserializeObject[T] (System.String value) [0x00000] in <4415f70934fb425193d84661eecab9c2>:0 
-  at maringuizarapp.Service.Service+<ProductoAsync>d__6.MoveNext () [0x000be] in <78f128211345445fa17ed40e71b8504d>:0 
---- End of stack trace from previous location where exception was thrown ---
-  at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw () [0x0000c] in <2f4074c3120b4d80802e10af84b67d41>:0 
-  at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess (System.Threading.Tasks.Task task) [0x0003e] in <2f4074c3120b4d80802e10af84b67d41>:0 
-  at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification (System.Threading.Tasks.Task task) [0x00028] in <2f4074c3120b4d80802e10af84b67d41>:0 
-  at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd (System.Threading.Tasks.Task task) [0x00008] in <2f4074c3120b4d80802e10af84b67d41>:0 
-  at System.Runtime.CompilerServices.TaskAwaiter`1[TResult].GetResult () [0x00000] in <2f4074c3120b4d80802e10af84b67d41>:0 
-  at maringuizarapp.iOS.ItemsTableViewController+<ProductoReadyAsync>d__7.MoveNext () [0x00075] in <6d4be1c077f747ff8cf49e0c1d6d8511>:0 
-2017-07-01 19:00:34.302 maringuizarapp.iOS[59334:1799410] READY ASYNC false
+objc[9500]: Class VCWeakObjectHolder is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/PrivateFrameworks/GameKitServices.framework/Frameworks/ViceroyTrace.framework/ViceroyTrace (0x11ffc8ca8) and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/PrivateFrameworks/GameKitServices.framework/Frameworks/AVConference.framework/AVConference (0x11fefacd0). One of the two will be used. Which one is undefined.
+objc[9500]: Class PLBuildVersion is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/PrivateFrameworks/AssetsLibraryServices.framework/AssetsLibraryServices (0x11dcedcc0) and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/PrivateFrameworks/PhotoLibraryServices.framework/PhotoLibraryServices (0x11db046f0). One of the two will be used. Which one is undefined.
+2017-08-12 15:49:40.155 maringuizarapp.iOS[9500:367906] SetRootViewController: <PrincipalNavViewController: 0x7ff5d305fc00>
+2017-08-12 15:49:40.156 maringuizarapp.iOS[9500:367906] Primera vista: <PrincipalNavViewController: 0x7ff5d305fc00>
+2017-08-12 15:49:40.442 maringuizarapp.iOS[9500:367906] UniqueID 0F0DF088-867B-418A-8D7A-049012B22945
+2017-08-12 15:49:40.442 maringuizarapp.iOS[9500:367906] 0F0DF088
+2017-08-12 15:49:42.419 maringuizarapp.iOS[9500:367906] Iniciando sesion...
+2017-08-12 15:49:42.420 maringuizarapp.iOS[9500:367906] Unique ID 0F0DF088
+2017-08-12 15:50:03.022 maringuizarapp.iOS[9500:367906] Iniciando sesion...
+2017-08-12 15:50:03.023 maringuizarapp.iOS[9500:367906] Unique ID F0:27:65:E8:19:69
+2017-08-12 15:50:03.940 maringuizarapp.iOS[9500:367906] Session Iniciada Exitosamente!
+2017-08-12 15:50:04.049 maringuizarapp.iOS[9500:367906] SetRootViewController: <TabBarViewController: 0x7ff5d14851a0>
+2017-08-12 15:50:04.152 maringuizarapp.iOS[9500:367906] Iniciando ItemsTableViewController...
+2017-08-12 15:50:09.071 maringuizarapp.iOS[9500:367906] J---------J
+2017-08-12 15:50:09.108 maringuizarapp.iOS[9500:367906] 92
+2017-08-12 15:50:09.109 maringuizarapp.iOS[9500:367906] Cantidad de busqueda 92
+2017-08-12 15:50:09.115 maringuizarapp.iOS[9500:367906] 92
+2017-08-12 15:50:09.313 maringuizarapp.iOS[9500:367906] Jk---------Jk
+2017-08-12 15:50:09.326 maringuizarapp.iOS[9500:367906] 0
+2017-08-12 15:50:09.326 maringuizarapp.iOS[9500:367906] Cantidad de busqueda 0
+2017-08-12 15:50:09.327 maringuizarapp.iOS[9500:367906] 0
+2017-08-12 15:50:09.332 maringuizarapp.iOS[9500:367906] Jkk---------Jkk
+2017-08-12 15:50:09.337 maringuizarapp.iOS[9500:367906] 0
+2017-08-12 15:50:09.338 maringuizarapp.iOS[9500:367906] Cantidad de busqueda 0
+2017-08-12 15:50:09.338 maringuizarapp.iOS[9500:367906] 0
+2017-08-12 15:50:09.342 maringuizarapp.iOS[9500:367906] Jkkj---------Jkkj
+2017-08-12 15:50:09.349 maringuizarapp.iOS[9500:367906] 0
+2017-08-12 15:50:09.349 maringuizarapp.iOS[9500:367906] Cantidad de busqueda 0
+2017-08-12 15:50:09.350 maringuizarapp.iOS[9500:367906] 0
+2017-08-12 15:50:09.356 maringuizarapp.iOS[9500:367906] Jkkjh---------Jkkjh
+2017-08-12 15:50:09.363 maringuizarapp.iOS[9500:367906] 0
+2017-08-12 15:50:09.363 maringuizarapp.iOS[9500:367906] Cantidad de busqueda 0
+2017-08-12 15:50:09.363 maringuizarapp.iOS[9500:367906] 0
+2017-08-12 15:50:09.500 maringuizarapp.iOS[9500:367906] Jkkjhk---------Jkkjhk
+2017-08-12 15:50:09.505 maringuizarapp.iOS[9500:367906] 0
+2017-08-12 15:50:09.506 maringuizarapp.iOS[9500:367906] Cantidad de busqueda 0
+2017-08-12 15:50:09.506 maringuizarapp.iOS[9500:367906] 0
+2017-08-12 15:50:09.936 maringuizarapp.iOS[9500:367906] Jkkjh---------Jkkjh
+2017-08-12 15:50:09.942 maringuizarapp.iOS[9500:367906] 0
+2017-08-12 15:50:09.943 maringuizarapp.iOS[9500:367906] Cantidad de busqueda 0
+2017-08-12 15:50:09.943 maringuizarapp.iOS[9500:367906] 0
+2017-08-12 15:50:10.052 maringuizarapp.iOS[9500:367906] Jkkj---------Jkkj
+2017-08-12 15:50:10.058 maringuizarapp.iOS[9500:367906] 0
+2017-08-12 15:50:10.058 maringuizarapp.iOS[9500:367906] Cantidad de busqueda 0
+2017-08-12 15:50:10.059 maringuizarapp.iOS[9500:367906] 0
+2017-08-12 15:50:10.204 maringuizarapp.iOS[9500:367906] Jkk---------Jkk
+2017-08-12 15:50:10.210 maringuizarapp.iOS[9500:367906] 0
+2017-08-12 15:50:10.210 maringuizarapp.iOS[9500:367906] Cantidad de busqueda 0
+2017-08-12 15:50:10.210 maringuizarapp.iOS[9500:367906] 0
+2017-08-12 15:50:10.349 maringuizarapp.iOS[9500:367906] Jk---------Jk
+2017-08-12 15:50:10.355 maringuizarapp.iOS[9500:367906] 0
+2017-08-12 15:50:10.355 maringuizarapp.iOS[9500:367906] Cantidad de busqueda 0
+2017-08-12 15:50:10.356 maringuizarapp.iOS[9500:367906] 0
+2017-08-12 15:50:10.502 maringuizarapp.iOS[9500:367906] J---------J
+2017-08-12 15:50:10.509 maringuizarapp.iOS[9500:367906] 92
+2017-08-12 15:50:10.510 maringuizarapp.iOS[9500:367906] Cantidad de busqueda 92
+2017-08-12 15:50:10.510 maringuizarapp.iOS[9500:367906] 92
+2017-08-12 15:50:12.160 maringuizarapp.iOS[9500:367906] Button Barcode!
+2017-08-12 15:50:12.768 maringuizarapp.iOS[9500:367906] Starting to scan...
+2017-08-12 15:50:12.838 maringuizarapp.iOS[9500:367906] StartScanning
+2017-08-12 15:50:12.864 maringuizarapp.iOS[9500:367906] No captureDevice - this won't work on the simulator, try a physical device
+2017-08-12 15:50:12.865 maringuizarapp.iOS[9500:367906] Capture Session FAILED
+2017-08-12 15:50:14.324 maringuizarapp.iOS[9500:367906] Stopping...
+2017-08-12 15:50:27.755 maringuizarapp.iOS[9500:367906] LST PRODUCTO 09REMEJSP68
+2017-08-12 15:50:27.864 maringuizarapp.iOS[9500:367906] IdProducto09REMEJSP68  adasd09REMEJSP68
+2017-08-12 15:50:28.737 maringuizarapp.iOS[9500:367906] Stock detalle 3
+2017-08-12 15:50:29.930 maringuizarapp.iOS[9500:367906] Enviando: 3
+2017-08-12 15:50:29.936 maringuizarapp.iOS[9500:367906] Iniciando StockTableViewController...
+2017-08-12 15:50:32.778 maringuizarapp.iOS[9500:367906] IdProducto09REMEJSP68  adasd09REMEJSP68
+2017-08-12 15:50:33.335 maringuizarapp.iOS[9500:367906] Stock detalle 3
+2017-08-12 15:50:35.472 maringuizarapp.iOS[9500:367906] LST PRODUCTO 09REMEJUS46
+2017-08-12 15:50:35.499 maringuizarapp.iOS[9500:367906] IdProducto09REMEJUS46  adasd09REMEJUS46
+2017-08-12 15:50:36.202 maringuizarapp.iOS[9500:367906] Stock detalle 5
+2017-08-12 15:50:36.883 maringuizarapp.iOS[9500:367906] Enviando: 5
+2017-08-12 15:50:36.888 maringuizarapp.iOS[9500:367906] Iniciando StockTableViewController...
+2017-08-12 15:50:37.978 maringuizarapp.iOS[9500:367906] IdProducto09REMEJUS46  adasd09REMEJUS46
+2017-08-12 15:50:38.541 maringuizarapp.iOS[9500:367906] Stock detalle 5
+2017-08-12 15:50:44.927 maringuizarapp.iOS[9500:367906] LST PRODUCTO 09REMEJUS46
+2017-08-12 15:50:44.955 maringuizarapp.iOS[9500:367906] IdProducto09REMEJUS46  adasd09REMEJUS46
+2017-08-12 15:50:45.790 maringuizarapp.iOS[9500:367906] Stock detalle 5
+2017-08-12 15:51:07.123 maringuizarapp.iOS[9500:367906] IdProducto09REMEJUS46  adasd09REMEJUS46
+2017-08-12 15:51:07.701 maringuizarapp.iOS[9500:367906] Stock detalle 5
+2017-08-12 15:51:10.197 maringuizarapp.iOS[9500:367906] SetRootViewController: <PrincipalNavViewController: 0x7ff5d1c93200>
+2017-08-12 15:51:10.213 maringuizarapp.iOS[9500:367906] UniqueID 0F0DF088-867B-418A-8D7A-049012B22945
+2017-08-12 15:51:10.213 maringuizarapp.iOS[9500:367906] 0F0DF088

@@ -31,6 +31,11 @@ namespace maringuizarapp.iOS
 
 		public override void ViewDidLoad() {
 			base.ViewDidLoad();
+
+
+			//Set cuantity on shoppingCart
+			this.TabBarController.ViewControllers[2].TabBarItem.BadgeValue = "0";
+
 			this.Title = "Productos";
 			Console.WriteLine("Iniciando ItemsTableViewController...");
 

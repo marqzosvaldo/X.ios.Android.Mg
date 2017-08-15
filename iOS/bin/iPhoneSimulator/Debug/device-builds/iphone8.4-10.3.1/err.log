@@ -1,0 +1,164 @@
+objc[1186]: Class VCWeakObjectHolder is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/PrivateFrameworks/GameKitServices.framework/Frameworks/ViceroyTrace.framework/ViceroyTrace (0x12269fca8) and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/PrivateFrameworks/GameKitServices.framework/Frameworks/AVConference.framework/AVConference (0x1225d1cd0). One of the two will be used. Which one is undefined.
+objc[1186]: Class PLBuildVersion is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/PrivateFrameworks/AssetsLibraryServices.framework/AssetsLibraryServices (0x12485ccc0) and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/PrivateFrameworks/PhotoLibraryServices.framework/PhotoLibraryServices (0x12420c6f0). One of the two will be used. Which one is undefined.
+2017-08-15 12:50:56.284 maringuizarapp.iOS[1186:56276] Xamarin.iOS: Socket error while connecting to IDE on 127.0.0.1:31744: Connection refused
+2017-08-15 12:50:57.880 maringuizarapp.iOS[1186:56163] SetRootViewController: <PrincipalNavViewController: 0x7fa0ea8d1800>
+2017-08-15 12:50:57.882 maringuizarapp.iOS[1186:56163] Primera vista: <PrincipalNavViewController: 0x7fa0ea8d1800>
+2017-08-15 12:50:58.068 maringuizarapp.iOS[1186:56163] UniqueID 0F0DF088-867B-418A-8D7A-049012B22945
+2017-08-15 12:50:58.068 maringuizarapp.iOS[1186:56163] 0F0DF088
+2017-08-15 12:50:59.401 maringuizarapp.iOS[1186:56163] Iniciando sesion...
+2017-08-15 12:50:59.401 maringuizarapp.iOS[1186:56163] Unique ID 0F0DF088
+2017-08-15 12:51:00.334 maringuizarapp.iOS[1186:56163] StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+Date: Tue, 15 Aug 2017 17:51:00 GMT
+Server: Apache
+Cache-Control: no-cache
+Set-Cookie: laravel_session=eyJpdiI6IkZTXC81clZzbU12VXlPMmdvd096dGNRPT0iLCJ2YWx1ZSI6InI3dHNYMWNGcko5djZQbkh3bklGdUkxTko4NHRWdWRUZjRNZWVmaE80UXdHZWgyckZpbFVEZWZyem9BdjVsZUhPcTgxV3k3R3JWZWhQcTNzNkMrT2VnPT0iLCJtYWMiOiI5OTM2NzEyYTE4OWRjMmQyMWMyNjRhYjU2MWFhZTM4NDc2M2RlMDIwNzA0ZDJhOWViNjQyZWY5NjE0ZGVjNGVhIn0%3D; expires=Tue, 15-Aug-2017 19:51:00 GMT; Max-Age=7200; path=/; httponly
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: application/json
+}
+2017-08-15 12:51:00.343 maringuizarapp.iOS[1186:56163] tipo de jsonResult:D System.String
+2017-08-15 12:51:00.344 maringuizarapp.iOS[1186:56163] Cadena jsonresultado: 
+2017-08-15 12:51:00.585 maringuizarapp.iOS[1186:56163] Cadena Json Vacia!!!!!!!!!!!!
+2017-08-15 12:51:03.126 maringuizarapp.iOS[1186:56163] Iniciando sesion...
+2017-08-15 12:51:03.126 maringuizarapp.iOS[1186:56163] Unique ID F0:27:65:E8:19:69
+2017-08-15 12:51:03.800 maringuizarapp.iOS[1186:56163] StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+Date: Tue, 15 Aug 2017 17:51:03 GMT
+Server: Apache
+Cache-Control: no-cache
+Set-Cookie: laravel_session=eyJpdiI6IjFLZ2Zkb1FnOVBrYzMwZXU0MWVGaXc9PSIsInZhbHVlIjoiWU1KQWo4YWFURmkyTE8wU0M1NFJxV29yS1NQT1FzMlZjaG9jYUNrdzNHTXBvUzJPQXhxVTAyUVQ1OG5xUzdsTlNjeEdJcG5nbTIwbksyVEphR3gwZ1E9PSIsIm1hYyI6IjczYmFhZTA4Njk2MjM0OTAxY2JiYjg5OWNkNGU5NTcwNDE2NmU3OWYwYTEzMmVhYzU1ZmU2ZWVhYmZkZDhiYTYifQ%3D%3D; expires=Tue, 15-Aug-2017 19:51:04 GMT; Max-Age=7200; path=/; httponly
+Transfer-Encoding: chunked
+Content-Type: application/json
+}
+2017-08-15 12:51:03.800 maringuizarapp.iOS[1186:56163] tipo de jsonResult:D System.String
+2017-08-15 12:51:03.800 maringuizarapp.iOS[1186:56163] Cadena jsonresultado: {"dispositivo_empleado":2,"prefijo":"ttt","admin_dispositivo":34,"id_mac":"F0:27:65:E8:19:69","nombre_empleado":"------ SISTEMAS PRUEBAS -----","vigencia_final":"2017-10-29"}
+2017-08-15 12:51:03.897 maringuizarapp.iOS[1186:56163] Resultado JSON EXITOSO!!!!!!!!!!!!
+2017-08-15 12:51:03.898 maringuizarapp.iOS[1186:56163] Session Iniciada Exitosamente!
+2017-08-15 12:51:03.968 maringuizarapp.iOS[1186:56163] SetRootViewController: <TabBarViewController: 0x7fa0ea436760>
+2017-08-15 12:51:04.046 maringuizarapp.iOS[1186:56163] Iniciando ItemsTableViewController...
+2017-08-15 12:51:08.340 maringuizarapp.iOS[1186:56163] A---------A
+2017-08-15 12:51:08.392 maringuizarapp.iOS[1186:56163] 2285
+2017-08-15 12:51:08.394 maringuizarapp.iOS[1186:56163] Cantidad de busqueda 2285
+2017-08-15 12:51:08.395 maringuizarapp.iOS[1186:56163] 2285
+2017-08-15 12:51:09.268 maringuizarapp.iOS[1186:56163] LST PRODUCTO 010PFAVOR06
+2017-08-15 12:51:09.357 maringuizarapp.iOS[1186:56163] IdProducto010PFAVOR06  adasd010PFAVOR06
+2017-08-15 12:51:09.927 maringuizarapp.iOS[1186:56163] Resultado de getDetailStock[{"ex_idmaterial":"010PFAVOR06","ex_idalmacen":"ALM08","ex_cantidad":0,"ex_noempresa":"00","NOMBREALMACEN":"COMPRAS EN TRANSITO"},{"ex_idmaterial":"010PFAVOR06","ex_idalmacen":"ALM14","ex_cantidad":0,"ex_noempresa":"00","NOMBREALMACEN":"BODEGA UTENSILIOS"},{"ex_idmaterial":"010PFAVOR06","ex_idalmacen":"ALM06","ex_cantidad":1,"ex_noempresa":"00","NOMBREALMACEN":"UTENSILIA TIENDA LIB"},{"ex_idmaterial":"010PFAVOR06","ex_idalmacen":"ALM01","ex_cantidad":0,"ex_noempresa":"00","NOMBREALMACEN":"UTENSILIA LIBRAMIENTO"}]
+2017-08-15 12:51:09.939 maringuizarapp.iOS[1186:56163] Stock detalle 4
+2017-08-15 12:51:11.067 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:11.511 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:11.954 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:12.301 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:12.653 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:12.828 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:12.980 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:13.148 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:13.300 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:13.468 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:13.620 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:13.780 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:13.945 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:14.093 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:14.256 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:14.414 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:14.575 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:14.752 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:14.919 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:15.094 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:15.263 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:15.432 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:15.609 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:15.784 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:15.969 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:16.137 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:16.305 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:16.472 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:16.656 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:16.835 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:17.003 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:17.178 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:17.362 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:17.563 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:17.746 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:17.922 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:18.092 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:18.269 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:18.451 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:18.637 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:18.812 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:18.989 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:19.174 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:19.362 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:19.527 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:19.708 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:19.886 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:20.069 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:20.247 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:20.423 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:20.578 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:20.751 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:20.909 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:21.097 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:21.288 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:21.463 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:21.647 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:21.817 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:22.010 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:22.184 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:22.368 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:22.535 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:22.712 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:22.879 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:23.075 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:23.268 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:23.451 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:23.636 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:23.819 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:24.003 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:24.196 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:24.388 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:24.565 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:24.748 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:24.925 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:25.102 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:25.295 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:25.487 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:51:25.678 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:35.213 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:35.334 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:35.340 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:35.489 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:35.641 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:35.794 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:35.946 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:36.098 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:36.249 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:36.401 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:36.547 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:36.697 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:36.859 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:37.026 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:37.177 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:37.338 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:37.506 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:37.658 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:37.804 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:37.963 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:38.123 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:38.290 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:38.497 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:38.653 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:38.835 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:39.010 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:39.204 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:39.385 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:39.547 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:53:39.739 maringuizarapp.iOS[1186:56163] clicked!
+2017-08-15 12:54:32.520 maringuizarapp.iOS[1186:56163] Enviando: 4
+2017-08-15 12:54:32.532 maringuizarapp.iOS[1186:56163] Iniciando StockTableViewController...
+2017-08-15 12:54:35.733 maringuizarapp.iOS[1186:56163] IdProducto010PFAVOR06  adasd010PFAVOR06
+2017-08-15 12:54:36.189 maringuizarapp.iOS[1186:56163] Resultado de getDetailStock[{"ex_idmaterial":"010PFAVOR06","ex_idalmacen":"ALM08","ex_cantidad":0,"ex_noempresa":"00","NOMBREALMACEN":"COMPRAS EN TRANSITO"},{"ex_idmaterial":"010PFAVOR06","ex_idalmacen":"ALM14","ex_cantidad":0,"ex_noempresa":"00","NOMBREALMACEN":"BODEGA UTENSILIOS"},{"ex_idmaterial":"010PFAVOR06","ex_idalmacen":"ALM06","ex_cantidad":1,"ex_noempresa":"00","NOMBREALMACEN":"UTENSILIA TIENDA LIB"},{"ex_idmaterial":"010PFAVOR06","ex_idalmacen":"ALM01","ex_cantidad":0,"ex_noempresa":"00","NOMBREALMACEN":"UTENSILIA LIBRAMIENTO"}]
+2017-08-15 12:54:36.190 maringuizarapp.iOS[1186:56163] Stock detalle 4
+2017-08-15 12:54:36.994 maringuizarapp.iOS[1186:56163] Enviando: 4
+2017-08-15 12:54:36.998 maringuizarapp.iOS[1186:56163] Iniciando StockTableViewController...
