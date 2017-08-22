@@ -2,7 +2,7 @@
 
 using System;
 using System.Collections.Generic;
-
+using maringuizarapp.Model;
 using Foundation;
 using UIKit;
 
@@ -13,6 +13,9 @@ namespace maringuizarapp.iOS{
 		string descripcion;
 		string idProducto; 
 		List<DetailProductStock> lstDetailProductStock;
+		ProductsGeneral cartItem = new ProductsGeneral();
+		Cart carrito = new Cart();
+
 
 
 		public string CostoFijo {
@@ -34,6 +37,8 @@ namespace maringuizarapp.iOS{
 			this.Title = "Detalles";
 			stockButton.TouchUpInside += StockButton_TouchUpInside;
 			addItemToCart.Clicked += AddItemToCart_Clicked;
+			Console.WriteLine("totall carrito!!!!!!!!");
+			//cart.cartTotal();
 
 			stockButton.Enabled = false;
 			stockButton.BackgroundColor = UIColor.Gray;
@@ -43,9 +48,20 @@ namespace maringuizarapp.iOS{
 		Int32 badgeCount = 0;
 		void AddItemToCart_Clicked(object sender, EventArgs e) {
 			Console.WriteLine("clicked!");
-			badgeCount ++;
 
-			this.TabBarController.ViewControllers[2].TabBarItem.BadgeValue = badgeCount.ToString();
+			cartItem.IDCODIGO = idProduct;
+			cartItem.PRECIOCOSTOFIJO = CostoFijo;
+
+
+			Console.WriteLine("totall carrito!!!!!!!!");
+			//CurrentSession.CartProduct.Add(cartItem);
+			carrito.cartAdd(cartItem);
+
+
+			this.TabBarController.ViewControllers[2].TabBarItem.BadgeValue = CurrentSession.CartProduct.Count.ToString();
+			Console.WriteLine(CurrentSession.CartProduct[0].IDCODIGO);
+			Console.WriteLine("carrito instance " + carrito.cartTotal());
+			badgeCount ++;
 
 		}
 

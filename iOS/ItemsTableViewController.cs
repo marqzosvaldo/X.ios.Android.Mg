@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
+using maringuizarapp.Model;
 //Mac pruebas  F0:27:65:E8:19:69
 namespace maringuizarapp.iOS
 {
@@ -32,7 +33,6 @@ namespace maringuizarapp.iOS
 		public override void ViewDidLoad() {
 			base.ViewDidLoad();
 
-
 			//Set cuantity on shoppingCart
 			this.TabBarController.ViewControllers[2].TabBarItem.BadgeValue = "0";
 
@@ -45,6 +45,9 @@ namespace maringuizarapp.iOS
 			buttonLogOut.Clicked += ButtonLogOut_Clicked;
 			buttonSaveJasonData.Clicked += ButtonSaveJasonData_Clicked;
 			buttonFilterAR.Clicked += ButtonFilterAR_Clicked;
+			Console.WriteLine(CurrentSession.admin_dispositivo);
+
+
 		}
 
 		void ButtonFilterAR_Clicked(object sender, EventArgs e) {
