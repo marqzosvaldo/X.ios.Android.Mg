@@ -32,5 +32,7 @@ namespace maringuizarapp.iOS
 		} 
 		public StockTableViewController (IntPtr handle) : base (handle){
 		}
+
+
 	}
 }

@@ -1,27 +1,17 @@
 ﻿<Properties StartupConfiguration="{8AEF7C35-F08C-4229-9F79-B827FAC94B04}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/ItemsTableViewController.cs">
-    <Files>
-      <File FileName="iOS/LoginViewController.cs" Line="28" Column="1" NotebookId="1" />
-      <File FileName="iOS/RootViewController.cs" Line="16" Column="9" NotebookId="1" />
-      <File FileName="iOS/LoginTestViewController.cs" Line="34" Column="26" NotebookId="1" />
-      <File FileName="maringuizarapp/Cart.cs" Line="41" Column="18" NotebookId="1" />
-      <File FileName="iOS/StockTableViewController.cs" Line="28" Column="32" NotebookId="1" />
-      <File FileName="iOS/StockTableViewSource.cs" Line="12" Column="3" NotebookId="1" />
-      <File FileName="iOS/StockCellController.cs" Line="16" Column="3" NotebookId="1" />
-      <File FileName="iOS/Main.cs" Line="14" Column="1" NotebookId="1" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <FloatingWindows>
-      <FloatingWindow WindowId="1" X="274" Y="22" Width="900" Height="728">
+      <FloatingWindow WindowId="1" X="274" Y="22" Width="900" Height="727">
         <Files>
-          <File FileName="iOS/ItemsTableViewSource.cs" Line="43" Column="3" />
+          <File FileName="iOS/ItemsTableViewSource.cs" Line="47" Column="41" />
           <File FileName="maringuizarapp/Service/Service.cs" Line="1" Column="25" />
           <File FileName="maringuizarapp/Model/Producto.cs" Line="8" Column="2" />
           <File FileName="maringuizarapp/Model/Session.cs" Line="20" Column="1" />
           <File FileName="iOS/ItemsCellController.cs" Line="42" Column="1" />
-          <File FileName="iOS/ItemsTableViewController.cs" Line="341" Column="4" />
-          <File FileName="iOS/ProductDetailsViewController.cs" Line="17" Column="1" />
+          <File FileName="iOS/ItemsTableViewController.cs" Line="341" Column="13" />
+          <File FileName="iOS/ProductDetailsViewController.cs" Line="58" Column="30" />
           <File FileName="maringuizarapp/Model/ProductsGeneral.cs" Line="19" Column="1" />
-          <File FileName="maringuizarapp/Model/CurrentSession.cs" Line="10" Column="49" />
+          <File FileName="maringuizarapp/Model/CurrentSession.cs" Line="17" Column="37" />
         </Files>
       </FloatingWindow>
     </FloatingWindows>

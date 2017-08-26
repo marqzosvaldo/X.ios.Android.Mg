@@ -42,6 +42,7 @@ namespace maringuizarapp.iOS {
 		}
 
 
+
 		public override nint RowsInSection(UITableView tableview, nint section) {
 			Console.WriteLine(lstProducts.Count);
 			return lstProducts.Count;
