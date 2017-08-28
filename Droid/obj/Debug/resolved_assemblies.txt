@@ -37,4 +37,3 @@
 /Users/osvaldo/Projects/maringuizarapp/Droid/obj/Debug/android/assets/System.Text.Encoding.dll
 /Users/osvaldo/Projects/maringuizarapp/Droid/obj/Debug/android/assets/System.Text.Encoding.Extensions.dll
 /Users/osvaldo/Projects/maringuizarapp/Droid/obj/Debug/android/assets/Microsoft.CSharp.dll
-/Users/osvaldo/Projects/maringuizarapp/Droid/obj/Debug/android/assets/Mono.CSharp.dll

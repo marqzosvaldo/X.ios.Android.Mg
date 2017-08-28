@@ -210,6 +210,15 @@
     <Compile Include="StockCellController.designer.cs">
       <DependentUpon>StockCellController.cs</DependentUpon>
     </Compile>
+    <Compile Include="CartTableViewController.cs" />
+    <Compile Include="CartTableViewController.designer.cs">
+      <DependentUpon>CartTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CartCellController.cs" />
+    <Compile Include="CartCellController.designer.cs">
+      <DependentUpon>CartCellController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CartTableViewDataSource.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\delivery.png" />

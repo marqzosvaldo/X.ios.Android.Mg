@@ -29,6 +29,10 @@
       <LogicalName>Main.storyboardc/BQV-mp-5Kb-view-LX8-zK-NRx.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/ibtool-link/Main.storyboardc/CartTableViewController.nib">
+      <LogicalName>Main.storyboardc/CartTableViewController.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/ibtool-link/Main.storyboardc/Info.plist">
       <LogicalName>Main.storyboardc/Info.plist</LogicalName>
       <Optimize>false</Optimize>
