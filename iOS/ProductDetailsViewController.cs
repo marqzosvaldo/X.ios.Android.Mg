@@ -7,14 +7,16 @@ using Foundation;
 using UIKit;
 
 namespace maringuizarapp.iOS{
-	public partial class ProductDetailsViewController : UIViewController{
+	public partial class ProductDetailsViewController : UIViewController {
 
 		string precioCostoFijo;
 		string descripcion;
-		string idProducto; 
+		string idProducto;
 		List<DetailProductStock> lstDetailProductStock;
 		ProductsGeneral cartItem = new ProductsGeneral();
 		Cart carrito = new Cart();
+		public  static Int32  badgeCount {get; set;}
+
 
 
 
@@ -45,7 +47,6 @@ namespace maringuizarapp.iOS{
 			labelPrecioCostoFijo.Text = precioCostoFijo;
 			textViewDescripción.Text = descripcion;
 		}
-		Int32 badgeCount = 0;
 		void AddItemToCart_Clicked(object sender, EventArgs e) {
 			Console.WriteLine("clicked!");
 

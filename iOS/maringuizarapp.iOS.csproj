@@ -234,6 +234,7 @@
     <BundleResource Include="Resources\barcodeItem.png" />
     <BundleResource Include="Resources\warehouse.png" />
     <BundleResource Include="Resources\barcode-product.png" />
+    <BundleResource Include="Resources\planning.png" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="iTunesArtwork" />

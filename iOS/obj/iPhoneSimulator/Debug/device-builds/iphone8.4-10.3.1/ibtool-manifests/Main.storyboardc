@@ -24,6 +24,33 @@
 				<integer>9</integer>
 			</dict>
 		</array>
+		<key>2bT-0G-TVx</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>2bT-0G-TVx</string>
+				</array>
+				<key>message</key>
+				<string>Automatically Adjusts Font before iOS 10.0</string>
+				<key>type</key>
+				<string>IBAttributeUnavailable</string>
+				<key>type-value</key>
+				<integer>5</integer>
+			</dict>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>2bT-0G-TVx</string>
+				</array>
+				<key>message</key>
+				<string>Automatically Adjusts Font requires using a Dynamic Type text style</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
 		<key>3UW-PO-umO</key>
 		<array>
 			<dict>
@@ -102,6 +129,33 @@
 				<key>affected-objects</key>
 				<array>
 					<string>an2-Fp-DJY</string>
+				</array>
+				<key>message</key>
+				<string>Automatically Adjusts Font requires using a Dynamic Type text style</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>dDn-sE-Ygt</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>dDn-sE-Ygt</string>
+				</array>
+				<key>message</key>
+				<string>Automatically Adjusts Font before iOS 10.0</string>
+				<key>type</key>
+				<string>IBAttributeUnavailable</string>
+				<key>type-value</key>
+				<integer>5</integer>
+			</dict>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>dDn-sE-Ygt</string>
 				</array>
 				<key>message</key>
 				<string>Automatically Adjusts Font requires using a Dynamic Type text style</string>

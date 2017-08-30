@@ -14,6 +14,7 @@ namespace maringuizarapp.iOS {
 			this.cartProduct = cartProduct;
 		}
 
+
 		public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath) {
 			var cell = tableView.DequeueReusableCell("cartCellID", indexPath) as CartCellController;
 

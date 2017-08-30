@@ -17,6 +17,10 @@
       <LogicalName>LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/ibtool-link/Main.storyboardc/7ux-3a-8eu-view-pUv-4E-9ew.nib">
+      <LogicalName>Main.storyboardc/7ux-3a-8eu-view-pUv-4E-9ew.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/ibtool-link/Main.storyboardc/8pd-Ca-2Xu-view-k3U-WW-HD7.nib">
       <LogicalName>Main.storyboardc/8pd-Ca-2Xu-view-k3U-WW-HD7.nib</LogicalName>
       <Optimize>false</Optimize>
@@ -67,10 +71,6 @@
     </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/ibtool-link/Main.storyboardc/TabBarViewController.nib">
       <LogicalName>Main.storyboardc/TabBarViewController.nib</LogicalName>
-      <Optimize>false</Optimize>
-    </_BundleResourceWithLogicalName>
-    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/ibtool-link/Main.storyboardc/a3o-Bl-iy6-view-hO2-Rg-s55.nib">
-      <LogicalName>Main.storyboardc/a3o-Bl-iy6-view-hO2-Rg-s55.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/ibtool-link/Main.storyboardc/gfQ-Dc-QNX-view-aoP-nb-D0r.nib">

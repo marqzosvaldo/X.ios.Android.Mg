@@ -27,3 +27,4 @@
 /Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Debug/maringuizarapp.pdb
 /Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
 /Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.xml
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/optimized/planning.png
