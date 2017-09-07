@@ -11,12 +11,14 @@ using System.Threading.Tasks;
 using System.IO;
 
 using maringuizarapp.Model;
+using maringuizarapp.Service;
 //Mac pruebas  F0:27:65:E8:19:69
 namespace maringuizarapp.iOS
 {
 	public partial class ItemsTableViewController : UITableViewController {
 		List<ProductsGeneral> lstProducto;
 		List<ProductsGeneral> searchItems;
+
 		bool filter = false; 
 
 		ItemsTableViewSource tableSource;
@@ -130,6 +132,7 @@ namespace maringuizarapp.iOS
 				var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
 				if (File.Exists(documents + "/allItems.json") == false) {
+					
 								
 					var ok = File.Exists(documents + "/allItems.json");
 					long ll = tx.Length;
@@ -144,6 +147,7 @@ namespace maringuizarapp.iOS
 
 					if (lstProducto == null) { 
 						lstProducto = servicio.serializeStringJson(tx);
+
 					}
 			}
 			}

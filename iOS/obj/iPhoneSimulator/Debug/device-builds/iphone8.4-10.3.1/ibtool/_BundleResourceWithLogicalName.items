@@ -37,6 +37,10 @@
       <LogicalName>Main.storyboardc/CartTableViewController.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/ibtool-link/Main.storyboardc/CorridaFinancieraViewController.nib">
+      <LogicalName>Main.storyboardc/CorridaFinancieraViewController.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/ibtool-link/Main.storyboardc/Info.plist">
       <LogicalName>Main.storyboardc/Info.plist</LogicalName>
       <Optimize>false</Optimize>

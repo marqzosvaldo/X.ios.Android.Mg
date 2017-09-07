@@ -13,6 +13,7 @@ namespace maringuizarapp.iOS{
 		string descripcion;
 		string idProducto;
 		List<DetailProductStock> lstDetailProductStock;
+		List<Aumentos> listAumentos;
 		ProductsGeneral cartItem = new ProductsGeneral();
 		Cart carrito = new Cart();
 		public  static Int32  badgeCount {get; set;}
@@ -46,9 +47,12 @@ namespace maringuizarapp.iOS{
 			stockButton.BackgroundColor = UIColor.Gray;
 			labelPrecioCostoFijo.Text = precioCostoFijo;
 			textViewDescripción.Text = descripcion;
+
 		}
 		void AddItemToCart_Clicked(object sender, EventArgs e) {
 			Console.WriteLine("clicked!");
+
+
 
 			cartItem.IDCODIGO = idProduct;
 			cartItem.PRECIOCOSTOFIJO = CostoFijo;
@@ -71,8 +75,15 @@ namespace maringuizarapp.iOS{
 
 			try {
 				Service.Service servicio = new Service.Service();
+				Service.Service servAumentos = new Service.Service();
+				listAumentos = await servAumentos.getAumentos();
+
 				Console.WriteLine("IdProducto"+idProduct +"  adasd" +idProducto);
 				lstDetailProductStock = await servicio.DetailStock(idProducto);
+
+				aumentosTable.Source = new aumentosSource(listAumentos, CostoFijo);
+				aumentosTable.ReloadData();
+
 				Console.WriteLine("Stock detalle " + lstDetailProductStock.Count);
 				if (lstDetailProductStock.Count > 0) {
 					stockButton.Enabled = true;

@@ -219,6 +219,12 @@
       <DependentUpon>CartCellController.cs</DependentUpon>
     </Compile>
     <Compile Include="CartTableViewDataSource.cs" />
+    <Compile Include="CorridaFinancieraViewController.cs" />
+    <Compile Include="CorridaFinancieraViewController.designer.cs">
+      <DependentUpon>CorridaFinancieraViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlanesViewModel.cs" />
+    <Compile Include="aumentosSource.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\delivery.png" />

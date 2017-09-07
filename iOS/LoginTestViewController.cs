@@ -33,9 +33,12 @@ namespace maringuizarapp.iOS{
 
 		async void SaveFile() {
 			try {
+
 				Service.Service servicio = new Service.Service();
 				var jsonStr = await servicio.saveJsonFile();
 				var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+
 
 				var filename = Path.Combine(documents, "allItems.json");
 				File.WriteAllText(filename, jsonStr);

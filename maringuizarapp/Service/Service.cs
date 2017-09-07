@@ -97,6 +97,46 @@ namespace maringuizarapp.Service {
 			return respuesta;
 		}
 
+		//Obteniendo Planes
+		public async Task<List<Planes>> PlansAsync() {
+			url_API = url_API + "getPlanes/";
+
+			var client = new HttpClient();
+			client.BaseAddress = new Uri(url_API);
+
+			var response = await client.GetAsync(client.BaseAddress);
+			response.EnsureSuccessStatusCode();
+
+			var jsonResult = response.Content.ReadAsStringAsync().Result;
+			Debug.WriteLine("Resultado de getPlanes"+jsonResult);
+
+			var respuesta = JsonConvert.DeserializeObject<List<Planes>>(jsonResult);
+			Debug.WriteLine("Respuesta Count "+ respuesta.Count);
+
+			return respuesta;
+		}
+		public async Task<List<Aumentos>> getAumentos() {
+			url_API = url_API + "getAumentos/";
+
+			var client = new HttpClient();
+			client.BaseAddress = new Uri(url_API);
+
+			var response = await client.GetAsync(client.BaseAddress);
+			response.EnsureSuccessStatusCode();
+
+			var jsonResult = response.Content.ReadAsStringAsync().Result;
+			Debug.WriteLine("Resultado de getAumentos" + jsonResult);
+
+			var respuesta = JsonConvert.DeserializeObject<List<Aumentos>>(jsonResult);
+
+
+			return respuesta;
+			
+			
+			}
+
+
+
 		public async Task<string> saveJsonFile() {
 			url_API = url_API + "service_material/1";
 			//Debug.WriteLine("URL API 1"+ url_API);

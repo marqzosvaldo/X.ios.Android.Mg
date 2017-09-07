@@ -37,6 +37,8 @@
     <Compile Include="Model\ProductsGeneral.cs" />
     <Compile Include="Model\DetailProductStock.cs" />
     <Compile Include="Cart.cs" />
+    <Compile Include="Model\Planes.cs" />
+    <Compile Include="Model\Aumentos.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />

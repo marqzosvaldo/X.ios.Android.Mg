@@ -16,6 +16,9 @@ namespace maringuizarapp.iOS
 		UIKit.UIBarButtonItem addItemToCart { get; set; }
 
 		[Outlet]
+		UIKit.UITableView aumentosTable { get; set; }
+
+		[Outlet]
 		UIKit.UILabel labelPrecioCostoFijo { get; set; }
 
 		[Outlet]
@@ -29,6 +32,11 @@ namespace maringuizarapp.iOS
 			if (addItemToCart != null) {
 				addItemToCart.Dispose ();
 				addItemToCart = null;
+			}
+
+			if (aumentosTable != null) {
+				aumentosTable.Dispose ();
+				aumentosTable = null;
 			}
 
 			if (labelPrecioCostoFijo != null) {
