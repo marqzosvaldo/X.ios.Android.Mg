@@ -12,6 +12,8 @@ namespace maringuizarapp.iOS{
 		string precioCostoFijo;
 		string descripcion;
 		string idProducto;
+		string precioVenta;
+		string nombreCorto;
 		List<DetailProductStock> lstDetailProductStock;
 		List<Aumentos> listAumentos;
 		ProductsGeneral cartItem = new ProductsGeneral();
@@ -20,7 +22,10 @@ namespace maringuizarapp.iOS{
 
 
 
-
+		public string PrecioVenta { 
+			get { return precioVenta;}
+			set { precioVenta = value;}
+		}
 		public string CostoFijo {
 			get { return precioCostoFijo; }
 			set { precioCostoFijo = value;}
@@ -34,6 +39,10 @@ namespace maringuizarapp.iOS{
 			get { return descripcion;}
 			set { descripcion = value;}
 		}
+		public string NombreCorto { 
+			get { return nombreCorto; }
+			set { nombreCorto = value;}
+		}
 
 		public override void ViewDidLoad() {
 			base.ViewDidLoad();
@@ -45,10 +54,18 @@ namespace maringuizarapp.iOS{
 
 			stockButton.Enabled = false;
 			stockButton.BackgroundColor = UIColor.Gray;
+
 			labelPrecioCostoFijo.Text = precioCostoFijo;
+			labelPrecioVenta.Text = "$"+precioVenta;
+
 			textViewDescripción.Text = descripcion;
 
+
+			viewCostoFijo.Layer.CornerRadius = 5;
+			viewDescripcion.Layer.CornerRadius = 5;
+			viewPrecioVenta.Layer.CornerRadius = 5;
 		}
+
 		void AddItemToCart_Clicked(object sender, EventArgs e) {
 			Console.WriteLine("clicked!");
 
@@ -56,14 +73,15 @@ namespace maringuizarapp.iOS{
 
 			cartItem.IDCODIGO = idProduct;
 			cartItem.PRECIOCOSTOFIJO = CostoFijo;
-
+			cartItem.precioventa1 = Convert.ToDouble(precioVenta);
+			cartItem.NOMBRECORTO = nombreCorto;
 
 			Console.WriteLine("totall carrito!!!!!!!!");
 			//CurrentSession.CartProduct.Add(cartItem);
 			carrito.cartAdd(cartItem);
 
 
-			this.TabBarController.ViewControllers[2].TabBarItem.BadgeValue = CurrentSession.CartProduct.Count.ToString();
+			this.TabBarController.ViewControllers[1].TabBarItem.BadgeValue = CurrentSession.CartProduct.Count.ToString();
 			Console.WriteLine(CurrentSession.CartProduct[0].IDCODIGO);
 			Console.WriteLine("carrito instance " + carrito.cartTotal());
 			badgeCount ++;
@@ -81,7 +99,7 @@ namespace maringuizarapp.iOS{
 				Console.WriteLine("IdProducto"+idProduct +"  adasd" +idProducto);
 				lstDetailProductStock = await servicio.DetailStock(idProducto);
 
-				aumentosTable.Source = new aumentosSource(listAumentos, CostoFijo);
+				aumentosTable.Source = new aumentosSource(listAumentos, CostoFijo, precioVenta);
 				aumentosTable.ReloadData();
 
 				Console.WriteLine("Stock detalle " + lstDetailProductStock.Count);
@@ -104,6 +122,7 @@ namespace maringuizarapp.iOS{
 		void StockButton_TouchUpInside(object sender, EventArgs e) {
 			var productStock= (StockTableViewController)Storyboard.InstantiateViewController("StockTableViewController");
 			Console.WriteLine("Enviando: "+ lstDetailProductStock.Count);
+
 			productStock.StockList = lstDetailProductStock;
 			this.NavigationController.PushViewController(productStock, true);
 

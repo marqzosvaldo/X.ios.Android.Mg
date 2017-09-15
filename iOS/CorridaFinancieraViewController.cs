@@ -21,9 +21,20 @@ namespace maringuizarapp.iOS{
 		public override void ViewDidLoad() {
 			base.ViewDidLoad();
 
-			cDatePicker.ValueChanged += CDatePicker_ValueChanged;
+			//cDatePicker.ValueChanged += CDatePicker_ValueChanged;
 
 			Console.WriteLine("Iniciando CorridaFinancieraViewController...");
+			viewPickerPlan.Layer.CornerRadius = 5;
+			viewDetailsPickerPlan.Layer.CornerRadius = 5;
+
+			buttonCalcCorrida.TouchUpInside += (sender, e) => {
+				Console.WriteLine("Button calc!");
+
+				Console.WriteLine("Enganche Calculado "+CalcEnganche(textFieldMonto.Text, porcenganche));
+				labelEngancheCorrida.Text = CalcEnganche(textFieldMonto.Text, porcenganche).ToString();
+			};
+
+
 
 			//DateTime localDate = DateTime.Parse("9/4/17", cultureinfo);
 			 //localDate = new DateTime(2017, 09, 21);
@@ -38,18 +49,27 @@ namespace maringuizarapp.iOS{
 
 		}
 		//Obteniendo Fechas del Datepicker
-		NSDate date;
-		void CDatePicker_ValueChanged(object sender, EventArgs e) {
-			date = cDatePicker.Date;
+		//NSDate date;
+		//void CDatePicker_ValueChanged(object sender, EventArgs e) {
+		//	date = cDatePicker.Date;
 
-			Console.WriteLine("myDatePicker: "+ date.ToString());
-			DateTime localDate = DateTime.Parse(date.ToString(), cultureinfo);
+		//	Console.WriteLine("myDatePicker: "+ date.ToString());
+		//	DateTime localDate = DateTime.Parse(date.ToString(), cultureinfo);
 
-			Console.WriteLine("Today is: "+ localDate);
-			Console.WriteLine("next month  is: "+ localDate.AddMonths(1));
+		//	Console.WriteLine("Today is: "+ localDate);
+		//	Console.WriteLine("next month  is: "+ localDate.AddMonths(1));
 
 
+		//}
+
+		public double CalcEnganche(string cant, object percent) {
+			var cantidad = Convert.ToDouble(cant);
+			var porcentaje = Convert.ToDouble(percent);
+
+
+			return cantidad * (1 / porcentaje);
 		}
+		Object porcenganche;
 
 		public async override void ViewWillAppear(bool animated) {
 			base.ViewWillAppear(animated);
@@ -62,7 +82,15 @@ namespace maringuizarapp.iOS{
 
 				planesViewModel.PaysSelected += (sender, e) => {
 					Console.WriteLine("Numero de pagos seleccionado ---->> "+planesViewModel.SelectedPlan);
+
+					labelIDCorrida.Text = planesViewModel.IDPlan;
+					labelDescripcionCorrida.Text = planesViewModel.Descripcion;
+					labelNoPagosCorrida.Text = planesViewModel.NoPagos.ToString();
+					porcenganche = planesViewModel.Porcentaje;
+
 				};
+
+				//tableCorridaFinanciera.Source = new sourceCorridaFinanciera();
 
 				//var pagos = planesViewModel.planPays();
 				//Console.WriteLine("No PAGOS:------>>>> "+pagos);

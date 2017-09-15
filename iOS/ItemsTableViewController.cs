@@ -36,7 +36,7 @@ namespace maringuizarapp.iOS
 			base.ViewDidLoad();
 
 			//Set cuantity on shoppingCart
-			this.TabBarController.ViewControllers[2].TabBarItem.BadgeValue = "0";
+			this.TabBarController.ViewControllers[1].TabBarItem.BadgeValue = "0";
 
 			this.Title = "Productos";
 			Console.WriteLine("Iniciando ItemsTableViewController...");
@@ -274,9 +274,12 @@ namespace maringuizarapp.iOS
 			var productDetails = (ProductDetailsViewController)Storyboard.InstantiateViewController("ProductDetailsViewController");
 
 			productDetails.CostoFijo = "$" + searchItems[indexPath.Row].PRECIOCOSTOFIJO.ToString();
+			productDetails.NombreCorto = searchItems[indexPath.Row].NOMBRECORTO;
 			productDetails.Descripcion = searchItems[indexPath.Row].DESCRIPCION;
 			Console.WriteLine("LST PRODUCTO " + searchItems[indexPath.Row].IDCODIGO);
 			productDetails.idProduct = searchItems[indexPath.Row].IDCODIGO;
+			productDetails.PrecioVenta = searchItems[indexPath.Row].precioventa1.ToString();
+
 
 
 			this.NavigationController.PushViewController(productDetails, true);

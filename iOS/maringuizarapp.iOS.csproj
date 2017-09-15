@@ -225,6 +225,7 @@
     </Compile>
     <Compile Include="PlanesViewModel.cs" />
     <Compile Include="aumentosSource.cs" />
+    <Compile Include="sourceCorridaFinanciera.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\delivery.png" />

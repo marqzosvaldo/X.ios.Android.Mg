@@ -13,10 +13,26 @@ namespace maringuizarapp.iOS
 	partial class CartCellController
 	{
 		[Outlet]
+		UIKit.UILabel idProducto { get; set; }
+
+		[Outlet]
 		UIKit.UILabel nombreProducto { get; set; }
+
+		[Outlet]
+		UIKit.UILabel precioVentaProducto { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (idProducto != null) {
+				idProducto.Dispose ();
+				idProducto = null;
+			}
+
+			if (precioVentaProducto != null) {
+				precioVentaProducto.Dispose ();
+				precioVentaProducto = null;
+			}
+
 			if (nombreProducto != null) {
 				nombreProducto.Dispose ();
 				nombreProducto = null;

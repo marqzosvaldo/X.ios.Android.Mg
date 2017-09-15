@@ -12,9 +12,23 @@ namespace maringuizarapp.iOS
 	[Register ("CartTableViewController")]
 	partial class CartTableViewController
 	{
+		[Outlet]
+		UIKit.UIButton calcTotalCart { get; set; }
+
+		[Outlet]
+		UIKit.UILabel labelCartTotal { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (calcTotalCart != null) {
+				calcTotalCart.Dispose ();
+				calcTotalCart = null;
+			}
+
+			if (labelCartTotal != null) {
+				labelCartTotal.Dispose ();
+				labelCartTotal = null;
+			}
 		}
 	}
 }

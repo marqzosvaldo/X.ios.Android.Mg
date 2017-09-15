@@ -22,13 +22,40 @@ namespace maringuizarapp.iOS
 		UIKit.UILabel labelPrecioCostoFijo { get; set; }
 
 		[Outlet]
+		UIKit.UILabel labelPrecioVenta { get; set; }
+
+		[Outlet]
 		UIKit.UIButton stockButton { get; set; }
 
 		[Outlet]
 		UIKit.UITextView textViewDescripción { get; set; }
+
+		[Outlet]
+		UIKit.UIView viewCostoFijo { get; set; }
+
+		[Outlet]
+		UIKit.UIView viewDescripcion { get; set; }
+
+		[Outlet]
+		UIKit.UIView viewPrecioVenta { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (viewDescripcion != null) {
+				viewDescripcion.Dispose ();
+				viewDescripcion = null;
+			}
+
+			if (viewCostoFijo != null) {
+				viewCostoFijo.Dispose ();
+				viewCostoFijo = null;
+			}
+
+			if (viewPrecioVenta != null) {
+				viewPrecioVenta.Dispose ();
+				viewPrecioVenta = null;
+			}
+
 			if (addItemToCart != null) {
 				addItemToCart.Dispose ();
 				addItemToCart = null;
@@ -42,6 +69,11 @@ namespace maringuizarapp.iOS
 			if (labelPrecioCostoFijo != null) {
 				labelPrecioCostoFijo.Dispose ();
 				labelPrecioCostoFijo = null;
+			}
+
+			if (labelPrecioVenta != null) {
+				labelPrecioVenta.Dispose ();
+				labelPrecioVenta = null;
 			}
 
 			if (stockButton != null) {

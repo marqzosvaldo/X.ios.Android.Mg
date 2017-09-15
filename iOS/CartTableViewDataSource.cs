@@ -18,7 +18,10 @@ namespace maringuizarapp.iOS {
 		public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath) {
 			var cell = tableView.DequeueReusableCell("cartCellID", indexPath) as CartCellController;
 
-			cell.NombreProducto = cartProduct[indexPath.Row].IDCODIGO;
+			cell.NombreProducto = cartProduct[indexPath.Row].NOMBRECORTO;
+			cell.PrecioVenta = "$"+cartProduct[indexPath.Row].precioventa1.ToString();
+			cell.IDProduct = cartProduct[indexPath.Row].IDCODIGO;
+
 			Console.WriteLine("cartTableViewDataSource nombre corto -----> " + cartProduct[indexPath.Row].NOMBRECORTO);
 
 			return cell;

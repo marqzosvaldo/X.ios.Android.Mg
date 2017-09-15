@@ -9,17 +9,28 @@ using maringuizarapp.Model;
 namespace maringuizarapp.iOS{
 	public partial class CartTableViewController : UITableViewController{
 
+		Cart carritoTotal = new Cart();
+
 		public override void ViewDidLoad() {
 			base.ViewDidLoad();
 			Console.WriteLine("Iniciando CartTableViewControlelr");
 			TableView.ReloadData();
 			TableView.DataSource = new CartTableViewDataSource(CurrentSession.CartProduct);
 
+
+
 		}
 
 		public override void ViewWillAppear(bool animated) {
 			base.ViewWillAppear(animated);
 			TableView.ReloadData();
+			calcTotalCart.TouchUpInside += (sender, e) => { 
+				labelCartTotal.Text = "$" + carritoTotal.gTotal().ToString();
+
+
+			
+			};
+
 		}
 
 		public override string TitleForDeleteConfirmation(UITableView tableView, NSIndexPath indexPath) {

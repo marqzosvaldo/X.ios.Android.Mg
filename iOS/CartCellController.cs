@@ -12,6 +12,16 @@ namespace maringuizarapp.iOS{
 			get { return nombreProducto.Text;}
 			set { nombreProducto.Text = value;}
 		}
+
+		public string IDProduct { 
+			get { return idProducto.Text;}
+			set { idProducto.Text = value;}
+		}
+
+		public string PrecioVenta { 
+			get { return precioVentaProducto.Text;}
+			set { precioVentaProducto.Text = value;}
+		}
 		public CartCellController (IntPtr handle) : base (handle){
 		}
 	}
