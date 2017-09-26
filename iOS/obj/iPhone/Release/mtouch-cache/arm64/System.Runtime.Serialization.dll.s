@@ -21,7 +21,7 @@ Ldebug_info_begin:
 	.short 2
 	.long 0
 	.byte 8,1
-	.asciz "Mono AOT Compiler 5.0.1 (tarball Mon May 22 16:16:38 EDT 2017)"
+	.asciz "Mono AOT Compiler 5.2.0 (tarball Mon Aug 28 16:40:14 EDT 2017)"
 	.asciz "System.Runtime.Serialization.dll"
 	.asciz ""
 
@@ -132,7 +132,7 @@ LDIFF_SYM3=ut_end - ut_0
 	.align 4
 	.no_dead_strip System_Runtime_Serialization_KeyValue_2_K_REF_V_REF_get_Key
 System_Runtime_Serialization_KeyValue_2_K_REF_V_REF_get_Key:
-.file 1 "/Library/Frameworks/Xamarin.iOS.framework/Versions/10.10.0.36/src/mono/mcs/class/referencesource/System.Runtime.Serialization/System/Runtime/Serialization/CollectionDataContract.cs"
+.file 1 "/Library/Frameworks/Xamarin.iOS.framework/Versions/10.12.3.3/src/mono/mcs/class/referencesource/System.Runtime.Serialization/System/Runtime/Serialization/CollectionDataContract.cs"
 .loc 1 41 0 prologue_end
 .word 0xa9be7bfd
 .word 0x910003fd
@@ -159,11 +159,20 @@ System_Runtime_Serialization_KeyValue_2_K_REF_V_REF_set_Key_K_REF:
 .word 0xf90013af
 .word 0xf9000ba0
 .word 0xf9000fa1
-.word 0xf9400fa1
-.word 0xf9400ba0
-.word 0xf9000001
-bl _p_1
 .word 0xf9400fa0
+.word 0xf9400ba1
+.word 0xf9000020
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Runtime_Serialization_got@PAGE+0
+add x16, x16, mono_aot_System_Runtime_Serialization_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .word 0x910003bf
 .word 0xa8c37bfd
 .word 0xd65f03c0
@@ -203,12 +212,21 @@ System_Runtime_Serialization_KeyValue_2_K_REF_V_REF_set_Value_V_REF:
 .word 0xf90013af
 .word 0xf9000ba0
 .word 0xf9000fa1
-.word 0xf9400fa1
-.word 0xf9400ba0
-.word 0xf9000401
-.word 0x91002000
-bl _p_1
 .word 0xf9400fa0
+.word 0xf9400ba1
+.word 0xf9000420
+.word 0x91002021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Runtime_Serialization_got@PAGE+0
+add x16, x16, mono_aot_System_Runtime_Serialization_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .word 0x910003bf
 .word 0xa8c37bfd
 .word 0xd65f03c0
@@ -218,7 +236,7 @@ Lme_3:
 	.align 4
 	.no_dead_strip System_Runtime_Serialization_DataContractAttribute__ctor
 System_Runtime_Serialization_DataContractAttribute__ctor:
-.file 2 "/Library/Frameworks/Xamarin.iOS.framework/Versions/10.10.0.36/src/mono/mcs/class/referencesource/System.Runtime.Serialization/System/Runtime/Serialization/DataContractAttribute.cs"
+.file 2 "/Library/Frameworks/Xamarin.iOS.framework/Versions/10.12.3.3/src/mono/mcs/class/referencesource/System.Runtime.Serialization/System/Runtime/Serialization/DataContractAttribute.cs"
 .loc 2 19 0 prologue_end
 .word 0xa9be7bfd
 .word 0x910003fd
@@ -255,11 +273,19 @@ System_Runtime_Serialization_DataContractAttribute_set_Namespace_string:
 .word 0xf9400fa1
 .word 0xf9400ba0
 .word 0xf9000c01
-.word 0x91006000
-bl _p_1
-.word 0xf9400fa0
+.word 0x91006002
+.word 0xd349fc42
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0042
+
+adrp x16, mono_aot_System_Runtime_Serialization_got@PAGE+0
+add x16, x16, mono_aot_System_Runtime_Serialization_got@PAGEOFF
+ldr x3, [x16, #16]
+.word 0x8b030042
+.word 0xd280003e
+.word 0x3900005e
 .loc 2 42 0
-.word 0xf9400ba0
 .word 0xd280003e
 .word 0x3900841e
 .loc 2 43 0
@@ -280,11 +306,19 @@ System_Runtime_Serialization_DataContractAttribute_set_Name_string:
 .word 0xf9400fa1
 .word 0xf9400ba0
 .word 0xf9000801
-.word 0x91004000
-bl _p_1
-.word 0xf9400fa0
+.word 0x91004002
+.word 0xd349fc42
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0042
+
+adrp x16, mono_aot_System_Runtime_Serialization_got@PAGE+0
+add x16, x16, mono_aot_System_Runtime_Serialization_got@PAGEOFF
+ldr x3, [x16, #16]
+.word 0x8b030042
+.word 0xd280003e
+.word 0x3900005e
 .loc 2 57 0
-.word 0xf9400ba0
 .word 0xd280003e
 .word 0x3900801e
 .loc 2 58 0
@@ -297,7 +331,7 @@ Lme_7:
 	.align 4
 	.no_dead_strip System_Runtime_Serialization_DataMemberAttribute__ctor
 System_Runtime_Serialization_DataMemberAttribute__ctor:
-.file 3 "/Library/Frameworks/Xamarin.iOS.framework/Versions/10.10.0.36/src/mono/mcs/class/referencesource/System.Runtime.Serialization/System/Runtime/Serialization/DataMemberAttribute.cs"
+.file 3 "/Library/Frameworks/Xamarin.iOS.framework/Versions/10.12.3.3/src/mono/mcs/class/referencesource/System.Runtime.Serialization/System/Runtime/Serialization/DataMemberAttribute.cs"
 .loc 3 12 0 prologue_end
 .word 0xa9be7bfd
 .word 0x910003fd
@@ -342,10 +376,18 @@ System_Runtime_Serialization_DataMemberAttribute_set_Name_string:
 .word 0xf9400fa1
 .word 0xf9400ba0
 .word 0xf9000801
-.word 0x91004000
-bl _p_1
-.word 0xf9400fa0
-.word 0xf9400ba0
+.word 0x91004002
+.word 0xd349fc42
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0042
+
+adrp x16, mono_aot_System_Runtime_Serialization_got@PAGE+0
+add x16, x16, mono_aot_System_Runtime_Serialization_got@PAGEOFF
+ldr x3, [x16, #16]
+.word 0x8b030042
+.word 0xd280003e
+.word 0x3900005e
 .word 0xd280003e
 .word 0x3900601e
 .word 0x910003bf
@@ -423,7 +465,7 @@ b System_Runtime_Serialization_DateTimeOffsetAdapter_get_UtcDateTime
 	.align 4
 	.no_dead_strip System_Runtime_Serialization_DateTimeOffsetAdapter_get_UtcDateTime
 System_Runtime_Serialization_DateTimeOffsetAdapter_get_UtcDateTime:
-.file 4 "/Library/Frameworks/Xamarin.iOS.framework/Versions/10.10.0.36/src/mono/mcs/class/referencesource/System.Runtime.Serialization/System/Runtime/Serialization/DateTimeOffsetAdapter.cs"
+.file 4 "/Library/Frameworks/Xamarin.iOS.framework/Versions/10.12.3.3/src/mono/mcs/class/referencesource/System.Runtime.Serialization/System/Runtime/Serialization/DateTimeOffsetAdapter.cs"
 .loc 4 30 0 prologue_end
 .word 0xa9bd7bfd
 .word 0x910003fd
@@ -502,7 +544,7 @@ Lme_12:
 	.align 4
 	.no_dead_strip System_Runtime_Serialization_EnumMemberAttribute_get_Value
 System_Runtime_Serialization_EnumMemberAttribute_get_Value:
-.file 5 "/Library/Frameworks/Xamarin.iOS.framework/Versions/10.10.0.36/src/mono/mcs/class/referencesource/System.Runtime.Serialization/System/Runtime/Serialization/EnumMemberAttribute.cs"
+.file 5 "/Library/Frameworks/Xamarin.iOS.framework/Versions/10.12.3.3/src/mono/mcs/class/referencesource/System.Runtime.Serialization/System/Runtime/Serialization/EnumMemberAttribute.cs"
 .loc 5 19 0 prologue_end
 .word 0xa9be7bfd
 .word 0x910003fd
@@ -518,18 +560,27 @@ Lme_13:
 	.align 4
 	.no_dead_strip System_Runtime_Serialization_KnownTypeAttribute__ctor_System_Type
 System_Runtime_Serialization_KnownTypeAttribute__ctor_System_Type:
-.file 6 "/Library/Frameworks/Xamarin.iOS.framework/Versions/10.10.0.36/src/mono/mcs/class/referencesource/System.Runtime.Serialization/System/Runtime/Serialization/KnownTypeAttribute.cs"
+.file 6 "/Library/Frameworks/Xamarin.iOS.framework/Versions/10.12.3.3/src/mono/mcs/class/referencesource/System.Runtime.Serialization/System/Runtime/Serialization/KnownTypeAttribute.cs"
 .loc 6 20 0 prologue_end
 .word 0xa9be7bfd
 .word 0x910003fd
 .word 0xf9000ba0
 .word 0xf9000fa1
-.word 0xf9400fa1
-.word 0xf9400ba0
-.word 0xf9000801
-.word 0x91004000
-bl _p_1
 .word 0xf9400fa0
+.word 0xf9400ba1
+.word 0xf9000820
+.word 0x91004021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Runtime_Serialization_got@PAGE+0
+add x16, x16, mono_aot_System_Runtime_Serialization_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 6 21 0
 .word 0x910003bf
 .word 0xa8c27bfd
@@ -552,7 +603,7 @@ System_Runtime_Serialization_KeyValue_2_K_GSHAREDVT_V_GSHAREDVT_get_Key:
 .word 0xf9001baf
 .word 0xf90017a0
 .word 0xf9401ba0
-bl _p_2
+bl _p_1
 .word 0xaa0003f9
 .word 0xb9800320
 .word 0x91003c10
@@ -587,7 +638,7 @@ bl _p_2
 .word 0xf9400b20
 .word 0xf9400f20
 .word 0xf9401ba0
-bl _p_3
+bl _p_2
 .word 0xaa0003e2
 .word 0xf94023a0
 .word 0xf94027a1
@@ -614,7 +665,7 @@ System_Runtime_Serialization_KeyValue_2_K_GSHAREDVT_V_GSHAREDVT_set_Key_K_GSHARE
 .word 0xf9000fa0
 .word 0xf90013a1
 .word 0xf94017a0
-bl _p_4
+bl _p_3
 .word 0xaa0003f9
 .word 0xb9800320
 .word 0xd2800001
@@ -629,7 +680,7 @@ bl _p_4
 .word 0xf9400b20
 .word 0xf9400f20
 .word 0xf94017a0
-bl _p_5
+bl _p_4
 .word 0xaa0003e2
 .word 0xf94023a0
 .word 0xf94027a1
@@ -656,7 +707,7 @@ System_Runtime_Serialization_KeyValue_2_K_GSHAREDVT_V_GSHAREDVT_get_Value:
 .word 0xf9001baf
 .word 0xf90017a0
 .word 0xf9401ba0
-bl _p_6
+bl _p_5
 .word 0xaa0003f9
 .word 0xb9800320
 .word 0x91003c10
@@ -691,7 +742,7 @@ bl _p_6
 .word 0xf9400b20
 .word 0xf9400f20
 .word 0xf9401ba0
-bl _p_7
+bl _p_6
 .word 0xaa0003e2
 .word 0xf94023a0
 .word 0xf94027a1
@@ -718,7 +769,7 @@ System_Runtime_Serialization_KeyValue_2_K_GSHAREDVT_V_GSHAREDVT_set_Value_V_GSHA
 .word 0xf9000fa0
 .word 0xf90013a1
 .word 0xf94017a0
-bl _p_8
+bl _p_7
 .word 0xaa0003f9
 .word 0xb9800320
 .word 0xd2800001
@@ -733,7 +784,7 @@ bl _p_8
 .word 0xf9400b20
 .word 0xf9400f20
 .word 0xf94017a0
-bl _p_9
+bl _p_8
 .word 0xaa0003e2
 .word 0xf94023a0
 .word 0xf94027a1
@@ -819,82 +870,74 @@ unwind_info:
 	.align 4
 plt:
 mono_aot_System_Runtime_Serialization_plt:
-	.no_dead_strip plt_wrapper_write_barrier_object_wbarrier_conc_intptr
-plt_wrapper_write_barrier_object_wbarrier_conc_intptr:
+	.no_dead_strip plt__rgctx_fetch_0
+plt__rgctx_fetch_0:
 _p_1:
+adrp x16, mono_aot_System_Runtime_Serialization_got@PAGE+0
+add x16, x16, mono_aot_System_Runtime_Serialization_got@PAGEOFF
+ldr x16, [x16, #208]
+br x16
+.word 466
+	.no_dead_strip plt__rgctx_fetch_1
+plt__rgctx_fetch_1:
+_p_2:
 adrp x16, mono_aot_System_Runtime_Serialization_got@PAGE+0
 add x16, x16, mono_aot_System_Runtime_Serialization_got@PAGEOFF
 ldr x16, [x16, #216]
 br x16
-.word 425
-	.no_dead_strip plt__rgctx_fetch_0
-plt__rgctx_fetch_0:
-_p_2:
+.word 505
+	.no_dead_strip plt__rgctx_fetch_2
+plt__rgctx_fetch_2:
+_p_3:
 adrp x16, mono_aot_System_Runtime_Serialization_got@PAGE+0
 add x16, x16, mono_aot_System_Runtime_Serialization_got@PAGEOFF
 ldr x16, [x16, #224]
 br x16
-.word 450
-	.no_dead_strip plt__rgctx_fetch_1
-plt__rgctx_fetch_1:
-_p_3:
+.word 530
+	.no_dead_strip plt__rgctx_fetch_3
+plt__rgctx_fetch_3:
+_p_4:
 adrp x16, mono_aot_System_Runtime_Serialization_got@PAGE+0
 add x16, x16, mono_aot_System_Runtime_Serialization_got@PAGEOFF
 ldr x16, [x16, #232]
 br x16
-.word 489
-	.no_dead_strip plt__rgctx_fetch_2
-plt__rgctx_fetch_2:
-_p_4:
+.word 566
+	.no_dead_strip plt__rgctx_fetch_4
+plt__rgctx_fetch_4:
+_p_5:
 adrp x16, mono_aot_System_Runtime_Serialization_got@PAGE+0
 add x16, x16, mono_aot_System_Runtime_Serialization_got@PAGEOFF
 ldr x16, [x16, #240]
 br x16
-.word 514
-	.no_dead_strip plt__rgctx_fetch_3
-plt__rgctx_fetch_3:
-_p_5:
+.word 591
+	.no_dead_strip plt__rgctx_fetch_5
+plt__rgctx_fetch_5:
+_p_6:
 adrp x16, mono_aot_System_Runtime_Serialization_got@PAGE+0
 add x16, x16, mono_aot_System_Runtime_Serialization_got@PAGEOFF
 ldr x16, [x16, #248]
 br x16
-.word 550
-	.no_dead_strip plt__rgctx_fetch_4
-plt__rgctx_fetch_4:
-_p_6:
+.word 630
+	.no_dead_strip plt__rgctx_fetch_6
+plt__rgctx_fetch_6:
+_p_7:
 adrp x16, mono_aot_System_Runtime_Serialization_got@PAGE+0
 add x16, x16, mono_aot_System_Runtime_Serialization_got@PAGEOFF
 ldr x16, [x16, #256]
 br x16
-.word 575
-	.no_dead_strip plt__rgctx_fetch_5
-plt__rgctx_fetch_5:
-_p_7:
+.word 655
+	.no_dead_strip plt__rgctx_fetch_7
+plt__rgctx_fetch_7:
+_p_8:
 adrp x16, mono_aot_System_Runtime_Serialization_got@PAGE+0
 add x16, x16, mono_aot_System_Runtime_Serialization_got@PAGEOFF
 ldr x16, [x16, #264]
 br x16
-.word 614
-	.no_dead_strip plt__rgctx_fetch_6
-plt__rgctx_fetch_6:
-_p_8:
-adrp x16, mono_aot_System_Runtime_Serialization_got@PAGE+0
-add x16, x16, mono_aot_System_Runtime_Serialization_got@PAGEOFF
-ldr x16, [x16, #272]
-br x16
-.word 639
-	.no_dead_strip plt__rgctx_fetch_7
-plt__rgctx_fetch_7:
-_p_9:
-adrp x16, mono_aot_System_Runtime_Serialization_got@PAGE+0
-add x16, x16, mono_aot_System_Runtime_Serialization_got@PAGEOFF
-ldr x16, [x16, #280]
-br x16
-.word 675
+.word 691
 plt_end:
 .section __DATA, __bss
 	.align 3
-.lcomm mono_aot_System_Runtime_Serialization_got, 288
+.lcomm mono_aot_System_Runtime_Serialization_got, 272
 got_end:
 .section __TEXT, __const
 	.align 3
@@ -925,7 +968,7 @@ runtime_version:
 .section __TEXT, __const
 	.align 2
 assembly_guid:
-	.asciz "0C6ADF76-0C56-4E4A-BA29-F5E040FD2298"
+	.asciz "9FED0243-E901-4DC9-914B-A9FD89FB83C7"
 .section __TEXT, __const
 	.align 2
 assembly_name:
@@ -1002,13 +1045,13 @@ _mono_aot_file_info:
 	.align 3
 	.quad unbox_trampoline_addresses
 
-	.long 26,288,10,26,66,391195135,0,1131
-	.long 128,8,8,10,0,26,1816,672
+	.long 25,272,9,26,66,391195135,0,1147
+	.long 128,8,8,10,0,25,1832,672
 	.long 472,240,0,376,440,320,0,200
 	.long 56,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0
-	.byte 68,168,165,158,196,22,174,226,171,205,78,57,179,39,61,234
+	.byte 136,26,35,39,55,29,101,64,82,233,145,29,140,56,105,95
 	.globl _mono_aot_module_System_Runtime_Serialization_info
 	.align 3
 _mono_aot_module_System_Runtime_Serialization_info:

@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<resources>
-	<string name="hello">Hello World, Click Me!</string>
-	<string name="app_name">maringuizarapp.Droid</string>
+<resources> 
+	<string name="app_name">Maringuizar App</string>
+	<string name="product_name">Productos</string>
+    <string name="title_product">Productos</string>
+	<string name="cart_name">Carrito</string>
+	<string name="corrida_name">Corrida Financiera</string>
+
+
+	<string name="strBottomLine">From android material design</string>
+	 <string name="open_drawer">Open drawer</string>
+	<string name="close_drawer">Close drawer</string>
 </resources>

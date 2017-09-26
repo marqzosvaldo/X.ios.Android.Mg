@@ -21,7 +21,7 @@ Ldebug_info_begin:
 	.short 2
 	.long 0
 	.byte 4,1
-	.asciz "Mono AOT Compiler 5.0.1 (tarball Mon May 22 16:16:43 EDT 2017)"
+	.asciz "Mono AOT Compiler 5.2.0 (tarball Mon Aug 28 16:40:16 EDT 2017)"
 	.asciz "System.Runtime.Serialization.dll"
 	.asciz ""
 
@@ -134,7 +134,7 @@ LDIFF_SYM3=ut_end - ut_0
 	.align 2
 	.no_dead_strip System_Runtime_Serialization_KeyValue_2_K_REF_V_REF_get_Key
 System_Runtime_Serialization_KeyValue_2_K_REF_V_REF_get_Key:
-.file 1 "/Library/Frameworks/Xamarin.iOS.framework/Versions/10.10.0.36/src/mono/mcs/class/referencesource/System.Runtime.Serialization/System/Runtime/Serialization/CollectionDataContract.cs"
+.file 1 "/Library/Frameworks/Xamarin.iOS.framework/Versions/10.12.3.3/src/mono/mcs/class/referencesource/System.Runtime.Serialization/System/Runtime/Serialization/CollectionDataContract.cs"
 .loc 1 41 0 prologue_end
 
 	.byte 128,64,45,233,13,112,160,225,0,1,45,233,3,223,77,226,0,128,141,229,4,0,141,229,4,0,157,229,0,0,144,229
@@ -153,11 +153,10 @@ ut_1:
 System_Runtime_Serialization_KeyValue_2_K_REF_V_REF_set_Key_K_REF:
 .loc 1 42 0 prologue_end
 
-	.byte 128,64,45,233,13,112,160,225,0,1,45,233,5,223,77,226,0,128,141,229,4,0,141,229,8,16,141,229,8,16,157,229
-	.byte 4,0,157,229,0,16,128,229
-bl _p_1
-
-	.byte 8,0,157,229,5,223,141,226,0,1,189,232,128,128,189,232
+	.byte 128,64,45,233,13,112,160,225,0,1,45,233,5,223,77,226,0,128,141,229,4,0,141,229,8,16,141,229,8,0,157,229
+	.byte 4,16,157,229,0,0,129,229,161,20,160,225,0,32,159,229,0,0,0,234
+	.long mono_aot_System_Runtime_Serialization_got - . -4
+	.byte 2,32,159,231,2,16,129,224,64,35,160,227,0,32,193,229,5,223,141,226,0,1,189,232,128,128,189,232
 
 Lme_1:
 .text
@@ -188,18 +187,17 @@ ut_3:
 System_Runtime_Serialization_KeyValue_2_K_REF_V_REF_set_Value_V_REF:
 .loc 1 49 0 prologue_end
 
-	.byte 128,64,45,233,13,112,160,225,0,1,45,233,5,223,77,226,0,128,141,229,4,0,141,229,8,16,141,229,8,16,157,229
-	.byte 4,0,157,229,4,16,128,229,1,15,128,226
-bl _p_1
-
-	.byte 8,0,157,229,5,223,141,226,0,1,189,232,128,128,189,232
+	.byte 128,64,45,233,13,112,160,225,0,1,45,233,5,223,77,226,0,128,141,229,4,0,141,229,8,16,141,229,8,0,157,229
+	.byte 4,16,157,229,4,0,129,229,1,31,129,226,161,20,160,225,0,32,159,229,0,0,0,234
+	.long mono_aot_System_Runtime_Serialization_got - . -4
+	.byte 2,32,159,231,2,16,129,224,64,35,160,227,0,32,193,229,5,223,141,226,0,1,189,232,128,128,189,232
 
 Lme_3:
 .text
 	.align 2
 	.no_dead_strip System_Runtime_Serialization_DataContractAttribute__ctor
 System_Runtime_Serialization_DataContractAttribute__ctor:
-.file 2 "/Library/Frameworks/Xamarin.iOS.framework/Versions/10.10.0.36/src/mono/mcs/class/referencesource/System.Runtime.Serialization/System/Runtime/Serialization/DataContractAttribute.cs"
+.file 2 "/Library/Frameworks/Xamarin.iOS.framework/Versions/10.12.3.3/src/mono/mcs/class/referencesource/System.Runtime.Serialization/System/Runtime/Serialization/DataContractAttribute.cs"
 .loc 2 19 0 prologue_end
 
 	.byte 128,64,45,233,13,112,160,225,0,1,45,233,3,223,77,226,0,0,141,229,3,223,141,226,0,1,189,232,128,128,189,232
@@ -222,10 +220,9 @@ System_Runtime_Serialization_DataContractAttribute_set_Namespace_string:
 .loc 2 41 0 prologue_end
 
 	.byte 128,64,45,233,13,112,160,225,64,1,45,233,2,223,77,226,0,96,160,225,0,16,141,229,0,0,157,229,12,0,134,229
-	.byte 3,15,134,226
-bl _p_1
-
-	.byte 0,0,157,229
+	.byte 3,31,134,226,161,20,160,225,0,32,159,229,0,0,0,234
+	.long mono_aot_System_Runtime_Serialization_got - . -4
+	.byte 2,32,159,231,2,16,129,224,64,35,160,227,0,32,193,229
 .loc 2 42 0
 
 	.byte 64,3,160,227,17,0,198,229
@@ -241,10 +238,9 @@ System_Runtime_Serialization_DataContractAttribute_set_Name_string:
 .loc 2 56 0 prologue_end
 
 	.byte 128,64,45,233,13,112,160,225,64,1,45,233,2,223,77,226,0,96,160,225,0,16,141,229,0,0,157,229,8,0,134,229
-	.byte 2,15,134,226
-bl _p_1
-
-	.byte 0,0,157,229
+	.byte 2,31,134,226,161,20,160,225,0,32,159,229,0,0,0,234
+	.long mono_aot_System_Runtime_Serialization_got - . -4
+	.byte 2,32,159,231,2,16,129,224,64,35,160,227,0,32,193,229
 .loc 2 57 0
 
 	.byte 64,3,160,227,16,0,198,229
@@ -257,7 +253,7 @@ Lme_7:
 	.align 2
 	.no_dead_strip System_Runtime_Serialization_DataMemberAttribute__ctor
 System_Runtime_Serialization_DataMemberAttribute__ctor:
-.file 3 "/Library/Frameworks/Xamarin.iOS.framework/Versions/10.10.0.36/src/mono/mcs/class/referencesource/System.Runtime.Serialization/System/Runtime/Serialization/DataMemberAttribute.cs"
+.file 3 "/Library/Frameworks/Xamarin.iOS.framework/Versions/10.12.3.3/src/mono/mcs/class/referencesource/System.Runtime.Serialization/System/Runtime/Serialization/DataMemberAttribute.cs"
 .loc 3 12 0 prologue_end
 
 	.byte 128,64,45,233,13,112,160,225,0,1,45,233,3,223,77,226,0,0,141,229,0,0,157,229,0,31,224,227,16,16,128,229
@@ -286,10 +282,10 @@ System_Runtime_Serialization_DataMemberAttribute_set_Name_string:
 .loc 3 23 0 prologue_end
 
 	.byte 128,64,45,233,13,112,160,225,64,1,45,233,2,223,77,226,0,96,160,225,0,16,141,229,0,0,157,229,8,0,134,229
-	.byte 2,15,134,226
-bl _p_1
-
-	.byte 0,0,157,229,64,3,160,227,12,0,198,229,2,223,141,226,64,1,189,232,128,128,189,232
+	.byte 2,31,134,226,161,20,160,225,0,32,159,229,0,0,0,234
+	.long mono_aot_System_Runtime_Serialization_got - . -4
+	.byte 2,32,159,231,2,16,129,224,64,35,160,227,0,32,193,229,64,3,160,227,12,0,198,229,2,223,141,226,64,1,189,232
+	.byte 128,128,189,232
 
 Lme_a:
 .text
@@ -342,7 +338,7 @@ ut_15:
 	.align 2
 	.no_dead_strip System_Runtime_Serialization_DateTimeOffsetAdapter_get_UtcDateTime
 System_Runtime_Serialization_DateTimeOffsetAdapter_get_UtcDateTime:
-.file 4 "/Library/Frameworks/Xamarin.iOS.framework/Versions/10.10.0.36/src/mono/mcs/class/referencesource/System.Runtime.Serialization/System/Runtime/Serialization/DateTimeOffsetAdapter.cs"
+.file 4 "/Library/Frameworks/Xamarin.iOS.framework/Versions/10.12.3.3/src/mono/mcs/class/referencesource/System.Runtime.Serialization/System/Runtime/Serialization/DateTimeOffsetAdapter.cs"
 .loc 4 30 0 prologue_end
 
 	.byte 128,64,45,233,13,112,160,225,0,1,45,233,5,223,77,226,0,16,141,229,12,0,141,229,12,0,157,229,0,16,144,229
@@ -402,7 +398,7 @@ Lme_12:
 	.align 2
 	.no_dead_strip System_Runtime_Serialization_EnumMemberAttribute_get_Value
 System_Runtime_Serialization_EnumMemberAttribute_get_Value:
-.file 5 "/Library/Frameworks/Xamarin.iOS.framework/Versions/10.10.0.36/src/mono/mcs/class/referencesource/System.Runtime.Serialization/System/Runtime/Serialization/EnumMemberAttribute.cs"
+.file 5 "/Library/Frameworks/Xamarin.iOS.framework/Versions/10.12.3.3/src/mono/mcs/class/referencesource/System.Runtime.Serialization/System/Runtime/Serialization/EnumMemberAttribute.cs"
 .loc 5 19 0 prologue_end
 
 	.byte 128,64,45,233,13,112,160,225,0,1,45,233,3,223,77,226,0,0,141,229,0,0,157,229,8,0,144,229,3,223,141,226
@@ -413,14 +409,13 @@ Lme_13:
 	.align 2
 	.no_dead_strip System_Runtime_Serialization_KnownTypeAttribute__ctor_System_Type
 System_Runtime_Serialization_KnownTypeAttribute__ctor_System_Type:
-.file 6 "/Library/Frameworks/Xamarin.iOS.framework/Versions/10.10.0.36/src/mono/mcs/class/referencesource/System.Runtime.Serialization/System/Runtime/Serialization/KnownTypeAttribute.cs"
+.file 6 "/Library/Frameworks/Xamarin.iOS.framework/Versions/10.12.3.3/src/mono/mcs/class/referencesource/System.Runtime.Serialization/System/Runtime/Serialization/KnownTypeAttribute.cs"
 .loc 6 20 0 prologue_end
 
-	.byte 128,64,45,233,13,112,160,225,0,1,45,233,3,223,77,226,0,0,141,229,4,16,141,229,4,16,157,229,0,0,157,229
-	.byte 8,16,128,229,2,15,128,226
-bl _p_1
-
-	.byte 4,0,157,229
+	.byte 128,64,45,233,13,112,160,225,0,1,45,233,3,223,77,226,0,0,141,229,4,16,141,229,4,0,157,229,0,16,157,229
+	.byte 8,0,129,229,2,31,129,226,161,20,160,225,0,32,159,229,0,0,0,234
+	.long mono_aot_System_Runtime_Serialization_got - . -4
+	.byte 2,32,159,231,2,16,129,224,64,35,160,227,0,32,193,229
 .loc 6 21 0
 
 	.byte 3,223,141,226,0,1,189,232,128,128,189,232
@@ -440,12 +435,12 @@ System_Runtime_Serialization_KeyValue_2_K_GSHAREDVT_V_GSHAREDVT_get_Key:
 
 	.byte 128,64,45,233,13,112,160,225,48,9,45,233,6,223,77,226,13,176,160,225,4,128,139,229,0,16,139,229,8,0,139,229
 	.byte 4,0,155,229
-bl _p_2
+bl _p_1
 
 	.byte 0,80,160,225,0,0,149,229,7,64,128,226,7,64,196,227,4,208,77,224,13,64,160,225,4,0,149,229,64,19,64,226
 	.byte 8,0,155,229,1,16,128,224,16,0,149,229,0,0,132,224,8,32,149,229,12,48,149,229,51,255,47,225,16,16,149,229
 	.byte 4,0,160,225,1,0,128,224,20,0,139,229,0,0,155,229,16,0,139,229,8,0,149,229,12,0,149,229,4,0,155,229
-bl _p_3
+bl _p_2
 
 	.byte 0,32,160,225,16,0,155,229,20,16,155,229
 bl _mono_gsharedvt_value_copy
@@ -467,11 +462,11 @@ System_Runtime_Serialization_KeyValue_2_K_GSHAREDVT_V_GSHAREDVT_set_Key_K_GSHARE
 
 	.byte 128,64,45,233,13,112,160,225,64,9,45,233,7,223,77,226,13,176,160,225,0,128,139,229,8,0,139,229,12,16,139,229
 	.byte 0,0,155,229
-bl _p_4
+bl _p_3
 
 	.byte 0,96,160,225,0,0,150,229,0,31,160,227,0,15,160,227,4,0,139,229,4,0,150,229,64,35,64,226,8,0,155,229
 	.byte 2,0,128,224,12,16,155,229,20,16,139,229,16,0,139,229,8,0,150,229,12,0,150,229,0,0,155,229
-bl _p_5
+bl _p_4
 
 	.byte 0,32,160,225,16,0,155,229,20,16,155,229
 bl _mono_gsharedvt_value_copy
@@ -493,12 +488,12 @@ System_Runtime_Serialization_KeyValue_2_K_GSHAREDVT_V_GSHAREDVT_get_Value:
 
 	.byte 128,64,45,233,13,112,160,225,48,9,45,233,6,223,77,226,13,176,160,225,4,128,139,229,0,16,139,229,8,0,139,229
 	.byte 4,0,155,229
-bl _p_6
+bl _p_5
 
 	.byte 0,80,160,225,0,0,149,229,7,64,128,226,7,64,196,227,4,208,77,224,13,64,160,225,4,0,149,229,64,19,64,226
 	.byte 8,0,155,229,1,16,128,224,16,0,149,229,0,0,132,224,8,32,149,229,12,48,149,229,51,255,47,225,16,16,149,229
 	.byte 4,0,160,225,1,0,128,224,20,0,139,229,0,0,155,229,16,0,139,229,8,0,149,229,12,0,149,229,4,0,155,229
-bl _p_7
+bl _p_6
 
 	.byte 0,32,160,225,16,0,155,229,20,16,155,229
 bl _mono_gsharedvt_value_copy
@@ -520,11 +515,11 @@ System_Runtime_Serialization_KeyValue_2_K_GSHAREDVT_V_GSHAREDVT_set_Value_V_GSHA
 
 	.byte 128,64,45,233,13,112,160,225,64,9,45,233,7,223,77,226,13,176,160,225,0,128,139,229,8,0,139,229,12,16,139,229
 	.byte 0,0,155,229
-bl _p_8
+bl _p_7
 
 	.byte 0,96,160,225,0,0,150,229,0,31,160,227,0,15,160,227,4,0,139,229,4,0,150,229,64,35,64,226,8,0,155,229
 	.byte 2,0,128,224,12,16,155,229,20,16,139,229,16,0,139,229,8,0,150,229,12,0,150,229,0,0,155,229
-bl _p_9
+bl _p_8
 
 	.byte 0,32,160,225,16,0,155,229,20,16,155,229
 bl _mono_gsharedvt_value_copy
@@ -600,17 +595,17 @@ bl ut_25
 unwind_info:
 
 	.byte 3,12,13,0,30,12,13,0,68,14,8,135,2,72,14,12,136,3,142,1,68,14,24,80,10,68,14,12,68,8,8,14
-	.byte 8,68,11,31,12,13,0,68,14,8,135,2,72,14,12,136,3,142,1,68,14,32,2,32,10,68,14,12,68,8,8,14
-	.byte 8,68,11,31,12,13,0,68,14,8,135,2,72,14,12,136,3,142,1,68,14,32,2,36,10,68,14,12,68,8,8,14
+	.byte 8,68,11,31,12,13,0,68,14,8,135,2,72,14,12,136,3,142,1,68,14,32,2,56,10,68,14,12,68,8,8,14
+	.byte 8,68,11,31,12,13,0,68,14,8,135,2,72,14,12,136,3,142,1,68,14,32,2,60,10,68,14,12,68,8,8,14
 	.byte 8,68,11,30,12,13,0,68,14,8,135,2,72,14,12,136,3,142,1,68,14,24,68,10,68,14,12,68,8,8,14,8
 	.byte 68,11,30,12,13,0,68,14,8,135,2,72,14,12,136,3,142,1,68,14,24,76,10,68,14,12,68,8,8,14,8,68
-	.byte 11,35,12,13,0,68,14,8,135,2,72,14,16,134,4,136,3,142,1,68,14,24,2,36,10,68,14,16,68,8,6,8
+	.byte 11,35,12,13,0,68,14,8,135,2,72,14,16,134,4,136,3,142,1,68,14,24,2,60,10,68,14,16,68,8,6,8
 	.byte 8,14,8,68,11,30,12,13,0,68,14,8,135,2,72,14,12,136,3,142,1,68,14,24,88,10,68,14,12,68,8,8
 	.byte 14,8,68,11,30,12,13,0,68,14,8,135,2,72,14,12,136,3,142,1,68,14,24,84,10,68,14,12,68,8,8,14
 	.byte 8,68,11,31,12,13,0,68,14,8,135,2,72,14,12,136,3,142,1,68,14,32,2,48,10,68,14,12,68,8,8,14
 	.byte 8,68,11,40,12,13,0,68,14,8,135,2,72,14,16,136,4,139,3,142,1,68,14,32,68,13,11,2,32,10,68,13
 	.byte 13,14,16,68,8,8,8,11,14,8,68,11,31,12,13,0,68,14,8,135,2,72,14,12,136,3,142,1,68,14,24,2
-	.byte 32,10,68,14,12,68,8,8,14,8,68,11,48,12,13,0,68,14,8,135,2,72,14,24,132,6,133,5,136,4,139,3
+	.byte 56,10,68,14,12,68,8,8,14,8,68,11,48,12,13,0,68,14,8,135,2,72,14,24,132,6,133,5,136,4,139,3
 	.byte 142,1,68,14,48,68,13,11,2,136,10,68,13,13,14,24,68,8,4,8,5,8,8,8,11,14,8,68,11,44,12,13
 	.byte 0,68,14,8,135,2,72,14,20,134,5,136,4,139,3,142,1,68,14,48,68,13,11,2,100,10,68,13,13,14,20,68
 	.byte 8,6,8,8,8,11,14,8,68,11
@@ -619,64 +614,58 @@ unwind_info:
 	.align 4
 plt:
 mono_aot_System_Runtime_Serialization_plt:
-	.no_dead_strip plt_wrapper_write_barrier_object_wbarrier_conc_intptr
-plt_wrapper_write_barrier_object_wbarrier_conc_intptr:
+	.no_dead_strip plt__rgctx_fetch_0
+plt__rgctx_fetch_0:
 _p_1:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_System_Runtime_Serialization_got - . + 104,425
-	.no_dead_strip plt__rgctx_fetch_0
-plt__rgctx_fetch_0:
+	.long mono_aot_System_Runtime_Serialization_got - . + 100,466
+	.no_dead_strip plt__rgctx_fetch_1
+plt__rgctx_fetch_1:
 _p_2:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_System_Runtime_Serialization_got - . + 108,450
-	.no_dead_strip plt__rgctx_fetch_1
-plt__rgctx_fetch_1:
+	.long mono_aot_System_Runtime_Serialization_got - . + 104,505
+	.no_dead_strip plt__rgctx_fetch_2
+plt__rgctx_fetch_2:
 _p_3:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_System_Runtime_Serialization_got - . + 112,489
-	.no_dead_strip plt__rgctx_fetch_2
-plt__rgctx_fetch_2:
+	.long mono_aot_System_Runtime_Serialization_got - . + 108,530
+	.no_dead_strip plt__rgctx_fetch_3
+plt__rgctx_fetch_3:
 _p_4:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_System_Runtime_Serialization_got - . + 116,514
-	.no_dead_strip plt__rgctx_fetch_3
-plt__rgctx_fetch_3:
+	.long mono_aot_System_Runtime_Serialization_got - . + 112,566
+	.no_dead_strip plt__rgctx_fetch_4
+plt__rgctx_fetch_4:
 _p_5:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_System_Runtime_Serialization_got - . + 120,550
-	.no_dead_strip plt__rgctx_fetch_4
-plt__rgctx_fetch_4:
+	.long mono_aot_System_Runtime_Serialization_got - . + 116,591
+	.no_dead_strip plt__rgctx_fetch_5
+plt__rgctx_fetch_5:
 _p_6:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_System_Runtime_Serialization_got - . + 124,575
-	.no_dead_strip plt__rgctx_fetch_5
-plt__rgctx_fetch_5:
+	.long mono_aot_System_Runtime_Serialization_got - . + 120,630
+	.no_dead_strip plt__rgctx_fetch_6
+plt__rgctx_fetch_6:
 _p_7:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_System_Runtime_Serialization_got - . + 128,614
-	.no_dead_strip plt__rgctx_fetch_6
-plt__rgctx_fetch_6:
+	.long mono_aot_System_Runtime_Serialization_got - . + 124,655
+	.no_dead_strip plt__rgctx_fetch_7
+plt__rgctx_fetch_7:
 _p_8:
 
 	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_System_Runtime_Serialization_got - . + 132,639
-	.no_dead_strip plt__rgctx_fetch_7
-plt__rgctx_fetch_7:
-_p_9:
-
-	.byte 0,192,159,229,12,240,159,231
-	.long mono_aot_System_Runtime_Serialization_got - . + 136,675
+	.long mono_aot_System_Runtime_Serialization_got - . + 128,691
 plt_end:
 .section __DATA, __bss
 	.align 3
-.lcomm mono_aot_System_Runtime_Serialization_got, 144
+.lcomm mono_aot_System_Runtime_Serialization_got, 136
 got_end:
 .section __TEXT, __const
 	.align 3
@@ -707,7 +696,7 @@ runtime_version:
 .section __TEXT, __const
 	.align 2
 assembly_guid:
-	.asciz "0C6ADF76-0C56-4E4A-BA29-F5E040FD2298"
+	.asciz "9FED0243-E901-4DC9-914B-A9FD89FB83C7"
 .section __TEXT, __const
 	.align 2
 assembly_name:
@@ -784,13 +773,13 @@ _mono_aot_file_info:
 	.align 2
 	.long unbox_trampoline_addresses
 
-	.long 26,144,10,26,66,391195135,0,1151
-	.long 128,4,4,10,0,26,1832,672
+	.long 25,136,9,26,66,391195135,0,1167
+	.long 128,4,4,10,0,25,1848,672
 	.long 472,240,0,376,440,320,0,200
 	.long 56,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0
-	.byte 245,191,91,15,14,238,240,56,43,39,157,73,205,13,120,78
+	.byte 35,128,81,86,255,133,210,151,216,16,106,173,182,127,207,100
 	.globl _mono_aot_module_System_Runtime_Serialization_info
 	.align 2
 _mono_aot_module_System_Runtime_Serialization_info:
@@ -938,7 +927,7 @@ Lfde1_start:
 
 LDIFF_SYM23=Lme_1 - System_Runtime_Serialization_KeyValue_2_K_REF_V_REF_set_Key_K_REF
 	.long LDIFF_SYM23
-	.byte 68,14,8,135,2,72,14,12,136,3,142,1,68,14,32,2,32,10,68,14,12,68,8,8,14,8,68,11
+	.byte 68,14,8,135,2,72,14,12,136,3,142,1,68,14,32,2,56,10,68,14,12,68,8,8,14,8,68,11
 	.align 2
 Lfde1_end:
 
@@ -1009,7 +998,7 @@ Lfde3_start:
 
 LDIFF_SYM30=Lme_3 - System_Runtime_Serialization_KeyValue_2_K_REF_V_REF_set_Value_V_REF
 	.long LDIFF_SYM30
-	.byte 68,14,8,135,2,72,14,12,136,3,142,1,68,14,32,2,36,10,68,14,12,68,8,8,14,8,68,11
+	.byte 68,14,8,135,2,72,14,12,136,3,142,1,68,14,32,2,60,10,68,14,12,68,8,8,14,8,68,11
 	.align 2
 Lfde3_end:
 
@@ -1211,7 +1200,7 @@ Lfde6_start:
 
 LDIFF_SYM58=Lme_6 - System_Runtime_Serialization_DataContractAttribute_set_Namespace_string
 	.long LDIFF_SYM58
-	.byte 68,14,8,135,2,72,14,16,134,4,136,3,142,1,68,14,24,2,36,10,68,14,16,68,8,6,8,8,14,8,68,11
+	.byte 68,14,8,135,2,72,14,16,134,4,136,3,142,1,68,14,24,2,60,10,68,14,16,68,8,6,8,8,14,8,68,11
 	.align 2
 Lfde6_end:
 
@@ -1249,7 +1238,7 @@ Lfde7_start:
 
 LDIFF_SYM62=Lme_7 - System_Runtime_Serialization_DataContractAttribute_set_Name_string
 	.long LDIFF_SYM62
-	.byte 68,14,8,135,2,72,14,16,134,4,136,3,142,1,68,14,24,2,36,10,68,14,16,68,8,6,8,8,14,8,68,11
+	.byte 68,14,8,135,2,72,14,16,134,4,136,3,142,1,68,14,24,2,60,10,68,14,16,68,8,6,8,8,14,8,68,11
 	.align 2
 Lfde7_end:
 
@@ -1428,7 +1417,7 @@ Lfde10_start:
 
 LDIFF_SYM86=Lme_a - System_Runtime_Serialization_DataMemberAttribute_set_Name_string
 	.long LDIFF_SYM86
-	.byte 68,14,8,135,2,72,14,16,134,4,136,3,142,1,68,14,24,2,36,10,68,14,16,68,8,6,8,8,14,8,68,11
+	.byte 68,14,8,135,2,72,14,16,134,4,136,3,142,1,68,14,24,2,60,10,68,14,16,68,8,6,8,8,14,8,68,11
 	.align 2
 Lfde10_end:
 
@@ -1944,7 +1933,7 @@ Lfde20_start:
 
 LDIFF_SYM150=Lme_14 - System_Runtime_Serialization_KnownTypeAttribute__ctor_System_Type
 	.long LDIFF_SYM150
-	.byte 68,14,8,135,2,72,14,12,136,3,142,1,68,14,24,2,32,10,68,14,12,68,8,8,14,8,68,11
+	.byte 68,14,8,135,2,72,14,12,136,3,142,1,68,14,24,2,56,10,68,14,12,68,8,8,14,8,68,11
 	.align 2
 Lfde20_end:
 

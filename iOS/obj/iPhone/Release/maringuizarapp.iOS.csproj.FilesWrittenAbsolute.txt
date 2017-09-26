@@ -12,6 +12,10 @@
 /Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/optimized/barcode (1).png
 /Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/optimized/logout.png
 /Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/optimized/logonav.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/optimized/barcodeItem.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/optimized/warehouse.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/optimized/barcode-product.png
+/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/optimized/planning.png
 /Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/optimized/
 /Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Release/maringuizarapp.iOS.pdb
 /Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Release/maringuizarapp.iOS.exe
@@ -22,6 +26,3 @@
 /Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Release/ZXingNetMobile.dll
 /Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Release/maringuizarapp.dll
 /Users/osvaldo/Projects/maringuizarapp/iOS/bin/iPhone/Release/Newtonsoft.Json.dll
-/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/optimized/barcodeItem.png
-/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/optimized/warehouse.png
-/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/optimized/barcode-product.png

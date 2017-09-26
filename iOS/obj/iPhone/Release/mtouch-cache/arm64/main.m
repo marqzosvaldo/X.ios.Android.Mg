@@ -13,7 +13,6 @@ extern void *mono_aot_module_Newtonsoft_Json_info;
 extern void *mono_aot_module_System_Xml_Linq_info;
 extern void *mono_aot_module_System_Runtime_Serialization_info;
 extern void *mono_aot_module_Microsoft_CSharp_info;
-extern void *mono_aot_module_Mono_CSharp_info;
 extern void *mono_aot_module_ZXing_Net_Mobile_Core_info;
 extern void *mono_aot_module_zxing_portable_info;
 extern void *mono_aot_module_ZXingNetMobile_info;
@@ -33,7 +32,6 @@ void xamarin_register_modules_impl ()
 	mono_aot_register_module (mono_aot_module_System_Xml_Linq_info);
 	mono_aot_register_module (mono_aot_module_System_Runtime_Serialization_info);
 	mono_aot_register_module (mono_aot_module_Microsoft_CSharp_info);
-	mono_aot_register_module (mono_aot_module_Mono_CSharp_info);
 	mono_aot_register_module (mono_aot_module_ZXing_Net_Mobile_Core_info);
 	mono_aot_register_module (mono_aot_module_zxing_portable_info);
 	mono_aot_register_module (mono_aot_module_ZXingNetMobile_info);
@@ -48,7 +46,7 @@ void xamarin_register_assemblies_impl ()
 
 }
 
-void xamarin_create_classes();
+extern "C" void xamarin_create_classes();
 void xamarin_setup_impl ()
 {
 	xamarin_create_classes();
@@ -64,7 +62,7 @@ void xamarin_setup_impl ()
 int main (int argc, char **argv)
 {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-	int rv = xamarin_main (argc, argv, false);
+	int rv = xamarin_main (argc, argv, XamarinLaunchModeApp);
 	[pool drain];
 	return rv;
 }

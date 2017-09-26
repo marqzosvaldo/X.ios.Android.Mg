@@ -1,11 +1,22 @@
-UIApplicationMain
-xamarin_get_block_descriptor
-xamarin_start_wwan
-CreateZStream
-CloseZStream
-Flush
-ReadZStream
-WriteZStream
-xamarin_timezone_get_data
-xamarin_GetFolderPath
-xamarin_log
+Function=UIApplicationMain
+	/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/mtouch-cache/32/Link/Xamarin.iOS.dll
+Function=xamarin_get_block_descriptor
+	/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/mtouch-cache/32/Link/Xamarin.iOS.dll
+Function=CreateZStream
+	/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/mtouch-cache/32/Link/System.dll
+Function=CloseZStream
+	/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/mtouch-cache/32/Link/System.dll
+Function=Flush
+	/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/mtouch-cache/32/Link/System.dll
+Function=ReadZStream
+	/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/mtouch-cache/32/Link/System.dll
+Function=WriteZStream
+	/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/mtouch-cache/32/Link/System.dll
+Function=xamarin_start_wwan
+	/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/mtouch-cache/32/Link/System.dll
+Function=xamarin_timezone_get_data
+	/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/mtouch-cache/32/Link/mscorlib.dll
+Function=xamarin_GetFolderPath
+	/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/mtouch-cache/32/Link/mscorlib.dll
+Function=xamarin_log
+	/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhone/Release/mtouch-cache/32/Link/mscorlib.dll

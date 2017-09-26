@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:myapp="http://schemas.android.com/apk/res-auto"> 
+	<item android:id="@+id/action_barcode"
+		android:icon="@drawable/ic_action_barcode"
+		android:title="Refresh"
+		myapp:showAsAction="always" />  
+	<item android:id="@+id/action_attach"
+		android:icon="@drawable/ic_action_attach"
+		android:title="Help"
+		myapp:showAsAction="always"/>
+	<item android:id="@+id/menuSearch"
+        android:title="Search"
+        android:icon="@drawable/ic_menu_search"
+        myapp:showAsAction="always|collapseActionView"
+        myapp:actionViewClass="android.support.v7.widget.SearchView" />
+</menu>

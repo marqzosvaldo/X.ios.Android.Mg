@@ -21,7 +21,7 @@ Ldebug_info_begin:
 	.short 2
 	.long 0
 	.byte 8,1
-	.asciz "Mono AOT Compiler 5.0.1 (tarball Mon May 22 16:16:38 EDT 2017)"
+	.asciz "Mono AOT Compiler 5.2.0 (tarball Mon Aug 28 16:40:14 EDT 2017)"
 	.asciz "System.Xml.Linq.dll"
 	.asciz ""
 
@@ -121,7 +121,7 @@ jit_code_start:
 	.align 4
 	.no_dead_strip System_Xml_Linq_XName__ctor_System_Xml_Linq_XNamespace_string
 System_Xml_Linq_XName__ctor_System_Xml_Linq_XNamespace_string:
-.file 1 "/Library/Frameworks/Xamarin.iOS.framework/Versions/10.10.0.36/src/mono/mcs/class/referencesource/System.Xml.Linq/System/Xml/Linq/XLinq.cs"
+.file 1 "/Library/Frameworks/Xamarin.iOS.framework/Versions/10.12.3.3/src/mono/mcs/class/referencesource/System.Xml.Linq/System/Xml/Linq/XLinq.cs"
 .loc 1 47 0 prologue_end
 .word 0xa9bc7bfd
 .word 0x910003fd
@@ -131,15 +131,33 @@ System_Xml_Linq_XName__ctor_System_Xml_Linq_XNamespace_string:
 .word 0xf90013a2
 .word 0xf9000b19
 .word 0x91004300
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 48 0
 .word 0xf94013a0
-bl _p_2
-.word 0xf9001fa0
-.word 0xf9000f00
-.word 0x91006300
 bl _p_1
-.word 0xf9401fa0
+.word 0xf9000f00
+.word 0x91006301
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 49 0
 .word 0xaa1903e0
 .word 0xf9400321
@@ -233,7 +251,7 @@ System_Xml_Linq_XName_ToString:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #208]
+ldr x0, [x16, #200]
 .word 0xf9400b41
 .word 0xaa0103e2
 .word 0xf940005e
@@ -241,9 +259,9 @@ ldr x0, [x16, #208]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x2, [x16, #216]
+ldr x2, [x16, #208]
 .word 0xf9400f43
-bl _p_3
+bl _p_2
 .word 0xf9400bba
 .word 0x910003bf
 .word 0xa8c27bfd
@@ -280,7 +298,7 @@ System_Xml_Linq_XName_Get_string:
 .word 0xaa1a03e0
 .word 0xd2800fa1
 .word 0xf940035e
-bl _p_4
+bl _p_3
 .word 0x93407c00
 .word 0xaa0003f9
 .loc 1 96 0
@@ -296,7 +314,7 @@ bl _p_4
 .word 0x51000722
 .word 0xaa1a03e0
 .word 0xd2800021
-bl _p_5
+bl _p_4
 .word 0xaa0003e4
 .word 0x11000722
 .word 0xb9801340
@@ -305,10 +323,10 @@ bl _p_5
 .word 0xaa0403e0
 .word 0xaa1a03e1
 .word 0xf940009e
-bl _p_6
+bl _p_5
 .word 0x14000007
 .loc 1 100 0
-bl _p_7
+bl _p_6
 .word 0xaa0003e2
 .word 0xaa0203e0
 .word 0xaa1a03e1
@@ -324,14 +342,14 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2800461
-bl _p_8
+bl _p_7
 .word 0xf90013a0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #224]
+ldr x0, [x16, #216]
 .word 0xd2800021
-bl _p_9
+bl _p_8
 .word 0xaa0003e3
 .word 0xaa0303e0
 .word 0xf90017a0
@@ -345,24 +363,24 @@ bl _p_9
 .word 0xf94017a1
 bl System_Xml_Linq_Res_GetString_string_object__
 .word 0xaa0003e1
-.word 0xd2801100
+.word 0xd28010c0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 .loc 1 96 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2800461
-bl _p_8
+bl _p_7
 .word 0xf90013a0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #224]
+ldr x0, [x16, #216]
 .word 0xd2800021
-bl _p_9
+bl _p_8
 .word 0xaa0003e3
 .word 0xaa0303e0
 .word 0xf90017a0
@@ -376,25 +394,25 @@ bl _p_9
 .word 0xf94017a1
 bl System_Xml_Linq_Res_GetString_string_object__
 .word 0xaa0003e1
-.word 0xd2801100
+.word 0xd28010c0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .loc 1 92 0
 .word 0xd2800121
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
-.word 0xd2801b80
+bl _p_9
+.word 0xd2801b40
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_5:
 .text
@@ -431,7 +449,7 @@ System_Xml_Linq_XName_op_Implicit_string:
 .word 0xd2800000
 .word 0x14000003
 .word 0xf9400ba0
-bl _p_12
+bl _p_11
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
@@ -523,7 +541,7 @@ System_Xml_Linq_XName_System_Runtime_Serialization_ISerializable_GetObjectData_S
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #232]
+ldr x0, [x16, #224]
 .word 0xf9001ba0
 .word 0xf9400fa0
 .word 0xf9400fa1
@@ -534,15 +552,15 @@ ldr x0, [x16, #232]
 .word 0xf9401ba1
 .word 0xaa1a03e0
 .word 0xf940035e
-bl _p_13
+bl _p_12
 .loc 1 207 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #240]
+ldr x1, [x16, #232]
 .word 0xaa1a03e0
 .word 0xf940035e
-bl _p_14
+bl _p_13
 .loc 1 208 0
 .word 0xf9400bba
 .word 0x910003bf
@@ -554,12 +572,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2800ba1
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_c:
 .text
@@ -567,33 +585,40 @@ Lme_c:
 	.no_dead_strip System_Xml_Linq_NameSerializer__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext
 System_Xml_Linq_NameSerializer__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext:
 .loc 1 219 0 prologue_end
-.word 0xa9bc7bfd
+.word 0xa9bd7bfd
 .word 0x910003fd
 .word 0xf9000bba
 .word 0xf9000fa0
 .word 0xaa0103fa
 .word 0xf90013a2
 .word 0xf90017a3
-.word 0xb400025a
+.word 0xb400031a
 .loc 1 220 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #232]
+ldr x1, [x16, #224]
 .word 0xaa1a03e0
 .word 0xf940035e
-bl _p_15
-.word 0xaa0003e1
-.word 0xf9400fa0
-.word 0xf9001ba1
-.word 0xf9000801
-.word 0x91004000
-bl _p_1
-.word 0xf9401ba0
+bl _p_14
+.word 0xf9400fa1
+.word 0xf9000820
+.word 0x91004021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 221 0
 .word 0xf9400bba
 .word 0x910003bf
-.word 0xa8c47bfd
+.word 0xa8c37bfd
 .word 0xd65f03c0
 .loc 1 219 0
 
@@ -601,12 +626,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2800ba1
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_d:
 .text
@@ -621,7 +646,7 @@ System_Xml_Linq_NameSerializer_System_Runtime_Serialization_IObjectReference_Get
 .word 0xf90013a2
 .word 0xf9400ba0
 .word 0xf9400800
-bl _p_12
+bl _p_11
 .word 0x910003bf
 .word 0xa8c37bfd
 .word 0xd65f03c0
@@ -638,10 +663,10 @@ System_Xml_Linq_NameSerializer_System_Runtime_Serialization_ISerializable_GetObj
 .word 0xf9000fa1
 .word 0xf90013a2
 .word 0xf90017a3
-.word 0xd2801de0
+.word 0xd2801da0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
-bl _p_10
+bl _p_9
 .word 0x910003bf
 .word 0xa8c37bfd
 .word 0xd65f03c0
@@ -652,14 +677,24 @@ Lme_f:
 	.no_dead_strip System_Xml_Linq_XNamespace__ctor_string
 System_Xml_Linq_XNamespace__ctor_string:
 .loc 1 257 0 prologue_end
-.word 0xa9bc7bfd
+.word 0xa9bd7bfd
 .word 0x910003fd
 .word 0xa9016bb9
 .word 0xaa0003f9
 .word 0xaa0103fa
 .word 0xf9000b3a
 .word 0x91004320
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 258 0
 .word 0xaa1a03e0
 .word 0xf9400341
@@ -671,49 +706,57 @@ bl _p_1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #248]
+ldr x0, [x16, #240]
 .word 0xd2800e01
-bl _p_16
+bl _p_15
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #256]
+ldr x1, [x16, #248]
 .word 0xf9001401
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #264]
+ldr x1, [x16, #256]
 .word 0xf9002001
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #272]
+ldr x1, [x16, #264]
 .word 0xf9401422
 .word 0xf9000c02
 .word 0xf9401021
 .word 0xf9000801
 .word 0x3901801f
-.word 0xf9001ba0
+.word 0xf90017a0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #280]
+ldr x0, [x16, #272]
 .word 0xd2800301
-bl _p_16
-.word 0xf9401ba1
-.word 0xf90017a0
-.word 0xd2800102
-bl _p_17
-.word 0xf94017a0
+bl _p_15
+.word 0xf94017a1
 .word 0xf90013a0
-.word 0xf9000f20
-.word 0x91006320
-bl _p_1
+.word 0xd2800102
+bl _p_16
 .word 0xf94013a0
+.word 0xf9000f20
+.word 0x91006321
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 260 0
 .word 0xa9416bb9
 .word 0x910003bf
-.word 0xa8c47bfd
+.word 0xa8c37bfd
 .word 0xd65f03c0
 
 Lme_10:
@@ -748,7 +791,7 @@ System_Xml_Linq_XNamespace_GetName_string:
 .word 0xb9801023
 .word 0xf9400ba0
 .word 0xd2800002
-bl _p_6
+bl _p_5
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
@@ -758,12 +801,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2800e21
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_12:
 .text
@@ -791,13 +834,13 @@ System_Xml_Linq_XNamespace_get_None:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #288]
+ldr x0, [x16, #280]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #296]
+ldr x1, [x16, #288]
 .word 0xf9400021
-bl _p_18
+bl _p_17
 .word 0x910003bf
 .word 0xa8c17bfd
 .word 0xd65f03c0
@@ -813,12 +856,12 @@ System_Xml_Linq_XNamespace_get_Xml:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #304]
+ldr x0, [x16, #296]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #312]
-bl _p_18
+ldr x1, [x16, #304]
+bl _p_17
 .word 0x910003bf
 .word 0xa8c17bfd
 .word 0xd65f03c0
@@ -834,12 +877,12 @@ System_Xml_Linq_XNamespace_get_Xmlns:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #320]
+ldr x0, [x16, #312]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #328]
-bl _p_18
+ldr x1, [x16, #320]
+bl _p_17
 .word 0x910003bf
 .word 0xa8c17bfd
 .word 0xd65f03c0
@@ -859,7 +902,7 @@ System_Xml_Linq_XNamespace_Get_string:
 .word 0xf9400ba0
 .word 0xb9801002
 .word 0xd2800001
-bl _p_5
+bl _p_4
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
@@ -869,12 +912,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2802161
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_17:
 .text
@@ -988,7 +1031,7 @@ System_Xml_Linq_XNamespace_GetName_string_int_int:
 .word 0xb98023a2
 .word 0xb9802ba3
 .word 0xf94000be
-bl _p_19
+bl _p_18
 .word 0x53001c00
 .word 0x34000060
 .loc 1 424 0
@@ -1002,14 +1045,14 @@ bl _p_19
 .word 0xb98023a1
 .word 0xb9802ba2
 .word 0xf940031e
-bl _p_20
+bl _p_19
 .word 0xf9002ba0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #336]
+ldr x0, [x16, #328]
 .word 0xd2800501
-bl _p_16
+bl _p_15
 .word 0xf9402ba2
 .word 0xf90023a0
 .word 0xf9400fa1
@@ -1018,7 +1061,7 @@ bl System_Xml_Linq_XName__ctor_System_Xml_Linq_XNamespace_string
 .word 0xf94027a2
 .word 0xaa0203e0
 .word 0xf940005e
-bl _p_21
+bl _p_20
 .word 0xf9400bb8
 .word 0x910003bf
 .word 0xa8c67bfd
@@ -1040,79 +1083,87 @@ System_Xml_Linq_XNamespace_Get_string_int_int:
 .word 0xaa0203fa
 .word 0xf9001fbf
 .word 0x3500007a
-bl _p_7
-.word 0x140000a4
+bl _p_6
+.word 0x140000ab
 .loc 1 441 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #344]
+ldr x0, [x16, #336]
 .word 0xf9400000
-.word 0xb5000680
+.word 0xb5000760
 .loc 1 442 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #344]
+ldr x0, [x16, #336]
 .word 0xf90027a0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #352]
+ldr x0, [x16, #344]
 .word 0xd2800e01
-bl _p_16
+bl _p_15
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #360]
+ldr x1, [x16, #352]
 .word 0xf9001401
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #368]
+ldr x1, [x16, #360]
 .word 0xf9002001
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #376]
+ldr x1, [x16, #368]
 .word 0xf9401422
 .word 0xf9000c02
 .word 0xf9401021
 .word 0xf9000801
 .word 0x3901801f
-.word 0xf9002fa0
+.word 0xf9002ba0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #384]
+ldr x0, [x16, #376]
 .word 0xd2800301
-bl _p_16
-.word 0xf9402fa1
-.word 0xf9002ba0
-.word 0xd2800402
-bl _p_22
-.word 0xf94027a0
+bl _p_15
 .word 0xf9402ba1
+.word 0xf90023a0
+.word 0xd2800402
+bl _p_21
+.word 0xf94023a0
+.word 0xf94027a1
 .word 0xd2800002
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x3, [x16, #392]
-.word 0xf90023a1
-.word 0xc85f7c10
+ldr x3, [x16, #384]
+.word 0xc85f7c30
 .word 0xeb02021f
 .word 0x54000061
-.word 0xc811fc01
+.word 0xc811fc20
 .word 0x35ffff91
 .word 0xd50330bf
-.word 0xaa1003e1
-bl _p_1
-.word 0xf94023a0
+.word 0xaa1003e2
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 450 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #344]
+ldr x0, [x16, #336]
 .word 0xf9400005
 .word 0x9100e3a4
 .word 0xaa0503e0
@@ -1120,86 +1171,86 @@ ldr x0, [x16, #344]
 .word 0xaa1903e2
 .word 0xaa1a03e3
 .word 0xf94000be
-bl _p_23
+bl _p_22
 .word 0x53001c00
 .word 0x350008a0
 .loc 1 452 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #312]
+ldr x0, [x16, #304]
 .word 0xb9801000
 .word 0x6b00035f
 .word 0x540001a1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x2, [x16, #312]
+ldr x2, [x16, #304]
 .word 0xaa1803e0
 .word 0xaa1903e1
 .word 0xd2800003
 .word 0xaa1a03e4
-bl _p_24
+bl _p_23
 .word 0x93407c00
 .word 0x35000060
-bl _p_25
+bl _p_24
 .word 0x1400004d
 .loc 1 453 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #328]
+ldr x0, [x16, #320]
 .word 0xb9801000
 .word 0x6b00035f
 .word 0x540001a1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x2, [x16, #328]
+ldr x2, [x16, #320]
 .word 0xaa1803e0
 .word 0xaa1903e1
 .word 0xd2800003
 .word 0xaa1a03e4
-bl _p_24
+bl _p_23
 .word 0x93407c00
 .word 0x35000060
-bl _p_26
+bl _p_25
 .word 0x1400003b
 .loc 1 456 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #344]
+ldr x0, [x16, #336]
 .word 0xf9400000
 .word 0xf90027a0
 .word 0xaa1803e0
 .word 0xaa1903e1
 .word 0xaa1a03e2
 .word 0xf940031e
-bl _p_20
+bl _p_19
 .word 0xf9002fa0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #400]
+ldr x0, [x16, #392]
 .word 0xd2800501
-bl _p_16
+bl _p_15
 .word 0xf9402fa1
 .word 0xf9002ba0
-bl _p_27
+bl _p_26
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #408]
-bl _p_28
+ldr x0, [x16, #400]
+bl _p_27
 .word 0xf9402ba1
 .word 0xf90023a0
-bl _p_29
+bl _p_28
 .word 0xf94023a1
 .word 0xf94027a2
 .word 0xaa0203e0
 .word 0xf940005e
-bl _p_30
+bl _p_29
 .word 0xf9001fa0
 .loc 1 459 0
 .word 0xf9401fa0
@@ -1209,7 +1260,7 @@ bl _p_30
 .word 0xf9401fa1
 .word 0xaa0103e0
 .word 0xf940003e
-bl _p_31
+bl _p_30
 .word 0xaa0003f7
 .word 0xb4000177
 .word 0xf94002e0
@@ -1219,7 +1270,7 @@ bl _p_31
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #416]
+ldr x1, [x16, #408]
 .word 0xeb01001f
 .word 0x10000011
 .word 0x540001a1
@@ -1237,9 +1288,9 @@ ldr x1, [x16, #416]
 .word 0x910003bf
 .word 0xa8c67bfd
 .word 0xd65f03c0
-.word 0xd2801c20
+.word 0xd2801be0
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_1e:
 .text
@@ -1270,7 +1321,7 @@ System_Xml_Linq_XNamespace_ExtractNamespace_System_WeakReference:
 .word 0xb400027a
 .word 0xaa1a03e0
 .word 0xf940035e
-bl _p_31
+bl _p_30
 .word 0xaa0003fa
 .word 0xb400017a
 .word 0xf9400340
@@ -1280,7 +1331,7 @@ bl _p_31
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #416]
+ldr x1, [x16, #408]
 .word 0xeb01001f
 .word 0x10000011
 .word 0x54000181
@@ -1297,9 +1348,9 @@ ldr x1, [x16, #416]
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
-.word 0xd2801c20
+.word 0xd2801be0
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_20:
 .text
@@ -1307,7 +1358,7 @@ Lme_20:
 	.no_dead_strip System_Xml_Linq_XNamespace_EnsureNamespace_System_WeakReference__string
 System_Xml_Linq_XNamespace_EnsureNamespace_System_WeakReference__string:
 .loc 1 500 0 prologue_end
-.word 0xa9ba7bfd
+.word 0xa9bb7bfd
 .word 0x910003fd
 .word 0xa9015fb6
 .word 0xa90267b8
@@ -1321,7 +1372,7 @@ System_Xml_Linq_XNamespace_EnsureNamespace_System_WeakReference__string:
 .loc 1 504 0
 .word 0xaa1803e0
 .word 0xf940031e
-bl _p_31
+bl _p_30
 .word 0xaa0003f7
 .word 0xb4000177
 .word 0xf94002e0
@@ -1331,10 +1382,10 @@ bl _p_31
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #416]
+ldr x1, [x16, #408]
 .word 0xeb01001f
 .word 0x10000011
-.word 0x540005c1
+.word 0x54000681
 .word 0xaa1703f6
 .loc 1 505 0
 .word 0xeb1f02ff
@@ -1343,52 +1394,59 @@ ldr x1, [x16, #416]
 .word 0x9a9f17e0
 .word 0x34000060
 .word 0xaa1603e0
-.word 0x14000020
+.word 0x14000026
 .loc 1 510 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #400]
+ldr x0, [x16, #392]
 .word 0xd2800501
-bl _p_16
-.word 0xf9002ba0
-.word 0xaa1a03e1
-bl _p_27
-
-adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
-add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #408]
-bl _p_28
-.word 0xf9402ba1
+bl _p_15
 .word 0xf90027a0
-bl _p_29
-.word 0xf94027a0
+.word 0xaa1a03e1
+bl _p_26
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #424]
+ldr x0, [x16, #400]
+bl _p_27
+.word 0xf94027a1
 .word 0xf90023a0
+bl _p_28
+.word 0xf94023a0
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #416]
 .word 0xc85f7f30
 .word 0xeb18021f
 .word 0x54000061
 .word 0xc811ff20
 .word 0x35ffff91
 .word 0xd50330bf
-.word 0xaa1003e0
-.word 0xaa1903e0
-bl _p_1
-.word 0xf94023a0
+.word 0xaa1003e1
+.word 0xd349ff21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 498 0
-.word 0x17ffffc8
+.word 0x17ffffc2
 .word 0xa9415fb6
 .word 0xa94267b8
 .word 0xf9401bba
 .word 0x910003bf
-.word 0xa8c67bfd
+.word 0xa8c57bfd
 .word 0xd65f03c0
-.word 0xd2801c20
+.word 0xd2801be0
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_21:
 .text
@@ -1396,7 +1454,7 @@ Lme_21:
 	.no_dead_strip System_Xml_Linq_XHashtable_1_TValue_REF__ctor_System_Xml_Linq_XHashtable_1_ExtractKeyDelegate_TValue_REF_int
 System_Xml_Linq_XHashtable_1_TValue_REF__ctor_System_Xml_Linq_XHashtable_1_ExtractKeyDelegate_TValue_REF_int:
 .loc 1 582 0 prologue_end
-.word 0xa9bb7bfd
+.word 0xa9bc7bfd
 .word 0x910003fd
 .word 0xf9000ba0
 .word 0xf9000fa1
@@ -1405,23 +1463,31 @@ System_Xml_Linq_XHashtable_1_TValue_REF__ctor_System_Xml_Linq_XHashtable_1_Extra
 .word 0xf9001fa0
 .word 0xf9400ba0
 .word 0xf9400000
-bl _p_32
+bl _p_31
 .word 0xd2800601
-bl _p_16
-.word 0xf90023a0
+bl _p_15
+.word 0xf9001ba0
 .word 0xf9400fa1
 .word 0xb98023a2
-bl _p_33
-.word 0xf9401fa0
-.word 0xf94023a1
-.word 0xf9001ba1
-.word 0xf9000801
-.word 0x91004000
-bl _p_1
+bl _p_32
 .word 0xf9401ba0
+.word 0xf9401fa1
+.word 0xf9000820
+.word 0x91004021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 583 0
 .word 0x910003bf
-.word 0xa8c57bfd
+.word 0xa8c47bfd
 .word 0xd65f03c0
 
 Lme_22:
@@ -1445,7 +1511,7 @@ System_Xml_Linq_XHashtable_1_TValue_REF_TryGetValue_string_int_int_TValue_REF_:
 .word 0xb9802ba3
 .word 0xf9401ba4
 .word 0xf94000be
-bl _p_34
+bl _p_33
 .word 0x53001c00
 .word 0x910003bf
 .word 0xa8c47bfd
@@ -1457,7 +1523,7 @@ Lme_23:
 	.no_dead_strip System_Xml_Linq_XHashtable_1_TValue_REF_Add_TValue_REF
 System_Xml_Linq_XHashtable_1_TValue_REF_Add_TValue_REF:
 .loc 1 602 0 prologue_end
-.word 0xa9b87bfd
+.word 0xa9ba7bfd
 .word 0x910003fd
 .word 0xa90167b8
 .word 0xf90013ba
@@ -1472,12 +1538,12 @@ System_Xml_Linq_XHashtable_1_TValue_REF_Add_TValue_REF:
 .word 0xaa0303e0
 .word 0xaa1a03e1
 .word 0xf940007e
-bl _p_35
+bl _p_34
 .word 0x53001c00
 .word 0x34000060
 .loc 1 603 0
 .word 0xf9401ba0
-.word 0x14000031
+.word 0x1400002a
 .loc 1 610 0
 .word 0xf94017a0
 .word 0xf9001fa0
@@ -1490,13 +1556,13 @@ bl _mono_monitor_enter_v4_fast
 .word 0x35000080
 .word 0xaa1903e0
 .word 0xaa1803e1
-bl _p_36
+bl _p_35
 .loc 1 611 0
 .word 0xf94017a0
 .word 0xf9400801
 .word 0xaa0103e0
 .word 0xf940003e
-bl _p_37
+bl _p_36
 .word 0xaa0003f9
 .loc 1 615 0
 .word 0xd50330bf
@@ -1504,38 +1570,31 @@ bl _p_37
 .word 0xf94017a0
 .word 0xf9000819
 .word 0x91004000
-bl _p_1
-.loc 1 625 0
-.word 0x94000002
-.word 0x17ffffdd
-.word 0xf9003bbe
-.word 0x394103a0
-.word 0x34000260
-.word 0xf9401fa0
-.word 0xf90027a0
-.word 0xf94027a0
-bl _mono_monitor_exit
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #432]
-.word 0xb9400000
-.word 0x34000120
-bl _p_38
-.word 0xf9002ba0
-.word 0xf9402ba1
-.word 0xf9402ba0
-.word 0xf9002fa1
-.word 0xb4000060
-.word 0xf9402fa0
-bl _p_10
-.word 0x14000001
-.word 0xf9403bbe
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
+.loc 1 625 0
+.word 0x94000002
+.word 0x17ffffd4
+.word 0xf9002fbe
+.word 0x394103a0
+.word 0x34000060
+.word 0xf9401fa0
+bl _p_37
+.word 0xf9402fbe
 .word 0xd61f03c0
 .word 0xa94167b8
 .word 0xf94013ba
 .word 0x910003bf
-.word 0xa8c87bfd
+.word 0xa8c67bfd
 .word 0xd65f03c0
 
 Lme_24:
@@ -1544,51 +1603,74 @@ Lme_24:
 	.no_dead_strip System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF__ctor_System_Xml_Linq_XHashtable_1_ExtractKeyDelegate_TValue_REF_int
 System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF__ctor_System_Xml_Linq_XHashtable_1_ExtractKeyDelegate_TValue_REF_int:
 .loc 1 659 0 prologue_end
-.word 0xa9bb7bfd
+.word 0xa9bc7bfd
 .word 0x910003fd
 .word 0xf9000ba0
 .word 0xf9000fa1
 .word 0xf90013a2
 .word 0xf9400ba0
-.word 0xf90027a0
+.word 0xf9001fa0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #440]
+ldr x0, [x16, #424]
 .word 0xb98023a1
-bl _p_9
-.word 0xaa0003e1
-.word 0xf94027a0
-.word 0xf90023a1
-.word 0xf9000801
-.word 0x91004000
-bl _p_1
-.word 0xf94023a0
+bl _p_8
+.word 0xf9401fa1
+.word 0xf9000820
+.word 0x91004021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 660 0
 .word 0xf9400ba0
-.word 0xf9001fa0
+.word 0xf9001ba0
 .word 0xf9400ba0
 .word 0xf9400000
-bl _p_39
+bl _p_38
 .word 0xb98023a1
-bl _p_9
-.word 0xaa0003e1
-.word 0xf9401fa0
-.word 0xf9001ba1
-.word 0xf9000c01
-.word 0x91006000
-bl _p_1
-.word 0xf9401ba0
+bl _p_8
+.word 0xf9401ba1
+.word 0xf9000c20
+.word 0x91006021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 663 0
-.word 0xf9400ba0
-.word 0xf9400fa1
-.word 0xf9001001
-.word 0x91008000
-bl _p_1
+.word 0xf9400ba1
 .word 0xf9400fa0
+.word 0xf9001020
+.word 0x91008021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 664 0
 .word 0x910003bf
-.word 0xa8c57bfd
+.word 0xa8c47bfd
 .word 0xd65f03c0
 
 Lme_29:
@@ -1766,13 +1848,13 @@ System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_Resize:
 .word 0xf90027a0
 .word 0xf94017a0
 .word 0xf9400000
-bl _p_40
+bl _p_39
 .word 0xd2800601
-bl _p_16
+bl _p_15
 .word 0xf94027a1
 .word 0xf90023a0
 .word 0xaa1a03e2
-bl _p_41
+bl _p_40
 .word 0xf94023a0
 .word 0xaa0003fa
 .loc 1 722 0
@@ -1837,13 +1919,13 @@ bl System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_TryAdd_TValue_REF_TVa
 .word 0xa8c57bfd
 .word 0xd65f03c0
 .loc 1 713 0
-.word 0xd2801ee0
+.word 0xd2801ea0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
-bl _p_10
-.word 0xd2801b80
+bl _p_9
+.word 0xd2801b40
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_2a:
 .text
@@ -1851,7 +1933,7 @@ Lme_2a:
 	.no_dead_strip System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_TryGetValue_string_int_int_TValue_REF_
 System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_TryGetValue_string_int_int_TValue_REF_:
 .loc 1 743 0 prologue_end
-.word 0xa9bb7bfd
+.word 0xa9bc7bfd
 .word 0x910003fd
 .word 0xf9000ba0
 .word 0xf9000fa1
@@ -1861,7 +1943,7 @@ System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_TryGetValue_string_int_i
 .word 0xb9003bbf
 .word 0xf9400ba0
 .word 0xf9400000
-bl _p_42
+bl _p_41
 .word 0xaa0003ef
 .word 0xf9400fa0
 .word 0xb98023a1
@@ -1879,7 +1961,7 @@ bl System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_ComputeHashCode_strin
 .word 0xb9802ba4
 bl System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_FindEntry_int_string_int_int_int_
 .word 0x53001c00
-.word 0x34000280
+.word 0x34000360
 .loc 1 748 0
 .word 0xf9400ba0
 .word 0xf9400c00
@@ -1888,16 +1970,24 @@ bl System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_FindEntry_int_string_
 .word 0xb9801802
 .word 0xeb01005f
 .word 0x10000011
-.word 0x54000249
+.word 0x54000329
 .word 0xd37cec21
 .word 0x8b010000
 .word 0x91008000
-.word 0xf9400001
-.word 0xf9401ba0
-.word 0xf90023a1
-.word 0xf9000001
-bl _p_1
-.word 0xf94023a0
+.word 0xf9400000
+.word 0xf9401ba1
+.word 0xf9000020
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 749 0
 .word 0xd2800020
 .word 0x14000004
@@ -1907,11 +1997,11 @@ bl _p_1
 .loc 1 754 0
 .word 0xd2800000
 .word 0x910003bf
-.word 0xa8c57bfd
+.word 0xa8c47bfd
 .word 0xd65f03c0
-.word 0xd2801b80
+.word 0xd2801b40
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_2b:
 .text
@@ -1929,8 +2019,17 @@ System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_TryAdd_TValue_REF_TValue
 .word 0xaa0203fa
 .word 0xb90043bf
 .word 0xf9000359
-.word 0xaa1a03e0
-bl _p_1
+.word 0xd349ff40
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 772 0
 .word 0xf9401fa0
 .word 0xf9401002
@@ -1945,13 +2044,13 @@ bl _p_1
 .word 0xb5000060
 .loc 1 774 0
 .word 0xd2800020
-.word 0x1400008f
+.word 0x1400009e
 .loc 1 777 0
 .word 0xb9801300
 .word 0xf9002ba0
 .word 0xf9401fa0
 .word 0xf9400000
-bl _p_43
+bl _p_42
 .word 0xaa0003ef
 .word 0xf9402ba2
 .word 0xaa1803e0
@@ -1963,7 +2062,7 @@ bl System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_ComputeHashCode_strin
 .word 0xf9401fa0
 .word 0xeb1f001f
 .word 0x10000011
-.word 0x54001100
+.word 0x540012e0
 .word 0x9100a000
 .word 0xd2800021
 .word 0x885f7c10
@@ -1983,7 +2082,7 @@ bl System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_ComputeHashCode_strin
 .word 0x5400006b
 .loc 1 785 0
 .word 0xd2800000
-.word 0x1400006d
+.word 0x1400007c
 .loc 1 787 0
 .word 0xf9401fa0
 .word 0xf9400c00
@@ -1991,12 +2090,22 @@ bl System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_ComputeHashCode_strin
 .word 0xb9801802
 .word 0xeb01005f
 .word 0x10000011
-.word 0x54000d89
+.word 0x54000f69
 .word 0xd37cec21
 .word 0x8b010000
 .word 0x91008000
 .word 0xf9000019
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 788 0
 .word 0xf9401fa0
 .word 0xf9400c00
@@ -2004,7 +2113,7 @@ bl _p_1
 .word 0xb9801802
 .word 0xeb01005f
 .word 0x10000011
-.word 0x54000c09
+.word 0x54000cc9
 .word 0xd37cec21
 .word 0x8b010000
 .word 0x91008000
@@ -2029,7 +2138,7 @@ bl _p_1
 .word 0xb9801802
 .word 0xeb01005f
 .word 0x10000011
-.word 0x54000969
+.word 0x54000a29
 .word 0xd37ef421
 .word 0x8b010000
 .word 0x91008000
@@ -2051,7 +2160,7 @@ bl _p_1
 .word 0xb9801802
 .word 0xeb01005f
 .word 0x10000011
-.word 0x540006c9
+.word 0x54000789
 .word 0xd37cec21
 .word 0x8b010000
 .word 0x91008000
@@ -2073,7 +2182,7 @@ bl _p_1
 .word 0xb98043a0
 .word 0x6b1f001f
 .word 0x9a9f17e0
-.word 0x1400001c
+.word 0x14000022
 .loc 1 805 0
 .word 0xf9401fa0
 .word 0xb9801304
@@ -2092,16 +2201,23 @@ bl System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_FindEntry_int_string_
 .word 0xb9801802
 .word 0xeb01005f
 .word 0x10000011
-.word 0x54000229
+.word 0x540002e9
 .word 0xd37cec21
 .word 0x8b010000
 .word 0x91008000
 .word 0xf9400000
-.word 0xf9002ba0
 .word 0xf9000340
-.word 0xaa1a03e0
-bl _p_1
-.word 0xf9402ba0
+.word 0xd349ff41
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 825 0
 .word 0xd2800020
 .word 0xa9415fb6
@@ -2110,12 +2226,12 @@ bl _p_1
 .word 0x910003bf
 .word 0xa8c67bfd
 .word 0xd65f03c0
-.word 0xd2801b80
+.word 0xd2801b40
 .word 0xaa1103e1
-bl _p_11
-.word 0xd2801e00
+bl _p_10
+.word 0xd2801dc0
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_2c:
 .text
@@ -2278,7 +2394,7 @@ System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_FindEntry_int_string_int
 .word 0xaa1303e2
 .word 0xd2800003
 .word 0xaa1903e4
-bl _p_24
+bl _p_23
 .word 0x93407c00
 .word 0x350000a0
 .loc 1 876 0
@@ -2316,9 +2432,9 @@ bl _p_24
 .word 0x910003bf
 .word 0xa8c77bfd
 .word 0xd65f03c0
-.word 0xd2801b80
+.word 0xd2801b40
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_2d:
 .text
@@ -2381,9 +2497,9 @@ System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_ComputeHashCode_string_i
 .word 0x910003bf
 .word 0xa8c47bfd
 .word 0xd65f03c0
-.word 0xd2801b80
+.word 0xd2801b40
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_2e:
 .text
@@ -2422,10 +2538,10 @@ System_Xml_Linq_XObject_get_BaseUri:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #448]
+ldr x15, [x16, #432]
 .word 0xf940033e
 .word 0xaa1903e0
-bl _p_44
+bl _p_43
 .word 0xaa0003fa
 .loc 1 948 0
 .word 0xaa1a03e0
@@ -2440,7 +2556,7 @@ bl _p_44
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #296]
+ldr x0, [x16, #288]
 .word 0xf9400000
 .word 0xa9416bb9
 .word 0x910003bf
@@ -2468,7 +2584,7 @@ System_Xml_Linq_XObject_get_Parent:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #456]
+ldr x1, [x16, #440]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd280001a
@@ -2484,7 +2600,7 @@ Lme_32:
 	.no_dead_strip System_Xml_Linq_XObject_AddAnnotation_object
 System_Xml_Linq_XObject_AddAnnotation_object:
 .loc 1 986 0 prologue_end
-.word 0xa9ba7bfd
+.word 0xa9bb7bfd
 .word 0x910003fd
 .word 0xa9015fb6
 .word 0xa90267b8
@@ -2492,15 +2608,17 @@ System_Xml_Linq_XObject_AddAnnotation_object:
 .word 0xaa0003f9
 .word 0xaa0103fa
 .word 0xf9001fbf
-.word 0xb400131a
+.word 0xb400167a
 .loc 1 987 0
 .word 0xf9400f20
-.word 0xb50005e0
+.word 0xb5000740
 .loc 1 988 0
 .word 0xaa1a03f8
 .word 0xeb1f035f
-.word 0x54000280
+.word 0x540002c0
 .word 0xf9400357
+.word 0xf9400b40
+.word 0xb5000240
 .word 0x3940b2e0
 .word 0xd280003e
 .word 0xeb1e001f
@@ -2511,13 +2629,13 @@ System_Xml_Linq_XObject_AddAnnotation_object:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #464]
+ldr x1, [x16, #448]
 .word 0xeb01001f
 .word 0x540000e1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #472]
+ldr x0, [x16, #456]
 .word 0xeb0002ff
 .word 0x54000040
 .word 0xd2800018
@@ -2528,9 +2646,9 @@ ldr x0, [x16, #472]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #224]
+ldr x0, [x16, #216]
 .word 0xd2800021
-bl _p_9
+bl _p_8
 .word 0xaa0003e3
 .word 0xaa0303e0
 .word 0xf90023a0
@@ -2544,15 +2662,27 @@ bl _p_9
 .word 0xaa0003fa
 .word 0xf9000f1a
 .word 0x91006300
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 989 0
-.word 0x14000062
+.word 0x14000072
 .loc 1 991 0
 .word 0xf9400f38
 .word 0xaa1803f7
 .word 0xeb1f031f
-.word 0x54000280
+.word 0x540002c0
 .word 0xf9400316
+.word 0xf9400b00
+.word 0xb5000240
 .word 0x3940b2c0
 .word 0xd280003e
 .word 0xeb1e001f
@@ -2563,53 +2693,61 @@ bl _p_1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #464]
+ldr x1, [x16, #448]
 .word 0xeb01001f
 .word 0x540000e1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #472]
+ldr x0, [x16, #456]
 .word 0xeb00031f
 .word 0x54000040
 .word 0xd2800017
 .word 0xf9001fb7
 .loc 1 992 0
 .word 0xf9401fa0
-.word 0xb50003e0
+.word 0xb50004c0
 .loc 1 993 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #224]
+ldr x0, [x16, #216]
 .word 0xd2800041
-bl _p_9
+bl _p_8
 .word 0xaa0003e3
 .word 0xaa0303e0
-.word 0xf9002ba0
+.word 0xf90027a0
 .word 0xf9400f22
 .word 0xaa0303e0
 .word 0xd2800001
 .word 0xf9400063
 .word 0xf9408070
 .word 0xd63f0200
-.word 0xf9402ba3
+.word 0xf94027a3
 .word 0xaa0303e0
-.word 0xf90027a0
+.word 0xf90023a0
 .word 0xaa0303e0
 .word 0xd2800021
 .word 0xaa1a03e2
 .word 0xf9400063
 .word 0xf9408070
 .word 0xd63f0200
-.word 0xf94027a0
-.word 0xf90023a0
-.word 0xf9000f20
-.word 0x91006320
-bl _p_1
 .word 0xf94023a0
+.word 0xf9000f20
+.word 0x91006321
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 994 0
-.word 0x1400002a
+.word 0x14000031
 .loc 1 996 0
 .word 0xd2800018
 .word 0x14000002
@@ -2624,7 +2762,7 @@ bl _p_1
 .word 0xb9801802
 .word 0xeb01005f
 .word 0x10000011
-.word 0x540005a9
+.word 0x54000689
 .word 0xd37df021
 .word 0x8b010000
 .word 0x91008000
@@ -2634,22 +2772,30 @@ bl _p_1
 .word 0xf9401fa0
 .word 0xb9801800
 .word 0x6b00031f
-.word 0x540001a1
+.word 0x54000281
 .loc 1 999 0
 .word 0x9100e3a0
 .word 0x531f7b01
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #480]
-bl _p_45
+ldr x15, [x16, #464]
+bl _p_44
 .loc 1 1000 0
 .word 0xf9401fa0
-.word 0xf90023a0
 .word 0xf9000f20
-.word 0x91006320
-bl _p_1
-.word 0xf94023a0
+.word 0x91006321
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 1002 0
 .word 0xf9401fa3
 .word 0xaa0303e0
@@ -2663,7 +2809,7 @@ bl _p_1
 .word 0xa94267b8
 .word 0xf9401bba
 .word 0x910003bf
-.word 0xa8c67bfd
+.word 0xa8c57bfd
 .word 0xd65f03c0
 .loc 1 986 0
 
@@ -2671,15 +2817,15 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd28024e1
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
-.word 0xd2801b80
+bl _p_9
+.word 0xd2801b40
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_33:
 .text
@@ -2696,16 +2842,18 @@ System_Xml_Linq_XObject_Annotation_System_Type:
 .word 0xaa0103fa
 .word 0xeb1f035f
 .word 0x9a9f17e0
-.word 0x350008c0
+.word 0x35000900
 .loc 1 1018 0
 .word 0xf9400f20
-.word 0xb40007a0
+.word 0xb40007e0
 .loc 1 1019 0
 .word 0xf9400f38
 .word 0xaa1803f7
 .word 0xeb1f031f
-.word 0x54000280
+.word 0x540002c0
 .word 0xf9400316
+.word 0xf9400b00
+.word 0xb5000240
 .word 0x3940b2c0
 .word 0xd280003e
 .word 0xeb1e001f
@@ -2716,13 +2864,13 @@ System_Xml_Linq_XObject_Annotation_System_Type:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #464]
+ldr x1, [x16, #448]
 .word 0xeb01001f
 .word 0x540000e1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #472]
+ldr x0, [x16, #456]
 .word 0xeb00031f
 .word 0x54000040
 .word 0xd2800017
@@ -2733,7 +2881,7 @@ ldr x0, [x16, #472]
 .word 0xf9400f21
 .word 0xaa1a03e0
 .word 0xf9400342
-.word 0xf9407c50
+.word 0xf9408050
 .word 0xd63f0200
 .word 0x53001c00
 .word 0x340003a0
@@ -2759,7 +2907,7 @@ ldr x0, [x16, #472]
 .word 0xaa1a03e0
 .word 0xaa1703e1
 .word 0xf9400342
-.word 0xf9407c50
+.word 0xf9408050
 .word 0xd63f0200
 .word 0x53001c00
 .word 0x34000060
@@ -2784,15 +2932,15 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd28027a1
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
-.word 0xd2801b80
+bl _p_9
+.word 0xd2801b40
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_34:
 .text
@@ -2807,13 +2955,15 @@ System_Xml_Linq_XObject_Annotation_T_REF:
 .word 0xf9001baf
 .word 0xaa0003fa
 .word 0xf9400f40
-.word 0xb40009a0
+.word 0xb40009e0
 .loc 1 1046 0
 .word 0xf9400f59
 .word 0xaa1903f8
 .word 0xeb1f033f
-.word 0x54000280
+.word 0x540002c0
 .word 0xf9400337
+.word 0xf9400b20
+.word 0xb5000240
 .word 0x3940b2e0
 .word 0xd280003e
 .word 0xeb1e001f
@@ -2824,13 +2974,13 @@ System_Xml_Linq_XObject_Annotation_T_REF:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #464]
+ldr x1, [x16, #448]
 .word 0xeb01001f
 .word 0x540000e1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #472]
+ldr x0, [x16, #456]
 .word 0xeb00033f
 .word 0x54000040
 .word 0xd2800018
@@ -2840,18 +2990,18 @@ ldr x0, [x16, #472]
 .word 0xf9400f40
 .word 0xf90027a0
 .word 0xf9401ba0
-bl _p_46
+bl _p_45
 .word 0xaa0003e2
 .word 0xf94027a0
 .word 0xf9400441
-bl _p_47
+bl _p_46
 .word 0xf90023a0
 .word 0xf9401ba0
-bl _p_46
+bl _p_45
 .word 0xaa0003e2
 .word 0xf94023a0
 .word 0xf9400441
-bl _p_48
+bl _p_47
 .word 0x14000025
 .loc 1 1048 0
 .word 0xd280001a
@@ -2871,18 +3021,18 @@ bl _p_48
 .word 0xb40002e0
 .loc 1 1051 0
 .word 0xf9401ba0
-bl _p_46
+bl _p_45
 .word 0xaa0003e2
 .word 0xf9400441
 .word 0xaa1803e0
-bl _p_47
+bl _p_46
 .word 0xf90023a0
 .word 0xf9401ba0
-bl _p_46
+bl _p_45
 .word 0xaa0003e2
 .word 0xf94023a0
 .word 0xf9400441
-bl _p_48
+bl _p_47
 .word 0xaa0003f8
 .loc 1 1052 0
 .word 0xaa1803e0
@@ -2901,9 +3051,9 @@ bl _p_48
 .word 0x910003bf
 .word 0xa8c57bfd
 .word 0xd65f03c0
-.word 0xd2801b80
+.word 0xd2801b40
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_35:
 .text
@@ -2915,23 +3065,30 @@ System_Xml_Linq_XObject_Annotations_T_REF:
 .word 0xf9000faf
 .word 0xf9000ba0
 .word 0xf9400fa0
-bl _p_49
+bl _p_48
 .word 0xd2800701
-bl _p_16
-.word 0xf90017a0
+bl _p_15
+.word 0xf90013a0
 .word 0x92800021
 .word 0xf2bfffe1
-bl _p_50
-.word 0xf94017a1
-.word 0xaa0103e0
-.word 0xaa0003e2
-.word 0xf90013a2
-.word 0xf9400ba2
-.word 0xf9000c22
-.word 0x91006000
-bl _p_1
-.word 0xf94013a0
+bl _p_49
+.word 0xf94013a3
+.word 0xaa0303e2
+.word 0xaa0203e0
 .word 0xf9400ba1
+.word 0xf9000c61
+.word 0x91006042
+.word 0xd349fc42
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0042
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x3, [x16, #16]
+.word 0x8b030042
+.word 0xd280003e
+.word 0x3900005e
 .word 0x910003bf
 .word 0xa8c37bfd
 .word 0xd65f03c0
@@ -2948,9 +3105,9 @@ System_Xml_Linq_XObject_System_Xml_IXmlLineInfo_HasLineInfo:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #488]
+ldr x15, [x16, #472]
 .word 0xf9400ba0
-bl _p_51
+bl _p_50
 .word 0xeb1f001f
 .word 0x9a9f97e0
 .word 0x910003bf
@@ -2970,9 +3127,9 @@ System_Xml_Linq_XObject_System_Xml_IXmlLineInfo_get_LineNumber:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #488]
+ldr x15, [x16, #472]
 .word 0xaa1a03e0
-bl _p_51
+bl _p_50
 .word 0xaa0003fa
 .loc 1 1221 0
 .word 0xaa1a03e0
@@ -2999,9 +3156,9 @@ System_Xml_Linq_XObject_System_Xml_IXmlLineInfo_get_LinePosition:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #488]
+ldr x15, [x16, #472]
 .word 0xaa1a03e0
-bl _p_51
+bl _p_50
 .word 0xaa0003fa
 .loc 1 1229 0
 .word 0xaa1a03e0
@@ -3027,9 +3184,9 @@ System_Xml_Linq_XObject_get_HasBaseUri:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #448]
+ldr x15, [x16, #432]
 .word 0xf9400ba0
-bl _p_44
+bl _p_43
 .word 0xeb1f001f
 .word 0x9a9f97e0
 .word 0x910003bf
@@ -3066,10 +3223,10 @@ System_Xml_Linq_XObject_NotifyChanged_object_System_Xml_Linq_XObjectChangeEventA
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #496]
+ldr x15, [x16, #480]
 .word 0xf94002de
 .word 0xaa1603e0
-bl _p_52
+bl _p_51
 .word 0xaa0003f8
 .loc 1 1249 0
 .word 0xaa1803e0
@@ -3131,10 +3288,10 @@ System_Xml_Linq_XObject_NotifyChanging_object_System_Xml_Linq_XObjectChangeEvent
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #496]
+ldr x15, [x16, #480]
 .word 0xf94002de
 .word 0xaa1603e0
-bl _p_52
+bl _p_51
 .word 0xaa0003f8
 .loc 1 1269 0
 .word 0xaa1803e0
@@ -3172,28 +3329,36 @@ Lme_3c:
 	.no_dead_strip System_Xml_Linq_XObject_SetBaseUri_string
 System_Xml_Linq_XObject_SetBaseUri_string:
 .loc 1 1281 0 prologue_end
-.word 0xa9bd7bfd
+.word 0xa9be7bfd
 .word 0x910003fd
 .word 0xf9000ba0
 .word 0xf9000fa1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #504]
+ldr x0, [x16, #488]
 .word 0xd2800301
-bl _p_16
-.word 0xf9400fa1
-.word 0xf9000801
-.word 0xf90013a0
-.word 0x91004000
-bl _p_1
-.word 0xf94013a1
+bl _p_15
+.word 0xaa0003e1
 .word 0xf9400fa0
+.word 0xf9000820
+.word 0x91004022
+.word 0xd349fc42
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0042
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x3, [x16, #16]
+.word 0x8b030042
+.word 0xd280003e
+.word 0x3900005e
 .word 0xf9400ba0
-bl _p_53
+bl _p_52
 .loc 1 1282 0
 .word 0x910003bf
-.word 0xa8c37bfd
+.word 0xa8c27bfd
 .word 0xd65f03c0
 
 Lme_3d:
@@ -3210,16 +3375,16 @@ System_Xml_Linq_XObject_SetLineInfo_int_int:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #512]
+ldr x0, [x16, #496]
 .word 0xd2800301
-bl _p_16
+bl _p_15
 .word 0xf9001ba0
 .word 0xb9801ba1
 .word 0xb98023a2
 bl System_Xml_Linq_LineInfoAnnotation__ctor_int_int
 .word 0xf9401ba1
 .word 0xf9400ba0
-bl _p_53
+bl _p_52
 .loc 1 1286 0
 .word 0x910003bf
 .word 0xa8c47bfd
@@ -3251,10 +3416,10 @@ System_Xml_Linq_XObject_SkipNotify:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #520]
+ldr x15, [x16, #504]
 .word 0xf940033e
 .word 0xaa1903e0
-bl _p_54
+bl _p_53
 .word 0xb4000060
 .word 0xd2800000
 .word 0x14000003
@@ -3294,10 +3459,10 @@ System_Xml_Linq_XObject_GetSaveOptionsFromAnnotations:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #528]
+ldr x1, [x16, #512]
 .word 0xaa1903e0
 .word 0xf940033e
-bl _p_55
+bl _p_54
 .word 0xaa0003fa
 .loc 1 1315 0
 .word 0xaa1a03e0
@@ -3313,7 +3478,7 @@ bl _p_55
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #536]
+ldr x1, [x16, #520]
 .word 0xeb01001f
 .word 0x10000011
 .word 0x54000121
@@ -3327,9 +3492,9 @@ ldr x1, [x16, #536]
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
-.word 0xd2801c20
+.word 0xd2801be0
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_40:
 .text
@@ -3345,7 +3510,7 @@ System_Xml_Linq_XObject__Annotationsd__16_1_T_REF__ctor_int:
 .word 0xb9002801
 .word 0xf9400ba0
 .word 0xf90013a0
-bl _p_56
+bl _p_55
 .word 0x93407c00
 .word 0xaa0003e1
 .word 0xf94013a0
@@ -3391,26 +3556,28 @@ System_Xml_Linq_XObject__Annotationsd__16_1_T_REF_MoveNext:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #544]
+ldr x0, [x16, #528]
 .word 0x8b010000
 .word 0xf9400000
 .word 0xd61f0000
 .word 0xd2800000
-.word 0x14000087
+.word 0x140000a4
 .word 0xf9401fa0
 .word 0x9280001e
 .word 0xf2bffffe
 .word 0xb900281e
 .loc 1 1092 0
 .word 0xf9400f40
-.word 0xb4001000
+.word 0xb40013a0
 .loc 1 1093 0
 .word 0xf9401fb9
 .word 0xf9400f58
 .word 0xaa1803f7
 .word 0xeb1f031f
-.word 0x54000280
+.word 0x540002c0
 .word 0xf9400316
+.word 0xf9400b00
+.word 0xb5000240
 .word 0x3940b2c0
 .word 0xd280003e
 .word 0xeb1e001f
@@ -3421,64 +3588,84 @@ ldr x0, [x16, #544]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #464]
+ldr x1, [x16, #448]
 .word 0xeb01001f
 .word 0x540000e1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #472]
+ldr x0, [x16, #456]
 .word 0xeb00031f
 .word 0x54000040
 .word 0xd2800017
 .word 0xf9001337
 .word 0x91008320
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 1094 0
 .word 0xf9401fa0
 .word 0xf9401000
-.word 0xb5000460
+.word 0xb5000580
 .loc 1 1095 0
 .word 0xf9400f40
 .word 0xf90027a0
 .word 0xf9401fa0
 .word 0xf9400000
-bl _p_57
+bl _p_56
 .word 0xaa0003e2
 .word 0xf94027a0
 .word 0xf9400441
-bl _p_47
+bl _p_46
 .word 0xf90023a0
 .word 0xf9401fa0
 .word 0xf9400000
-bl _p_57
+bl _p_56
 .word 0xaa0003e2
 .word 0xf94023a0
 .word 0xf9400441
-bl _p_48
+bl _p_47
 .word 0xaa0003fa
 .loc 1 1096 0
 .word 0xaa1a03e0
-.word 0xb4000980
+.word 0xb4000bc0
 .word 0xf9401fa0
 .word 0xf900081a
 .word 0x91004000
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .word 0xf9401fa0
 .word 0xd280003e
 .word 0xb900281e
 .word 0xd2800020
-.word 0x14000046
+.word 0x1400004f
 .word 0xf9401fa0
 .word 0x9280001e
 .word 0xf2bffffe
 .word 0xb900281e
 .loc 1 1097 0
-.word 0x1400003e
+.word 0x14000047
 .loc 1 1099 0
 .word 0xf9401fa0
 .word 0xb900301f
-.word 0x14000034
+.word 0x1400003d
 .loc 1 1100 0
 .word 0xf9401fa0
 .word 0xf9401000
@@ -3488,38 +3675,48 @@ bl _p_1
 .word 0xb9801802
 .word 0xeb01005f
 .word 0x10000011
-.word 0x54000769
+.word 0x54000889
 .word 0xd37df021
 .word 0x8b010000
 .word 0x91008000
 .word 0xf940001a
 .loc 1 1101 0
 .word 0xaa1a03e0
-.word 0xb4000580
+.word 0xb40006a0
 .loc 1 1102 0
 .word 0xf9401fa0
 .word 0xf9400000
-bl _p_57
+bl _p_56
 .word 0xaa0003e2
 .word 0xf9400441
 .word 0xaa1a03e0
-bl _p_47
+bl _p_46
 .word 0xf90023a0
 .word 0xf9401fa0
 .word 0xf9400000
-bl _p_57
+bl _p_56
 .word 0xaa0003e2
 .word 0xf94023a0
 .word 0xf9400441
-bl _p_48
+bl _p_47
 .word 0xaa0003fa
 .loc 1 1103 0
 .word 0xaa1a03e0
-.word 0xb40001c0
+.word 0xb40002e0
 .word 0xf9401fa0
 .word 0xf900081a
 .word 0x91004000
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .word 0xf9401fa0
 .word 0xd280005e
 .word 0xb900281e
@@ -3541,7 +3738,7 @@ bl _p_1
 .word 0xf9401021
 .word 0xb9801821
 .word 0x6b01001f
-.word 0x54fff8eb
+.word 0x54fff7cb
 .loc 1 1106 0
 .word 0xf9401fa0
 .word 0xf900101f
@@ -3553,9 +3750,9 @@ bl _p_1
 .word 0x910003bf
 .word 0xa8c57bfd
 .word 0xd65f03c0
-.word 0xd2801b80
+.word 0xd2801b40
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_43:
 .text
@@ -3579,10 +3776,10 @@ System_Xml_Linq_XObject__Annotationsd__16_1_T_REF_System_Collections_IEnumerator
 .word 0xa9be7bfd
 .word 0x910003fd
 .word 0xf9000ba0
-.word 0xd2801de0
+.word 0xd2801da0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
-bl _p_10
+bl _p_9
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
@@ -3619,7 +3816,7 @@ System_Xml_Linq_XObject__Annotationsd__16_1_T_REF_System_Collections_Generic_IEn
 .word 0xf9400fa0
 .word 0xb9802c00
 .word 0xf90013a0
-bl _p_56
+bl _p_55
 .word 0x93407c00
 .word 0xaa0003e1
 .word 0xf94013a0
@@ -3628,25 +3825,33 @@ bl _p_56
 .word 0xf9400fa0
 .word 0xb900281f
 .word 0xf9400fba
-.word 0x14000013
+.word 0x1400001a
 .word 0xf9400fa0
 .word 0xf9400000
-bl _p_58
+bl _p_57
 .word 0xd2800701
-bl _p_16
-.word 0xf90017a0
+bl _p_15
+.word 0xf90013a0
 .word 0xd2800001
 bl System_Xml_Linq_XObject__Annotationsd__16_1_T_REF__ctor_int
-.word 0xf94017a1
-.word 0xaa0103fa
-.word 0xaa1a03e0
-.word 0xf9400fa2
-.word 0xf9400c42
-.word 0xf90013a2
-.word 0xf9000c22
-.word 0x91006000
-bl _p_1
-.word 0xf94013a0
+.word 0xf94013a2
+.word 0xaa0203fa
+.word 0xaa1a03e1
+.word 0xf9400fa0
+.word 0xf9400c00
+.word 0xf9000c40
+.word 0x91006021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .word 0xaa1a03e0
 .word 0xf9400bba
 .word 0x910003bf
@@ -3677,12 +3882,21 @@ System_Xml_Linq_BaseUriAnnotation__ctor_string:
 .word 0x910003fd
 .word 0xf9000ba0
 .word 0xf9000fa1
-.word 0xf9400fa1
-.word 0xf9400ba0
-.word 0xf9000801
-.word 0x91004000
-bl _p_1
 .word 0xf9400fa0
+.word 0xf9400ba1
+.word 0xf9000820
+.word 0x91004021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 1329 0
 .word 0x910003bf
 .word 0xa8c27bfd
@@ -3758,60 +3972,60 @@ System_Xml_Linq_XObjectChangeEventArgs__cctor:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #552]
+ldr x0, [x16, #536]
 .word 0xd2800281
-bl _p_16
+bl _p_15
 .word 0xaa0003e1
 .word 0xb900103f
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #560]
+ldr x0, [x16, #544]
 .word 0xf9000001
 .loc 1 1416 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #552]
+ldr x0, [x16, #536]
 .word 0xd2800281
-bl _p_16
+bl _p_15
 .word 0xaa0003e1
 .word 0xd280003e
 .word 0xb900103e
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #568]
+ldr x0, [x16, #552]
 .word 0xf9000001
 .loc 1 1422 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #552]
+ldr x0, [x16, #536]
 .word 0xd2800281
-bl _p_16
+bl _p_15
 .word 0xaa0003e1
 .word 0xd280005e
 .word 0xb900103e
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #576]
+ldr x0, [x16, #560]
 .word 0xf9000001
 .loc 1 1428 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #552]
+ldr x0, [x16, #536]
 .word 0xd2800281
-bl _p_16
+bl _p_15
 .word 0xaa0003e1
 .word 0xd280007e
 .word 0xb900103e
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #584]
+ldr x0, [x16, #568]
 .word 0xf9000001
 .word 0x910003bf
 .word 0xa8c17bfd
@@ -3847,7 +4061,7 @@ System_Xml_Linq_XNode_Remove:
 .word 0xf9400822
 .word 0xaa0203e0
 .word 0xf940005e
-bl _p_59
+bl _p_58
 .loc 1 1863 0
 .word 0x910003bf
 .word 0xa8c27bfd
@@ -3858,13 +4072,13 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd28028e1
-bl _p_8
-bl _p_60
+bl _p_7
+bl _p_59
 .word 0xaa0003e1
-.word 0xd2801c40
+.word 0xd2801c00
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_4f:
 .text
@@ -3876,11 +4090,11 @@ System_Xml_Linq_XNode_ToString:
 .word 0x910003fd
 .word 0xf9000ba0
 .word 0xf9400ba0
-bl _p_61
+bl _p_60
 .word 0x93407c00
 .word 0xaa0003e1
 .word 0xf9400ba0
-bl _p_62
+bl _p_61
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
@@ -3912,11 +4126,11 @@ System_Xml_Linq_XNode_GetXmlReaderSettings_System_Xml_Linq_LoadOptions:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #592]
+ldr x0, [x16, #576]
 .word 0xd2800e01
-bl _p_16
+bl _p_15
 .word 0xf90013a0
-bl _p_63
+bl _p_62
 .word 0xf94013a0
 .word 0xaa0003f9
 .loc 1 1990 0
@@ -3927,23 +4141,23 @@ bl _p_63
 .word 0xaa1903e0
 .word 0xd2800021
 .word 0xf940033e
-bl _p_64
+bl _p_63
 .loc 1 1991 0
 .word 0xaa1903e0
 .word 0xd2800041
 .word 0xf940033e
-bl _p_65
+bl _p_64
 .loc 1 1992 0
 .word 0xaa1903e0
 .word 0xd292d001
 .word 0xf2a01301
 .word 0xf940033e
-bl _p_66
+bl _p_65
 .loc 1 1993 0
 .word 0xaa1903e0
 .word 0xd2800001
 .word 0xf940033e
-bl _p_67
+bl _p_66
 .loc 1 1994 0
 .word 0xaa1903e0
 .word 0xf9400bb9
@@ -3968,36 +4182,36 @@ System_Xml_Linq_XNode_GetXmlString_System_Xml_Linq_SaveOptions:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #600]
+ldr x0, [x16, #584]
 .word 0x3980b410
 .word 0xb5000050
-bl _p_68
+bl _p_67
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #608]
+ldr x0, [x16, #592]
 .word 0xf9400000
 .word 0xf90037a0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #616]
+ldr x0, [x16, #600]
 .word 0xd2800701
-bl _p_16
+bl _p_15
 .word 0xf94037a1
 .word 0xf90033a0
-bl _p_69
+bl _p_68
 .word 0xf94033a0
 .word 0xf90017a0
 .loc 1 2006 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #624]
+ldr x0, [x16, #608]
 .word 0xd2800f01
-bl _p_16
+bl _p_15
 .word 0xf90033a0
-bl _p_70
+bl _p_69
 .word 0xf94033a0
 .word 0xaa0003f8
 .loc 1 2007 0
@@ -4005,7 +4219,7 @@ bl _p_70
 .word 0xaa0203e0
 .word 0xd2800021
 .word 0xf940005e
-bl _p_71
+bl _p_70
 .loc 1 2008 0
 .word 0xd280003e
 .word 0xa1e0340
@@ -4013,7 +4227,7 @@ bl _p_71
 .word 0xaa1803e0
 .word 0xd2800021
 .word 0xf940031e
-bl _p_72
+bl _p_71
 .loc 1 2009 0
 .word 0xd280005e
 .word 0xa1e0340
@@ -4024,7 +4238,7 @@ bl _p_72
 .word 0x2a1e0001
 .word 0xaa1803e0
 .word 0xf940031e
-bl _p_73
+bl _p_72
 .loc 1 2010 0
 .word 0xaa1903fa
 .word 0xeb1f033f
@@ -4036,7 +4250,7 @@ bl _p_73
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #632]
+ldr x1, [x16, #616]
 .word 0xeb01001f
 .word 0x54000060
 .word 0xd280001a
@@ -4045,11 +4259,11 @@ ldr x1, [x16, #632]
 .word 0xaa1803e0
 .word 0xd2800021
 .word 0xf940031e
-bl _p_74
+bl _p_73
 .loc 1 2011 0
 .word 0xf94017a0
 .word 0xaa1803e1
-bl _p_75
+bl _p_74
 .word 0xf9001ba0
 .loc 1 2012 0
 .word 0xaa1903fa
@@ -4062,7 +4276,7 @@ bl _p_75
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #640]
+ldr x1, [x16, #624]
 .word 0xeb01001f
 .word 0x54000060
 .word 0xd280001a
@@ -4074,7 +4288,7 @@ ldr x1, [x16, #640]
 .word 0xf9401ba1
 .word 0xaa1803e0
 .word 0xf940031e
-bl _p_76
+bl _p_75
 .loc 1 2015 0
 .word 0x94000009
 .word 0x14000017
@@ -4096,7 +4310,7 @@ bl _p_76
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #648]
+ldr x15, [x16, #632]
 .word 0x928004f0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -4121,7 +4335,7 @@ ldr x15, [x16, #648]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #648]
+ldr x15, [x16, #632]
 .word 0x928004f0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -4147,14 +4361,23 @@ System_Xml_Linq_XText__ctor_string:
 .word 0xf9000ba0
 .word 0xf9000fa1
 .word 0xf9400fa0
-.word 0xb4000140
+.word 0xb4000240
 .loc 1 2185 0
-.word 0xf9400fa1
-.word 0xf9400ba0
-.word 0xf9001401
-.word 0x9100a000
-bl _p_1
 .word 0xf9400fa0
+.word 0xf9400ba1
+.word 0xf9001420
+.word 0x9100a021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 2186 0
 .word 0x910003bf
 .word 0xa8c27bfd
@@ -4165,12 +4388,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd28030a1
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_56:
 .text
@@ -4178,24 +4401,32 @@ Lme_56:
 	.no_dead_strip System_Xml_Linq_XText__ctor_System_Xml_Linq_XText
 System_Xml_Linq_XText__ctor_System_Xml_Linq_XText:
 .loc 1 2193 0 prologue_end
-.word 0xa9bd7bfd
+.word 0xa9be7bfd
 .word 0x910003fd
 .word 0xf9000ba0
 .word 0xf9000fa1
 .word 0xf9400fa0
-.word 0xb4000180
+.word 0xb4000260
 .loc 1 2194 0
 .word 0xf9400fa0
-.word 0xf9401401
-.word 0xf9400ba0
-.word 0xf90013a1
-.word 0xf9001401
-.word 0x9100a000
-bl _p_1
-.word 0xf94013a0
+.word 0xf9401400
+.word 0xf9400ba1
+.word 0xf9001420
+.word 0x9100a021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 2195 0
 .word 0x910003bf
-.word 0xa8c37bfd
+.word 0xa8c27bfd
 .word 0xd65f03c0
 .loc 1 2193 0
 
@@ -4203,12 +4434,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2803221
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_57:
 .text
@@ -4245,45 +4476,52 @@ Lme_59:
 	.no_dead_strip System_Xml_Linq_XText_set_Value_string
 System_Xml_Linq_XText_set_Value_string:
 .loc 1 2222 0 prologue_end
-.word 0xa9bd7bfd
+.word 0xa9be7bfd
 .word 0x910003fd
 .word 0xf9000bb9
 .word 0xaa0003f9
 .word 0xf9000fa1
 .word 0xf9400fa0
-.word 0xb4000380
+.word 0xb4000440
 .loc 1 2223 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #584]
+ldr x0, [x16, #568]
 .word 0xf9400002
 .word 0xaa1903e0
 .word 0xaa1903e1
-bl _p_77
+bl _p_76
 .word 0x53001c00
-.word 0xf90013a0
-.word 0xf9400fa0
-.loc 1 2224 0
-.word 0xf9001720
-.word 0x9100a320
-bl _p_1
-.word 0xf94013a0
 .word 0xf9400fa1
+.loc 1 2224 0
+.word 0xf9001721
+.word 0x9100a322
+.word 0xd349fc42
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0042
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x3, [x16, #16]
+.word 0x8b030042
+.word 0xd280003e
+.word 0x3900005e
 .loc 1 2225 0
 .word 0x34000100
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #584]
+ldr x0, [x16, #568]
 .word 0xf9400002
 .word 0xaa1903e0
 .word 0xaa1903e1
-bl _p_78
+bl _p_77
 .loc 1 2226 0
 .word 0xf9400bb9
 .word 0x910003bf
-.word 0xa8c37bfd
+.word 0xa8c27bfd
 .word 0xd65f03c0
 .loc 1 2222 0
 
@@ -4291,12 +4529,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd28030a1
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_5a:
 .text
@@ -4324,7 +4562,7 @@ System_Xml_Linq_XText_WriteTo_System_Xml_XmlWriter:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #640]
+ldr x1, [x16, #624]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800017
@@ -4357,12 +4595,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd28033a1
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_5b:
 .text
@@ -4379,7 +4617,7 @@ System_Xml_Linq_XText_AppendText_System_Text_StringBuilder:
 .word 0xf9400fa0
 .word 0xf9400fa2
 .word 0xf940005e
-bl _p_79
+bl _p_78
 .loc 1 2247 0
 .word 0x910003bf
 .word 0xa8c27bfd
@@ -4397,9 +4635,9 @@ System_Xml_Linq_XText_CloneNode:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #656]
+ldr x0, [x16, #640]
 .word 0xd2800601
-bl _p_16
+bl _p_15
 .word 0xf90013a0
 .word 0xf9400ba1
 bl System_Xml_Linq_XText__ctor_System_Xml_Linq_XText
@@ -4486,12 +4724,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd28033a1
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_61:
 .text
@@ -4505,9 +4743,9 @@ System_Xml_Linq_XCData_CloneNode:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #664]
+ldr x0, [x16, #648]
 .word 0xd2800601
-bl _p_16
+bl _p_15
 .word 0xf90013a0
 .word 0xf9400ba1
 bl System_Xml_Linq_XCData__ctor_System_Xml_Linq_XCData
@@ -4535,13 +4773,13 @@ Lme_63:
 	.no_dead_strip System_Xml_Linq_XContainer__ctor_System_Xml_Linq_XContainer
 System_Xml_Linq_XContainer__ctor_System_Xml_Linq_XContainer:
 .loc 1 2323 0 prologue_end
-.word 0xa9bc7bfd
+.word 0xa9bd7bfd
 .word 0x910003fd
 .word 0xa90163b7
 .word 0xa9026bb9
 .word 0xaa0003f9
 .word 0xaa0103fa
-.word 0xb40006ba
+.word 0xb400079a
 .loc 1 2324 0
 .word 0xf9401758
 .word 0xaa1803f7
@@ -4554,18 +4792,26 @@ System_Xml_Linq_XContainer__ctor_System_Xml_Linq_XContainer:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #672]
+ldr x1, [x16, #656]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800017
-.word 0xb4000117
+.word 0xb40001f7
 .loc 1 2325 0
 .word 0xf9401740
-.word 0xf9001ba0
 .word 0xf9001720
-.word 0x9100a320
-bl _p_1
-.word 0xf9401ba0
+.word 0x9100a321
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 2326 0
 .word 0x1400001a
 .loc 1 2328 0
@@ -4578,7 +4824,7 @@ bl _p_1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #680]
+ldr x1, [x16, #664]
 .word 0xeb01001f
 .word 0x10000011
 .word 0x540003a1
@@ -4594,7 +4840,7 @@ ldr x1, [x16, #680]
 .word 0xd63f0200
 .word 0xaa0003e1
 .word 0xaa1903e0
-bl _p_80
+bl _p_79
 .loc 1 2333 0
 .word 0xf9401740
 .word 0xeb0002ff
@@ -4603,7 +4849,7 @@ bl _p_80
 .word 0xa94163b7
 .word 0xa9426bb9
 .word 0x910003bf
-.word 0xa8c47bfd
+.word 0xa8c37bfd
 .word 0xd65f03c0
 .loc 1 2323 0
 
@@ -4611,15 +4857,15 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2803221
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
-.word 0xd2801c20
+bl _p_9
+.word 0xd2801be0
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_64:
 .text
@@ -4635,7 +4881,7 @@ System_Xml_Linq_XContainer_get_LastNode:
 .word 0xf9401740
 .word 0xb5000060
 .word 0xd2800000
-.word 0x14000056
+.word 0x1400006f
 .loc 1 2354 0
 .word 0xf9401759
 .word 0xaa1903f8
@@ -4648,7 +4894,7 @@ System_Xml_Linq_XContainer_get_LastNode:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #680]
+ldr x1, [x16, #664]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800018
@@ -4656,7 +4902,7 @@ ldr x1, [x16, #680]
 .loc 1 2355 0
 .word 0xb4000078
 .word 0xaa1903e0
-.word 0x14000044
+.word 0x1400005d
 .loc 1 2356 0
 .word 0xf9401759
 .word 0xaa1903f8
@@ -4669,50 +4915,68 @@ ldr x1, [x16, #680]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #672]
+ldr x1, [x16, #656]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800018
 .word 0xaa1803f9
 .loc 1 2357 0
-.word 0xb40004f8
+.word 0xb4000818
 .loc 1 2358 0
 .word 0xb9801320
 .word 0x35000060
 .word 0xd2800000
-.word 0x14000030
+.word 0x14000049
 .loc 1 2359 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #656]
+ldr x0, [x16, #640]
 .word 0xd2800601
-bl _p_16
-.word 0xf9001fa0
+bl _p_15
+.word 0xf9001ba0
 .word 0xaa1903e1
 bl System_Xml_Linq_XText__ctor_string
-.word 0xf9401fa1
-.word 0xaa0103f8
-.loc 1 2360 0
-.word 0xaa1803e0
-.word 0xf900083a
-.word 0xf9001ba1
-.word 0x91004000
-bl _p_1
 .word 0xf9401ba0
+.word 0xaa0003f8
+.loc 1 2360 0
+.word 0xaa1803e1
+.word 0xf900081a
+.word 0x91004021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 2361 0
 .word 0xf9001018
 .word 0x91008300
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 2362 0
 .word 0xeb1f035f
 .word 0x10000011
-.word 0x54000440
+.word 0x54000560
 .word 0x9100a340
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #688]
+ldr x1, [x16, #672]
 .word 0xc85f7c10
 .word 0xeb19021f
 .word 0x54000061
@@ -4720,7 +4984,17 @@ ldr x1, [x16, #688]
 .word 0x35ffff91
 .word 0xd50330bf
 .word 0xaa1003e1
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 2364 0
 .word 0xf9401759
 .word 0xb4000179
@@ -4731,7 +5005,7 @@ bl _p_1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #680]
+ldr x1, [x16, #664]
 .word 0xeb01001f
 .word 0x10000011
 .word 0x540000e1
@@ -4741,12 +5015,12 @@ ldr x1, [x16, #680]
 .word 0x910003bf
 .word 0xa8c47bfd
 .word 0xd65f03c0
-.word 0xd2801c20
+.word 0xd2801be0
 .word 0xaa1103e1
-bl _p_11
-.word 0xd2801e00
+bl _p_10
+.word 0xd2801dc0
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_65:
 .text
@@ -4763,18 +5037,66 @@ System_Xml_Linq_XContainer_Add_object:
 .word 0xf9001bbf
 .word 0xf9001fbf
 .word 0xaa1903e0
-bl _p_81
+bl _p_80
 .word 0x53001c00
 .word 0x340000a0
 .loc 1 2421 0
 .word 0xaa1903e0
 .word 0xaa1a03e1
-bl _p_82
+bl _p_81
 .loc 1 2422 0
-.word 0x140000fd
+.word 0x140000ff
 .loc 1 2424 0
-.word 0xb4001f9a
+.word 0xb4001fda
 .loc 1 2425 0
+.word 0xaa1a03f8
+.word 0xeb1f035f
+.word 0x54000160
+.word 0xf9400340
+.word 0xf9400000
+.word 0xf9400800
+.word 0xf9400800
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #664]
+.word 0xeb01001f
+.word 0x54000040
+.word 0xd2800018
+.word 0xaa1803f7
+.loc 1 2426 0
+.word 0xb40000b8
+.loc 1 2427 0
+.word 0xaa1903e0
+.word 0xaa1703e1
+bl System_Xml_Linq_XContainer_AddNode_System_Xml_Linq_XNode
+.loc 1 2428 0
+.word 0x140000eb
+.loc 1 2430 0
+.word 0xaa1a03f8
+.word 0xeb1f035f
+.word 0x54000160
+.word 0xf9400340
+.word 0xf9400000
+.word 0xf9400800
+.word 0xf9400400
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #656]
+.word 0xeb01001f
+.word 0x54000040
+.word 0xd2800018
+.word 0xaa1803f7
+.loc 1 2431 0
+.word 0xb40000b8
+.loc 1 2432 0
+.word 0xaa1903e0
+.word 0xaa1703e1
+bl _p_82
+.loc 1 2433 0
+.word 0x140000d8
+.loc 1 2435 0
 .word 0xaa1a03f8
 .word 0xeb1f035f
 .word 0x54000160
@@ -4790,54 +5112,6 @@ ldr x1, [x16, #680]
 .word 0x54000040
 .word 0xd2800018
 .word 0xaa1803f7
-.loc 1 2426 0
-.word 0xb40000b8
-.loc 1 2427 0
-.word 0xaa1903e0
-.word 0xaa1703e1
-bl System_Xml_Linq_XContainer_AddNode_System_Xml_Linq_XNode
-.loc 1 2428 0
-.word 0x140000e9
-.loc 1 2430 0
-.word 0xaa1a03f8
-.word 0xeb1f035f
-.word 0x54000160
-.word 0xf9400340
-.word 0xf9400000
-.word 0xf9400800
-.word 0xf9400400
-
-adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
-add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #672]
-.word 0xeb01001f
-.word 0x54000040
-.word 0xd2800018
-.word 0xaa1803f7
-.loc 1 2431 0
-.word 0xb40000b8
-.loc 1 2432 0
-.word 0xaa1903e0
-.word 0xaa1703e1
-bl _p_83
-.loc 1 2433 0
-.word 0x140000d6
-.loc 1 2435 0
-.word 0xaa1a03f8
-.word 0xeb1f035f
-.word 0x54000160
-.word 0xf9400340
-.word 0xf9400000
-.word 0xf9400800
-.word 0xf9400800
-
-adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
-add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #696]
-.word 0xeb01001f
-.word 0x54000040
-.word 0xd2800018
-.word 0xaa1803f7
 .loc 1 2436 0
 .word 0xb40000f8
 .loc 1 2437 0
@@ -4847,7 +5121,7 @@ ldr x1, [x16, #696]
 .word 0xf9405850
 .word 0xd63f0200
 .loc 1 2438 0
-.word 0x140000c1
+.word 0x140000c3
 .loc 1 2440 0
 .word 0xaa1a03f8
 .word 0xeb1f035f
@@ -4859,7 +5133,7 @@ ldr x1, [x16, #696]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #704]
+ldr x1, [x16, #688]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800018
@@ -4870,9 +5144,9 @@ ldr x1, [x16, #704]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #712]
+ldr x0, [x16, #696]
 .word 0xd2800801
-bl _p_16
+bl _p_15
 .word 0xf9003ba0
 .word 0xaa1703e1
 bl System_Xml_Linq_XElement__ctor_System_Xml_Linq_XStreamingElement
@@ -4880,12 +5154,14 @@ bl System_Xml_Linq_XElement__ctor_System_Xml_Linq_XStreamingElement
 .word 0xaa1903e0
 bl System_Xml_Linq_XContainer_AddNode_System_Xml_Linq_XNode
 .loc 1 2443 0
-.word 0x140000a6
+.word 0x140000a8
 .loc 1 2445 0
 .word 0xaa1a03f8
 .word 0xeb1f035f
-.word 0x54000280
+.word 0x540002c0
 .word 0xf9400357
+.word 0xf9400b40
+.word 0xb5000240
 .word 0x3940b2e0
 .word 0xd280003e
 .word 0xeb1e001f
@@ -4896,13 +5172,13 @@ bl System_Xml_Linq_XContainer_AddNode_System_Xml_Linq_XNode
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #464]
+ldr x1, [x16, #448]
 .word 0xeb01001f
 .word 0x540000e1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #472]
+ldr x0, [x16, #456]
 .word 0xeb0002ff
 .word 0x54000040
 .word 0xd2800018
@@ -4924,7 +5200,7 @@ ldr x0, [x16, #472]
 .word 0xf9400017
 .word 0xaa1903e0
 .word 0xaa1703e1
-bl _p_84
+bl _p_83
 .word 0x11000718
 .word 0xb9801b40
 .word 0x6b00031f
@@ -4939,14 +5215,14 @@ bl _p_84
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #720]
+ldr x1, [x16, #704]
 .word 0xeb01001f
 .word 0x540001c3
 .word 0xf94012e0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #720]
+ldr x1, [x16, #704]
 .word 0x9343fc22
 .word 0x8b020000
 .word 0x39400000
@@ -4966,7 +5242,7 @@ ldr x1, [x16, #720]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #728]
+ldr x15, [x16, #712]
 .word 0x92800ef0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -4979,7 +5255,7 @@ ldr x15, [x16, #728]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #736]
+ldr x15, [x16, #720]
 .word 0x928003f0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -4987,14 +5263,14 @@ ldr x15, [x16, #736]
 .word 0xaa0003fa
 .word 0xaa1903e0
 .word 0xaa1a03e1
-bl _p_84
+bl _p_83
 .word 0xf9401ba1
 .word 0xaa0103e0
 .word 0xf9400021
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #744]
+ldr x15, [x16, #728]
 .word 0x92800ef0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -5019,7 +5295,7 @@ ldr x15, [x16, #744]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #752]
+ldr x1, [x16, #736]
 .word 0xeb01001f
 .word 0x540001e3
 .word 0xf9402ba0
@@ -5027,7 +5303,7 @@ ldr x1, [x16, #752]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #752]
+ldr x1, [x16, #736]
 .word 0x9343fc22
 .word 0x8b020000
 .word 0x39400000
@@ -5050,7 +5326,7 @@ ldr x1, [x16, #752]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #648]
+ldr x15, [x16, #632]
 .word 0x928004f0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -5059,19 +5335,19 @@ ldr x15, [x16, #648]
 .word 0xd61f03c0
 .loc 1 2455 0
 .word 0xaa1a03e0
-bl _p_85
+bl _p_84
 .word 0xaa0003e1
 .word 0xaa1903e0
-bl _p_83
+bl _p_82
 .loc 1 2456 0
 .word 0xa94163b7
 .word 0xa9426bb9
 .word 0x910003bf
 .word 0xa8c87bfd
 .word 0xd65f03c0
-.word 0xd2801b80
+.word 0xd2801b40
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_66:
 .text
@@ -5084,23 +5360,30 @@ System_Xml_Linq_XContainer_Nodes:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #760]
+ldr x0, [x16, #744]
 .word 0xd2800601
-bl _p_16
-.word 0xf90017a0
+bl _p_15
+.word 0xf90013a0
 .word 0x92800021
 .word 0xf2bfffe1
 bl System_Xml_Linq_XContainer__Nodesd__18__ctor_int
-.word 0xf94017a1
-.word 0xaa0103e0
-.word 0xaa0003e2
-.word 0xf90013a2
-.word 0xf9400ba2
-.word 0xf9000c22
-.word 0x91006000
-bl _p_1
-.word 0xf94013a0
+.word 0xf94013a3
+.word 0xaa0303e2
+.word 0xaa0203e0
 .word 0xf9400ba1
+.word 0xf9000c61
+.word 0x91006042
+.word 0xd349fc42
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0042
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x3, [x16, #16]
+.word 0x8b030042
+.word 0xd280003e
+.word 0x3900005e
 .word 0x910003bf
 .word 0xa8c37bfd
 .word 0xd65f03c0
@@ -5111,20 +5394,20 @@ Lme_67:
 	.no_dead_strip System_Xml_Linq_XContainer_RemoveNodes
 System_Xml_Linq_XContainer_RemoveNodes:
 .loc 1 2629 0 prologue_end
-.word 0xa9bc7bfd
+.word 0xa9bd7bfd
 .word 0x910003fd
 .word 0xa90167b8
 .word 0xf90013ba
 .word 0xaa0003fa
 .word 0xaa1a03e0
-bl _p_81
+bl _p_80
 .word 0x53001c00
-.word 0x34000da0
+.word 0x34000e80
 .loc 1 2630 0
 .word 0xaa1a03e0
-bl _p_86
+bl _p_85
 .loc 1 2631 0
-.word 0x1400006c
+.word 0x14000073
 .loc 1 2634 0
 .word 0xf9401759
 .word 0xaa1903f8
@@ -5137,7 +5420,7 @@ bl _p_86
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #672]
+ldr x1, [x16, #656]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800018
@@ -5150,7 +5433,7 @@ ldr x1, [x16, #672]
 .word 0x5400008d
 .loc 1 2637 0
 .word 0xaa1a03e0
-bl _p_87
+bl _p_86
 .loc 1 2638 0
 .word 0x14000023
 .loc 1 2640 0
@@ -5164,7 +5447,7 @@ bl _p_87
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #456]
+ldr x1, [x16, #440]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800018
@@ -5173,26 +5456,26 @@ ldr x1, [x16, #456]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #584]
+ldr x0, [x16, #568]
 .word 0xf9400002
 .word 0xaa1a03e0
 .word 0xaa1a03e1
-bl _p_77
+bl _p_76
 .loc 1 2644 0
 .word 0xf9401740
 .word 0xeb00033f
-.word 0x54000861
+.word 0x54000941
 .loc 1 2645 0
 .word 0xf900175f
 .loc 1 2646 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #584]
+ldr x0, [x16, #568]
 .word 0xf9400002
 .word 0xaa1a03e0
 .word 0xaa1a03e1
-bl _p_78
+bl _p_77
 .loc 1 2647 0
 .word 0x14000002
 .loc 1 2649 0
@@ -5209,41 +5492,49 @@ bl _p_78
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #680]
+ldr x1, [x16, #664]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800018
 .word 0xaa1803f9
 .loc 1 2654 0
-.word 0xb4000458
+.word 0xb4000538
 .loc 1 2655 0
 .word 0xf9401338
 .loc 1 2656 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #568]
+ldr x0, [x16, #552]
 .word 0xf9400002
 .word 0xaa1a03e0
 .word 0xaa1803e1
-bl _p_77
+bl _p_76
 .loc 1 2657 0
 .word 0xf9401740
 .word 0xeb00033f
-.word 0x54000521
+.word 0x54000601
 .word 0xf9401320
 .word 0xeb00031f
-.word 0x540004c1
+.word 0x540005a1
 .loc 1 2658 0
 .word 0xeb19031f
-.word 0x54000100
+.word 0x540001e0
 .loc 1 2659 0
 .word 0xf9401300
-.word 0xf9001ba0
 .word 0xf9001320
-.word 0x91008320
-bl _p_1
-.word 0xf9401ba0
+.word 0x91008321
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 2660 0
 .word 0x14000002
 .loc 1 2662 0
@@ -5256,19 +5547,19 @@ bl _p_1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #568]
+ldr x0, [x16, #552]
 .word 0xf9400002
 .word 0xaa1a03e0
 .word 0xaa1803e1
-bl _p_78
+bl _p_77
 .loc 1 2633 0
 .word 0xf9401740
-.word 0xb5fff2c0
+.word 0xb5fff1e0
 .loc 1 2669 0
 .word 0xa94167b8
 .word 0xf94013ba
 .word 0x910003bf
-.word 0xa8c47bfd
+.word 0xa8c37bfd
 .word 0xd65f03c0
 .loc 1 2644 0
 
@@ -5276,26 +5567,26 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2803561
-bl _p_8
-bl _p_60
+bl _p_7
+bl _p_59
 .word 0xaa0003e1
-.word 0xd2801c40
+.word 0xd2801c00
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 .loc 1 2657 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2803561
-bl _p_8
-bl _p_60
+bl _p_7
+bl _p_59
 .word 0xaa0003e1
-.word 0xd2801c40
+.word 0xd2801c00
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_68:
 .text
@@ -5339,8 +5630,56 @@ System_Xml_Linq_XContainer_AddContentSkipNotify_object:
 .word 0xaa0103fa
 .word 0xf9001bbf
 .word 0xf9001fbf
-.word 0xb4001f9a
+.word 0xb4001fda
 .loc 1 2715 0
+.word 0xaa1a03f8
+.word 0xeb1f035f
+.word 0x54000160
+.word 0xf9400340
+.word 0xf9400000
+.word 0xf9400800
+.word 0xf9400800
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #664]
+.word 0xeb01001f
+.word 0x54000040
+.word 0xd2800018
+.word 0xaa1803f7
+.loc 1 2716 0
+.word 0xb40000b8
+.loc 1 2717 0
+.word 0xaa1903e0
+.word 0xaa1703e1
+bl System_Xml_Linq_XContainer_AddNodeSkipNotify_System_Xml_Linq_XNode
+.loc 1 2718 0
+.word 0x140000eb
+.loc 1 2720 0
+.word 0xaa1a03f8
+.word 0xeb1f035f
+.word 0x54000160
+.word 0xf9400340
+.word 0xf9400000
+.word 0xf9400800
+.word 0xf9400400
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #656]
+.word 0xeb01001f
+.word 0x54000040
+.word 0xd2800018
+.word 0xaa1803f7
+.loc 1 2721 0
+.word 0xb40000b8
+.loc 1 2722 0
+.word 0xaa1903e0
+.word 0xaa1703e1
+bl _p_87
+.loc 1 2723 0
+.word 0x140000d8
+.loc 1 2725 0
 .word 0xaa1a03f8
 .word 0xeb1f035f
 .word 0x54000160
@@ -5356,54 +5695,6 @@ ldr x1, [x16, #680]
 .word 0x54000040
 .word 0xd2800018
 .word 0xaa1803f7
-.loc 1 2716 0
-.word 0xb40000b8
-.loc 1 2717 0
-.word 0xaa1903e0
-.word 0xaa1703e1
-bl System_Xml_Linq_XContainer_AddNodeSkipNotify_System_Xml_Linq_XNode
-.loc 1 2718 0
-.word 0x140000e9
-.loc 1 2720 0
-.word 0xaa1a03f8
-.word 0xeb1f035f
-.word 0x54000160
-.word 0xf9400340
-.word 0xf9400000
-.word 0xf9400800
-.word 0xf9400400
-
-adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
-add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #672]
-.word 0xeb01001f
-.word 0x54000040
-.word 0xd2800018
-.word 0xaa1803f7
-.loc 1 2721 0
-.word 0xb40000b8
-.loc 1 2722 0
-.word 0xaa1903e0
-.word 0xaa1703e1
-bl _p_88
-.loc 1 2723 0
-.word 0x140000d6
-.loc 1 2725 0
-.word 0xaa1a03f8
-.word 0xeb1f035f
-.word 0x54000160
-.word 0xf9400340
-.word 0xf9400000
-.word 0xf9400800
-.word 0xf9400800
-
-adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
-add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #696]
-.word 0xeb01001f
-.word 0x54000040
-.word 0xd2800018
-.word 0xaa1803f7
 .loc 1 2726 0
 .word 0xb40000f8
 .loc 1 2727 0
@@ -5413,7 +5704,7 @@ ldr x1, [x16, #696]
 .word 0xf9405450
 .word 0xd63f0200
 .loc 1 2728 0
-.word 0x140000c1
+.word 0x140000c3
 .loc 1 2730 0
 .word 0xaa1a03f8
 .word 0xeb1f035f
@@ -5425,7 +5716,7 @@ ldr x1, [x16, #696]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #704]
+ldr x1, [x16, #688]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800018
@@ -5436,9 +5727,9 @@ ldr x1, [x16, #704]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #712]
+ldr x0, [x16, #696]
 .word 0xd2800801
-bl _p_16
+bl _p_15
 .word 0xf9003ba0
 .word 0xaa1703e1
 bl System_Xml_Linq_XElement__ctor_System_Xml_Linq_XStreamingElement
@@ -5446,12 +5737,14 @@ bl System_Xml_Linq_XElement__ctor_System_Xml_Linq_XStreamingElement
 .word 0xaa1903e0
 bl System_Xml_Linq_XContainer_AddNodeSkipNotify_System_Xml_Linq_XNode
 .loc 1 2733 0
-.word 0x140000a6
+.word 0x140000a8
 .loc 1 2735 0
 .word 0xaa1a03f8
 .word 0xeb1f035f
-.word 0x54000280
+.word 0x540002c0
 .word 0xf9400357
+.word 0xf9400b40
+.word 0xb5000240
 .word 0x3940b2e0
 .word 0xd280003e
 .word 0xeb1e001f
@@ -5462,13 +5755,13 @@ bl System_Xml_Linq_XContainer_AddNodeSkipNotify_System_Xml_Linq_XNode
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #464]
+ldr x1, [x16, #448]
 .word 0xeb01001f
 .word 0x540000e1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #472]
+ldr x0, [x16, #456]
 .word 0xeb0002ff
 .word 0x54000040
 .word 0xd2800018
@@ -5490,7 +5783,7 @@ ldr x0, [x16, #472]
 .word 0xf9400017
 .word 0xaa1903e0
 .word 0xaa1703e1
-bl _p_82
+bl _p_81
 .word 0x11000718
 .word 0xb9801b40
 .word 0x6b00031f
@@ -5505,14 +5798,14 @@ bl _p_82
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #720]
+ldr x1, [x16, #704]
 .word 0xeb01001f
 .word 0x540001c3
 .word 0xf94012e0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #720]
+ldr x1, [x16, #704]
 .word 0x9343fc22
 .word 0x8b020000
 .word 0x39400000
@@ -5532,7 +5825,7 @@ ldr x1, [x16, #720]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #728]
+ldr x15, [x16, #712]
 .word 0x92800ef0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -5545,7 +5838,7 @@ ldr x15, [x16, #728]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #736]
+ldr x15, [x16, #720]
 .word 0x928003f0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -5553,14 +5846,14 @@ ldr x15, [x16, #736]
 .word 0xaa0003fa
 .word 0xaa1903e0
 .word 0xaa1a03e1
-bl _p_82
+bl _p_81
 .word 0xf9401ba1
 .word 0xaa0103e0
 .word 0xf9400021
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #744]
+ldr x15, [x16, #728]
 .word 0x92800ef0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -5585,7 +5878,7 @@ ldr x15, [x16, #744]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #752]
+ldr x1, [x16, #736]
 .word 0xeb01001f
 .word 0x540001e3
 .word 0xf9402ba0
@@ -5593,7 +5886,7 @@ ldr x1, [x16, #752]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #752]
+ldr x1, [x16, #736]
 .word 0x9343fc22
 .word 0x8b020000
 .word 0x39400000
@@ -5616,7 +5909,7 @@ ldr x1, [x16, #752]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #648]
+ldr x15, [x16, #632]
 .word 0x928004f0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -5625,19 +5918,19 @@ ldr x15, [x16, #648]
 .word 0xd61f03c0
 .loc 1 2745 0
 .word 0xaa1a03e0
-bl _p_85
+bl _p_84
 .word 0xaa0003e1
 .word 0xaa1903e0
-bl _p_88
+bl _p_87
 .loc 1 2746 0
 .word 0xa94163b7
 .word 0xa9426bb9
 .word 0x910003bf
 .word 0xa8c87bfd
 .word 0xd65f03c0
-.word 0xd2801b80
+.word 0xd2801b40
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_6b:
 .text
@@ -5685,11 +5978,11 @@ System_Xml_Linq_XContainer_AddNode_System_Xml_Linq_XNode:
 .word 0xaa0003fa
 .loc 1 2758 0
 .word 0xaa1903e0
-bl _p_87
+bl _p_86
 .loc 1 2759 0
 .word 0xaa1903e0
 .word 0xaa1a03e1
-bl _p_89
+bl _p_88
 .loc 1 2760 0
 .word 0xa94167b8
 .word 0xf94013ba
@@ -5743,11 +6036,11 @@ System_Xml_Linq_XContainer_AddNodeSkipNotify_System_Xml_Linq_XNode:
 .word 0xaa0003fa
 .loc 1 2772 0
 .word 0xaa1903e0
-bl _p_87
+bl _p_86
 .loc 1 2773 0
 .word 0xaa1903e0
 .word 0xaa1a03e1
-bl _p_80
+bl _p_79
 .loc 1 2774 0
 .word 0xa94167b8
 .word 0xf94013ba
@@ -5774,7 +6067,7 @@ System_Xml_Linq_XContainer_AddString_string:
 .word 0xd63f0200
 .loc 1 2778 0
 .word 0xf9401720
-.word 0xb50006c0
+.word 0xb5000900
 .loc 1 2779 0
 .word 0xb9801340
 .word 0x6b1f001f
@@ -5783,17 +6076,17 @@ System_Xml_Linq_XContainer_AddString_string:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #656]
+ldr x0, [x16, #640]
 .word 0xd2800601
-bl _p_16
+bl _p_15
 .word 0xf9001ba0
 .word 0xaa1a03e1
 bl System_Xml_Linq_XText__ctor_string
 .word 0xf9401ba1
 .word 0xaa1903e0
-bl _p_89
+bl _p_88
 .loc 1 2781 0
-.word 0x1400005e
+.word 0x14000070
 .loc 1 2783 0
 .word 0xaa1903f8
 .word 0xeb1f033f
@@ -5805,42 +6098,62 @@ bl _p_89
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #456]
+ldr x1, [x16, #440]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800018
-.word 0xb40002b8
+.word 0xb40003d8
 .loc 1 2786 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #584]
+ldr x0, [x16, #568]
 .word 0xf9400002
 .word 0xaa1903e0
 .word 0xaa1903e1
-bl _p_77
+bl _p_76
 .loc 1 2787 0
 .word 0xf9401720
-.word 0xb5000980
+.word 0xb5000bc0
 .loc 1 2788 0
 .word 0xf900173a
 .word 0x9100a320
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 2789 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #584]
+ldr x0, [x16, #568]
 .word 0xf9400002
 .word 0xaa1903e0
 .word 0xaa1903e1
-bl _p_78
+bl _p_77
 .loc 1 2790 0
-.word 0x1400003c
+.word 0x14000045
 .loc 1 2792 0
 .word 0xf900173a
 .word 0x9100a320
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 2795 0
 .word 0x14000038
 .loc 1 2796 0
@@ -5849,7 +6162,7 @@ bl _p_1
 .word 0x540006ad
 .loc 1 2797 0
 .word 0xaa1903e0
-bl _p_87
+bl _p_86
 .loc 1 2798 0
 .word 0xf9401738
 .word 0xaa1803f7
@@ -5862,7 +6175,7 @@ bl _p_87
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #632]
+ldr x1, [x16, #616]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800017
@@ -5879,7 +6192,7 @@ ldr x1, [x16, #632]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #768]
+ldr x1, [x16, #752]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800017
@@ -5888,26 +6201,26 @@ ldr x1, [x16, #768]
 .word 0xf940031e
 .word 0xf9401700
 .word 0xaa1a03e1
-bl _p_90
+bl _p_89
 .word 0xaa0003e1
 .word 0xaa1803e0
 .word 0xf940031e
-bl _p_91
+bl _p_90
 .loc 1 2801 0
 .word 0x1400000c
 .loc 1 2803 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #656]
+ldr x0, [x16, #640]
 .word 0xd2800601
-bl _p_16
+bl _p_15
 .word 0xf9001ba0
 .word 0xaa1a03e1
 bl System_Xml_Linq_XText__ctor_string
 .word 0xf9401ba1
 .word 0xaa1903e0
-bl _p_89
+bl _p_88
 .loc 1 2806 0
 .word 0xa94163b7
 .word 0xa9426bb9
@@ -5920,13 +6233,13 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2803561
-bl _p_8
-bl _p_60
+bl _p_7
+bl _p_59
 .word 0xaa0003e1
-.word 0xd2801c40
+.word 0xd2801c00
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_6e:
 .text
@@ -5947,17 +6260,27 @@ System_Xml_Linq_XContainer_AddStringSkipNotify_string:
 .word 0xd63f0200
 .loc 1 2810 0
 .word 0xf9401720
-.word 0xb50000a0
+.word 0xb50001c0
 .loc 1 2811 0
 .word 0xf900173a
 .word 0x9100a320
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 2812 0
-.word 0x1400005a
+.word 0x14000068
 .loc 1 2813 0
 .word 0xb9801340
 .word 0x6b1f001f
-.word 0x54000aed
+.word 0x54000cad
 .loc 1 2814 0
 .word 0xf9401738
 .word 0xaa1803f7
@@ -5970,11 +6293,11 @@ bl _p_1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #672]
+ldr x1, [x16, #656]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800017
-.word 0xb40002d7
+.word 0xb40003b7
 .loc 1 2815 0
 .word 0xf9401738
 .word 0xb4000178
@@ -5985,20 +6308,28 @@ ldr x1, [x16, #672]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #672]
+ldr x1, [x16, #656]
 .word 0xeb01001f
 .word 0x10000011
-.word 0x54000821
+.word 0x540009e1
 .word 0xaa1803e0
 .word 0xaa1a03e1
-bl _p_90
-.word 0xf9001ba0
+bl _p_89
 .word 0xf9001720
-.word 0x9100a320
-bl _p_1
-.word 0xf9401ba0
+.word 0x9100a321
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 2816 0
-.word 0x14000033
+.word 0x1400003a
 .loc 1 2818 0
 .word 0xf9401738
 .word 0xaa1803f7
@@ -6011,13 +6342,13 @@ bl _p_1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #632]
+ldr x1, [x16, #616]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800017
 .word 0xaa1703f8
 .loc 1 2819 0
-.word 0xb4000317
+.word 0xb40003f7
 .word 0xaa1803f7
 .word 0xeb1f031f
 .word 0x54000160
@@ -6028,44 +6359,52 @@ ldr x1, [x16, #632]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #768]
+ldr x1, [x16, #752]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800017
-.word 0xb5000157
+.word 0xb5000237
 .loc 1 2820 0
 .word 0xf9401700
 .word 0xaa1a03e1
-bl _p_90
-.word 0xf9001ba0
+bl _p_89
 .word 0xf9001700
-.word 0x9100a300
-bl _p_1
-.word 0xf9401ba0
+.word 0x9100a301
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 2821 0
 .word 0x1400000c
 .loc 1 2823 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #656]
+ldr x0, [x16, #640]
 .word 0xd2800601
-bl _p_16
+bl _p_15
 .word 0xf9001ba0
 .word 0xaa1a03e1
 bl System_Xml_Linq_XText__ctor_string
 .word 0xf9401ba1
 .word 0xaa1903e0
-bl _p_80
+bl _p_79
 .loc 1 2827 0
 .word 0xa94163b7
 .word 0xa9426bb9
 .word 0x910003bf
 .word 0xa8c47bfd
 .word 0xd65f03c0
-.word 0xd2801c20
+.word 0xd2801be0
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_6f:
 .text
@@ -6081,11 +6420,11 @@ System_Xml_Linq_XContainer_AppendNode_System_Xml_Linq_XNode:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #560]
+ldr x0, [x16, #544]
 .word 0xf9400002
 .word 0xf9400fa0
 .word 0xaa1a03e1
-bl _p_77
+bl _p_76
 .word 0x53001c01
 .loc 1 2831 0
 .word 0xf9400b40
@@ -6096,18 +6435,18 @@ bl _p_77
 .word 0xf9400fa0
 .loc 1 2832 0
 .word 0xaa1a03e1
-bl _p_80
+bl _p_79
 .word 0xb98023a0
 .loc 1 2833 0
 .word 0x34000100
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #560]
+ldr x0, [x16, #544]
 .word 0xf9400002
 .word 0xf9400fa0
 .word 0xaa1a03e1
-bl _p_78
+bl _p_77
 .loc 1 2834 0
 .word 0xf9400bba
 .word 0x910003bf
@@ -6119,13 +6458,13 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2803561
-bl _p_8
-bl _p_60
+bl _p_7
+bl _p_59
 .word 0xaa0003e1
-.word 0xd2801c40
+.word 0xd2801c00
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_70:
 .text
@@ -6133,7 +6472,7 @@ Lme_70:
 	.no_dead_strip System_Xml_Linq_XContainer_AppendNodeSkipNotify_System_Xml_Linq_XNode
 System_Xml_Linq_XContainer_AppendNodeSkipNotify_System_Xml_Linq_XNode:
 .loc 1 2837 0 prologue_end
-.word 0xa9bc7bfd
+.word 0xa9bd7bfd
 .word 0x910003fd
 .word 0xa90163b7
 .word 0xa9026bb9
@@ -6141,7 +6480,17 @@ System_Xml_Linq_XContainer_AppendNodeSkipNotify_System_Xml_Linq_XNode:
 .word 0xaa0103fa
 .word 0xf9000b59
 .word 0x91004340
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 2838 0
 .word 0xf9401720
 .word 0xb4000200
@@ -6156,17 +6505,27 @@ bl _p_1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #672]
+ldr x1, [x16, #656]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800017
-.word 0xb40000b7
+.word 0xb40001d7
 .loc 1 2839 0
 .word 0xf900135a
 .word 0x91008340
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 2840 0
-.word 0x14000017
+.word 0x14000027
 .loc 1 2842 0
 .word 0xf9401738
 .word 0xb4000178
@@ -6177,35 +6536,63 @@ bl _p_1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #680]
+ldr x1, [x16, #664]
 .word 0xeb01001f
 .word 0x10000011
-.word 0x54000261
+.word 0x54000581
 .word 0xaa1803f7
 .loc 1 2843 0
 .word 0xf9401300
-.word 0xf9001ba0
 .word 0xf9001340
-.word 0x91008340
-bl _p_1
-.word 0xf9401ba0
+.word 0x91008341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 2844 0
 .word 0xf900131a
 .word 0x91008300
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 2846 0
 .word 0xf900173a
 .word 0x9100a320
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 2847 0
 .word 0xa94163b7
 .word 0xa9426bb9
 .word 0x910003bf
-.word 0xa8c47bfd
+.word 0xa8c37bfd
 .word 0xd65f03c0
-.word 0xd2801c20
+.word 0xd2801be0
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_71:
 .text
@@ -6230,7 +6617,7 @@ System_Xml_Linq_XContainer_AppendText_System_Text_StringBuilder:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #672]
+ldr x1, [x16, #656]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800017
@@ -6241,7 +6628,7 @@ ldr x1, [x16, #672]
 .word 0xaa1a03e0
 .word 0xaa1803e1
 .word 0xf940035e
-bl _p_79
+bl _p_78
 .loc 1 2853 0
 .word 0x14000019
 .loc 1 2855 0
@@ -6254,7 +6641,7 @@ bl _p_79
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #680]
+ldr x1, [x16, #664]
 .word 0xeb01001f
 .word 0x10000011
 .word 0x54000241
@@ -6280,9 +6667,9 @@ ldr x1, [x16, #680]
 .word 0x910003bf
 .word 0xa8c37bfd
 .word 0xd65f03c0
-.word 0xd2801c20
+.word 0xd2801be0
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_72:
 .text
@@ -6306,43 +6693,71 @@ System_Xml_Linq_XContainer_ConvertTextToNode:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #672]
+ldr x1, [x16, #656]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800018
 .word 0xaa1803f9
 .loc 1 2929 0
-.word 0xb4000358
+.word 0xb4000678
 .word 0xb9801320
 .word 0x6b1f001f
-.word 0x540002ed
+.word 0x5400060d
 .loc 1 2930 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #656]
+ldr x0, [x16, #640]
 .word 0xd2800601
-bl _p_16
-.word 0xf9001fa0
+bl _p_15
+.word 0xf9001ba0
 .word 0xaa1903e1
 bl System_Xml_Linq_XText__ctor_string
-.word 0xf9401fa1
-.word 0xaa0103f9
-.loc 1 2931 0
-.word 0xaa1903e0
-.word 0xf900083a
-.word 0xf9001ba1
-.word 0x91004000
-bl _p_1
 .word 0xf9401ba0
+.word 0xaa0003f9
+.loc 1 2931 0
+.word 0xaa1903e1
+.word 0xf900081a
+.word 0x91004021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 2932 0
 .word 0xf9001019
 .word 0x91008320
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 2933 0
 .word 0xf9001759
 .word 0x9100a340
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 2935 0
 .word 0xa94167b8
 .word 0xf94013ba
@@ -6361,7 +6776,7 @@ System_Xml_Linq_XContainer_GetDateTimeString_System_DateTime:
 .word 0xf9000ba0
 .word 0xf9400ba0
 .word 0xd2800061
-bl _p_92
+bl _p_91
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
@@ -6386,7 +6801,7 @@ System_Xml_Linq_XContainer_GetStringValue_object:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #672]
+ldr x1, [x16, #656]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800019
@@ -6400,7 +6815,7 @@ ldr x1, [x16, #672]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #672]
+ldr x1, [x16, #656]
 .word 0xeb01001f
 .word 0x10000011
 .word 0x54002441
@@ -6417,7 +6832,7 @@ ldr x1, [x16, #672]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #776]
+ldr x1, [x16, #760]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800019
@@ -6433,12 +6848,12 @@ ldr x1, [x16, #776]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #776]
+ldr x1, [x16, #760]
 .word 0xeb01001f
 .word 0x10000011
 .word 0x540020c1
 .word 0xfd400b40
-bl _p_93
+bl _p_92
 .word 0xaa0003fa
 .loc 1 2999 0
 .word 0x140000e6
@@ -6453,7 +6868,7 @@ bl _p_93
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #784]
+ldr x1, [x16, #768]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800019
@@ -6469,12 +6884,12 @@ ldr x1, [x16, #784]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #784]
+ldr x1, [x16, #768]
 .word 0xeb01001f
 .word 0x10000011
 .word 0x54001ce1
 .word 0xbd401340
-bl _p_94
+bl _p_93
 .word 0xaa0003fa
 .loc 1 3002 0
 .word 0x140000c7
@@ -6489,7 +6904,7 @@ bl _p_94
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #792]
+ldr x1, [x16, #776]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800019
@@ -6505,7 +6920,7 @@ ldr x1, [x16, #792]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #792]
+ldr x1, [x16, #776]
 .word 0xeb01001f
 .word 0x10000011
 .word 0x54001901
@@ -6516,7 +6931,7 @@ ldr x1, [x16, #792]
 .word 0xf90027a0
 .word 0xf94023a0
 .word 0xf94027a1
-bl _p_95
+bl _p_94
 .word 0xaa0003fa
 .loc 1 3005 0
 .word 0x140000a2
@@ -6531,7 +6946,7 @@ bl _p_95
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #800]
+ldr x1, [x16, #784]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800019
@@ -6547,7 +6962,7 @@ ldr x1, [x16, #800]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #800]
+ldr x1, [x16, #784]
 .word 0xeb01001f
 .word 0x10000011
 .word 0x54001461
@@ -6556,12 +6971,12 @@ ldr x1, [x16, #800]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x26, [x16, #808]
+ldr x26, [x16, #792]
 .word 0x14000004
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x26, [x16, #816]
+ldr x26, [x16, #800]
 .loc 1 3008 0
 .word 0x1400007d
 .loc 1 3009 0
@@ -6575,7 +6990,7 @@ ldr x26, [x16, #816]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #824]
+ldr x1, [x16, #808]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800019
@@ -6591,7 +7006,7 @@ ldr x1, [x16, #824]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #824]
+ldr x1, [x16, #808]
 .word 0xeb01001f
 .word 0x10000011
 .word 0x54000fc1
@@ -6614,7 +7029,7 @@ bl System_Xml_Linq_XContainer_GetDateTimeString_System_DateTime
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #832]
+ldr x1, [x16, #816]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800019
@@ -6630,7 +7045,7 @@ ldr x1, [x16, #832]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #832]
+ldr x1, [x16, #816]
 .word 0xeb01001f
 .word 0x10000011
 .word 0x54000b81
@@ -6641,7 +7056,7 @@ ldr x1, [x16, #832]
 .word 0xf9001ba0
 .word 0xf94017a0
 .word 0xf9401ba1
-bl _p_96
+bl _p_95
 .word 0xaa0003fa
 .loc 1 3014 0
 .word 0x14000036
@@ -6656,7 +7071,7 @@ bl _p_96
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #840]
+ldr x1, [x16, #824]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800019
@@ -6672,7 +7087,7 @@ ldr x1, [x16, #840]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #840]
+ldr x1, [x16, #824]
 .word 0xeb01001f
 .word 0x10000011
 .word 0x540006e1
@@ -6680,7 +7095,7 @@ ldr x1, [x16, #840]
 .word 0xf9400000
 .word 0xf90013a0
 .word 0xf94013a0
-bl _p_97
+bl _p_96
 .word 0xaa0003fa
 .loc 1 3017 0
 .word 0x14000014
@@ -6695,7 +7110,7 @@ bl _p_97
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #848]
+ldr x1, [x16, #832]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800019
@@ -6720,29 +7135,29 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2803ce1
-bl _p_8
-bl _p_60
+bl _p_7
+bl _p_59
 .word 0xaa0003e1
-.word 0xd2801100
+.word 0xd28010c0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 .loc 1 3024 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2804261
-bl _p_8
-bl _p_60
+bl _p_7
+bl _p_59
 .word 0xaa0003e1
-.word 0xd2801100
+.word 0xd28010c0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
-.word 0xd2801c20
+bl _p_9
+.word 0xd2801be0
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_75:
 .text
@@ -6771,7 +7186,7 @@ System_Xml_Linq_XContainer_ReadContentFrom_System_Xml_XmlReader:
 .word 0x93407c00
 .word 0xd280003e
 .word 0x6b1e001f
-.word 0x54002a41
+.word 0x54002b21
 .loc 1 3030 0
 .word 0xaa1903f8
 .loc 1 3031 0
@@ -6793,13 +7208,13 @@ System_Xml_Linq_XContainer_ReadContentFrom_System_Xml_XmlReader:
 .word 0x51000417
 .word 0xd280021e
 .word 0x6b1e02ff
-.word 0x54002142
+.word 0x54002222
 .word 0xd37df2e0
 .word 0x2a0003e1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #856]
+ldr x0, [x16, #840]
 .word 0x8b010000
 .word 0xf9400000
 .word 0xd61f0000
@@ -6827,9 +7242,9 @@ bl System_Xml_Linq_XNamespace_GetName_string
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #712]
+ldr x0, [x16, #696]
 .word 0xd2800801
-bl _p_16
+bl _p_15
 .word 0xf9403fa1
 .word 0xf9003ba0
 bl System_Xml_Linq_XElement__ctor_System_Xml_Linq_XName
@@ -6864,7 +7279,7 @@ bl System_Xml_Linq_XElement__ctor_System_Xml_Linq_XName
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #296]
+ldr x0, [x16, #288]
 .word 0xf9400000
 .word 0xaa1503f4
 .word 0xaa0003f5
@@ -6890,9 +7305,9 @@ bl System_Xml_Linq_XNamespace_GetName_string
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #864]
+ldr x0, [x16, #848]
 .word 0xd2800701
-bl _p_16
+bl _p_15
 .word 0xf9403fa1
 .word 0xf94043a2
 .word 0xf9003ba0
@@ -6924,25 +7339,33 @@ bl System_Xml_Linq_XContainer_AddNodeSkipNotify_System_Xml_Linq_XNode
 .word 0xf9408c30
 .word 0xd63f0200
 .word 0x53001c00
-.word 0x35001760
+.word 0x35001840
 .loc 1 3045 0
 .word 0xaa1703f8
 .loc 1 3047 0
-.word 0x140000b9
+.word 0x140000c0
 .loc 1 3049 0
 .word 0xf9401700
-.word 0xb5000140
+.word 0xb5000220
 .loc 1 3050 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #296]
+ldr x0, [x16, #288]
 .word 0xf9400000
-.word 0xf9003ba0
 .word 0xf9001700
-.word 0x9100a300
-bl _p_1
-.word 0xf9403ba0
+.word 0x9100a301
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 3052 0
 .word 0xeb19031f
 .word 0x54001640
@@ -6958,7 +7381,7 @@ bl _p_1
 .word 0xaa0003e1
 .word 0xaa1803e0
 .word 0xf940031e
-bl _p_88
+bl _p_87
 .loc 1 3059 0
 .word 0x140000a1
 .loc 1 3061 0
@@ -6970,9 +7393,9 @@ bl _p_88
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #664]
+ldr x0, [x16, #648]
 .word 0xd2800601
-bl _p_16
+bl _p_15
 .word 0xf9403fa1
 .word 0xf9003ba0
 bl System_Xml_Linq_XCData__ctor_string
@@ -6991,9 +7414,9 @@ bl System_Xml_Linq_XContainer_AddNodeSkipNotify_System_Xml_Linq_XNode
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #872]
+ldr x0, [x16, #856]
 .word 0xd2800601
-bl _p_16
+bl _p_15
 .word 0xf9403fa1
 .word 0xf9003ba0
 bl System_Xml_Linq_XComment__ctor_string
@@ -7017,9 +7440,9 @@ bl System_Xml_Linq_XContainer_AddNodeSkipNotify_System_Xml_Linq_XNode
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #880]
+ldr x0, [x16, #864]
 .word 0xd2800701
-bl _p_16
+bl _p_15
 .word 0xf9403fa1
 .word 0xf94043a2
 .word 0xf9003ba0
@@ -7039,7 +7462,7 @@ bl System_Xml_Linq_XContainer_AddNodeSkipNotify_System_Xml_Linq_XNode
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #888]
+ldr x1, [x16, #872]
 .word 0xaa1a03e0
 .word 0xf9400342
 .word 0xf9407c50
@@ -7048,7 +7471,7 @@ ldr x1, [x16, #888]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #896]
+ldr x1, [x16, #880]
 .word 0xaa1a03e0
 .word 0xf9400342
 .word 0xf9407c50
@@ -7067,9 +7490,9 @@ ldr x1, [x16, #896]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #904]
+ldr x0, [x16, #888]
 .word 0xd2800a01
-bl _p_16
+bl _p_15
 .word 0xf9403fa1
 .word 0xf94043a2
 .word 0xf94047a3
@@ -7103,14 +7526,14 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2806021
-bl _p_8
+bl _p_7
 .word 0xf9003ba0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #224]
+ldr x0, [x16, #216]
 .word 0xd2800021
-bl _p_9
+bl _p_8
 .word 0xf90047a0
 .word 0xf9003fa0
 .word 0xaa1a03e0
@@ -7122,9 +7545,9 @@ bl _p_9
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #912]
+ldr x0, [x16, #896]
 .word 0xd2800281
-bl _p_16
+bl _p_15
 .word 0xaa0003e2
 .word 0xf94043a0
 .word 0xf94047a3
@@ -7138,17 +7561,17 @@ bl _p_16
 .word 0xf9403fa1
 bl System_Xml_Linq_Res_GetString_string_object__
 .word 0xaa0003e1
-.word 0xd2801c40
+.word 0xd2801c00
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 .loc 1 3085 0
 .word 0xaa1a03e0
 .word 0xf9400341
 .word 0xf9406030
 .word 0xd63f0200
 .word 0x53001c00
-.word 0x35ffd7c0
+.word 0x35ffd6e0
 .loc 1 3086 0
 .word 0xa94157b4
 .word 0xa9425fb6
@@ -7163,26 +7586,26 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd28048a1
-bl _p_8
-bl _p_60
+bl _p_7
+bl _p_59
 .word 0xaa0003e1
-.word 0xd2801c40
+.word 0xd2801c00
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 .loc 1 3077 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2805561
-bl _p_8
-bl _p_60
+bl _p_7
+bl _p_59
 .word 0xaa0003e1
-.word 0xd2801c40
+.word 0xd2801c00
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_76:
 .text
@@ -7211,9 +7634,9 @@ System_Xml_Linq_XContainer_ReadContentFrom_System_Xml_XmlReader_System_Xml_Linq_
 .loc 1 3090 0
 .word 0xaa1803e0
 .word 0xaa1903e1
-bl _p_98
+bl _p_97
 .loc 1 3091 0
-.word 0x14000271
+.word 0x14000278
 .loc 1 3093 0
 .word 0xaa1903e0
 .word 0xf9400321
@@ -7222,7 +7645,7 @@ bl _p_98
 .word 0x93407c00
 .word 0xd280003e
 .word 0x6b1e001f
-.word 0x54004e01
+.word 0x54004ee1
 .loc 1 3094 0
 .word 0xaa1803f7
 .loc 1 3095 0
@@ -7261,14 +7684,14 @@ bl _p_98
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #920]
+ldr x1, [x16, #904]
 .word 0xeb01001f
 .word 0x540001c3
 .word 0xf94012a0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #920]
+ldr x1, [x16, #904]
 .word 0x9343fc22
 .word 0x8b020000
 .word 0x39400000
@@ -7298,13 +7721,13 @@ ldr x1, [x16, #920]
 .word 0x51000413
 .word 0xd280021e
 .word 0x6b1e027f
-.word 0x54003842
+.word 0x54003922
 .word 0xd37df260
 .word 0x2a0003e1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #928]
+ldr x0, [x16, #912]
 .word 0x8b010000
 .word 0xf9400000
 .word 0xd61f0000
@@ -7332,9 +7755,9 @@ bl System_Xml_Linq_XNamespace_GetName_string
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #712]
+ldr x0, [x16, #696]
 .word 0xd2800801
-bl _p_16
+bl _p_15
 .word 0xf9404fa1
 .word 0xf9004ba0
 bl System_Xml_Linq_XElement__ctor_System_Xml_Linq_XName
@@ -7344,14 +7767,14 @@ bl System_Xml_Linq_XElement__ctor_System_Xml_Linq_XName
 .word 0xb4000154
 .word 0xaa1403e0
 .word 0xaa1503e1
-bl _p_99
+bl _p_98
 .word 0x53001c00
 .word 0x340000a0
 .loc 1 3106 0
 .word 0xaa1303e0
 .word 0xaa1503e1
 .word 0xf940027e
-bl _p_100
+bl _p_99
 .loc 1 3108 0
 .word 0xb40004da
 .word 0xaa1a03e0
@@ -7359,7 +7782,7 @@ bl _p_100
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #936]
+ldr x15, [x16, #920]
 .word 0x92800ff0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -7372,7 +7795,7 @@ ldr x15, [x16, #936]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #944]
+ldr x15, [x16, #928]
 .word 0x928008f0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -7384,7 +7807,7 @@ ldr x15, [x16, #944]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #952]
+ldr x15, [x16, #936]
 .word 0x928005f0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -7394,7 +7817,7 @@ ldr x15, [x16, #952]
 .word 0xf9404ba1
 .word 0xaa1303e0
 .word 0xf940027e
-bl _p_101
+bl _p_100
 .loc 1 3111 0
 .word 0xaa1903e0
 .word 0xf9400321
@@ -7424,7 +7847,7 @@ bl _p_101
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #296]
+ldr x0, [x16, #288]
 .word 0xf9400000
 .word 0xf9403ba1
 .word 0xf9003fa1
@@ -7451,9 +7874,9 @@ bl System_Xml_Linq_XNamespace_GetName_string
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #864]
+ldr x0, [x16, #848]
 .word 0xd2800701
-bl _p_16
+bl _p_15
 .word 0xf9404fa1
 .word 0xf94053a2
 .word 0xf9004ba0
@@ -7467,7 +7890,7 @@ bl System_Xml_Linq_XAttribute__ctor_System_Xml_Linq_XName_object
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #936]
+ldr x15, [x16, #920]
 .word 0x92800ff0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -7480,7 +7903,7 @@ ldr x15, [x16, #936]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #944]
+ldr x15, [x16, #928]
 .word 0x928008f0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -7492,7 +7915,7 @@ ldr x15, [x16, #944]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #952]
+ldr x15, [x16, #936]
 .word 0x928005f0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -7503,7 +7926,7 @@ ldr x15, [x16, #952]
 .word 0xf94047a0
 .word 0xf94047a3
 .word 0xf940007e
-bl _p_101
+bl _p_100
 .loc 1 3117 0
 .word 0xaa1303e0
 .word 0xf94047a1
@@ -7532,29 +7955,37 @@ bl System_Xml_Linq_XContainer_AddNodeSkipNotify_System_Xml_Linq_XNode
 .word 0xf9408c30
 .word 0xd63f0200
 .word 0x53001c00
-.word 0x35002320
+.word 0x35002400
 .loc 1 3123 0
 .word 0xaa1303f7
 .loc 1 3124 0
-.word 0xb40022f4
+.word 0xb40023d4
 .loc 1 3125 0
 .word 0xaa1503f4
 .loc 1 3128 0
-.word 0x14000115
+.word 0x1400011c
 .loc 1 3131 0
 .word 0xf94016e0
-.word 0xb5000140
+.word 0xb5000220
 .loc 1 3132 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #296]
+ldr x0, [x16, #288]
 .word 0xf9400000
-.word 0xf9004ba0
 .word 0xf90016e0
-.word 0x9100a2e0
-bl _p_1
-.word 0xf9404ba0
+.word 0x9100a2e1
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 3136 0
 .word 0xaa1703f3
 .word 0xeb1f02ff
@@ -7566,7 +7997,7 @@ bl _p_1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #456]
+ldr x1, [x16, #440]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800013
@@ -7580,7 +8011,7 @@ ldr x1, [x16, #456]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #936]
+ldr x15, [x16, #920]
 .word 0x92800ff0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -7593,7 +8024,7 @@ ldr x15, [x16, #936]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #944]
+ldr x15, [x16, #928]
 .word 0x928008f0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -7605,7 +8036,7 @@ ldr x15, [x16, #944]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #952]
+ldr x15, [x16, #936]
 .word 0x928005f0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -7616,7 +8047,7 @@ ldr x15, [x16, #952]
 .word 0xf94047a0
 .word 0xf94047a3
 .word 0xf940007e
-bl _p_102
+bl _p_101
 .loc 1 3141 0
 .word 0xeb1802ff
 .word 0x540021a0
@@ -7624,14 +8055,14 @@ bl _p_102
 .word 0xb4000174
 .word 0xaa1703e0
 .word 0xf94002fe
-bl _p_103
+bl _p_102
 .word 0x53001c00
 .word 0x340000c0
 .loc 1 3143 0
 .word 0xf9400ae1
 .word 0xaa0103e0
 .word 0xf940003e
-bl _p_104
+bl _p_103
 .word 0xaa0003f4
 .loc 1 3145 0
 .word 0xf9400af7
@@ -7641,7 +8072,7 @@ bl _p_104
 .word 0xb40000d4
 .word 0xaa1403e0
 .word 0xaa1503e1
-bl _p_99
+bl _p_98
 .word 0x53001c00
 .word 0x350001a0
 .word 0xb400039a
@@ -7650,7 +8081,7 @@ bl _p_99
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #936]
+ldr x15, [x16, #920]
 .word 0x92800ff0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -7666,9 +8097,9 @@ ldr x15, [x16, #936]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #656]
+ldr x0, [x16, #640]
 .word 0xd2800601
-bl _p_16
+bl _p_15
 .word 0xf9404fa1
 .word 0xf9004ba0
 bl System_Xml_Linq_XText__ctor_string
@@ -7684,7 +8115,7 @@ bl System_Xml_Linq_XText__ctor_string
 .word 0xaa0003e1
 .word 0xaa1703e0
 .word 0xf94002fe
-bl _p_88
+bl _p_87
 .loc 1 3158 0
 .word 0x14000099
 .loc 1 3160 0
@@ -7696,9 +8127,9 @@ bl _p_88
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #664]
+ldr x0, [x16, #648]
 .word 0xd2800601
-bl _p_16
+bl _p_15
 .word 0xf9404fa1
 .word 0xf9004ba0
 bl System_Xml_Linq_XCData__ctor_string
@@ -7715,9 +8146,9 @@ bl System_Xml_Linq_XCData__ctor_string
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #872]
+ldr x0, [x16, #856]
 .word 0xd2800601
-bl _p_16
+bl _p_15
 .word 0xf9404fa1
 .word 0xf9004ba0
 bl System_Xml_Linq_XComment__ctor_string
@@ -7739,9 +8170,9 @@ bl System_Xml_Linq_XComment__ctor_string
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #880]
+ldr x0, [x16, #864]
 .word 0xd2800701
-bl _p_16
+bl _p_15
 .word 0xf9404fa1
 .word 0xf94053a2
 .word 0xf9004ba0
@@ -7759,7 +8190,7 @@ bl System_Xml_Linq_XProcessingInstruction__ctor_string_string
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #888]
+ldr x1, [x16, #872]
 .word 0xaa1903e0
 .word 0xf9400322
 .word 0xf9407c50
@@ -7768,7 +8199,7 @@ ldr x1, [x16, #888]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #896]
+ldr x1, [x16, #880]
 .word 0xaa1903e0
 .word 0xf9400322
 .word 0xf9407c50
@@ -7787,9 +8218,9 @@ ldr x1, [x16, #896]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #904]
+ldr x0, [x16, #888]
 .word 0xd2800a01
-bl _p_16
+bl _p_15
 .word 0xf9404fa1
 .word 0xf94053a2
 .word 0xf94057a3
@@ -7821,14 +8252,14 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2806021
-bl _p_8
+bl _p_7
 .word 0xf9004ba0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #224]
+ldr x0, [x16, #216]
 .word 0xd2800021
-bl _p_9
+bl _p_8
 .word 0xf90057a0
 .word 0xf9004fa0
 .word 0xaa1903e0
@@ -7840,9 +8271,9 @@ bl _p_9
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #912]
+ldr x0, [x16, #896]
 .word 0xd2800281
-bl _p_16
+bl _p_15
 .word 0xaa0003e2
 .word 0xf94053a0
 .word 0xf94057a3
@@ -7856,24 +8287,24 @@ bl _p_16
 .word 0xf9404fa1
 bl System_Xml_Linq_Res_GetString_string_object__
 .word 0xaa0003e1
-.word 0xd2801c40
+.word 0xd2801c00
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 .loc 1 3184 0
 .word 0xb40006d6
 .loc 1 3185 0
 .word 0xb4000154
 .word 0xaa1403e0
 .word 0xaa1503e1
-bl _p_99
+bl _p_98
 .word 0x53001c00
 .word 0x340000a0
 .loc 1 3186 0
 .word 0xaa1603e0
 .word 0xaa1503e1
 .word 0xf94002de
-bl _p_100
+bl _p_99
 .loc 1 3188 0
 .word 0xb40004da
 .word 0xaa1a03e0
@@ -7881,7 +8312,7 @@ bl _p_100
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #936]
+ldr x15, [x16, #920]
 .word 0x92800ff0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -7894,7 +8325,7 @@ ldr x15, [x16, #936]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #944]
+ldr x15, [x16, #928]
 .word 0x928008f0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -7906,7 +8337,7 @@ ldr x15, [x16, #944]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #952]
+ldr x15, [x16, #936]
 .word 0x928005f0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -7916,7 +8347,7 @@ ldr x15, [x16, #952]
 .word 0xf9404ba1
 .word 0xaa1603e0
 .word 0xf94002de
-bl _p_101
+bl _p_100
 .loc 1 3191 0
 .word 0xaa1703e0
 .word 0xaa1603e1
@@ -7930,7 +8361,7 @@ bl System_Xml_Linq_XContainer_AddNodeSkipNotify_System_Xml_Linq_XNode
 .word 0xf9406030
 .word 0xd63f0200
 .word 0x53001c00
-.word 0x35ffb960
+.word 0x35ffb880
 .loc 1 3195 0
 .word 0xa94153b3
 .word 0xa9425bb5
@@ -7945,26 +8376,26 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd28048a1
-bl _p_8
-bl _p_60
+bl _p_7
+bl _p_59
 .word 0xaa0003e1
-.word 0xd2801c40
+.word 0xd2801c00
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 .loc 1 3176 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2805561
-bl _p_8
-bl _p_60
+bl _p_7
+bl _p_59
 .word 0xaa0003e1
-.word 0xd2801c40
+.word 0xd2801c00
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_77:
 .text
@@ -7972,7 +8403,7 @@ Lme_77:
 	.no_dead_strip System_Xml_Linq_XContainer_RemoveNode_System_Xml_Linq_XNode
 System_Xml_Linq_XContainer_RemoveNode_System_Xml_Linq_XNode:
 .loc 1 3198 0 prologue_end
-.word 0xa9bb7bfd
+.word 0xa9bc7bfd
 .word 0x910003fd
 .word 0xa9015fb6
 .word 0xa9026bb9
@@ -7981,16 +8412,16 @@ System_Xml_Linq_XContainer_RemoveNode_System_Xml_Linq_XNode:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #568]
+ldr x0, [x16, #552]
 .word 0xf9400002
 .word 0xaa1903e0
 .word 0xaa1a03e1
-bl _p_77
+bl _p_76
 .word 0x3900c3a0
 .loc 1 3199 0
 .word 0xf9400b40
 .word 0xeb19001f
-.word 0x54000661
+.word 0x54000861
 .loc 1 3200 0
 .word 0xf9401737
 .word 0xb4000177
@@ -8001,10 +8432,10 @@ bl _p_77
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #680]
+ldr x1, [x16, #664]
 .word 0xeb01001f
 .word 0x10000011
-.word 0x54000641
+.word 0x54000841
 .word 0xaa1703f6
 .word 0x14000002
 .loc 1 3201 0
@@ -8018,21 +8449,39 @@ ldr x1, [x16, #680]
 .loc 1 3203 0
 .word 0xf900173f
 .loc 1 3204 0
-.word 0x1400000d
+.word 0x1400001d
 .loc 1 3206 0
 .word 0xf9401720
 .word 0xeb1a001f
-.word 0x54000081
+.word 0x540001a1
 .word 0xf9001736
 .word 0x9100a320
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 3207 0
 .word 0xf9401340
-.word 0xf90023a0
 .word 0xf90012c0
-.word 0x910082c0
-bl _p_1
-.word 0xf94023a0
+.word 0x910082c1
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 3209 0
 .word 0xf9000b5f
 .loc 1 3210 0
@@ -8043,16 +8492,16 @@ bl _p_1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #568]
+ldr x0, [x16, #552]
 .word 0xf9400002
 .word 0xaa1903e0
 .word 0xaa1a03e1
-bl _p_78
+bl _p_77
 .loc 1 3212 0
 .word 0xa9415fb6
 .word 0xa9426bb9
 .word 0x910003bf
-.word 0xa8c57bfd
+.word 0xa8c47bfd
 .word 0xd65f03c0
 .loc 1 3199 0
 
@@ -8060,16 +8509,16 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2803561
-bl _p_8
-bl _p_60
+bl _p_7
+bl _p_59
 .word 0xaa0003e1
-.word 0xd2801c40
+.word 0xd2801c00
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
-.word 0xd2801c20
+bl _p_9
+.word 0xd2801be0
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_78:
 .text
@@ -8093,7 +8542,7 @@ System_Xml_Linq_XContainer_RemoveNodesSkipNotify:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #680]
+ldr x1, [x16, #664]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800018
@@ -8176,7 +8625,7 @@ System_Xml_Linq_XContainer_WriteContentTo_System_Xml_XmlWriter:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #672]
+ldr x1, [x16, #656]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800017
@@ -8192,7 +8641,7 @@ ldr x1, [x16, #672]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #640]
+ldr x1, [x16, #624]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800018
@@ -8207,7 +8656,7 @@ ldr x1, [x16, #640]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #672]
+ldr x1, [x16, #656]
 .word 0xeb01001f
 .word 0x10000011
 .word 0x540006a1
@@ -8228,7 +8677,7 @@ ldr x1, [x16, #672]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #672]
+ldr x1, [x16, #656]
 .word 0xeb01001f
 .word 0x10000011
 .word 0x54000461
@@ -8249,7 +8698,7 @@ ldr x1, [x16, #672]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #680]
+ldr x1, [x16, #664]
 .word 0xeb01001f
 .word 0x10000011
 .word 0x54000221
@@ -8273,9 +8722,9 @@ ldr x1, [x16, #680]
 .word 0x910003bf
 .word 0xa8c37bfd
 .word 0xd65f03c0
-.word 0xd2801c20
+.word 0xd2801be0
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_7c:
 .text
@@ -8289,7 +8738,7 @@ System_Xml_Linq_XContainer__Nodesd__18__ctor_int:
 .word 0xb9801ba1
 .word 0xf9400ba0
 .word 0xb9002801
-bl _p_56
+bl _p_55
 .word 0x93407c00
 .word 0xaa0003e1
 .word 0xf9400ba0
@@ -8316,7 +8765,7 @@ Lme_7e:
 	.no_dead_strip System_Xml_Linq_XContainer__Nodesd__18_MoveNext
 System_Xml_Linq_XContainer__Nodesd__18_MoveNext:
 .loc 1 0 0 prologue_end
-.word 0xa9bc7bfd
+.word 0xa9bd7bfd
 .word 0x910003fd
 .word 0xa90167b8
 .word 0xf90013ba
@@ -8326,38 +8775,62 @@ System_Xml_Linq_XContainer__Nodesd__18_MoveNext:
 .word 0x340000d9
 .word 0xd280003e
 .word 0x6b1e033f
-.word 0x54000400
+.word 0x540006a0
 .word 0xd2800000
-.word 0x1400002a
+.word 0x1400003f
 .word 0x9280001e
 .word 0xf2bffffe
 .word 0xb9002b5e
 .loc 1 2614 0
 .word 0xaa1803e0
-bl _p_105
-.word 0xf9001ba0
+bl _p_104
 .word 0xf9001340
-.word 0x91008340
-bl _p_1
-.word 0xf9401ba0
+.word 0x91008341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 2615 0
 .word 0xf9401340
-.word 0xb40003a0
+.word 0xb4000560
 .loc 1 2617 0
 .word 0xf9401340
 .word 0xf9401000
-.word 0xf9001fa0
 .word 0xf9001340
-.word 0x91008340
-bl _p_1
-.word 0xf9401fa0
+.word 0x91008341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 2618 0
 .word 0xf9401340
-.word 0xf9001ba0
 .word 0xf9000b40
-.word 0x91004340
-bl _p_1
-.word 0xf9401ba0
+.word 0x91004341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .word 0xd280003e
 .word 0xb9002b5e
 .word 0xd2800020
@@ -8373,13 +8846,13 @@ bl _p_1
 .word 0xf9401340
 .word 0xf9401701
 .word 0xeb01001f
-.word 0x54fffca1
+.word 0x54fffae1
 .loc 1 2621 0
 .word 0xd2800000
 .word 0xa94167b8
 .word 0xf94013ba
 .word 0x910003bf
-.word 0xa8c47bfd
+.word 0xa8c37bfd
 .word 0xd65f03c0
 
 Lme_7f:
@@ -8404,10 +8877,10 @@ System_Xml_Linq_XContainer__Nodesd__18_System_Collections_IEnumerator_Reset:
 .word 0xa9be7bfd
 .word 0x910003fd
 .word 0xf9000ba0
-.word 0xd2801de0
+.word 0xd2801da0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
-bl _p_10
+bl _p_9
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
@@ -8442,7 +8915,7 @@ System_Xml_Linq_XContainer__Nodesd__18_System_Collections_Generic_IEnumerable_Sy
 .word 0x54000181
 .word 0xb9802f40
 .word 0xf90013a0
-bl _p_56
+bl _p_55
 .word 0x93407c00
 .word 0xaa0003e1
 .word 0xf94013a0
@@ -8450,25 +8923,33 @@ bl _p_56
 .word 0x54000081
 .word 0xb9002b5f
 .word 0xaa1a03f9
-.word 0x14000012
+.word 0x14000019
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #760]
+ldr x0, [x16, #744]
 .word 0xd2800601
-bl _p_16
-.word 0xf90017a0
+bl _p_15
+.word 0xf90013a0
 .word 0xd2800001
 bl System_Xml_Linq_XContainer__Nodesd__18__ctor_int
-.word 0xf94017a1
-.word 0xaa0103f9
-.word 0xaa1903e0
-.word 0xf9400f42
-.word 0xf90013a2
-.word 0xf9000c22
-.word 0x91006000
-bl _p_1
-.word 0xf94013a0
+.word 0xf94013a2
+.word 0xaa0203f9
+.word 0xaa1903e1
+.word 0xf9400f40
+.word 0xf9000c40
+.word 0x91006021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .word 0xaa1903e0
 .word 0xa9416bb9
 .word 0x910003bf
@@ -8484,7 +8965,7 @@ System_Xml_Linq_XContainer__Nodesd__18_System_Collections_IEnumerable_GetEnumera
 .word 0x910003fd
 .word 0xf9000ba0
 .word 0xf9400ba0
-bl _p_106
+bl _p_105
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
@@ -8506,7 +8987,7 @@ LDIFF_SYM3=ut_end - ut_133
 	.no_dead_strip System_Xml_Linq_NamespaceCache_Get_string
 System_Xml_Linq_NamespaceCache_Get_string:
 .loc 1 3416 0 prologue_end
-.word 0xa9bd7bfd
+.word 0xa9be7bfd
 .word 0x910003fd
 .word 0xa9016bb9
 .word 0xaa0003f9
@@ -8515,24 +8996,41 @@ System_Xml_Linq_NamespaceCache_Get_string:
 .word 0xeb00035f
 .word 0x54000061
 .word 0xf9400320
-.word 0x1400000c
+.word 0x1400001b
 .loc 1 3417 0
 .word 0xf900073a
 .word 0x91002320
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 3418 0
 .word 0xaa1a03e0
 bl System_Xml_Linq_XNamespace_Get_string
-.word 0xf90013a0
 .word 0xf9000320
-.word 0xaa1903e0
-bl _p_1
-.word 0xf94013a0
+.word 0xd349ff21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 3419 0
 .word 0xf9400320
 .word 0xa9416bb9
 .word 0x910003bf
-.word 0xa8c37bfd
+.word 0xa8c27bfd
 .word 0xd65f03c0
 
 Lme_85:
@@ -8548,14 +9046,23 @@ System_Xml_Linq_XElement__ctor_System_Xml_Linq_XName:
 .word 0xf9400fa0
 .word 0xeb1f001f
 .word 0x9a9f17e0
-.word 0x35000140
+.word 0x35000240
 .loc 1 3469 0
-.word 0xf9400fa1
-.word 0xf9400ba0
-.word 0xf9001801
-.word 0x9100c000
-bl _p_1
 .word 0xf9400fa0
+.word 0xf9400ba1
+.word 0xf9001820
+.word 0x9100c021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 3470 0
 .word 0x910003bf
 .word 0xa8c27bfd
@@ -8566,12 +9073,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2800ce1
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_86:
 .text
@@ -8587,14 +9094,22 @@ System_Xml_Linq_XElement__ctor_System_Xml_Linq_XElement:
 .word 0xaa0103fa
 .word 0xaa1903e0
 .word 0xaa1a03e1
-bl _p_107
+bl _p_106
 .loc 1 3512 0
 .word 0xf9401b40
-.word 0xf9001ba0
 .word 0xf9001b20
-.word 0x9100c320
-bl _p_1
-.word 0xf9401ba0
+.word 0x9100c321
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 3513 0
 .word 0xf9401f58
 .loc 1 3514 0
@@ -8606,9 +9121,9 @@ bl _p_1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #864]
+ldr x0, [x16, #848]
 .word 0xd2800701
-bl _p_16
+bl _p_15
 .word 0xf9001ba0
 .word 0xaa1803e1
 bl System_Xml_Linq_XAttribute__ctor_System_Xml_Linq_XAttribute
@@ -8632,29 +9147,35 @@ Lme_87:
 	.no_dead_strip System_Xml_Linq_XElement__ctor_System_Xml_Linq_XStreamingElement
 System_Xml_Linq_XElement__ctor_System_Xml_Linq_XStreamingElement:
 .loc 1 3530 0 prologue_end
-.word 0xa9bd7bfd
+.word 0xa9be7bfd
 .word 0x910003fd
 .word 0xf9000ba0
 .word 0xf9000fa1
 .word 0xf9400fa0
-.word 0xb4000200
+.word 0xb40002a0
 .loc 1 3531 0
-.word 0xf9400fa0
-.word 0xf9400801
+.word 0xf9400fa1
+.word 0xf9400822
 .word 0xf9400ba0
-.word 0xf90013a1
-.word 0xf9001801
-.word 0x9100c000
-bl _p_1
-.word 0xf94013a0
+.word 0xf9001802
+.word 0x9100c003
+.word 0xd349fc63
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0063
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x4, [x16, #16]
+.word 0x8b040063
+.word 0xd280003e
+.word 0x3900007e
 .loc 1 3532 0
-.word 0xf9400fa0
-.word 0xf9400c01
-.word 0xf9400ba0
-bl _p_82
+.word 0xf9400c21
+bl _p_81
 .loc 1 3533 0
 .word 0x910003bf
-.word 0xa8c37bfd
+.word 0xa8c27bfd
 .word 0xd65f03c0
 .loc 1 3530 0
 
@@ -8662,12 +9183,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2803221
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_88:
 .text
@@ -8683,7 +9204,7 @@ System_Xml_Linq_XElement__ctor_System_Xml_XmlReader_System_Xml_Linq_LoadOptions:
 .word 0xf9400ba0
 .word 0xf9400fa1
 .word 0xb98023a2
-bl _p_108
+bl _p_107
 .loc 1 3543 0
 .word 0x910003bf
 .word 0xa8c37bfd
@@ -8710,7 +9231,7 @@ System_Xml_Linq_XElement_ConvertForAssignment_object:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #960]
+ldr x1, [x16, #944]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800019
@@ -8724,11 +9245,11 @@ ldr x1, [x16, #960]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #968]
+ldr x0, [x16, #952]
 .word 0xd2802501
-bl _p_16
+bl _p_15
 .word 0xf90023a0
-bl _p_109
+bl _p_108
 .word 0xf94023a3
 .loc 1 3553 0
 .word 0xaa0303e0
@@ -8738,7 +9259,7 @@ bl _p_109
 .word 0xd2800022
 .word 0xf940007e
 .word 0xf9001fa3
-bl _p_110
+bl _p_109
 .word 0xaa0003e1
 .word 0xf9401fa2
 .word 0xaa0203e0
@@ -8837,7 +9358,7 @@ System_Xml_Linq_XElement_get_Value:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #296]
+ldr x0, [x16, #288]
 .word 0xf9400000
 .word 0x14000025
 .loc 1 3639 0
@@ -8852,7 +9373,7 @@ ldr x0, [x16, #296]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #672]
+ldr x1, [x16, #656]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800018
@@ -8865,11 +9386,11 @@ ldr x1, [x16, #672]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #976]
+ldr x0, [x16, #960]
 .word 0xd2800601
-bl _p_16
+bl _p_15
 .word 0xf9001ba0
-bl _p_111
+bl _p_110
 .word 0xf9401ba0
 .word 0xaa0003f9
 .loc 1 3642 0
@@ -8903,11 +9424,11 @@ System_Xml_Linq_XElement_set_Value_string:
 .word 0xb4000120
 .loc 1 3647 0
 .word 0xf9400ba0
-bl _p_112
+bl _p_111
 .loc 1 3648 0
 .word 0xf9400ba0
 .word 0xf9400fa1
-bl _p_84
+bl _p_83
 .loc 1 3649 0
 .word 0x910003bf
 .word 0xa8c27bfd
@@ -8918,12 +9439,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd28030a1
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_90:
 .text
@@ -8974,7 +9495,7 @@ System_Xml_Linq_XElement_Attributes:
 .word 0xf9000ba0
 .word 0xf9400ba0
 .word 0xd2800001
-bl _p_113
+bl _p_112
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
@@ -9015,14 +9536,14 @@ System_Xml_Linq_XElement_GetPrefixOfNamespace_System_Xml_Linq_XNamespace:
 .word 0xaa1603e1
 .word 0xaa0103e0
 .word 0xf940003e
-bl _p_114
+bl _p_113
 .word 0x53001c00
 .word 0x34000440
 .loc 1 3826 0
 .word 0xf94002de
 .word 0xf9401ac0
 .word 0xaa1803e1
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x34000360
 .loc 1 3827 0
@@ -9044,7 +9565,7 @@ bl _p_115
 .word 0xf9400c01
 .word 0xaa1903e0
 .word 0xaa1703e2
-bl _p_116
+bl _p_115
 .word 0xb50000e0
 .loc 1 3830 0
 .word 0xf94002de
@@ -9073,7 +9594,7 @@ bl _p_116
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #456]
+ldr x1, [x16, #440]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800017
@@ -9083,7 +9604,7 @@ ldr x1, [x16, #456]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #312]
+ldr x0, [x16, #304]
 .word 0xeb00031f
 .word 0x540001a1
 .loc 1 3843 0
@@ -9091,28 +9612,28 @@ ldr x0, [x16, #312]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #984]
+ldr x1, [x16, #968]
 .word 0xaa1903e0
 .word 0xd2800002
-bl _p_116
+bl _p_115
 .word 0xb50001c0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #984]
+ldr x0, [x16, #968]
 .word 0x1400000b
 .loc 1 3845 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #328]
+ldr x0, [x16, #320]
 .word 0xeb00031f
 .word 0x540000a1
 .loc 1 3846 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #992]
+ldr x0, [x16, #976]
 .word 0x14000002
 .loc 1 3848 0
 .word 0xd2800000
@@ -9128,12 +9649,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2806921
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_93:
 .text
@@ -9160,9 +9681,9 @@ System_Xml_Linq_XElement_Load_System_Xml_XmlReader_System_Xml_Linq_LoadOptions:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #712]
+ldr x0, [x16, #696]
 .word 0xd2800801
-bl _p_16
+bl _p_15
 .word 0xf9001ba0
 .word 0xaa1903e1
 .word 0xb98023a2
@@ -9194,34 +9715,34 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2806c61
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 .loc 1 4047 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2806e21
-bl _p_8
+bl _p_7
 .word 0xf9001ba0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #224]
+ldr x0, [x16, #216]
 .word 0xd2800041
-bl _p_9
+bl _p_8
 .word 0xf9002fa0
 .word 0xf9002ba0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #912]
+ldr x0, [x16, #896]
 .word 0xd2800281
-bl _p_16
+bl _p_15
 .word 0xaa0003e2
 .word 0xf9402fa3
 .word 0xd280003e
@@ -9243,9 +9764,9 @@ bl _p_16
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #912]
+ldr x0, [x16, #896]
 .word 0xd2800281
-bl _p_16
+bl _p_15
 .word 0xaa0003e2
 .word 0xf94023a0
 .word 0xf94027a3
@@ -9259,23 +9780,23 @@ bl _p_16
 .word 0xf9401fa1
 bl System_Xml_Linq_Res_GetString_string_object__
 .word 0xaa0003e1
-.word 0xd2801c40
+.word 0xd2801c00
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 .loc 1 4050 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd28076a1
-bl _p_8
-bl _p_60
+bl _p_7
+bl _p_59
 .word 0xaa0003e1
-.word 0xd2801c40
+.word 0xd2801c00
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_94:
 .text
@@ -9288,7 +9809,7 @@ System_Xml_Linq_XElement_Parse_string:
 .word 0xf9000ba0
 .word 0xf9400ba0
 .word 0xd2800001
-bl _p_117
+bl _p_116
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
@@ -9309,27 +9830,27 @@ System_Xml_Linq_XElement_Parse_string_System_Xml_Linq_LoadOptions:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1000]
+ldr x0, [x16, #984]
 .word 0xd2800501
-bl _p_16
+bl _p_15
 .word 0xf90033a0
 .word 0xf94013a1
-bl _p_118
+bl _p_117
 .word 0xf94033a0
 .word 0xf90017a0
 .loc 1 4099 0
 .word 0xaa1a03e0
-bl _p_119
+bl _p_118
 .word 0xaa0003f9
 .loc 1 4100 0
 .word 0xf94017a0
 .word 0xaa1903e1
-bl _p_120
+bl _p_119
 .word 0xf9001ba0
 .loc 1 4101 0
 .word 0xf9401ba0
 .word 0xaa1a03e1
-bl _p_121
+bl _p_120
 .word 0xaa0003fa
 .word 0x94000003
 .word 0x94000011
@@ -9343,7 +9864,7 @@ bl _p_121
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #648]
+ldr x15, [x16, #632]
 .word 0x928004f0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -9359,7 +9880,7 @@ ldr x15, [x16, #648]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #648]
+ldr x15, [x16, #632]
 .word 0x928004f0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -9409,7 +9930,7 @@ bl System_Xml_Linq_ElementWriter__ctor_System_Xml_XmlWriter
 .word 0xf9002fa0
 .word 0x910103a0
 .word 0xf9400ba1
-bl _p_122
+bl _p_121
 .loc 1 4441 0
 .word 0x910003bf
 .word 0xa8c67bfd
@@ -9420,12 +9941,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd28033a1
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_97:
 .text
@@ -9449,9 +9970,9 @@ bl System_Xml_Linq_XElement_Attribute_System_Xml_Linq_XName
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #864]
+ldr x0, [x16, #848]
 .word 0xd2800701
-bl _p_16
+bl _p_15
 .word 0xf90013a0
 .word 0xaa1a03e1
 bl System_Xml_Linq_XAttribute__ctor_System_Xml_Linq_XAttribute
@@ -9460,7 +9981,7 @@ bl System_Xml_Linq_XAttribute__ctor_System_Xml_Linq_XAttribute
 .loc 1 4992 0
 .word 0xf9400fa0
 .word 0xaa1a03e1
-bl _p_123
+bl _p_122
 .loc 1 4993 0
 .word 0xf9400bba
 .word 0x910003bf
@@ -9472,13 +9993,13 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2807f61
-bl _p_8
-bl _p_60
+bl _p_7
+bl _p_59
 .word 0xaa0003e1
-.word 0xd2801c40
+.word 0xd2801c00
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_98:
 .text
@@ -9502,9 +10023,9 @@ bl System_Xml_Linq_XElement_Attribute_System_Xml_Linq_XName
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #864]
+ldr x0, [x16, #848]
 .word 0xd2800701
-bl _p_16
+bl _p_15
 .word 0xf90013a0
 .word 0xaa1a03e1
 bl System_Xml_Linq_XAttribute__ctor_System_Xml_Linq_XAttribute
@@ -9525,13 +10046,13 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2807f61
-bl _p_8
-bl _p_60
+bl _p_7
+bl _p_59
 .word 0xaa0003e1
-.word 0xd2801c40
+.word 0xd2801c00
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_99:
 .text
@@ -9547,11 +10068,11 @@ System_Xml_Linq_XElement_AppendAttribute_System_Xml_Linq_XAttribute:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #560]
+ldr x0, [x16, #544]
 .word 0xf9400002
 .word 0xf9400fa0
 .word 0xaa1a03e1
-bl _p_77
+bl _p_76
 .word 0x53001c01
 .loc 1 5003 0
 .word 0xf9400b40
@@ -9569,11 +10090,11 @@ bl System_Xml_Linq_XElement_AppendAttributeSkipNotify_System_Xml_Linq_XAttribute
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #560]
+ldr x0, [x16, #544]
 .word 0xf9400002
 .word 0xf9400fa0
 .word 0xaa1a03e1
-bl _p_78
+bl _p_77
 .loc 1 5006 0
 .word 0xf9400bba
 .word 0x910003bf
@@ -9585,13 +10106,13 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2803561
-bl _p_8
-bl _p_60
+bl _p_7
+bl _p_59
 .word 0xaa0003e1
-.word 0xd2801c40
+.word 0xd2801c00
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_9a:
 .text
@@ -9599,44 +10120,92 @@ Lme_9a:
 	.no_dead_strip System_Xml_Linq_XElement_AppendAttributeSkipNotify_System_Xml_Linq_XAttribute
 System_Xml_Linq_XElement_AppendAttributeSkipNotify_System_Xml_Linq_XAttribute:
 .loc 1 5009 0 prologue_end
-.word 0xa9bd7bfd
+.word 0xa9be7bfd
 .word 0x910003fd
 .word 0xa9016bb9
 .word 0xaa0003f9
 .word 0xaa0103fa
 .word 0xf9000b59
 .word 0x91004340
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 5010 0
 .word 0xf9401f20
-.word 0xb50000a0
+.word 0xb50001c0
 .loc 1 5011 0
 .word 0xf900135a
 .word 0x91008340
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 5012 0
-.word 0x1400000c
+.word 0x1400001c
 .loc 1 5014 0
 .word 0xf9401f20
 .word 0xf9401000
-.word 0xf90013a0
 .word 0xf9001340
-.word 0x91008340
-bl _p_1
-.word 0xf94013a0
+.word 0x91008341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 5015 0
 .word 0xf9401f20
 .word 0xf900101a
 .word 0x91008000
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 5017 0
 .word 0xf9001f3a
 .word 0x9100e320
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 5018 0
 .word 0xa9416bb9
 .word 0x910003bf
-.word 0xa8c37bfd
+.word 0xa8c27bfd
 .word 0xd65f03c0
 
 Lme_9b:
@@ -9651,12 +10220,12 @@ System_Xml_Linq_XElement_CloneNode:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #712]
+ldr x0, [x16, #696]
 .word 0xd2800801
-bl _p_16
+bl _p_15
 .word 0xf90013a0
 .word 0xf9400ba1
-bl _p_124
+bl _p_123
 .word 0xf94013a0
 .word 0x910003bf
 .word 0xa8c37bfd
@@ -9667,41 +10236,53 @@ Lme_9c:
 	.align 4
 	.no_dead_strip System_Xml_Linq_XElement_GetAttributes_System_Xml_Linq_XName
 System_Xml_Linq_XElement_GetAttributes_System_Xml_Linq_XName:
-.word 0xa9bc7bfd
+.word 0xa9bd7bfd
 .word 0x910003fd
 .word 0xf9000ba0
 .word 0xf9000fa1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1008]
+ldr x0, [x16, #992]
 .word 0xd2800801
-bl _p_16
-.word 0xf9001ba0
+bl _p_15
+.word 0xf90013a0
 .word 0x92800021
 .word 0xf2bfffe1
 bl System_Xml_Linq_XElement__GetAttributesd__105__ctor_int
-.word 0xf9401ba1
-.word 0xaa0103e0
-.word 0xaa0003e2
-.word 0xf90017a2
-.word 0xf9400ba2
-.word 0xf9000c22
-.word 0x91006000
-bl _p_1
-.word 0xf94017a1
-.word 0xf9400ba0
-.word 0xaa0103e0
-.word 0xaa0003e2
-.word 0xf90013a2
-.word 0xf9400fa2
-.word 0xf9001822
-.word 0x9100c000
-bl _p_1
-.word 0xf94013a0
+.word 0xf94013a3
+.word 0xaa0303e2
+.word 0xaa0203e0
+.word 0xf9400ba1
+.word 0xf9000c61
+.word 0x91006043
+.word 0xd349fc63
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0063
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x4, [x16, #16]
+.word 0x8b040063
+.word 0xd280003e
+.word 0x3900007e
 .word 0xf9400fa1
+.word 0xf9001841
+.word 0x9100c002
+.word 0xd349fc42
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0042
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x3, [x16, #16]
+.word 0x8b030042
+.word 0xd280003e
+.word 0x3900005e
 .word 0x910003bf
-.word 0xa8c47bfd
+.word 0xa8c37bfd
 .word 0xd65f03c0
 
 Lme_9d:
@@ -9730,7 +10311,7 @@ System_Xml_Linq_XElement_GetNamespaceOfPrefixInScope_string_System_Xml_Linq_XEle
 .word 0xaa1803e1
 .word 0xaa0103e0
 .word 0xf940003e
-bl _p_114
+bl _p_113
 .word 0x53001c00
 .word 0x340001a0
 .word 0xf940031e
@@ -9739,7 +10320,7 @@ bl _p_114
 .word 0xf940003e
 .word 0xf9400c00
 .word 0xaa1903e1
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x34000080
 .word 0xf940031e
@@ -9761,7 +10342,7 @@ bl _p_115
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #456]
+ldr x1, [x16, #440]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800017
@@ -9796,28 +10377,36 @@ System_Xml_Linq_XElement_ReadElementFrom_System_Xml_XmlReader_System_Xml_Linq_Lo
 .word 0x93407c00
 .word 0xd280003e
 .word 0x6b1e001f
-.word 0x54001c81
+.word 0x54001d61
 .loc 1 5084 0
 .word 0xaa1903e0
 .word 0xf9400321
 .word 0xf940a030
 .word 0xd63f0200
 bl System_Xml_Linq_XNamespace_Get_string
-.word 0xf90027a0
+.word 0xf90023a0
 .word 0xaa1903e0
 .word 0xf9400321
 .word 0xf940a430
 .word 0xd63f0200
 .word 0xaa0003e1
-.word 0xf94027a2
+.word 0xf94023a2
 .word 0xaa0203e0
 .word 0xf940005e
 bl System_Xml_Linq_XNamespace_GetName_string
-.word 0xf90023a0
 .word 0xf9001b00
-.word 0x9100c300
-bl _p_1
-.word 0xf94023a0
+.word 0x9100c301
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 5085 0
 .word 0xb98033a0
 .word 0xd280005e
@@ -9837,7 +10426,7 @@ bl _p_1
 .loc 1 5088 0
 .word 0xaa1803e0
 .word 0xaa1703e1
-bl _p_100
+bl _p_99
 .loc 1 5091 0
 .word 0xd2800017
 .loc 1 5092 0
@@ -9854,14 +10443,14 @@ bl _p_100
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #920]
+ldr x1, [x16, #904]
 .word 0xeb01001f
 .word 0x540001c3
 .word 0xf94012c0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #920]
+ldr x1, [x16, #904]
 .word 0x9343fc22
 .word 0x8b020000
 .word 0x39400000
@@ -9879,7 +10468,7 @@ ldr x1, [x16, #920]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #936]
+ldr x15, [x16, #920]
 .word 0x92800ff0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -9892,7 +10481,7 @@ ldr x15, [x16, #936]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #944]
+ldr x15, [x16, #928]
 .word 0x928008f0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -9904,7 +10493,7 @@ ldr x15, [x16, #944]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #952]
+ldr x15, [x16, #936]
 .word 0x928005f0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -9913,7 +10502,7 @@ ldr x15, [x16, #952]
 .word 0xaa0003e2
 .word 0xf94023a1
 .word 0xaa1803e0
-bl _p_101
+bl _p_100
 .loc 1 5098 0
 .word 0xaa1903e0
 .word 0xf9400321
@@ -9937,7 +10526,7 @@ bl _p_101
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #296]
+ldr x0, [x16, #288]
 .word 0xf9400016
 .word 0xaa1603e0
 bl System_Xml_Linq_XNamespace_Get_string
@@ -9960,9 +10549,9 @@ bl System_Xml_Linq_XNamespace_GetName_string
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #864]
+ldr x0, [x16, #848]
 .word 0xd2800701
-bl _p_16
+bl _p_15
 .word 0xf94027a1
 .word 0xf9402ba2
 .word 0xf90023a0
@@ -9976,7 +10565,7 @@ bl System_Xml_Linq_XAttribute__ctor_System_Xml_Linq_XName_object
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #936]
+ldr x15, [x16, #920]
 .word 0x92800ff0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -9989,7 +10578,7 @@ ldr x15, [x16, #936]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #944]
+ldr x15, [x16, #928]
 .word 0x928008f0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -10001,7 +10590,7 @@ ldr x15, [x16, #944]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #952]
+ldr x15, [x16, #936]
 .word 0x928005f0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -10011,7 +10600,7 @@ ldr x15, [x16, #952]
 .word 0xf94023a1
 .word 0xaa1603e0
 .word 0xf94002de
-bl _p_101
+bl _p_100
 .loc 1 5104 0
 .word 0xaa1803e0
 .word 0xaa1603e1
@@ -10044,7 +10633,7 @@ bl System_Xml_Linq_XElement_AppendAttributeSkipNotify_System_Xml_Linq_XAttribute
 .word 0xaa1803e0
 .word 0xaa1903e1
 .word 0xb98033a2
-bl _p_125
+bl _p_124
 .loc 1 5112 0
 .word 0xaa1903e0
 .word 0xf9400321
@@ -10062,13 +10651,13 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd28048a1
-bl _p_8
-bl _p_60
+bl _p_7
+bl _p_59
 .word 0xaa0003e1
-.word 0xd2801c40
+.word 0xd2801c00
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_9f:
 .text
@@ -10084,16 +10673,16 @@ System_Xml_Linq_XElement_SetEndElementLineInfo_int_int:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1016]
+ldr x0, [x16, #1000]
 .word 0xd2800301
-bl _p_16
+bl _p_15
 .word 0xf9001ba0
 .word 0xb9801ba1
 .word 0xb98023a2
 bl System_Xml_Linq_LineInfoEndElementAnnotation__ctor_int_int
 .word 0xf9401ba1
 .word 0xf9400ba0
-bl _p_53
+bl _p_52
 .loc 1 5147 0
 .word 0x910003bf
 .word 0xa8c47bfd
@@ -10121,7 +10710,7 @@ System_Xml_Linq_XElement_ValidateNode_System_Xml_Linq_XNode_System_Xml_Linq_XNod
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #640]
+ldr x1, [x16, #624]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800019
@@ -10137,7 +10726,7 @@ ldr x1, [x16, #640]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1024]
+ldr x1, [x16, #1008]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800019
@@ -10153,22 +10742,22 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2808861
-bl _p_8
+bl _p_7
 .word 0xf9001ba0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #224]
+ldr x0, [x16, #216]
 .word 0xd2800021
-bl _p_9
+bl _p_8
 .word 0xf90023a0
 .word 0xf9001fa0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #912]
+ldr x0, [x16, #896]
 .word 0xd2800281
-bl _p_16
+bl _p_15
 .word 0xaa0003e2
 .word 0xf94023a3
 .word 0xd280013e
@@ -10182,32 +10771,32 @@ bl _p_16
 .word 0xf9401fa1
 bl System_Xml_Linq_Res_GetString_string_object__
 .word 0xaa0003e1
-.word 0xd2801100
+.word 0xd28010c0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 .loc 1 5151 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2808861
-bl _p_8
+bl _p_7
 .word 0xf9001ba0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #224]
+ldr x0, [x16, #216]
 .word 0xd2800021
-bl _p_9
+bl _p_8
 .word 0xf90023a0
 .word 0xf9001fa0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #912]
+ldr x0, [x16, #896]
 .word 0xd2800281
-bl _p_16
+bl _p_15
 .word 0xaa0003e2
 .word 0xf94023a3
 .word 0xd280015e
@@ -10221,10 +10810,10 @@ bl _p_16
 .word 0xf9401fa1
 bl System_Xml_Linq_Res_GetString_string_object__
 .word 0xaa0003e1
-.word 0xd2801100
+.word 0xd28010c0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_a1:
 .text
@@ -10238,7 +10827,7 @@ System_Xml_Linq_XElement__GetAttributesd__105__ctor_int:
 .word 0xb9801ba1
 .word 0xf9400ba0
 .word 0xb9003801
-bl _p_56
+bl _p_55
 .word 0x93407c00
 .word 0xaa0003e1
 .word 0xf9400ba0
@@ -10265,7 +10854,7 @@ Lme_a3:
 	.no_dead_strip System_Xml_Linq_XElement__GetAttributesd__105_MoveNext
 System_Xml_Linq_XElement__GetAttributesd__105_MoveNext:
 .loc 1 0 0 prologue_end
-.word 0xa9bc7bfd
+.word 0xa9bd7bfd
 .word 0x910003fd
 .word 0xa90167b8
 .word 0xf90013ba
@@ -10275,30 +10864,46 @@ System_Xml_Linq_XElement__GetAttributesd__105_MoveNext:
 .word 0x340000d9
 .word 0xd280003e
 .word 0x6b1e033f
-.word 0x54000520
+.word 0x540007c0
 .word 0xd2800000
-.word 0x14000033
+.word 0x14000048
 .word 0x9280001e
 .word 0xf2bffffe
 .word 0xb9003b5e
 .loc 1 5044 0
 .word 0xf9401f00
-.word 0xf9001ba0
 .word 0xf9001340
-.word 0x91008340
-bl _p_1
-.word 0xf9401ba0
+.word 0x91008341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 5045 0
 .word 0xf9401340
-.word 0xb40004e0
+.word 0xb40006a0
 .loc 1 5047 0
 .word 0xf9401340
 .word 0xf9401000
-.word 0xf9001ba0
 .word 0xf9001340
-.word 0x91008340
-bl _p_1
-.word 0xf9401ba0
+.word 0x91008341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 5048 0
 .word 0xf9401740
 .word 0xeb1f001f
@@ -10309,13 +10914,21 @@ bl _p_1
 .word 0xf9401741
 .word 0xeb01001f
 .word 0x9a9f17e0
-.word 0x340001c0
+.word 0x340002a0
 .word 0xf9401340
-.word 0xf9001ba0
 .word 0xf9000b40
-.word 0x91004340
-bl _p_1
-.word 0xf9401ba0
+.word 0x91004341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .word 0xd280003e
 .word 0xb9003b5e
 .word 0xd2800020
@@ -10331,13 +10944,13 @@ bl _p_1
 .word 0xf9401340
 .word 0xf9401f01
 .word 0xeb01001f
-.word 0x54fffb61
+.word 0x54fff9a1
 .loc 1 5051 0
 .word 0xd2800000
 .word 0xa94167b8
 .word 0xf94013ba
 .word 0x910003bf
-.word 0xa8c47bfd
+.word 0xa8c37bfd
 .word 0xd65f03c0
 
 Lme_a4:
@@ -10362,10 +10975,10 @@ System_Xml_Linq_XElement__GetAttributesd__105_System_Collections_IEnumerator_Res
 .word 0xa9be7bfd
 .word 0x910003fd
 .word 0xf9000ba0
-.word 0xd2801de0
+.word 0xd2801da0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
-bl _p_10
+bl _p_9
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
@@ -10400,7 +11013,7 @@ System_Xml_Linq_XElement__GetAttributesd__105_System_Collections_Generic_IEnumer
 .word 0x54000181
 .word 0xb9803f40
 .word 0xf90013a0
-bl _p_56
+bl _p_55
 .word 0x93407c00
 .word 0xaa0003e1
 .word 0xf94013a0
@@ -10408,31 +11021,47 @@ bl _p_56
 .word 0x54000081
 .word 0xb9003b5f
 .word 0xaa1a03f9
-.word 0x14000012
+.word 0x14000019
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1008]
+ldr x0, [x16, #992]
 .word 0xd2800801
-bl _p_16
-.word 0xf90017a0
+bl _p_15
+.word 0xf90013a0
 .word 0xd2800001
 bl System_Xml_Linq_XElement__GetAttributesd__105__ctor_int
-.word 0xf94017a1
-.word 0xaa0103f9
-.word 0xaa1903e0
-.word 0xf9400f42
-.word 0xf90013a2
-.word 0xf9000c22
-.word 0x91006000
-bl _p_1
-.word 0xf94013a0
+.word 0xf94013a2
+.word 0xaa0203f9
+.word 0xaa1903e1
+.word 0xf9400f40
+.word 0xf9000c40
+.word 0x91006021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .word 0xf9401b40
-.word 0xf90013a0
 .word 0xf9001720
-.word 0x9100a320
-bl _p_1
-.word 0xf94013a0
+.word 0x9100a321
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .word 0xaa1903e0
 .word 0xa9416bb9
 .word 0x910003bf
@@ -10448,7 +11077,7 @@ System_Xml_Linq_XElement__GetAttributesd__105_System_Collections_IEnumerable_Get
 .word 0x910003fd
 .word 0xf9000ba0
 .word 0xf9400ba0
-bl _p_126
+bl _p_125
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
@@ -10470,10 +11099,18 @@ System_Xml_Linq_ElementWriter__ctor_System_Xml_XmlWriter:
 .word 0xf9400fa1
 .word 0xf9400ba0
 .word 0xf9000001
-bl _p_1
-.word 0xf9400fa0
+.word 0xd349fc02
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0042
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x3, [x16, #16]
+.word 0x8b030042
+.word 0xd280003e
+.word 0x3900005e
 .loc 1 5162 0
-.word 0xf9400ba0
 .word 0x91002000
 .word 0xd2800001
 .word 0xf9000001
@@ -10503,7 +11140,7 @@ System_Xml_Linq_ElementWriter_WriteElement_System_Xml_Linq_XElement:
 .word 0xaa0103fa
 .word 0xaa1903e0
 .word 0xaa1a03e1
-bl _p_127
+bl _p_126
 .loc 1 5167 0
 .word 0xaa1a03f8
 .loc 1 5168 0
@@ -10519,7 +11156,7 @@ bl _p_127
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #456]
+ldr x1, [x16, #440]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd280001a
@@ -10528,7 +11165,7 @@ ldr x1, [x16, #456]
 .loc 1 5172 0
 .word 0xaa1903e0
 .word 0xaa1a03e1
-bl _p_128
+bl _p_127
 .loc 1 5173 0
 .word 0xf9401740
 .word 0xb5000080
@@ -10549,7 +11186,7 @@ bl System_Xml_Linq_ElementWriter_WriteEndElement
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #672]
+ldr x1, [x16, #656]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800015
@@ -10578,7 +11215,7 @@ bl System_Xml_Linq_ElementWriter_WriteFullEndElement
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #680]
+ldr x1, [x16, #664]
 .word 0xeb01001f
 .word 0x10000011
 .word 0x54000381
@@ -10618,9 +11255,9 @@ bl System_Xml_Linq_ElementWriter_WriteFullEndElement
 .word 0x910003bf
 .word 0xa8c47bfd
 .word 0xd65f03c0
-.word 0xd2801c20
+.word 0xd2801be0
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_ab:
 .text
@@ -10648,7 +11285,7 @@ System_Xml_Linq_ElementWriter_GetPrefixOfNamespace_System_Xml_Linq_XNamespace_bo
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #296]
+ldr x0, [x16, #288]
 .word 0xf9400000
 .word 0x1400001e
 .loc 1 5204 0
@@ -10667,25 +11304,25 @@ bl System_Xml_Linq_NamespaceResolver_GetPrefixOfNamespace_System_Xml_Linq_XNames
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #312]
+ldr x0, [x16, #304]
 .word 0xeb0002ff
 .word 0x540000a1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #984]
+ldr x0, [x16, #968]
 .word 0x1400000b
 .loc 1 5207 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #328]
+ldr x0, [x16, #320]
 .word 0xeb0002ff
 .word 0x540000a1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #992]
+ldr x0, [x16, #976]
 .word 0x14000002
 .loc 1 5208 0
 .word 0xd2800000
@@ -10723,7 +11360,7 @@ System_Xml_Linq_ElementWriter_PushAncestors_System_Xml_Linq_XElement:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #456]
+ldr x1, [x16, #440]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd280001a
@@ -10740,7 +11377,7 @@ ldr x1, [x16, #456]
 .word 0xaa1803e1
 .word 0xaa0103e0
 .word 0xf940003e
-bl _p_114
+bl _p_113
 .word 0x53001c00
 .word 0x34000440
 .loc 1 5220 0
@@ -10767,7 +11404,7 @@ bl _p_114
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #296]
+ldr x0, [x16, #288]
 .word 0xf9400000
 .word 0xaa1703f6
 .word 0xaa0003f7
@@ -10777,7 +11414,7 @@ bl System_Xml_Linq_XNamespace_Get_string
 .word 0xaa0003e2
 .word 0xaa1603e0
 .word 0xaa1703e1
-bl _p_129
+bl _p_128
 .loc 1 5222 0
 .word 0xf9401f40
 .word 0xeb00031f
@@ -10823,7 +11460,7 @@ System_Xml_Linq_ElementWriter_PushElement_System_Xml_Linq_XElement:
 .word 0xaa1803e1
 .word 0xaa0103e0
 .word 0xf940003e
-bl _p_114
+bl _p_113
 .word 0x53001c00
 .word 0x34000440
 .loc 1 5234 0
@@ -10850,7 +11487,7 @@ bl _p_114
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #296]
+ldr x0, [x16, #288]
 .word 0xf9400000
 .word 0xaa1703f6
 .word 0xaa0003f7
@@ -10860,7 +11497,7 @@ bl System_Xml_Linq_XNamespace_Get_string
 .word 0xaa0003e2
 .word 0xaa1603e0
 .word 0xaa1703e1
-bl _p_130
+bl _p_129
 .loc 1 5236 0
 .word 0xf9401f40
 .word 0xeb00031f
@@ -10949,7 +11586,7 @@ System_Xml_Linq_ElementWriter_WriteStartElement_System_Xml_Linq_XElement:
 .word 0xaa0103fa
 .word 0xaa1903e0
 .word 0xaa1a03e1
-bl _p_131
+bl _p_130
 .loc 1 5252 0
 .word 0xf940035e
 .word 0xf9401b40
@@ -10962,7 +11599,7 @@ bl _p_131
 .word 0xaa1903e0
 .word 0xaa1803e1
 .word 0xd2800022
-bl _p_132
+bl _p_131
 .word 0xaa0003e1
 .word 0xf9402ba4
 .word 0xf940035e
@@ -11006,7 +11643,7 @@ bl _p_132
 .word 0xaa1903e0
 .word 0xaa1803e1
 .word 0xd2800002
-bl _p_132
+bl _p_131
 .word 0xaa0003e1
 .word 0xf9402ba2
 .word 0xb98012a0
@@ -11017,9 +11654,9 @@ bl _p_132
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #992]
+ldr x1, [x16, #976]
 .word 0xaa1603e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x35000060
 .word 0xaa1503f6
@@ -11027,7 +11664,7 @@ bl _p_115
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x22, [x16, #328]
+ldr x22, [x16, #320]
 .word 0xf94002fe
 .word 0xf9401ae4
 .word 0xaa1803e0
@@ -11035,7 +11672,7 @@ ldr x22, [x16, #328]
 .word 0xaa1303e2
 .word 0xaa1603e3
 .word 0xf940031e
-bl _p_133
+bl _p_132
 .loc 1 5262 0
 .word 0xf9401f40
 .word 0xeb0002ff
@@ -11081,14 +11718,14 @@ b System_Xml_Linq_NamespaceResolver_PopScope
 	.no_dead_strip System_Xml_Linq_NamespaceResolver_PopScope
 System_Xml_Linq_NamespaceResolver_PopScope:
 .loc 1 5284 0 prologue_end
-.word 0xa9bd7bfd
+.word 0xa9be7bfd
 .word 0x910003fd
 .word 0xa9016bb9
 .word 0xaa0003fa
 .word 0xf9400759
 .loc 1 5285 0
 .word 0xaa1903e0
-.word 0xb4000320
+.word 0xb4000400
 .loc 1 5287 0
 .word 0xf9401339
 .loc 1 5288 0
@@ -11096,7 +11733,7 @@ System_Xml_Linq_NamespaceResolver_PopScope:
 .word 0xb9802800
 .word 0xb9800341
 .word 0x6b01001f
-.word 0x54000261
+.word 0x54000341
 .loc 1 5289 0
 .word 0xf9400740
 .word 0xeb00033f
@@ -11104,15 +11741,23 @@ System_Xml_Linq_NamespaceResolver_PopScope:
 .loc 1 5290 0
 .word 0xf900075f
 .loc 1 5291 0
-.word 0x14000008
+.word 0x1400000f
 .loc 1 5293 0
-.word 0xf9400740
-.word 0xf9401321
-.word 0xf90013a1
-.word 0xf9001001
-.word 0x91008000
-bl _p_1
-.word 0xf94013a0
+.word 0xf9400741
+.word 0xf9401320
+.word 0xf9001020
+.word 0x91008021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 5295 0
 .word 0xf9000b5f
 .loc 1 5296 0
@@ -11120,7 +11765,7 @@ bl _p_1
 .word 0xeb00033f
 .word 0x54000060
 .word 0xf9400740
-.word 0xb5fffd20
+.word 0xb5fffc40
 .loc 1 5298 0
 .word 0xb9800340
 .word 0x51000400
@@ -11128,7 +11773,7 @@ bl _p_1
 .loc 1 5299 0
 .word 0xa9416bb9
 .word 0x910003bf
-.word 0xa8c37bfd
+.word 0xa8c27bfd
 .word 0xd65f03c0
 
 Lme_b3:
@@ -11141,7 +11786,7 @@ b System_Xml_Linq_NamespaceResolver_Add_string_System_Xml_Linq_XNamespace
 	.no_dead_strip System_Xml_Linq_NamespaceResolver_Add_string_System_Xml_Linq_XNamespace
 System_Xml_Linq_NamespaceResolver_Add_string_System_Xml_Linq_XNamespace:
 .loc 1 5302 0 prologue_end
-.word 0xa9bc7bfd
+.word 0xa9bd7bfd
 .word 0x910003fd
 .word 0xa90163b7
 .word 0xaa0003f8
@@ -11150,57 +11795,99 @@ System_Xml_Linq_NamespaceResolver_Add_string_System_Xml_Linq_XNamespace:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1032]
+ldr x0, [x16, #1016]
 .word 0xd2800601
-bl _p_16
+bl _p_15
 .word 0xaa0003f7
 .loc 1 5303 0
 .word 0xf94013a1
 .word 0xf9000801
-.word 0xf9001fa0
-.word 0x91004000
-bl _p_1
-.word 0xf9401fa0
-.word 0xf94013a1
+.word 0x91004002
+.word 0xd349fc42
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0042
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x3, [x16, #16]
+.word 0x8b030042
+.word 0xd280003e
+.word 0x3900005e
 .loc 1 5304 0
 .word 0xf94017a1
 .word 0xf9000c01
-.word 0xf9001ba0
-.word 0x910062e0
-bl _p_1
-.word 0xf9401ba0
-.word 0xf94017a1
+.word 0x91006002
+.word 0xd349fc42
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0042
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x3, [x16, #16]
+.word 0x8b030042
+.word 0xd280003e
+.word 0x3900005e
 .loc 1 5305 0
 .word 0xb9800301
 .word 0xb9002801
 .loc 1 5306 0
 .word 0xf9400700
-.word 0xb50000a0
+.word 0xb50001c0
 .loc 1 5307 0
 .word 0xf9000717
 .word 0x91002300
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 5308 0
-.word 0x14000008
+.word 0x1400000f
 .loc 1 5310 0
 .word 0xf9400700
 .word 0xf9401000
-.word 0xf9001ba0
 .word 0xf90012e0
-.word 0x910082e0
-bl _p_1
-.word 0xf9401ba0
+.word 0x910082e1
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 5312 0
 .word 0xf9400700
 .word 0xf9001017
 .word 0x91008000
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 5313 0
 .word 0xf9000b1f
 .loc 1 5314 0
 .word 0xa94163b7
 .word 0x910003bf
-.word 0xa8c47bfd
+.word 0xa8c37bfd
 .word 0xd65f03c0
 
 Lme_b4:
@@ -11213,7 +11900,7 @@ b System_Xml_Linq_NamespaceResolver_AddFirst_string_System_Xml_Linq_XNamespace
 	.no_dead_strip System_Xml_Linq_NamespaceResolver_AddFirst_string_System_Xml_Linq_XNamespace
 System_Xml_Linq_NamespaceResolver_AddFirst_string_System_Xml_Linq_XNamespace:
 .loc 1 5317 0 prologue_end
-.word 0xa9bc7bfd
+.word 0xa9bd7bfd
 .word 0x910003fd
 .word 0xa90163b7
 .word 0xaa0003f8
@@ -11222,61 +11909,113 @@ System_Xml_Linq_NamespaceResolver_AddFirst_string_System_Xml_Linq_XNamespace:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1032]
+ldr x0, [x16, #1016]
 .word 0xd2800601
-bl _p_16
+bl _p_15
 .word 0xaa0003f7
 .loc 1 5318 0
 .word 0xf94013a1
 .word 0xf9000801
-.word 0xf9001fa0
-.word 0x91004000
-bl _p_1
-.word 0xf9401fa0
-.word 0xf94013a1
+.word 0x91004002
+.word 0xd349fc42
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0042
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x3, [x16, #16]
+.word 0x8b030042
+.word 0xd280003e
+.word 0x3900005e
 .loc 1 5319 0
 .word 0xf94017a1
 .word 0xf9000c01
-.word 0xf9001ba0
-.word 0x910062e0
-bl _p_1
-.word 0xf9401ba0
-.word 0xf94017a1
+.word 0x91006002
+.word 0xd349fc42
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0042
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x3, [x16, #16]
+.word 0x8b030042
+.word 0xd280003e
+.word 0x3900005e
 .loc 1 5320 0
 .word 0xb9800301
 .word 0xb9002801
 .loc 1 5321 0
 .word 0xf9400700
-.word 0xb50000a0
+.word 0xb50001c0
 .loc 1 5322 0
 .word 0xf90012f7
 .word 0x910082e0
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 5323 0
-.word 0x1400000c
+.word 0x1400001c
 .loc 1 5325 0
 .word 0xf9400700
 .word 0xf9401000
-.word 0xf9001ba0
 .word 0xf90012e0
-.word 0x910082e0
-bl _p_1
-.word 0xf9401ba0
+.word 0x910082e1
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 5326 0
 .word 0xf9400700
 .word 0xf9001017
 .word 0x91008000
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 5328 0
 .word 0xf9000717
 .word 0x91002300
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 5329 0
 .word 0xf9000b1f
 .loc 1 5330 0
 .word 0xa94163b7
 .word 0x910003bf
-.word 0xa8c47bfd
+.word 0xa8c37bfd
 .word 0xd65f03c0
 
 Lme_b5:
@@ -11312,12 +12051,12 @@ System_Xml_Linq_NamespaceResolver_GetPrefixOfNamespace_System_Xml_Linq_XNamespac
 .word 0x5400008d
 .word 0xf9400b00
 .word 0xf9400800
-.word 0x14000027
+.word 0x14000030
 .loc 1 5336 0
 .word 0xf9400717
 .loc 1 5337 0
 .word 0xaa1703e0
-.word 0xb4000460
+.word 0xb4000580
 .loc 1 5339 0
 .word 0xf94012f7
 .loc 1 5340 0
@@ -11325,7 +12064,7 @@ System_Xml_Linq_NamespaceResolver_GetPrefixOfNamespace_System_Xml_Linq_XNamespac
 .word 0xf9400c00
 .word 0xeb19001f
 .word 0x9a9f17e0
-.word 0x34000340
+.word 0x34000460
 .loc 1 5341 0
 .word 0xf9400700
 .word 0xf9401016
@@ -11337,18 +12076,28 @@ System_Xml_Linq_NamespaceResolver_GetPrefixOfNamespace_System_Xml_Linq_XNamespac
 .word 0x540000c0
 .word 0xf9400ac0
 .word 0xf9400ae1
-bl _p_99
+bl _p_98
 .word 0x53001c00
 .word 0x35ffff20
 .loc 1 5345 0
 .word 0xeb1702df
-.word 0x540001a1
+.word 0x540002c1
 .loc 1 5346 0
-.word 0x340000da
+.word 0x340001fa
 .loc 1 5347 0
 .word 0xf9000b17
 .word 0x91004300
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 5348 0
 .word 0xf9400ae0
 .word 0x1400000b
@@ -11363,7 +12112,7 @@ bl _p_1
 .loc 1 5355 0
 .word 0xf9400700
 .word 0xeb0002ff
-.word 0x54fffbe1
+.word 0x54fffac1
 .loc 1 5357 0
 .word 0xd2800000
 .word 0xa9415fb6
@@ -11404,40 +12153,48 @@ Lme_b8:
 	.no_dead_strip System_Xml_Linq_XDocument__ctor_System_Xml_Linq_XDocument
 System_Xml_Linq_XDocument__ctor_System_Xml_Linq_XDocument:
 .loc 1 5492 0 prologue_end
-.word 0xa9bc7bfd
+.word 0xa9bd7bfd
 .word 0x910003fd
 .word 0xf9000ba0
 .word 0xf9000fa1
 .word 0xf9400ba0
 .word 0xf9400fa1
-bl _p_107
+bl _p_106
 .loc 1 5493 0
 .word 0xf9400fa0
 .word 0xf9401800
-.word 0xb4000260
+.word 0xb4000340
 .loc 1 5494 0
 .word 0xf9400fa0
 .word 0xf9401800
-.word 0xf9001ba0
+.word 0xf90017a0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1040]
+ldr x0, [x16, #1024]
 .word 0xd2800501
-bl _p_16
-.word 0xf9401ba1
-.word 0xf90017a0
-bl System_Xml_Linq_XDeclaration__ctor_System_Xml_Linq_XDeclaration
+bl _p_15
 .word 0xf94017a1
-.word 0xf9400ba0
-.word 0xf90013a1
-.word 0xf9001801
-.word 0x9100c000
-bl _p_1
+.word 0xf90013a0
+bl System_Xml_Linq_XDeclaration__ctor_System_Xml_Linq_XDeclaration
 .word 0xf94013a0
+.word 0xf9400ba1
+.word 0xf9001820
+.word 0x9100c021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 5496 0
 .word 0x910003bf
-.word 0xa8c47bfd
+.word 0xa8c37bfd
 .word 0xd65f03c0
 
 Lme_b9:
@@ -11465,12 +12222,21 @@ System_Xml_Linq_XDocument_set_Declaration_System_Xml_Linq_XDeclaration:
 .word 0x910003fd
 .word 0xf9000ba0
 .word 0xf9000fa1
-.word 0xf9400fa1
-.word 0xf9400ba0
-.word 0xf9001801
-.word 0x9100c000
-bl _p_1
 .word 0xf9400fa0
+.word 0xf9400ba1
+.word 0xf9001820
+.word 0x9100c021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
@@ -11501,9 +12267,9 @@ System_Xml_Linq_XDocument_get_Root:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #1048]
+ldr x15, [x16, #1032]
 .word 0xf9400ba0
-bl _p_134
+bl _p_133
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
@@ -11530,8 +12296,8 @@ System_Xml_Linq_XDocument_WriteTo_System_Xml_XmlWriter:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1056]
-bl _p_115
+ldr x1, [x16, #1040]
+bl _p_114
 .word 0x53001c00
 .word 0x340000e0
 .loc 1 5959 0
@@ -11552,8 +12318,8 @@ bl _p_115
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1064]
-bl _p_115
+ldr x1, [x16, #1048]
+bl _p_114
 .word 0x53001c00
 .word 0x340000e0
 .loc 1 5962 0
@@ -11572,7 +12338,7 @@ bl _p_115
 .loc 1 5967 0
 .word 0xaa1903e0
 .word 0xaa1a03e1
-bl _p_76
+bl _p_75
 .loc 1 5968 0
 .word 0xaa1a03e0
 .word 0xf9400341
@@ -11589,12 +12355,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd28033a1
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_be:
 .text
@@ -11611,13 +12377,13 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2808e61
-bl _p_8
-bl _p_60
+bl _p_7
+bl _p_59
 .word 0xaa0003e1
-.word 0xd2801100
+.word 0xd28010c0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
@@ -11637,13 +12403,13 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2808e61
-bl _p_8
-bl _p_60
+bl _p_7
+bl _p_59
 .word 0xaa0003e1
-.word 0xd2801100
+.word 0xd28010c0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
@@ -11660,12 +12426,12 @@ System_Xml_Linq_XDocument_CloneNode:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1072]
+ldr x0, [x16, #1056]
 .word 0xd2800701
-bl _p_16
+bl _p_15
 .word 0xf90013a0
 .word 0xf9400ba1
-bl _p_135
+bl _p_134
 .word 0xf94013a0
 .word 0x910003bf
 .word 0xa8c37bfd
@@ -11694,7 +12460,7 @@ System_Xml_Linq_XDocument_GetFirstNode_T_REF:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #680]
+ldr x1, [x16, #664]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800018
@@ -11707,18 +12473,18 @@ ldr x1, [x16, #680]
 .word 0xaa1903e0
 .word 0xf9001fa0
 .word 0xf94017a0
-bl _p_136
+bl _p_135
 .word 0xaa0003e2
 .word 0xf9401fa0
 .word 0xf9400441
-bl _p_47
+bl _p_46
 .word 0xf9001ba0
 .word 0xf94017a0
-bl _p_136
+bl _p_135
 .word 0xaa0003e2
 .word 0xf9401ba0
 .word 0xf9400441
-bl _p_48
+bl _p_47
 .word 0xaa0003f8
 .loc 1 5998 0
 .word 0xaa1803e0
@@ -11787,9 +12553,9 @@ System_Xml_Linq_XDocument_IsWhitespace_string:
 .word 0x910003bf
 .word 0xa8c37bfd
 .word 0xd65f03c0
-.word 0xd2801b80
+.word 0xd2801b40
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_c3:
 .text
@@ -11820,7 +12586,7 @@ System_Xml_Linq_XDocument_ValidateNode_System_Xml_Linq_XNode_System_Xml_Linq_XNo
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1080]
+ldr x0, [x16, #1064]
 .word 0x8b010000
 .word 0xf9400000
 .word 0xd61f0000
@@ -11840,7 +12606,7 @@ ldr x0, [x16, #1080]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #632]
+ldr x1, [x16, #616]
 .word 0xeb01001f
 .word 0x10000011
 .word 0x54000c01
@@ -11857,7 +12623,7 @@ ldr x1, [x16, #632]
 .word 0xf9401ba1
 .word 0xd2800142
 .word 0xd2800003
-bl _p_137
+bl _p_136
 .loc 1 6018 0
 .word 0x1400004e
 .loc 1 6020 0
@@ -11865,7 +12631,7 @@ bl _p_137
 .word 0xf9401ba1
 .word 0xd2800002
 .word 0xd2800023
-bl _p_137
+bl _p_136
 .loc 1 6021 0
 .word 0x14000048
 .loc 1 6023 0
@@ -11874,22 +12640,22 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2808861
-bl _p_8
+bl _p_7
 .word 0xf90023a0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #224]
+ldr x0, [x16, #216]
 .word 0xd2800021
-bl _p_9
+bl _p_8
 .word 0xf9002ba0
 .word 0xf90027a0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #912]
+ldr x0, [x16, #896]
 .word 0xd2800281
-bl _p_16
+bl _p_15
 .word 0xaa0003e2
 .word 0xf9402ba3
 .word 0xd280009e
@@ -11903,10 +12669,10 @@ bl _p_16
 .word 0xf94027a1
 bl System_Xml_Linq_Res_GetString_string_object__
 .word 0xaa0003e1
-.word 0xd2801100
+.word 0xd28010c0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 .word 0x14000001
 .loc 1 6025 0
 
@@ -11914,22 +12680,22 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2808861
-bl _p_8
+bl _p_7
 .word 0xf90023a0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #224]
+ldr x0, [x16, #216]
 .word 0xd2800021
-bl _p_9
+bl _p_8
 .word 0xf9002ba0
 .word 0xf90027a0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #912]
+ldr x0, [x16, #896]
 .word 0xd2800281
-bl _p_16
+bl _p_15
 .word 0xaa0003e2
 .word 0xf9402ba3
 .word 0xd280013e
@@ -11943,19 +12709,19 @@ bl _p_16
 .word 0xf94027a1
 bl System_Xml_Linq_Res_GetString_string_object__
 .word 0xaa0003e1
-.word 0xd2801100
+.word 0xd28010c0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 .loc 1 6027 0
 .word 0xa9415fb6
 .word 0xa94267b8
 .word 0x910003bf
 .word 0xa8c67bfd
 .word 0xd65f03c0
-.word 0xd2801c20
+.word 0xd2801be0
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_c4:
 .text
@@ -11983,7 +12749,7 @@ System_Xml_Linq_XDocument_ValidateDocument_System_Xml_Linq_XNode_System_Xml_XmlN
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #680]
+ldr x1, [x16, #664]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800015
@@ -12037,13 +12803,13 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd28093e1
-bl _p_8
-bl _p_60
+bl _p_7
+bl _p_59
 .word 0xaa0003e1
-.word 0xd2801c40
+.word 0xd2801c00
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_c5:
 .text
@@ -12069,13 +12835,13 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2809ca1
-bl _p_8
-bl _p_60
+bl _p_7
+bl _p_59
 .word 0xaa0003e1
-.word 0xd2801100
+.word 0xd28010c0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_c6:
 .text
@@ -12088,14 +12854,23 @@ System_Xml_Linq_XComment__ctor_string:
 .word 0xf9000ba0
 .word 0xf9000fa1
 .word 0xf9400fa0
-.word 0xb4000140
+.word 0xb4000240
 .loc 1 6072 0
-.word 0xf9400fa1
-.word 0xf9400ba0
-.word 0xf9001401
-.word 0x9100a000
-bl _p_1
 .word 0xf9400fa0
+.word 0xf9400ba1
+.word 0xf9001420
+.word 0x9100a021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 6073 0
 .word 0x910003bf
 .word 0xa8c27bfd
@@ -12106,12 +12881,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd28030a1
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_c7:
 .text
@@ -12119,24 +12894,32 @@ Lme_c7:
 	.no_dead_strip System_Xml_Linq_XComment__ctor_System_Xml_Linq_XComment
 System_Xml_Linq_XComment__ctor_System_Xml_Linq_XComment:
 .loc 1 6080 0 prologue_end
-.word 0xa9bd7bfd
+.word 0xa9be7bfd
 .word 0x910003fd
 .word 0xf9000ba0
 .word 0xf9000fa1
 .word 0xf9400fa0
-.word 0xb4000180
+.word 0xb4000260
 .loc 1 6081 0
 .word 0xf9400fa0
-.word 0xf9401401
-.word 0xf9400ba0
-.word 0xf90013a1
-.word 0xf9001401
-.word 0x9100a000
-bl _p_1
-.word 0xf94013a0
+.word 0xf9401400
+.word 0xf9400ba1
+.word 0xf9001420
+.word 0x9100a021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 6082 0
 .word 0x910003bf
-.word 0xa8c37bfd
+.word 0xa8c27bfd
 .word 0xd65f03c0
 .loc 1 6080 0
 
@@ -12144,12 +12927,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2803221
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_c8:
 .text
@@ -12186,45 +12969,52 @@ Lme_ca:
 	.no_dead_strip System_Xml_Linq_XComment_set_Value_string
 System_Xml_Linq_XComment_set_Value_string:
 .loc 1 6112 0 prologue_end
-.word 0xa9bd7bfd
+.word 0xa9be7bfd
 .word 0x910003fd
 .word 0xf9000bb9
 .word 0xaa0003f9
 .word 0xf9000fa1
 .word 0xf9400fa0
-.word 0xb4000380
+.word 0xb4000440
 .loc 1 6113 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #584]
+ldr x0, [x16, #568]
 .word 0xf9400002
 .word 0xaa1903e0
 .word 0xaa1903e1
-bl _p_77
+bl _p_76
 .word 0x53001c00
-.word 0xf90013a0
-.word 0xf9400fa0
-.loc 1 6114 0
-.word 0xf9001720
-.word 0x9100a320
-bl _p_1
-.word 0xf94013a0
 .word 0xf9400fa1
+.loc 1 6114 0
+.word 0xf9001721
+.word 0x9100a322
+.word 0xd349fc42
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0042
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x3, [x16, #16]
+.word 0x8b030042
+.word 0xd280003e
+.word 0x3900005e
 .loc 1 6115 0
 .word 0x34000100
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #584]
+ldr x0, [x16, #568]
 .word 0xf9400002
 .word 0xaa1903e0
 .word 0xaa1903e1
-bl _p_78
+bl _p_77
 .loc 1 6116 0
 .word 0xf9400bb9
 .word 0x910003bf
-.word 0xa8c37bfd
+.word 0xa8c27bfd
 .word 0xd65f03c0
 .loc 1 6112 0
 
@@ -12232,12 +13022,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd28030a1
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_cb:
 .text
@@ -12269,12 +13059,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd28033a1
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_cc:
 .text
@@ -12288,9 +13078,9 @@ System_Xml_Linq_XComment_CloneNode:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #872]
+ldr x0, [x16, #856]
 .word 0xd2800601
-bl _p_16
+bl _p_15
 .word 0xf90013a0
 .word 0xf9400ba1
 bl System_Xml_Linq_XComment__ctor_System_Xml_Linq_XComment
@@ -12312,22 +13102,40 @@ System_Xml_Linq_XProcessingInstruction__ctor_string_string:
 .word 0xf9000fa1
 .word 0xf90013a2
 .word 0xf94013a0
-.word 0xb4000220
+.word 0xb4000420
 .loc 1 6166 0
 .word 0xf9400fa0
-bl _p_138
+bl _p_137
 .loc 1 6167 0
 .word 0xf9400fa0
 .word 0xf9001700
-.word 0x9100a300
-bl _p_1
-.word 0xf9400fa0
+.word 0x9100a301
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 6168 0
 .word 0xf94013a0
 .word 0xf9001b00
-.word 0x9100c300
-bl _p_1
-.word 0xf94013a0
+.word 0x9100c301
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 6169 0
 .word 0xf9400bb8
 .word 0x910003bf
@@ -12339,12 +13147,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd280a321
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_ce:
 .text
@@ -12352,33 +13160,48 @@ Lme_ce:
 	.no_dead_strip System_Xml_Linq_XProcessingInstruction__ctor_System_Xml_Linq_XProcessingInstruction
 System_Xml_Linq_XProcessingInstruction__ctor_System_Xml_Linq_XProcessingInstruction:
 .loc 1 6177 0 prologue_end
-.word 0xa9bd7bfd
+.word 0xa9be7bfd
 .word 0x910003fd
 .word 0xf9000bb9
 .word 0xaa0003f9
 .word 0xf9000fa1
 .word 0xf9400fa0
-.word 0xb4000260
+.word 0xb4000400
 .loc 1 6178 0
 .word 0xf9400fa0
-.word 0xf9401400
-.word 0xf90017a0
-.word 0xf9001720
-.word 0x9100a320
-bl _p_1
-.word 0xf94017a0
+.word 0xf9401401
+.word 0xf9001721
+.word 0x9100a322
+.word 0xd349fc42
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0042
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x3, [x16, #16]
+.word 0x8b030042
+.word 0xd280003e
+.word 0x3900005e
 .loc 1 6179 0
-.word 0xf9400fa0
 .word 0xf9401800
-.word 0xf90013a0
 .word 0xf9001b20
-.word 0x9100c320
-bl _p_1
-.word 0xf94013a0
+.word 0x9100c321
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 6180 0
 .word 0xf9400bb9
 .word 0x910003bf
-.word 0xa8c37bfd
+.word 0xa8c27bfd
 .word 0xd65f03c0
 .loc 1 6177 0
 
@@ -12386,12 +13209,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2803221
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_cf:
 .text
@@ -12414,45 +13237,52 @@ Lme_d0:
 	.no_dead_strip System_Xml_Linq_XProcessingInstruction_set_Data_string
 System_Xml_Linq_XProcessingInstruction_set_Data_string:
 .loc 1 6199 0 prologue_end
-.word 0xa9bd7bfd
+.word 0xa9be7bfd
 .word 0x910003fd
 .word 0xf9000bb9
 .word 0xaa0003f9
 .word 0xf9000fa1
 .word 0xf9400fa0
-.word 0xb4000380
+.word 0xb4000440
 .loc 1 6200 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #584]
+ldr x0, [x16, #568]
 .word 0xf9400002
 .word 0xaa1903e0
 .word 0xaa1903e1
-bl _p_77
+bl _p_76
 .word 0x53001c00
-.word 0xf90013a0
-.word 0xf9400fa0
-.loc 1 6201 0
-.word 0xf9001b20
-.word 0x9100c320
-bl _p_1
-.word 0xf94013a0
 .word 0xf9400fa1
+.loc 1 6201 0
+.word 0xf9001b21
+.word 0x9100c322
+.word 0xd349fc42
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0042
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x3, [x16, #16]
+.word 0x8b030042
+.word 0xd280003e
+.word 0x3900005e
 .loc 1 6202 0
 .word 0x34000100
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #584]
+ldr x0, [x16, #568]
 .word 0xf9400002
 .word 0xaa1903e0
 .word 0xaa1903e1
-bl _p_78
+bl _p_77
 .loc 1 6203 0
 .word 0xf9400bb9
 .word 0x910003bf
-.word 0xa8c37bfd
+.word 0xa8c27bfd
 .word 0xd65f03c0
 .loc 1 6199 0
 
@@ -12460,12 +13290,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd28030a1
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_d1:
 .text
@@ -12527,12 +13357,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd28033a1
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_d4:
 .text
@@ -12546,9 +13376,9 @@ System_Xml_Linq_XProcessingInstruction_CloneNode:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #880]
+ldr x0, [x16, #864]
 .word 0xd2800701
-bl _p_16
+bl _p_15
 .word 0xf90013a0
 .word 0xf9400ba1
 bl System_Xml_Linq_XProcessingInstruction__ctor_System_Xml_Linq_XProcessingInstruction
@@ -12567,15 +13397,15 @@ System_Xml_Linq_XProcessingInstruction_ValidateName_string:
 .word 0x910003fd
 .word 0xf9000ba0
 .word 0xf9400ba0
-bl _p_2
+bl _p_1
 .loc 1 6262 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #984]
+ldr x1, [x16, #968]
 .word 0xf9400ba0
 .word 0xd28000a2
-bl _p_139
+bl _p_138
 .word 0x93407c00
 .word 0x34000080
 .loc 1 6263 0
@@ -12588,14 +13418,14 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd280a461
-bl _p_8
+bl _p_7
 .word 0xf90013a0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #224]
+ldr x0, [x16, #216]
 .word 0xd2800021
-bl _p_9
+bl _p_8
 .word 0xaa0003e3
 .word 0xaa0303e0
 .word 0xf90017a0
@@ -12609,10 +13439,10 @@ bl _p_9
 .word 0xf94017a1
 bl System_Xml_Linq_Res_GetString_string_object__
 .word 0xaa0003e1
-.word 0xd2801100
+.word 0xd28010c0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_d6:
 .text
@@ -12629,21 +13459,48 @@ System_Xml_Linq_XDeclaration__ctor_string_string_string:
 .word 0xf90017a3
 .word 0xf9400fa0
 .word 0xf9000ae0
-.word 0x910042e0
-bl _p_1
-.word 0xf9400fa0
+.word 0x910042e1
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 6295 0
 .word 0xf94013a0
 .word 0xf9000ee0
-.word 0x910062e0
-bl _p_1
-.word 0xf94013a0
+.word 0x910062e1
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 6296 0
 .word 0xf94017a0
 .word 0xf90012e0
-.word 0x910082e0
-bl _p_1
-.word 0xf94017a0
+.word 0x910082e1
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 6297 0
 .word 0xf9400bb7
 .word 0x910003bf
@@ -12656,37 +13513,61 @@ Lme_d7:
 	.no_dead_strip System_Xml_Linq_XDeclaration__ctor_System_Xml_Linq_XDeclaration
 System_Xml_Linq_XDeclaration__ctor_System_Xml_Linq_XDeclaration:
 .loc 1 6307 0 prologue_end
-.word 0xa9bc7bfd
+.word 0xa9be7bfd
 .word 0x910003fd
 .word 0xa9016bb9
 .word 0xaa0003f9
 .word 0xaa0103fa
-.word 0xb40002fa
+.word 0xb400059a
 .loc 1 6308 0
 .word 0xf9400b40
-.word 0xf9001ba0
 .word 0xf9000b20
-.word 0x91004320
-bl _p_1
-.word 0xf9401ba0
+.word 0x91004321
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 6309 0
 .word 0xf9400f40
-.word 0xf90017a0
 .word 0xf9000f20
-.word 0x91006320
-bl _p_1
-.word 0xf94017a0
+.word 0x91006321
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 6310 0
 .word 0xf9401340
-.word 0xf90013a0
 .word 0xf9001320
-.word 0x91008320
-bl _p_1
-.word 0xf94013a0
+.word 0x91008321
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 6311 0
 .word 0xa9416bb9
 .word 0x910003bf
-.word 0xa8c47bfd
+.word 0xa8c27bfd
 .word 0xd65f03c0
 .loc 1 6307 0
 
@@ -12694,12 +13575,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2803221
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_d8:
 .text
@@ -12726,12 +13607,21 @@ System_Xml_Linq_XDeclaration_set_Encoding_string:
 .word 0x910003fd
 .word 0xf9000ba0
 .word 0xf9000fa1
-.word 0xf9400fa1
-.word 0xf9400ba0
-.word 0xf9000c01
-.word 0x91006000
-bl _p_1
 .word 0xf9400fa0
+.word 0xf9400ba1
+.word 0xf9000c20
+.word 0x91006021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
@@ -12761,12 +13651,21 @@ System_Xml_Linq_XDeclaration_set_Standalone_string:
 .word 0x910003fd
 .word 0xf9000ba0
 .word 0xf9000fa1
-.word 0xf9400fa1
-.word 0xf9400ba0
-.word 0xf9001001
-.word 0x91008000
-bl _p_1
 .word 0xf9400fa0
+.word 0xf9400ba1
+.word 0xf9001020
+.word 0x91008021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
@@ -12799,17 +13698,17 @@ System_Xml_Linq_XDeclaration_ToString:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1088]
+ldr x0, [x16, #1072]
 .word 0xf90017a0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #976]
+ldr x0, [x16, #960]
 .word 0xd2800601
-bl _p_16
+bl _p_15
 .word 0xf94017a1
 .word 0xf90013a0
-bl _p_140
+bl _p_139
 .word 0xf94013a0
 .word 0xaa0003f9
 .loc 1 6356 0
@@ -12819,23 +13718,23 @@ bl _p_140
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1096]
+ldr x1, [x16, #1080]
 .word 0xaa1903e0
 .word 0xf940033e
-bl _p_79
+bl _p_78
 .loc 1 6358 0
 .word 0xf9400b41
 .word 0xaa1903e0
 .word 0xf940033e
-bl _p_79
+bl _p_78
 .loc 1 6359 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1104]
+ldr x1, [x16, #1088]
 .word 0xaa1903e0
 .word 0xf940033e
-bl _p_79
+bl _p_78
 .loc 1 6361 0
 .word 0xf9400f40
 .word 0xb4000220
@@ -12843,23 +13742,23 @@ bl _p_79
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1112]
+ldr x1, [x16, #1096]
 .word 0xaa1903e0
 .word 0xf940033e
-bl _p_79
+bl _p_78
 .loc 1 6363 0
 .word 0xf9400f41
 .word 0xaa1903e0
 .word 0xf940033e
-bl _p_79
+bl _p_78
 .loc 1 6364 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1104]
+ldr x1, [x16, #1088]
 .word 0xaa1903e0
 .word 0xf940033e
-bl _p_79
+bl _p_78
 .loc 1 6366 0
 .word 0xf9401340
 .word 0xb4000220
@@ -12867,31 +13766,31 @@ bl _p_79
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1120]
+ldr x1, [x16, #1104]
 .word 0xaa1903e0
 .word 0xf940033e
-bl _p_79
+bl _p_78
 .loc 1 6368 0
 .word 0xf9401341
 .word 0xaa1903e0
 .word 0xf940033e
-bl _p_79
+bl _p_78
 .loc 1 6369 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1104]
+ldr x1, [x16, #1088]
 .word 0xaa1903e0
 .word 0xf940033e
-bl _p_79
+bl _p_78
 .loc 1 6371 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1128]
+ldr x1, [x16, #1112]
 .word 0xaa1903e0
 .word 0xf940033e
-bl _p_79
+bl _p_78
 .loc 1 6372 0
 .word 0xaa1903e0
 .word 0xf9400321
@@ -12908,7 +13807,7 @@ Lme_de:
 	.no_dead_strip System_Xml_Linq_XDocumentType__ctor_string_string_string_string
 System_Xml_Linq_XDocumentType__ctor_string_string_string_string:
 .loc 1 6396 0 prologue_end
-.word 0xa9bb7bfd
+.word 0xa9bc7bfd
 .word 0x910003fd
 .word 0xf9000bb6
 .word 0xaa0003f6
@@ -12917,34 +13816,69 @@ System_Xml_Linq_XDocumentType__ctor_string_string_string_string:
 .word 0xf90017a3
 .word 0xf9001ba4
 .word 0xf9400fa0
-bl _p_141
-.word 0xf90023a0
+bl _p_140
 .word 0xf90016c0
-.word 0x9100a2c0
-bl _p_1
-.word 0xf94023a0
+.word 0x9100a2c1
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 6397 0
 .word 0xf94013a0
 .word 0xf9001ac0
-.word 0x9100c2c0
-bl _p_1
-.word 0xf94013a0
+.word 0x9100c2c1
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 6398 0
 .word 0xf94017a0
 .word 0xf9001ec0
-.word 0x9100e2c0
-bl _p_1
-.word 0xf94017a0
+.word 0x9100e2c1
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 6399 0
 .word 0xf9401ba0
 .word 0xf90022c0
-.word 0x910102c0
-bl _p_1
-.word 0xf9401ba0
+.word 0x910102c1
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 6400 0
 .word 0xf9400bb6
 .word 0x910003bf
-.word 0xa8c57bfd
+.word 0xa8c47bfd
 .word 0xd65f03c0
 
 Lme_df:
@@ -12953,51 +13887,91 @@ Lme_df:
 	.no_dead_strip System_Xml_Linq_XDocumentType__ctor_System_Xml_Linq_XDocumentType
 System_Xml_Linq_XDocumentType__ctor_System_Xml_Linq_XDocumentType:
 .loc 1 6408 0 prologue_end
-.word 0xa9bb7bfd
+.word 0xa9be7bfd
 .word 0x910003fd
 .word 0xa9016bb9
 .word 0xaa0003f9
 .word 0xaa0103fa
-.word 0xb400047a
+.word 0xb40008da
 .loc 1 6409 0
 .word 0xf9401740
-.word 0xf90023a0
 .word 0xf9001720
-.word 0x9100a320
-bl _p_1
-.word 0xf94023a0
+.word 0x9100a321
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 6410 0
 .word 0xf9401b40
-.word 0xf9001fa0
 .word 0xf9001b20
-.word 0x9100c320
-bl _p_1
-.word 0xf9401fa0
+.word 0x9100c321
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 6411 0
 .word 0xf9401f40
-.word 0xf9001ba0
 .word 0xf9001f20
-.word 0x9100e320
-bl _p_1
-.word 0xf9401ba0
+.word 0x9100e321
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 6412 0
 .word 0xf9402340
-.word 0xf90017a0
 .word 0xf9002320
-.word 0x91010320
-bl _p_1
-.word 0xf94017a0
+.word 0x91010321
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 6414 0
 .word 0xf9402740
-.word 0xf90013a0
 .word 0xf9002720
-.word 0x91012320
-bl _p_1
-.word 0xf94013a0
+.word 0x91012321
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 6416 0
 .word 0xa9416bb9
 .word 0x910003bf
-.word 0xa8c57bfd
+.word 0xa8c27bfd
 .word 0xd65f03c0
 .loc 1 6408 0
 
@@ -13005,12 +13979,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2803221
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_e0:
 .text
@@ -13033,12 +14007,21 @@ System_Xml_Linq_XDocumentType__ctor_string_string_string_string_System_Xml_IDtdI
 .word 0xf9401ba4
 bl System_Xml_Linq_XDocumentType__ctor_string_string_string_string
 .loc 1 6432 0
-.word 0xf9401fa1
-.word 0xf9400ba0
-.word 0xf9002401
-.word 0x91012000
-bl _p_1
 .word 0xf9401fa0
+.word 0xf9400ba1
+.word 0xf9002420
+.word 0x91012021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 6433 0
 .word 0x910003bf
 .word 0xa8c47bfd
@@ -13152,12 +14135,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd28033a1
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_e7:
 .text
@@ -13171,9 +14154,9 @@ System_Xml_Linq_XDocumentType_CloneNode:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #904]
+ldr x0, [x16, #888]
 .word 0xd2800a01
-bl _p_16
+bl _p_15
 .word 0xf90013a0
 .word 0xf9400ba1
 bl System_Xml_Linq_XDocumentType__ctor_System_Xml_Linq_XDocumentType
@@ -13197,25 +14180,45 @@ System_Xml_Linq_XAttribute__ctor_System_Xml_Linq_XName_object:
 .word 0xaa0203fa
 .word 0xeb1f033f
 .word 0x9a9f17e0
-.word 0x350003a0
+.word 0x350005e0
 .loc 1 6588 0
-.word 0xb400025a
+.word 0xb400049a
 .loc 1 6589 0
 .word 0xaa1a03e0
-bl _p_85
+bl _p_84
 .word 0xaa0003fa
 .loc 1 6590 0
 .word 0xaa1903e0
 .word 0xaa1a03e1
-bl _p_142
+bl _p_141
 .loc 1 6591 0
 .word 0xf9001719
 .word 0x9100a300
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 6592 0
 .word 0xf9001b1a
 .word 0x9100c300
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 6593 0
 .word 0xa94167b8
 .word 0xf94013ba
@@ -13228,24 +14231,24 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd28030a1
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .loc 1 6587 0
 .word 0xd2800ce1
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_e9:
 .text
@@ -13253,33 +14256,48 @@ Lme_e9:
 	.no_dead_strip System_Xml_Linq_XAttribute__ctor_System_Xml_Linq_XAttribute
 System_Xml_Linq_XAttribute__ctor_System_Xml_Linq_XAttribute:
 .loc 1 6604 0 prologue_end
-.word 0xa9bd7bfd
+.word 0xa9be7bfd
 .word 0x910003fd
 .word 0xf9000bb9
 .word 0xaa0003f9
 .word 0xf9000fa1
 .word 0xf9400fa0
-.word 0xb4000260
+.word 0xb4000400
 .loc 1 6605 0
 .word 0xf9400fa0
-.word 0xf9401400
-.word 0xf90017a0
-.word 0xf9001720
-.word 0x9100a320
-bl _p_1
-.word 0xf94017a0
+.word 0xf9401401
+.word 0xf9001721
+.word 0x9100a322
+.word 0xd349fc42
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0042
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x3, [x16, #16]
+.word 0x8b030042
+.word 0xd280003e
+.word 0x3900005e
 .loc 1 6606 0
-.word 0xf9400fa0
 .word 0xf9401800
-.word 0xf90013a0
 .word 0xf9001b20
-.word 0x9100c320
-bl _p_1
-.word 0xf94013a0
+.word 0x9100c321
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 6607 0
 .word 0xf9400bb9
 .word 0x910003bf
-.word 0xa8c37bfd
+.word 0xa8c27bfd
 .word 0xd65f03c0
 .loc 1 6604 0
 
@@ -13287,12 +14305,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd2803221
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_ea:
 .text
@@ -13325,15 +14343,15 @@ System_Xml_Linq_XAttribute_get_IsNamespaceDeclaration:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #992]
-bl _p_115
+ldr x1, [x16, #976]
+bl _p_114
 .word 0x53001c00
 .word 0x14000006
 .loc 1 6618 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #328]
+ldr x0, [x16, #320]
 .word 0xeb00033f
 .word 0x9a9f17e0
 .word 0xf9400bb9
@@ -13391,46 +14409,54 @@ Lme_ee:
 	.no_dead_strip System_Xml_Linq_XAttribute_set_Value_string
 System_Xml_Linq_XAttribute_set_Value_string:
 .loc 1 6681 0 prologue_end
-.word 0xa9bd7bfd
+.word 0xa9be7bfd
 .word 0x910003fd
 .word 0xa9016bb9
 .word 0xaa0003f9
 .word 0xaa0103fa
-.word 0xb40003ba
+.word 0xb400049a
 .loc 1 6682 0
 .word 0xf9401720
 .word 0xaa1a03e1
-bl _p_142
+bl _p_141
 .loc 1 6683 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #584]
+ldr x0, [x16, #568]
 .word 0xf9400002
 .word 0xaa1903e0
 .word 0xaa1903e1
-bl _p_77
+bl _p_76
 .word 0x53001c00
-.word 0xf90013a0
 .loc 1 6684 0
 .word 0xf9001b3a
-.word 0x9100c320
-bl _p_1
-.word 0xf94013a0
+.word 0x9100c321
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 6685 0
 .word 0x34000100
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #584]
+ldr x0, [x16, #568]
 .word 0xf9400002
 .word 0xaa1903e0
 .word 0xaa1903e1
-bl _p_78
+bl _p_77
 .loc 1 6686 0
 .word 0xa9416bb9
 .word 0x910003bf
-.word 0xa8c37bfd
+.word 0xa8c27bfd
 .word 0xd65f03c0
 .loc 1 6681 0
 
@@ -13438,12 +14464,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd28030a1
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_ef:
 .text
@@ -13460,36 +14486,36 @@ System_Xml_Linq_XAttribute_ToString:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #600]
+ldr x0, [x16, #584]
 .word 0x3980b410
 .word 0xb5000050
-bl _p_68
+bl _p_67
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #608]
+ldr x0, [x16, #592]
 .word 0xf9400000
 .word 0xf90037a0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #616]
+ldr x0, [x16, #600]
 .word 0xd2800701
-bl _p_16
+bl _p_15
 .word 0xf94037a1
 .word 0xf90033a0
-bl _p_69
+bl _p_68
 .word 0xf94033a0
 .word 0xf90013a0
 .loc 1 6724 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #624]
+ldr x0, [x16, #608]
 .word 0xd2800f01
-bl _p_16
+bl _p_15
 .word 0xf90033a0
-bl _p_70
+bl _p_69
 .word 0xf94033a0
 .word 0xaa0003f9
 .loc 1 6725 0
@@ -13497,11 +14523,11 @@ bl _p_70
 .word 0xaa0203e0
 .word 0xd2800021
 .word 0xf940005e
-bl _p_74
+bl _p_73
 .loc 1 6726 0
 .word 0xf94013a0
 .word 0xaa1903e1
-bl _p_75
+bl _p_74
 .word 0xf90017a0
 .loc 1 6727 0
 .word 0xf94017a0
@@ -13511,7 +14537,7 @@ bl _p_75
 .word 0xf940003e
 .word 0xf9400801
 .word 0xaa1a03e0
-bl _p_143
+bl _p_142
 .word 0xaa0003e1
 .word 0xf94033a5
 .word 0xf9401740
@@ -13528,7 +14554,7 @@ bl _p_143
 .word 0xf9401b44
 .word 0xaa0503e0
 .word 0xf94000be
-bl _p_133
+bl _p_132
 .loc 1 6728 0
 .word 0x94000002
 .word 0x14000010
@@ -13541,7 +14567,7 @@ bl _p_133
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #648]
+ldr x15, [x16, #632]
 .word 0x928004f0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -13557,7 +14583,7 @@ ldr x15, [x16, #648]
 .word 0xaa0003e1
 .word 0xaa0103e0
 .word 0xf940003e
-bl _p_144
+bl _p_143
 .word 0xaa0003fa
 .word 0x94000002
 .word 0x14000010
@@ -13570,7 +14596,7 @@ bl _p_144
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #648]
+ldr x15, [x16, #632]
 .word 0x928004f0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -13605,7 +14631,7 @@ System_Xml_Linq_XAttribute_GetPrefixOfNamespace_System_Xml_Linq_XNamespace:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #296]
+ldr x0, [x16, #288]
 .word 0xf9400000
 .word 0x14000029
 .loc 1 7151 0
@@ -13622,38 +14648,38 @@ ldr x0, [x16, #296]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #456]
+ldr x1, [x16, #440]
 .word 0xeb01001f
 .word 0x10000011
 .word 0x540003c1
 .word 0xaa1803e0
 .word 0xaa1a03e1
 .word 0xf940031e
-bl _p_145
+bl _p_144
 .word 0x14000014
 .loc 1 7152 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #312]
+ldr x0, [x16, #304]
 .word 0xeb00031f
 .word 0x540000a1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #984]
+ldr x0, [x16, #968]
 .word 0x1400000b
 .loc 1 7153 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #328]
+ldr x0, [x16, #320]
 .word 0xeb00031f
 .word 0x540000a1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #992]
+ldr x0, [x16, #976]
 .word 0x14000002
 .loc 1 7154 0
 .word 0xd2800000
@@ -13662,9 +14688,9 @@ ldr x0, [x16, #992]
 .word 0x910003bf
 .word 0xa8c37bfd
 .word 0xd65f03c0
-.word 0xd2801c20
+.word 0xd2801be0
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_f1:
 .text
@@ -13688,7 +14714,7 @@ System_Xml_Linq_XAttribute_ValidateAttribute_System_Xml_Linq_XName_string:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #328]
+ldr x1, [x16, #320]
 .word 0xeb01001f
 .word 0x54000561
 .loc 1 7161 0
@@ -13698,9 +14724,9 @@ ldr x1, [x16, #328]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #312]
+ldr x1, [x16, #304]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x34000140
 .loc 1 7169 0
@@ -13709,8 +14735,8 @@ bl _p_115
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #984]
-bl _p_99
+ldr x1, [x16, #968]
+bl _p_98
 .word 0x53001c00
 .word 0x35000ea0
 .word 0x14000031
@@ -13718,9 +14744,9 @@ bl _p_99
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #328]
+ldr x1, [x16, #320]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x35000980
 .loc 1 7177 0
@@ -13731,17 +14757,17 @@ bl _p_115
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #984]
-bl _p_115
+ldr x1, [x16, #968]
+bl _p_114
 .word 0x53001c00
 .word 0x350009c0
 .loc 1 7183 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #992]
+ldr x1, [x16, #976]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x35000d00
 .word 0x14000019
@@ -13753,26 +14779,26 @@ bl _p_115
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #992]
-bl _p_115
+ldr x1, [x16, #976]
+bl _p_114
 .word 0x53001c00
 .word 0x340001e0
 .loc 1 7190 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #312]
+ldr x1, [x16, #304]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x35000800
 .loc 1 7195 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #328]
+ldr x1, [x16, #320]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x35000b40
 .loc 1 7201 0
@@ -13787,14 +14813,14 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd280b621
-bl _p_8
+bl _p_7
 .word 0xf9001ba0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #224]
+ldr x0, [x16, #216]
 .word 0xd2800021
-bl _p_9
+bl _p_8
 .word 0xaa0003e3
 .word 0xaa0303e0
 .word 0xf9001fa0
@@ -13809,88 +14835,88 @@ bl _p_9
 .word 0xf9401fa1
 bl System_Xml_Linq_Res_GetString_string_object__
 .word 0xaa0003e1
-.word 0xd2801100
+.word 0xd28010c0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 .loc 1 7174 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd280c7e1
-bl _p_8
-bl _p_60
+bl _p_7
+bl _p_59
 .word 0xaa0003e1
-.word 0xd2801100
+.word 0xd28010c0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 .loc 1 7181 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd280bfa1
-bl _p_8
-bl _p_60
+bl _p_7
+bl _p_59
 .word 0xaa0003e1
-.word 0xd2801100
+.word 0xd28010c0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 .loc 1 7193 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd280bfa1
-bl _p_8
-bl _p_60
+bl _p_7
+bl _p_59
 .word 0xaa0003e1
-.word 0xd2801100
+.word 0xd28010c0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .loc 1 7169 0
 .word 0xd280bfa1
-bl _p_8
-bl _p_60
+bl _p_7
+bl _p_59
 .word 0xaa0003e1
-.word 0xd2801100
+.word 0xd28010c0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 .loc 1 7185 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd280c7e1
-bl _p_8
-bl _p_60
+bl _p_7
+bl _p_59
 .word 0xaa0003e1
-.word 0xd2801100
+.word 0xd28010c0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 .loc 1 7198 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd280c7e1
-bl _p_8
-bl _p_60
+bl _p_7
+bl _p_59
 .word 0xaa0003e1
-.word 0xd2801100
+.word 0xd28010c0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_f2:
 .text
@@ -13918,7 +14944,7 @@ System_Xml_Linq_XStreamingElement_ToString:
 .word 0xf9000ba0
 .word 0xf9400ba0
 .word 0xd2800001
-bl _p_146
+bl _p_145
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
@@ -13952,7 +14978,7 @@ System_Xml_Linq_XStreamingElement_WriteTo_System_Xml_XmlWriter:
 .word 0xf90027a0
 .word 0x910083a0
 .word 0xf9400fa1
-bl _p_147
+bl _p_146
 .word 0xf94013a0
 .word 0xf9002ba0
 .word 0xf94017a0
@@ -13978,12 +15004,12 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd28033a1
-bl _p_8
+bl _p_7
 .word 0xaa0003e1
-.word 0xd2801120
+.word 0xd28010e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_f5:
 .text
@@ -14002,36 +15028,36 @@ System_Xml_Linq_XStreamingElement_GetXmlString_System_Xml_Linq_SaveOptions:
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #600]
+ldr x0, [x16, #584]
 .word 0x3980b410
 .word 0xb5000050
-bl _p_68
+bl _p_67
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #608]
+ldr x0, [x16, #592]
 .word 0xf9400000
 .word 0xf90037a0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #616]
+ldr x0, [x16, #600]
 .word 0xd2800701
-bl _p_16
+bl _p_15
 .word 0xf94037a1
 .word 0xf90033a0
-bl _p_69
+bl _p_68
 .word 0xf94033a0
 .word 0xf90017a0
 .loc 1 7400 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #624]
+ldr x0, [x16, #608]
 .word 0xd2800f01
-bl _p_16
+bl _p_15
 .word 0xf90033a0
-bl _p_70
+bl _p_69
 .word 0xf94033a0
 .word 0xaa0003f8
 .loc 1 7401 0
@@ -14039,7 +15065,7 @@ bl _p_70
 .word 0xaa0203e0
 .word 0xd2800021
 .word 0xf940005e
-bl _p_71
+bl _p_70
 .loc 1 7402 0
 .word 0xd280003e
 .word 0xa1e0340
@@ -14047,7 +15073,7 @@ bl _p_71
 .word 0xaa1803e0
 .word 0xd2800021
 .word 0xf940031e
-bl _p_72
+bl _p_71
 .loc 1 7403 0
 .word 0xd280005e
 .word 0xa1e0340
@@ -14058,11 +15084,11 @@ bl _p_72
 .word 0x2a1e0001
 .word 0xaa1803e0
 .word 0xf940031e
-bl _p_73
+bl _p_72
 .loc 1 7404 0
 .word 0xf94017a0
 .word 0xaa1803e1
-bl _p_75
+bl _p_74
 .word 0xf9001ba0
 .loc 1 7405 0
 .word 0xf9401ba1
@@ -14080,7 +15106,7 @@ bl System_Xml_Linq_XStreamingElement_WriteTo_System_Xml_XmlWriter
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #648]
+ldr x15, [x16, #632]
 .word 0x928004f0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -14105,7 +15131,7 @@ ldr x15, [x16, #648]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #648]
+ldr x15, [x16, #632]
 .word 0x928004f0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -14130,42 +15156,64 @@ b System_Xml_Linq_StreamingElementWriter__ctor_System_Xml_XmlWriter
 	.no_dead_strip System_Xml_Linq_StreamingElementWriter__ctor_System_Xml_XmlWriter
 System_Xml_Linq_StreamingElementWriter__ctor_System_Xml_XmlWriter:
 .loc 1 7420 0 prologue_end
-.word 0xa9bc7bfd
+.word 0xa9be7bfd
 .word 0x910003fd
 .word 0xf9000bb9
 .word 0xaa0003f9
 .word 0xf9000fa1
 .word 0xf9400fa0
 .word 0xf9000320
-.word 0xaa1903e0
-bl _p_1
-.word 0xf9400fa0
+.word 0xd349ff21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 7421 0
 .word 0xf900073f
 .loc 1 7422 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1136]
+ldr x0, [x16, #1120]
 .word 0xd2800501
-bl _p_16
+bl _p_15
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1144]
+ldr x1, [x16, #1128]
 .word 0xf9400021
-.word 0xf9001ba1
 .word 0xf9000801
-.word 0xf90017a0
-.word 0x91004000
-bl _p_1
-.word 0xf94017a0
-.word 0xf9401ba1
-.word 0xf90013a0
+.word 0x91004002
+.word 0xd349fc42
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0042
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x3, [x16, #16]
+.word 0x8b030042
+.word 0xd280003e
+.word 0x3900005e
 .word 0xf9000b20
-.word 0x91004320
-bl _p_1
-.word 0xf94013a0
+.word 0x91004321
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 7423 0
 .word 0x91006320
 .word 0xd2800001
@@ -14175,7 +15223,7 @@ bl _p_1
 .loc 1 7424 0
 .word 0xf9400bb9
 .word 0x910003bf
-.word 0xa8c47bfd
+.word 0xa8c27bfd
 .word 0xd65f03c0
 
 Lme_f7:
@@ -14203,7 +15251,7 @@ System_Xml_Linq_StreamingElementWriter_FlushElement:
 .word 0xb4000dc0
 .loc 1 7428 0
 .word 0xaa1a03e0
-bl _p_148
+bl _p_147
 .loc 1 7429 0
 .word 0xf9400740
 .word 0xaa0003e1
@@ -14218,7 +15266,7 @@ bl _p_148
 .word 0xaa1a03e0
 .word 0xaa1903e1
 .word 0xd2800022
-bl _p_149
+bl _p_148
 .word 0xaa0003e1
 .word 0xf94043a4
 .word 0xf9400740
@@ -14239,12 +15287,12 @@ bl _p_149
 .word 0x910123a8
 .word 0xaa0103e0
 .word 0xf940003e
-bl _p_150
+bl _p_149
 .word 0x14000034
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1152]
+ldr x0, [x16, #1136]
 .word 0xf9402fb8
 .loc 1 7432 0
 .word 0xaa1803e0
@@ -14269,7 +15317,7 @@ ldr x0, [x16, #1152]
 .word 0xaa1a03e0
 .word 0xaa1903e1
 .word 0xd2800002
-bl _p_149
+bl _p_148
 .word 0xaa0003e1
 .word 0xf94043a2
 .word 0xb98012c0
@@ -14280,9 +15328,9 @@ bl _p_149
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #992]
+ldr x1, [x16, #976]
 .word 0xaa1703e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x35000060
 .word 0xaa1603f7
@@ -14290,7 +15338,7 @@ bl _p_115
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x23, [x16, #328]
+ldr x23, [x16, #320]
 .word 0xf940031e
 .word 0xf9401b04
 .word 0xaa1903e0
@@ -14298,14 +15346,14 @@ ldr x23, [x16, #328]
 .word 0xaa1403e2
 .word 0xaa1703e3
 .word 0xf940033e
-bl _p_133
+bl _p_132
 .loc 1 7431 0
 .word 0x910123a0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #1152]
-bl _p_151
+ldr x15, [x16, #1136]
+bl _p_150
 .word 0x53001c00
 .word 0x35fff8e0
 .word 0x94000002
@@ -14315,7 +15363,7 @@ bl _p_151
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1152]
+ldr x1, [x16, #1136]
 .word 0xf90033a0
 .word 0xf9403fbe
 .word 0xd61f03c0
@@ -14325,7 +15373,7 @@ ldr x1, [x16, #1152]
 .word 0xf9400b41
 .word 0xaa0103e0
 .word 0xf940003e
-bl _p_152
+bl _p_151
 .loc 1 7440 0
 .word 0xa94157b4
 .word 0xa9425fb6
@@ -14361,7 +15409,7 @@ System_Xml_Linq_StreamingElementWriter_GetPrefixOfNamespace_System_Xml_Linq_XNam
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #296]
+ldr x0, [x16, #288]
 .word 0xf9400000
 .word 0x1400001e
 .loc 1 7445 0
@@ -14380,25 +15428,25 @@ bl System_Xml_Linq_NamespaceResolver_GetPrefixOfNamespace_System_Xml_Linq_XNames
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #312]
+ldr x0, [x16, #304]
 .word 0xeb0002ff
 .word 0x540000a1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #984]
+ldr x0, [x16, #968]
 .word 0x1400000b
 .loc 1 7448 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #328]
+ldr x0, [x16, #320]
 .word 0xeb0002ff
 .word 0x540000a1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #992]
+ldr x0, [x16, #976]
 .word 0x14000002
 .loc 1 7449 0
 .word 0xd2800000
@@ -14436,18 +15484,18 @@ System_Xml_Linq_StreamingElementWriter_PushElement:
 .word 0x9100c3a8
 .word 0xaa0103e0
 .word 0xf940003e
-bl _p_150
+bl _p_149
 .word 0x1400002c
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1152]
+ldr x0, [x16, #1136]
 .word 0xf94023b9
 .loc 1 7455 0
 .word 0xaa1903e1
 .word 0xaa0103e0
 .word 0xf940003e
-bl _p_114
+bl _p_113
 .word 0x53001c00
 .word 0x34000440
 .loc 1 7456 0
@@ -14474,7 +15522,7 @@ bl _p_114
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #296]
+ldr x0, [x16, #288]
 .word 0xf9400000
 .word 0xaa1803f7
 .word 0xaa0003f8
@@ -14484,14 +15532,14 @@ bl System_Xml_Linq_XNamespace_Get_string
 .word 0xaa0003e2
 .word 0xaa1703e0
 .word 0xaa1803e1
-bl _p_130
+bl _p_129
 .loc 1 7454 0
 .word 0x9100c3a0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #1152]
-bl _p_151
+ldr x15, [x16, #1136]
+bl _p_150
 .word 0x53001c00
 .word 0x35fff9e0
 .word 0x94000002
@@ -14501,7 +15549,7 @@ bl _p_151
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1152]
+ldr x1, [x16, #1136]
 .word 0xf90027a0
 .word 0xf94033be
 .word 0xd61f03c0
@@ -14530,8 +15578,56 @@ System_Xml_Linq_StreamingElementWriter_Write_object:
 .word 0xaa0103fa
 .word 0xf9001bbf
 .word 0xf9001fbf
-.word 0xb4001e5a
+.word 0xb4001e9a
 .loc 1 7463 0
+.word 0xaa1a03f8
+.word 0xeb1f035f
+.word 0x54000160
+.word 0xf9400340
+.word 0xf9400000
+.word 0xf9400800
+.word 0xf9400800
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #664]
+.word 0xeb01001f
+.word 0x54000040
+.word 0xd2800018
+.word 0xaa1803f7
+.loc 1 7464 0
+.word 0xb40000b8
+.loc 1 7465 0
+.word 0xaa1903e0
+.word 0xaa1703e1
+bl System_Xml_Linq_StreamingElementWriter_WriteNode_System_Xml_Linq_XNode
+.loc 1 7466 0
+.word 0x140000e1
+.loc 1 7468 0
+.word 0xaa1a03f8
+.word 0xeb1f035f
+.word 0x54000160
+.word 0xf9400340
+.word 0xf9400000
+.word 0xf9400800
+.word 0xf9400400
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #656]
+.word 0xeb01001f
+.word 0x54000040
+.word 0xd2800018
+.word 0xaa1803f7
+.loc 1 7469 0
+.word 0xb40000b8
+.loc 1 7470 0
+.word 0xaa1903e0
+.word 0xaa1703e1
+bl System_Xml_Linq_StreamingElementWriter_WriteString_string
+.loc 1 7471 0
+.word 0x140000ce
+.loc 1 7473 0
 .word 0xaa1a03f8
 .word 0xeb1f035f
 .word 0x54000160
@@ -14547,54 +15643,6 @@ ldr x1, [x16, #680]
 .word 0x54000040
 .word 0xd2800018
 .word 0xaa1803f7
-.loc 1 7464 0
-.word 0xb40000b8
-.loc 1 7465 0
-.word 0xaa1903e0
-.word 0xaa1703e1
-bl System_Xml_Linq_StreamingElementWriter_WriteNode_System_Xml_Linq_XNode
-.loc 1 7466 0
-.word 0x140000df
-.loc 1 7468 0
-.word 0xaa1a03f8
-.word 0xeb1f035f
-.word 0x54000160
-.word 0xf9400340
-.word 0xf9400000
-.word 0xf9400800
-.word 0xf9400400
-
-adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
-add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #672]
-.word 0xeb01001f
-.word 0x54000040
-.word 0xd2800018
-.word 0xaa1803f7
-.loc 1 7469 0
-.word 0xb40000b8
-.loc 1 7470 0
-.word 0xaa1903e0
-.word 0xaa1703e1
-bl System_Xml_Linq_StreamingElementWriter_WriteString_string
-.loc 1 7471 0
-.word 0x140000cc
-.loc 1 7473 0
-.word 0xaa1a03f8
-.word 0xeb1f035f
-.word 0x54000160
-.word 0xf9400340
-.word 0xf9400000
-.word 0xf9400800
-.word 0xf9400800
-
-adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
-add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #696]
-.word 0xeb01001f
-.word 0x54000040
-.word 0xd2800018
-.word 0xaa1803f7
 .loc 1 7474 0
 .word 0xb40000b8
 .loc 1 7475 0
@@ -14602,7 +15650,7 @@ ldr x1, [x16, #696]
 .word 0xaa1703e1
 bl System_Xml_Linq_StreamingElementWriter_WriteAttribute_System_Xml_Linq_XAttribute
 .loc 1 7476 0
-.word 0x140000b9
+.word 0x140000bb
 .loc 1 7478 0
 .word 0xaa1a03f8
 .word 0xeb1f035f
@@ -14614,7 +15662,7 @@ bl System_Xml_Linq_StreamingElementWriter_WriteAttribute_System_Xml_Linq_XAttrib
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #704]
+ldr x1, [x16, #688]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800018
@@ -14626,12 +15674,14 @@ ldr x1, [x16, #704]
 .word 0xaa1703e1
 bl System_Xml_Linq_StreamingElementWriter_WriteStreamingElement_System_Xml_Linq_XStreamingElement
 .loc 1 7481 0
-.word 0x140000a6
+.word 0x140000a8
 .loc 1 7483 0
 .word 0xaa1a03f8
 .word 0xeb1f035f
-.word 0x54000280
+.word 0x540002c0
 .word 0xf9400357
+.word 0xf9400b40
+.word 0xb5000240
 .word 0x3940b2e0
 .word 0xd280003e
 .word 0xeb1e001f
@@ -14642,13 +15692,13 @@ bl System_Xml_Linq_StreamingElementWriter_WriteStreamingElement_System_Xml_Linq_
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #464]
+ldr x1, [x16, #448]
 .word 0xeb01001f
 .word 0x540000e1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #472]
+ldr x0, [x16, #456]
 .word 0xeb0002ff
 .word 0x54000040
 .word 0xd2800018
@@ -14670,7 +15720,7 @@ ldr x0, [x16, #472]
 .word 0xf9400017
 .word 0xaa1903e0
 .word 0xaa1703e1
-bl _p_153
+bl _p_152
 .word 0x11000718
 .word 0xb9801b40
 .word 0x6b00031f
@@ -14685,14 +15735,14 @@ bl _p_153
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #720]
+ldr x1, [x16, #704]
 .word 0xeb01001f
 .word 0x540001c3
 .word 0xf94012e0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #720]
+ldr x1, [x16, #704]
 .word 0x9343fc22
 .word 0x8b020000
 .word 0x39400000
@@ -14712,7 +15762,7 @@ ldr x1, [x16, #720]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #728]
+ldr x15, [x16, #712]
 .word 0x92800ef0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -14725,7 +15775,7 @@ ldr x15, [x16, #728]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #736]
+ldr x15, [x16, #720]
 .word 0x928003f0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -14733,14 +15783,14 @@ ldr x15, [x16, #736]
 .word 0xaa0003fa
 .word 0xaa1903e0
 .word 0xaa1a03e1
-bl _p_153
+bl _p_152
 .word 0xf9401ba1
 .word 0xaa0103e0
 .word 0xf9400021
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #744]
+ldr x15, [x16, #728]
 .word 0x92800ef0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -14765,7 +15815,7 @@ ldr x15, [x16, #744]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #752]
+ldr x1, [x16, #736]
 .word 0xeb01001f
 .word 0x540001e3
 .word 0xf9402ba0
@@ -14773,7 +15823,7 @@ ldr x1, [x16, #752]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #752]
+ldr x1, [x16, #736]
 .word 0x9343fc22
 .word 0x8b020000
 .word 0x39400000
@@ -14796,7 +15846,7 @@ ldr x1, [x16, #752]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x15, [x16, #648]
+ldr x15, [x16, #632]
 .word 0x928004f0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -14805,7 +15855,7 @@ ldr x15, [x16, #648]
 .word 0xd61f03c0
 .loc 1 7493 0
 .word 0xaa1a03e0
-bl _p_85
+bl _p_84
 .word 0xaa0003e1
 .word 0xaa1903e0
 bl System_Xml_Linq_StreamingElementWriter_WriteString_string
@@ -14815,9 +15865,9 @@ bl System_Xml_Linq_StreamingElementWriter_WriteString_string
 .word 0x910003bf
 .word 0xa8c77bfd
 .word 0xd65f03c0
-.word 0xd2801b80
+.word 0xd2801b40
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_fb:
 .text
@@ -14842,7 +15892,7 @@ System_Xml_Linq_StreamingElementWriter_WriteAttribute_System_Xml_Linq_XAttribute
 .word 0xaa0203e0
 .word 0xf9400fa1
 .word 0xf940005e
-bl _p_154
+bl _p_153
 .loc 1 7499 0
 .word 0x910003bf
 .word 0xa8c27bfd
@@ -14853,13 +15903,13 @@ adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x0, [x16, #0]
 .word 0xd280d0a1
-bl _p_8
-bl _p_60
+bl _p_7
+bl _p_59
 .word 0xaa0003e1
-.word 0xd2801c40
+.word 0xd2801c00
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_fc:
 .text
@@ -14876,7 +15926,7 @@ System_Xml_Linq_StreamingElementWriter_WriteNode_System_Xml_Linq_XNode:
 .word 0xf9000ba0
 .word 0xf9000fa1
 .word 0xf9400ba0
-bl _p_155
+bl _p_154
 .loc 1 7503 0
 .word 0xf9400ba0
 .word 0xf9400001
@@ -14906,17 +15956,26 @@ System_Xml_Linq_StreamingElementWriter_WriteStreamingElement_System_Xml_Linq_XSt
 .word 0xaa0003f9
 .word 0xf9000fa1
 .word 0xaa1903e0
-bl _p_155
+bl _p_154
 .loc 1 7508 0
 .word 0xf9400fa0
 .word 0xf9000720
-.word 0x91002320
-bl _p_1
-.word 0xf9400fa0
+.word 0x91002321
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 7509 0
 .word 0xf9400c01
 .word 0xaa1903e0
-bl _p_153
+bl _p_152
 .loc 1 7510 0
 .word 0xf9400720
 .word 0xeb1f001f
@@ -14924,7 +15983,7 @@ bl _p_153
 .word 0xf90013a0
 .loc 1 7511 0
 .word 0xaa1903e0
-bl _p_155
+bl _p_154
 .word 0xf94013a0
 .loc 1 7512 0
 .word 0x340000e0
@@ -14966,7 +16025,7 @@ System_Xml_Linq_StreamingElementWriter_WriteString_string:
 .word 0xf9000ba0
 .word 0xf9000fa1
 .word 0xf9400ba0
-bl _p_155
+bl _p_154
 .loc 1 7523 0
 .word 0xf9400ba0
 .word 0xf9400002
@@ -14991,7 +16050,7 @@ System_Xml_Linq_Res_GetString_string:
 .word 0xa9016bb9
 .word 0xaa0003fa
 .word 0xaa1a03e0
-bl _p_156
+bl _p_155
 .word 0xaa0003f9
 .word 0xaa1903e0
 .word 0x9293073e
@@ -15201,288 +16260,288 @@ bl _p_156
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1160]
+ldr x1, [x16, #1144]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x35001f40
 .word 0x14000179
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1168]
+ldr x1, [x16, #1152]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x35001ec0
 .word 0x14000171
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1176]
+ldr x1, [x16, #1160]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x35001e40
 .word 0x14000169
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1184]
+ldr x1, [x16, #1168]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x35001dc0
 .word 0x14000161
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1192]
+ldr x1, [x16, #1176]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x35001d40
 .word 0x14000159
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1200]
+ldr x1, [x16, #1184]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x35001cc0
 .word 0x14000151
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1208]
+ldr x1, [x16, #1192]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x35001c40
 .word 0x14000149
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1216]
+ldr x1, [x16, #1200]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x35001bc0
 .word 0x14000141
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1224]
+ldr x1, [x16, #1208]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x35001b40
 .word 0x14000139
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1232]
+ldr x1, [x16, #1216]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x35001ac0
 .word 0x14000131
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1240]
+ldr x1, [x16, #1224]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x35001a40
 .word 0x14000129
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1248]
+ldr x1, [x16, #1232]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x350019c0
 .word 0x14000121
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1256]
+ldr x1, [x16, #1240]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x35001940
 .word 0x14000119
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1264]
+ldr x1, [x16, #1248]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x350018c0
 .word 0x14000111
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1272]
+ldr x1, [x16, #1256]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x35001840
 .word 0x14000109
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1280]
+ldr x1, [x16, #1264]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x350017c0
 .word 0x14000101
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1288]
+ldr x1, [x16, #1272]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x35001740
 .word 0x140000f9
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1296]
+ldr x1, [x16, #1280]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x350016c0
 .word 0x140000f1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1304]
+ldr x1, [x16, #1288]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x35001640
 .word 0x140000e9
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1312]
+ldr x1, [x16, #1296]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x350015c0
 .word 0x140000e1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1320]
+ldr x1, [x16, #1304]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x35001540
 .word 0x140000d9
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1328]
+ldr x1, [x16, #1312]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x350014c0
 .word 0x140000d1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1336]
+ldr x1, [x16, #1320]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x35001440
 .word 0x140000c9
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1344]
+ldr x1, [x16, #1328]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x350013c0
 .word 0x140000c1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1352]
+ldr x1, [x16, #1336]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x35001340
 .word 0x140000b9
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1360]
+ldr x1, [x16, #1344]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x350012c0
 .word 0x140000b1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1368]
+ldr x1, [x16, #1352]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x35001240
 .word 0x140000a9
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1376]
+ldr x1, [x16, #1360]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x350011c0
 .word 0x140000a1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1384]
+ldr x1, [x16, #1368]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x35001140
 .word 0x14000099
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1392]
+ldr x1, [x16, #1376]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x350010c0
 .word 0x14000091
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1400]
+ldr x1, [x16, #1384]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x35001040
 .word 0x14000089
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #1408]
+ldr x1, [x16, #1392]
 .word 0xaa1a03e0
-bl _p_115
+bl _p_114
 .word 0x53001c00
 .word 0x35000fc0
 .word 0x14000081
@@ -15490,193 +16549,193 @@ bl _p_115
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1416]
+ldr x0, [x16, #1400]
 .word 0x1400007e
 .loc 1 9260 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1424]
+ldr x0, [x16, #1408]
 .word 0x1400007a
 .loc 1 9262 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1432]
+ldr x0, [x16, #1416]
 .word 0x14000076
 .loc 1 9264 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1440]
+ldr x0, [x16, #1424]
 .word 0x14000072
 .loc 1 9266 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1448]
+ldr x0, [x16, #1432]
 .word 0x1400006e
 .loc 1 9268 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1456]
+ldr x0, [x16, #1440]
 .word 0x1400006a
 .loc 1 9270 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1464]
+ldr x0, [x16, #1448]
 .word 0x14000066
 .loc 1 9272 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1472]
+ldr x0, [x16, #1456]
 .word 0x14000062
 .loc 1 9274 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1480]
+ldr x0, [x16, #1464]
 .word 0x1400005e
 .loc 1 9276 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1488]
+ldr x0, [x16, #1472]
 .word 0x1400005a
 .loc 1 9278 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1496]
+ldr x0, [x16, #1480]
 .word 0x14000056
 .loc 1 9280 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1504]
+ldr x0, [x16, #1488]
 .word 0x14000052
 .loc 1 9282 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1512]
+ldr x0, [x16, #1496]
 .word 0x1400004e
 .loc 1 9284 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1520]
+ldr x0, [x16, #1504]
 .word 0x1400004a
 .loc 1 9286 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1528]
+ldr x0, [x16, #1512]
 .word 0x14000046
 .loc 1 9288 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1536]
+ldr x0, [x16, #1520]
 .word 0x14000042
 .loc 1 9290 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1544]
+ldr x0, [x16, #1528]
 .word 0x1400003e
 .loc 1 9292 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1552]
+ldr x0, [x16, #1536]
 .word 0x1400003a
 .loc 1 9294 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1560]
+ldr x0, [x16, #1544]
 .word 0x14000036
 .loc 1 9296 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1568]
+ldr x0, [x16, #1552]
 .word 0x14000032
 .loc 1 9298 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1576]
+ldr x0, [x16, #1560]
 .word 0x1400002e
 .loc 1 9300 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1584]
+ldr x0, [x16, #1568]
 .word 0x1400002a
 .loc 1 9302 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1592]
+ldr x0, [x16, #1576]
 .word 0x14000026
 .loc 1 9304 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1600]
+ldr x0, [x16, #1584]
 .word 0x14000022
 .loc 1 9306 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1608]
+ldr x0, [x16, #1592]
 .word 0x1400001e
 .loc 1 9308 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1616]
+ldr x0, [x16, #1600]
 .word 0x1400001a
 .loc 1 9310 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1624]
+ldr x0, [x16, #1608]
 .word 0x14000016
 .loc 1 9312 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1632]
+ldr x0, [x16, #1616]
 .word 0x14000012
 .loc 1 9314 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1640]
+ldr x0, [x16, #1624]
 .word 0x1400000e
 .loc 1 9316 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1648]
+ldr x0, [x16, #1632]
 .word 0x1400000a
 .loc 1 9318 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1656]
+ldr x0, [x16, #1640]
 .word 0x14000006
 .loc 1 9320 0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1664]
+ldr x0, [x16, #1648]
 .word 0x14000002
 .loc 1 9322 0
 .word 0xd2800000
@@ -15697,7 +16756,7 @@ System_Xml_Linq_Res_GetString_string_object__:
 .word 0xaa0003f9
 .word 0xf9000fa1
 .word 0xaa1903e0
-bl _p_60
+bl _p_59
 .word 0xaa0003f9
 .loc 1 9327 0
 .word 0xf9400fa0
@@ -15708,10 +16767,10 @@ bl _p_60
 .word 0xaa1903e0
 .word 0x14000005
 .loc 1 9328 0
-bl _p_157
+bl _p_156
 .word 0xaa1903e1
 .word 0xf9400fa2
-bl _p_158
+bl _p_157
 .word 0xf9400bb9
 .word 0x910003bf
 .word 0xa8c27bfd
@@ -15755,9 +16814,9 @@ _PrivateImplementationDetails_ComputeStringHash_string:
 .word 0x910003bf
 .word 0xa8c37bfd
 .word 0xd65f03c0
-.word 0xd2801b80
+.word 0xd2801b40
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_102:
 .text
@@ -15773,7 +16832,7 @@ System_Xml_Linq_XHashtable_1_TValue_GSHAREDVT__ctor_System_Xml_Linq_XHashtable_1
 .word 0xf90017a2
 .word 0xf9400fa0
 .word 0xf9400000
-bl _p_159
+bl _p_158
 .word 0xaa0003f8
 .word 0xb9800300
 .word 0xf9001bbf
@@ -15782,27 +16841,35 @@ bl _p_159
 .word 0xf90027a0
 .word 0xf9400fa0
 .word 0xf9400000
+bl _p_159
 bl _p_160
-bl _p_161
-.word 0xf9002fa0
+.word 0xf9002ba0
 .word 0xf9400fa0
 .word 0xf9400000
-bl _p_162
+bl _p_161
 .word 0xaa0003e3
-.word 0xf9402fa0
-.word 0xf9002ba0
+.word 0xf9402ba0
+.word 0xf90023a0
 .word 0xf94013a1
 .word 0xb9802ba2
 .word 0xd63f0060
-.word 0xf94027a0
-.word 0xf9402ba1
+.word 0xf94023a0
+.word 0xf94027a1
 .word 0xf9400702
 .word 0xd1000442
-.word 0x8b020000
-.word 0xf90023a1
-.word 0xf9000001
-bl _p_1
-.word 0xf94023a0
+.word 0x8b020021
+.word 0xf9000020
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 583 0
 .word 0xf9400bb8
 .word 0x910003bf
@@ -15825,7 +16892,7 @@ System_Xml_Linq_XHashtable_1_TValue_GSHAREDVT_TryGetValue_string_int_int_TValue_
 .word 0xf9001fa4
 .word 0xf9400fa0
 .word 0xf9400000
-bl _p_163
+bl _p_162
 .word 0xaa0003f6
 .word 0xb98002c0
 .word 0xf90023bf
@@ -15837,7 +16904,7 @@ bl _p_163
 .word 0xf9002ba0
 .word 0xf9400fa0
 .word 0xf9400000
-bl _p_164
+bl _p_163
 .word 0xaa0003e5
 .word 0xf9402ba0
 .word 0xf94013a1
@@ -15857,7 +16924,7 @@ Lme_105:
 	.no_dead_strip System_Xml_Linq_XHashtable_1_TValue_GSHAREDVT_Add_TValue_GSHAREDVT
 System_Xml_Linq_XHashtable_1_TValue_GSHAREDVT_Add_TValue_GSHAREDVT:
 .loc 1 602 0 prologue_end
-.word 0xa9b67bfd
+.word 0xa9b87bfd
 .word 0x910003fd
 .word 0xa90163b7
 .word 0xa9026bb9
@@ -15866,7 +16933,7 @@ System_Xml_Linq_XHashtable_1_TValue_GSHAREDVT_Add_TValue_GSHAREDVT:
 .word 0xf90023a1
 .word 0xf9401fa0
 .word 0xf9400000
-bl _p_165
+bl _p_164
 .word 0xaa0003fa
 .word 0xb9800340
 .word 0x91003c10
@@ -15895,16 +16962,16 @@ bl _p_165
 .word 0xd1000421
 .word 0x8b010000
 .word 0xf9400000
-.word 0xf9004ba0
+.word 0xf9003ba0
 .word 0xb9802b40
 .word 0x8b000320
-.word 0xf9004fa0
+.word 0xf9003fa0
 .word 0xf9401fa0
 .word 0xf9400000
-bl _p_166
+bl _p_165
 .word 0xaa0003e3
-.word 0xf9404ba0
-.word 0xf9404fa2
+.word 0xf9403ba0
+.word 0xf9403fa2
 .word 0xf94023a1
 .word 0xd63f0060
 .word 0x53001c00
@@ -15920,18 +16987,18 @@ bl _p_166
 .word 0xf9401ba0
 .word 0xb9803341
 .word 0x8b010321
-.word 0xf9004fa1
-.word 0xf9004ba0
+.word 0xf9003fa1
+.word 0xf9003ba0
 .word 0xf9400b40
 .word 0xf9401340
 .word 0xf9401fa0
 .word 0xf9400000
-bl _p_167
+bl _p_166
 .word 0xaa0003e2
-.word 0xf9404ba0
-.word 0xf9404fa1
+.word 0xf9403ba0
+.word 0xf9403fa1
 bl _mono_gsharedvt_value_copy
-.word 0x1400003a
+.word 0x14000033
 .loc 1 610 0
 .word 0xf9401fa0
 .word 0xf90027a0
@@ -15944,19 +17011,19 @@ bl _mono_monitor_enter_v4_fast
 .word 0x35000080
 .word 0xaa1803e0
 .word 0xaa1703e1
-bl _p_36
+bl _p_35
 .loc 1 611 0
 .word 0xf9401fa0
 .word 0xf9400741
 .word 0xd1000421
 .word 0x8b010000
 .word 0xf9400000
-.word 0xf9004ba0
+.word 0xf9003ba0
 .word 0xf9401fa0
 .word 0xf9400000
-bl _p_168
+bl _p_167
 .word 0xaa0003e1
-.word 0xf9404ba0
+.word 0xf9403ba0
 .word 0xd63f0020
 .word 0xaa0003f8
 .loc 1 615 0
@@ -15967,38 +17034,31 @@ bl _p_168
 .word 0xd1000421
 .word 0x8b010000
 .word 0xf9000018
-bl _p_1
-.loc 1 625 0
-.word 0x94000002
-.word 0x17ffffb6
-.word 0xf90043be
-.word 0x394143a0
-.word 0x34000260
-.word 0xf94027a0
-.word 0xf9002fa0
-.word 0xf9402fa0
-bl _mono_monitor_exit
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #432]
-.word 0xb9400000
-.word 0x34000120
-bl _p_38
-.word 0xf90033a0
-.word 0xf94033a1
-.word 0xf94033a0
-.word 0xf90037a1
-.word 0xb4000060
-.word 0xf94037a0
-bl _p_10
-.word 0x14000001
-.word 0xf94043be
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
+.loc 1 625 0
+.word 0x94000002
+.word 0x17ffffad
+.word 0xf90037be
+.word 0x394143a0
+.word 0x34000060
+.word 0xf94027a0
+bl _p_37
+.word 0xf94037be
 .word 0xd61f03c0
 .word 0xa94163b7
 .word 0xa9426bb9
 .word 0x910003bf
-.word 0xa8ca7bfd
+.word 0xa8c87bfd
 .word 0xd65f03c0
 
 Lme_106:
@@ -16007,7 +17067,7 @@ Lme_106:
 	.no_dead_strip System_Xml_Linq_XHashtable_1_XHashtableState_TValue_GSHAREDVT__ctor_System_Xml_Linq_XHashtable_1_ExtractKeyDelegate_TValue_GSHAREDVT_int
 System_Xml_Linq_XHashtable_1_XHashtableState_TValue_GSHAREDVT__ctor_System_Xml_Linq_XHashtable_1_ExtractKeyDelegate_TValue_GSHAREDVT_int:
 .loc 1 654 0 prologue_end
-.word 0xa9ba7bfd
+.word 0xa9bb7bfd
 .word 0x910003fd
 .word 0xf9000bb8
 .word 0xf9000fa0
@@ -16015,58 +17075,81 @@ System_Xml_Linq_XHashtable_1_XHashtableState_TValue_GSHAREDVT__ctor_System_Xml_L
 .word 0xf90017a2
 .word 0xf9400fa0
 .word 0xf9400000
-bl _p_169
+bl _p_168
 .word 0xaa0003f8
 .word 0xb9800300
 .word 0xf9001bbf
 .loc 1 659 0
 .word 0xf9400fa0
-.word 0xf9002fa0
+.word 0xf90027a0
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #440]
+ldr x0, [x16, #424]
 .word 0xb9802ba1
-bl _p_9
-.word 0xaa0003e1
-.word 0xf9402fa0
+bl _p_8
+.word 0xf94027a1
 .word 0xf9400702
 .word 0xd1000442
-.word 0x8b020000
-.word 0xf9002ba1
-.word 0xf9000001
-bl _p_1
-.word 0xf9402ba0
+.word 0x8b020021
+.word 0xf9000020
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 660 0
 .word 0xf9400fa0
-.word 0xf90027a0
+.word 0xf90023a0
 .word 0xf9400fa0
 .word 0xf9400000
-bl _p_170
+bl _p_169
 .word 0xb9802ba1
-bl _p_9
-.word 0xaa0003e1
-.word 0xf94027a0
+bl _p_8
+.word 0xf94023a1
 .word 0xf9400b02
 .word 0xd1000442
-.word 0x8b020000
-.word 0xf90023a1
-.word 0xf9000001
-bl _p_1
-.word 0xf94023a0
+.word 0x8b020021
+.word 0xf9000020
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 663 0
 .word 0xf9400fa0
 .word 0xf9400f01
 .word 0xd1000421
-.word 0x8b010000
-.word 0xf94013a1
-.word 0xf9000001
-bl _p_1
+.word 0x8b010001
 .word 0xf94013a0
+.word 0xf9000020
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .loc 1 664 0
 .word 0xf9400bb8
 .word 0x910003bf
-.word 0xa8c67bfd
+.word 0xa8c57bfd
 .word 0xd65f03c0
 
 Lme_10b:
@@ -16083,7 +17166,7 @@ System_Xml_Linq_XHashtable_1_XHashtableState_TValue_GSHAREDVT_Resize:
 .word 0xf9001fa0
 .word 0xf9401fa0
 .word 0xf9400000
-bl _p_171
+bl _p_170
 .word 0xaa0003fa
 .word 0xb9800340
 .word 0x91003c10
@@ -16200,7 +17283,7 @@ bl _p_171
 .word 0xd63f0060
 .word 0xf9401fa0
 .word 0xf9400000
-bl _p_172
+bl _p_171
 .word 0xaa0003e2
 .word 0xf94027a0
 .word 0xf90023a0
@@ -16335,12 +17418,12 @@ bl _p_172
 .word 0xf9002ba0
 .word 0xf9401fa0
 .word 0xf9400000
-bl _p_173
-bl _p_161
+bl _p_172
+bl _p_160
 .word 0xf90027a0
 .word 0xf9401fa0
 .word 0xf9400000
-bl _p_174
+bl _p_173
 .word 0xaa0003e3
 .word 0xf94027a0
 .word 0xf9402ba1
@@ -16396,7 +17479,7 @@ bl _p_174
 .word 0xf90023a0
 .word 0xf9401fa0
 .word 0xf9400000
-bl _p_175
+bl _p_174
 .word 0xaa0003e3
 .word 0xf94023a2
 .word 0xaa1803e0
@@ -16444,13 +17527,13 @@ bl _p_175
 .word 0xa8c67bfd
 .word 0xd65f03c0
 .loc 1 713 0
-.word 0xd2801ee0
+.word 0xd2801ea0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
-bl _p_10
-.word 0xd2801b80
+bl _p_9
+.word 0xd2801b40
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_10c:
 .text
@@ -16468,7 +17551,7 @@ System_Xml_Linq_XHashtable_1_XHashtableState_TValue_GSHAREDVT_TryGetValue_string
 .word 0xf90023a4
 .word 0xf94013a0
 .word 0xf9400000
-bl _p_176
+bl _p_175
 .word 0xaa0003f6
 .word 0xb98002c0
 .word 0x91003c10
@@ -16488,11 +17571,11 @@ bl _p_176
 .word 0xb9004bbf
 .word 0xf94013a0
 .word 0xf9400000
-bl _p_177
+bl _p_176
 .word 0xf90037a0
 .word 0xf94013a0
 .word 0xf9400000
-bl _p_178
+bl _p_177
 .word 0xaa0003e3
 .word 0xf94037af
 .word 0xf94017a0
@@ -16510,7 +17593,7 @@ bl _p_178
 .word 0xf90033a0
 .word 0xf94013a0
 .word 0xf9400000
-bl _p_179
+bl _p_178
 .word 0xaa0003e6
 .word 0xf9402ba0
 .word 0xf9402fa1
@@ -16554,7 +17637,7 @@ bl _p_179
 .word 0xf9401ac0
 .word 0xf94013a0
 .word 0xf9400000
-bl _p_180
+bl _p_179
 .word 0xaa0003e2
 .word 0xf9402ba0
 .word 0xf9402fa1
@@ -16573,9 +17656,9 @@ bl _mono_gsharedvt_value_copy
 .word 0x910003bf
 .word 0xa8c77bfd
 .word 0xd65f03c0
-.word 0xd2801b80
+.word 0xd2801b40
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_10d:
 .text
@@ -16593,7 +17676,7 @@ System_Xml_Linq_XHashtable_1_XHashtableState_TValue_GSHAREDVT_TryAdd_TValue_GSHA
 .word 0xf90027a2
 .word 0xf9401fa0
 .word 0xf9400000
-bl _p_181
+bl _p_180
 .word 0xaa0003f9
 .word 0xb9800320
 .word 0x91003c10
@@ -16619,7 +17702,7 @@ bl _p_181
 .word 0xf9402b20
 .word 0xf9401fa0
 .word 0xf9400000
-bl _p_182
+bl _p_181
 .word 0xaa0003e2
 .word 0xf9403ba0
 .word 0xf9403fa1
@@ -16633,7 +17716,7 @@ bl _mono_gsharedvt_value_copy
 .word 0xf90037a0
 .word 0xf9401fa0
 .word 0xf9400000
-bl _p_183
+bl _p_182
 .word 0xaa0003e2
 .word 0xf94037a0
 .word 0xf90033a0
@@ -16651,11 +17734,11 @@ bl _p_183
 .word 0xf90033a0
 .word 0xf9401fa0
 .word 0xf9400000
-bl _p_184
+bl _p_183
 .word 0xf90037a0
 .word 0xf9401fa0
 .word 0xf9400000
-bl _p_185
+bl _p_184
 .word 0xaa0003e3
 .word 0xf94033a2
 .word 0xf94037af
@@ -16719,7 +17802,7 @@ bl _p_185
 .word 0xf9402b20
 .word 0xf9401fa0
 .word 0xf9400000
-bl _p_182
+bl _p_181
 .word 0xaa0003e2
 .word 0xf94033a0
 .word 0xf94037a1
@@ -16829,7 +17912,7 @@ bl _mono_gsharedvt_value_copy
 .word 0xf9003ba0
 .word 0xf9401fa0
 .word 0xf9400000
-bl _p_186
+bl _p_185
 .word 0xaa0003e6
 .word 0xf94033a0
 .word 0xf94037a4
@@ -16873,7 +17956,7 @@ bl _p_186
 .word 0xf9402b20
 .word 0xf9401fa0
 .word 0xf9400000
-bl _p_182
+bl _p_181
 .word 0xaa0003e2
 .word 0xf94033a0
 .word 0xf94037a1
@@ -16886,12 +17969,12 @@ bl _mono_gsharedvt_value_copy
 .word 0x910003bf
 .word 0xa8c87bfd
 .word 0xd65f03c0
-.word 0xd2801b80
+.word 0xd2801b40
 .word 0xaa1103e1
-bl _p_11
-.word 0xd2801e00
+bl _p_10
+.word 0xd2801dc0
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_10e:
 .text
@@ -16913,7 +17996,7 @@ System_Xml_Linq_XHashtable_1_XHashtableState_TValue_GSHAREDVT_FindEntry_int_stri
 .word 0xf9002fa5
 .word 0xf9402ba0
 .word 0xf9400000
-bl _p_187
+bl _p_186
 .word 0xaa0003f5
 .word 0xb98002a0
 .word 0x91003c10
@@ -17017,7 +18100,7 @@ bl _p_187
 .word 0xd63f0060
 .word 0xf9402ba0
 .word 0xf9400000
-bl _p_188
+bl _p_187
 .word 0xaa0003e2
 .word 0xf9403fa0
 .word 0xf9003ba0
@@ -17151,7 +18234,7 @@ bl _p_188
 .word 0xaa1a03e2
 .word 0xd2800003
 .word 0xaa1903e4
-bl _p_24
+bl _p_23
 .word 0x93407c00
 .word 0x350000c0
 .loc 1 876 0
@@ -17200,9 +18283,9 @@ bl _p_24
 .word 0x910003bf
 .word 0xa8c87bfd
 .word 0xd65f03c0
-.word 0xd2801b80
+.word 0xd2801b40
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_10f:
 .text
@@ -17220,7 +18303,7 @@ System_Xml_Linq_XHashtable_1_XHashtableState_TValue_GSHAREDVT_ComputeHashCode_st
 .word 0xf9001ba1
 .word 0xaa0203fa
 .word 0xf9401fa0
-bl _p_189
+bl _p_188
 .word 0xaa0003f7
 .word 0xb98002e0
 .word 0xf90023bf
@@ -17270,9 +18353,9 @@ bl _p_189
 .word 0x910003bf
 .word 0xa8c57bfd
 .word 0xd65f03c0
-.word 0xd2801b80
+.word 0xd2801b40
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_110:
 .text
@@ -17289,7 +18372,7 @@ System_Xml_Linq_XObject_Annotation_T_GSHAREDVT:
 .word 0xf90027af
 .word 0xaa0003fa
 .word 0xf94027a0
-bl _p_190
+bl _p_189
 .word 0xaa0003f9
 .word 0xb9800320
 .word 0x91003c10
@@ -17318,13 +18401,15 @@ bl _p_190
 .word 0xf9401b22
 .word 0xd63f0040
 .word 0xf9400f40
-.word 0xb4001760
+.word 0xb40017a0
 .loc 1 1046 0
 .word 0xf9400f57
 .word 0xaa1703f6
 .word 0xeb1f02ff
-.word 0x54000280
+.word 0x540002c0
 .word 0xf94002f5
+.word 0xf9400ae0
+.word 0xb5000240
 .word 0x3940b2a0
 .word 0xd280003e
 .word 0xeb1e001f
@@ -17335,13 +18420,13 @@ bl _p_190
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #464]
+ldr x1, [x16, #448]
 .word 0xeb01001f
 .word 0x540000e1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #472]
+ldr x0, [x16, #456]
 .word 0xeb0002ff
 .word 0x54000040
 .word 0xd2800016
@@ -17351,13 +18436,13 @@ ldr x0, [x16, #472]
 .word 0xf9400f40
 .word 0xf9002ba0
 .word 0xf94027a0
-bl _p_191
+bl _p_190
 .word 0xaa0003e2
 .word 0xf9402ba0
 .word 0xf9400441
-bl _p_47
+bl _p_46
 .word 0xf9400721
-bl _p_192
+bl _p_191
 .word 0xaa0003fa
 .word 0xf9400b37
 .word 0xd280005e
@@ -17393,7 +18478,7 @@ bl _p_192
 .word 0xf9401720
 .word 0xf9401f20
 .word 0xf94027a0
-bl _p_193
+bl _p_192
 .word 0xaa0003e2
 .word 0xf9402ba0
 .word 0xf9402fa1
@@ -17417,13 +18502,13 @@ bl _mono_gsharedvt_value_copy
 .word 0xb4000c40
 .loc 1 1051 0
 .word 0xf94027a0
-bl _p_191
+bl _p_190
 .word 0xaa0003e2
 .word 0xf9400441
 .word 0xaa1603e0
-bl _p_47
+bl _p_46
 .word 0xf9400721
-bl _p_192
+bl _p_191
 .word 0xaa0003f6
 .word 0xf9400b35
 .word 0xd280005e
@@ -17467,8 +18552,8 @@ bl _p_192
 .word 0xeb1e02df
 .word 0x54000320
 .word 0xf94027a0
-bl _p_194
-bl _p_161
+bl _p_193
+bl _p_160
 .word 0xb9807321
 .word 0x8b010301
 .word 0xf90033a1
@@ -17478,7 +18563,7 @@ bl _p_161
 .word 0xf9401720
 .word 0xf9401f20
 .word 0xf94027a0
-bl _p_193
+bl _p_192
 .word 0xaa0003e2
 .word 0xf9402fa0
 .word 0xf94033a1
@@ -17504,7 +18589,7 @@ bl _mono_gsharedvt_value_copy
 .word 0xf9401720
 .word 0xf9401f20
 .word 0xf94027a0
-bl _p_193
+bl _p_192
 .word 0xaa0003e2
 .word 0xf9402ba0
 .word 0xf9402fa1
@@ -17536,7 +18621,7 @@ bl _mono_gsharedvt_value_copy
 .word 0xf9401720
 .word 0xf9401f20
 .word 0xf94027a0
-bl _p_193
+bl _p_192
 .word 0xaa0003e2
 .word 0xf9402ba0
 .word 0xf9402fa1
@@ -17547,51 +18632,58 @@ bl _mono_gsharedvt_value_copy
 .word 0x910003bf
 .word 0xa8c77bfd
 .word 0xd65f03c0
-.word 0xd2801b80
+.word 0xd2801b40
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_111:
 .text
 	.align 4
 	.no_dead_strip System_Xml_Linq_XObject_Annotations_T_GSHAREDVT
 System_Xml_Linq_XObject_Annotations_T_GSHAREDVT:
-.word 0xa9bb7bfd
+.word 0xa9bc7bfd
 .word 0x910003fd
 .word 0xf9000bb9
 .word 0xf90013af
 .word 0xf9000fa0
 .word 0xf94013a0
-bl _p_195
+bl _p_194
 .word 0xaa0003f9
 .word 0xb9800320
 .word 0xf90017bf
 .word 0xf94013a0
-bl _p_196
-bl _p_161
-.word 0xf90023a0
-.word 0xf94013a0
-bl _p_197
-.word 0xaa0003e2
-.word 0xf94023a0
+bl _p_195
+bl _p_160
 .word 0xf9001fa0
+.word 0xf94013a0
+bl _p_196
+.word 0xaa0003e2
+.word 0xf9401fa0
+.word 0xf9001ba0
 .word 0x92800021
 .word 0xf2bfffe1
 .word 0xd63f0040
-.word 0xf9401fa0
-.word 0xaa0003e1
-.word 0xf9001ba1
-.word 0xf9400721
-.word 0xd1000421
-.word 0x8b010000
+.word 0xf9401ba1
+.word 0xaa0103e0
+.word 0xf9400722
+.word 0xd1000442
+.word 0x8b020022
 .word 0xf9400fa1
-.word 0xf9000001
-bl _p_1
-.word 0xf9401ba0
-.word 0xf9400fa1
+.word 0xf9000041
+.word 0xd349fc42
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0042
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x3, [x16, #16]
+.word 0x8b030042
+.word 0xd280003e
+.word 0x3900005e
 .word 0xf9400bb9
 .word 0x910003bf
-.word 0xa8c57bfd
+.word 0xa8c47bfd
 .word 0xd65f03c0
 
 Lme_112:
@@ -17606,7 +18698,7 @@ System_Xml_Linq_XObject__Annotationsd__16_1_T_GSHAREDVT__ctor_int:
 .word 0xf90013a1
 .word 0xf9400fa0
 .word 0xf9400000
-bl _p_198
+bl _p_197
 .word 0xaa0003f9
 .word 0xb9800320
 .word 0xf90017bf
@@ -17618,7 +18710,7 @@ bl _p_198
 .word 0xb9000001
 .word 0xf9400fa0
 .word 0xf9001ba0
-bl _p_56
+bl _p_55
 .word 0x93407c00
 .word 0xaa0003e1
 .word 0xf9401ba0
@@ -17641,7 +18733,7 @@ System_Xml_Linq_XObject__Annotationsd__16_1_T_GSHAREDVT_System_IDisposable_Dispo
 .word 0xf9000ba0
 .word 0xf9400ba0
 .word 0xf9400000
-bl _p_199
+bl _p_198
 .word 0xf9000fa0
 .word 0xf9400fa0
 .word 0xb9800000
@@ -17665,7 +18757,7 @@ System_Xml_Linq_XObject__Annotationsd__16_1_T_GSHAREDVT_MoveNext:
 .word 0xf90027a0
 .word 0xf94027a0
 .word 0xf9400000
-bl _p_200
+bl _p_199
 .word 0xaa0003fa
 .word 0xb9800340
 .word 0x91003c10
@@ -17712,12 +18804,12 @@ bl _p_200
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #1672]
+ldr x0, [x16, #1656]
 .word 0x8b010000
 .word 0xf9400000
 .word 0xd61f0000
 .word 0xd2800000
-.word 0x1400014d
+.word 0x14000158
 .word 0xf94027a0
 .word 0xf9400741
 .word 0xd1000421
@@ -17727,14 +18819,16 @@ ldr x0, [x16, #1672]
 .word 0xb900001e
 .loc 1 1092 0
 .word 0xf9400f00
-.word 0xb4002860
+.word 0xb40029c0
 .loc 1 1093 0
 .word 0xf94027b7
 .word 0xf9400f16
 .word 0xaa1603f5
 .word 0xeb1f02df
-.word 0x54000280
+.word 0x540002c0
 .word 0xf94002d4
+.word 0xf9400ac0
+.word 0xb5000240
 .word 0x3940b280
 .word 0xd280003e
 .word 0xeb1e001f
@@ -17745,13 +18839,13 @@ ldr x0, [x16, #1672]
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #464]
+ldr x1, [x16, #448]
 .word 0xeb01001f
 .word 0x540000e1
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #472]
+ldr x0, [x16, #456]
 .word 0xeb0002df
 .word 0x54000040
 .word 0xd2800015
@@ -17759,7 +18853,17 @@ ldr x0, [x16, #472]
 .word 0xd1000400
 .word 0x8b0002e0
 .word 0xf9000015
-bl _p_1
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
 .loc 1 1094 0
 .word 0xf94027a0
 .word 0xf9400f41
@@ -17772,13 +18876,13 @@ bl _p_1
 .word 0xf9002ba0
 .word 0xf94027a0
 .word 0xf9400000
-bl _p_201
+bl _p_200
 .word 0xaa0003e2
 .word 0xf9402ba0
 .word 0xf9400441
-bl _p_47
+bl _p_46
 .word 0xf9401341
-bl _p_192
+bl _p_191
 .word 0xaa0003f8
 .word 0xf9401757
 .word 0xd280005e
@@ -17823,8 +18927,8 @@ bl _p_192
 .word 0x54000360
 .word 0xf94027a0
 .word 0xf9400000
-bl _p_202
-bl _p_161
+bl _p_201
+bl _p_160
 .word 0xb9808b41
 .word 0x8b010321
 .word 0xf90033a1
@@ -17835,7 +18939,7 @@ bl _p_161
 .word 0xf9403340
 .word 0xf94027a0
 .word 0xf9400000
-bl _p_203
+bl _p_202
 .word 0xaa0003e2
 .word 0xf9402fa0
 .word 0xf94033a1
@@ -17865,7 +18969,7 @@ bl _mono_gsharedvt_value_copy
 .word 0xf9403340
 .word 0xf94027a0
 .word 0xf9400000
-bl _p_203
+bl _p_202
 .word 0xaa0003e2
 .word 0xf9402ba0
 .word 0xf9402fa1
@@ -17920,13 +19024,13 @@ bl _mono_gsharedvt_value_copy
 .loc 1 1102 0
 .word 0xf94027a0
 .word 0xf9400000
-bl _p_201
+bl _p_200
 .word 0xaa0003e2
 .word 0xf9400441
 .word 0xaa1803e0
-bl _p_47
+bl _p_46
 .word 0xf9401341
-bl _p_192
+bl _p_191
 .word 0xaa0003f8
 .word 0xf9401757
 .word 0xd280005e
@@ -17971,8 +19075,8 @@ bl _p_192
 .word 0x54000360
 .word 0xf94027a0
 .word 0xf9400000
-bl _p_202
-bl _p_161
+bl _p_201
+bl _p_160
 .word 0xb980a341
 .word 0x8b010321
 .word 0xf90033a1
@@ -17983,7 +19087,7 @@ bl _p_161
 .word 0xf9403340
 .word 0xf94027a0
 .word 0xf9400000
-bl _p_203
+bl _p_202
 .word 0xaa0003e2
 .word 0xf9402fa0
 .word 0xf94033a1
@@ -18013,7 +19117,7 @@ bl _mono_gsharedvt_value_copy
 .word 0xf9403340
 .word 0xf94027a0
 .word 0xf9400000
-bl _p_203
+bl _p_202
 .word 0xaa0003e2
 .word 0xf9402ba0
 .word 0xf9402fa1
@@ -18073,9 +19177,9 @@ bl _mono_gsharedvt_value_copy
 .word 0x910003bf
 .word 0xa8c77bfd
 .word 0xd65f03c0
-.word 0xd2801b80
+.word 0xd2801b40
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_115:
 .text
@@ -18089,7 +19193,7 @@ System_Xml_Linq_XObject__Annotationsd__16_1_T_GSHAREDVT_System_Collections_Gener
 .word 0xf90017a0
 .word 0xf94017a0
 .word 0xf9400000
-bl _p_204
+bl _p_203
 .word 0xaa0003fa
 .word 0xb9800340
 .word 0x91003c10
@@ -18125,7 +19229,7 @@ bl _p_204
 .word 0xf9400f40
 .word 0xf94017a0
 .word 0xf9400000
-bl _p_205
+bl _p_204
 .word 0xaa0003e2
 .word 0xf9401ba0
 .word 0xf9401fa1
@@ -18145,15 +19249,15 @@ System_Xml_Linq_XObject__Annotationsd__16_1_T_GSHAREDVT_System_Collections_IEnum
 .word 0xf9000ba0
 .word 0xf9400ba0
 .word 0xf9400000
-bl _p_206
+bl _p_205
 .word 0xf9000fa0
 .word 0xf9400fa0
 .word 0xb9800000
 .word 0xf9000fbf
-.word 0xd2801de0
+.word 0xd2801da0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
-bl _p_10
+bl _p_9
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
@@ -18170,7 +19274,7 @@ System_Xml_Linq_XObject__Annotationsd__16_1_T_GSHAREDVT_System_Collections_IEnum
 .word 0xf90017a0
 .word 0xf94017a0
 .word 0xf9400000
-bl _p_207
+bl _p_206
 .word 0xaa0003fa
 .word 0xb9800340
 .word 0x91003c10
@@ -18205,8 +19309,8 @@ bl _p_207
 .word 0x54000360
 .word 0xf94017a0
 .word 0xf9400000
-bl _p_208
-bl _p_161
+bl _p_207
+bl _p_160
 .word 0xb9803341
 .word 0x8b010321
 .word 0xf90023a1
@@ -18217,7 +19321,7 @@ bl _p_161
 .word 0xf9401740
 .word 0xf94017a0
 .word 0xf9400000
-bl _p_209
+bl _p_208
 .word 0xaa0003e2
 .word 0xf9401fa0
 .word 0xf94023a1
@@ -18246,13 +19350,13 @@ Lme_118:
 	.align 4
 	.no_dead_strip System_Xml_Linq_XObject__Annotationsd__16_1_T_GSHAREDVT_System_Collections_Generic_IEnumerable_T_GetEnumerator
 System_Xml_Linq_XObject__Annotationsd__16_1_T_GSHAREDVT_System_Collections_Generic_IEnumerable_T_GetEnumerator:
-.word 0xa9bb7bfd
+.word 0xa9bc7bfd
 .word 0x910003fd
 .word 0xa9016bb9
 .word 0xf90013a0
 .word 0xf94013a0
 .word 0xf9400000
-bl _p_210
+bl _p_209
 .word 0xaa0003fa
 .word 0xb9800340
 .word 0xf90017bf
@@ -18271,7 +19375,7 @@ bl _p_210
 .word 0x8b010000
 .word 0xb9800000
 .word 0xf9001ba0
-bl _p_56
+bl _p_55
 .word 0x93407c00
 .word 0xaa0003e1
 .word 0xf9401ba0
@@ -18283,39 +19387,47 @@ bl _p_56
 .word 0x8b010000
 .word 0xb900001f
 .word 0xf94013b9
-.word 0x1400001d
+.word 0x14000024
+.word 0xf94013a0
+.word 0xf9400000
+bl _p_210
+bl _p_160
+.word 0xf9001fa0
 .word 0xf94013a0
 .word 0xf9400000
 bl _p_211
-bl _p_161
-.word 0xf90023a0
-.word 0xf94013a0
-.word 0xf9400000
-bl _p_212
 .word 0xaa0003e2
-.word 0xf94023a0
-.word 0xf9001fa0
+.word 0xf9401fa0
+.word 0xf9001ba0
 .word 0xd2800001
 .word 0xd63f0040
-.word 0xf9401fa0
+.word 0xf9401ba0
 .word 0xaa0003f9
-.word 0xaa1903e0
-.word 0xf94013a1
-.word 0xf9400f42
-.word 0xd1000442
-.word 0x8b020021
-.word 0xf9400021
+.word 0xaa1903e1
+.word 0xf94013a0
 .word 0xf9400f42
 .word 0xd1000442
 .word 0x8b020000
-.word 0xf9001ba1
-.word 0xf9000001
-bl _p_1
-.word 0xf9401ba0
+.word 0xf9400000
+.word 0xf9400f42
+.word 0xd1000442
+.word 0x8b020021
+.word 0xf9000020
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
 .word 0xaa1903e0
 .word 0xa9416bb9
 .word 0x910003bf
-.word 0xa8c57bfd
+.word 0xa8c47bfd
 .word 0xd65f03c0
 
 Lme_119:
@@ -18328,7 +19440,7 @@ System_Xml_Linq_XObject__Annotationsd__16_1_T_GSHAREDVT_System_Collections_IEnum
 .word 0xf9000ba0
 .word 0xf9400ba0
 .word 0xf9400000
-bl _p_213
+bl _p_212
 .word 0xf9000fa0
 .word 0xf9400fa0
 .word 0xb9800000
@@ -18337,7 +19449,7 @@ bl _p_213
 .word 0xf90013a0
 .word 0xf9400ba0
 .word 0xf9400000
-bl _p_214
+bl _p_213
 .word 0xaa0003e1
 .word 0xf94013a0
 .word 0xd63f0020
@@ -18360,7 +19472,7 @@ System_Xml_Linq_XDocument_GetFirstNode_T_GSHAREDVT:
 .word 0xf90027af
 .word 0xaa0003fa
 .word 0xf94027a0
-bl _p_215
+bl _p_214
 .word 0xaa0003f9
 .word 0xb9800320
 .word 0x91003c10
@@ -18399,7 +19511,7 @@ bl _p_215
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x1, [x16, #680]
+ldr x1, [x16, #664]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xd2800016
@@ -18412,13 +19524,13 @@ ldr x1, [x16, #680]
 .word 0xaa1703e0
 .word 0xf9002ba0
 .word 0xf94027a0
-bl _p_216
+bl _p_215
 .word 0xaa0003e2
 .word 0xf9402ba0
 .word 0xf9400441
-bl _p_47
+bl _p_46
 .word 0xf9400721
-bl _p_192
+bl _p_191
 .word 0xaa0003f6
 .word 0xf9400b35
 .word 0xd280005e
@@ -18462,8 +19574,8 @@ bl _p_192
 .word 0xeb1e02df
 .word 0x54000320
 .word 0xf94027a0
-bl _p_217
-bl _p_161
+bl _p_216
+bl _p_160
 .word 0xb9806321
 .word 0x8b010301
 .word 0xf90033a1
@@ -18473,7 +19585,7 @@ bl _p_161
 .word 0xf9401720
 .word 0xf9401f20
 .word 0xf94027a0
-bl _p_218
+bl _p_217
 .word 0xaa0003e2
 .word 0xf9402fa0
 .word 0xf94033a1
@@ -18499,7 +19611,7 @@ bl _mono_gsharedvt_value_copy
 .word 0xf9401720
 .word 0xf9401f20
 .word 0xf94027a0
-bl _p_218
+bl _p_217
 .word 0xaa0003e2
 .word 0xf9402ba0
 .word 0xf9402fa1
@@ -18530,7 +19642,7 @@ bl _mono_gsharedvt_value_copy
 .word 0xf9401720
 .word 0xf9401f20
 .word 0xf94027a0
-bl _p_218
+bl _p_217
 .word 0xaa0003e2
 .word 0xf9402ba0
 .word 0xf9402fa1
@@ -18557,7 +19669,7 @@ wrapper_delegate_invoke_System_Xml_Linq_XHashtable_1_ExtractKeyDelegate_System_X
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #432]
+ldr x0, [x16, #1664]
 .word 0xb9400000
 .word 0x35000660
 .word 0x14000001
@@ -18609,14 +19721,14 @@ ldr x0, [x16, #432]
 .word 0xa8c57bfd
 .word 0xd65f03c0
 .word 0xaa1803e0
-bl _p_10
-bl _p_38
+bl _p_9
+bl _p_218
 .word 0xaa0003f8
 .word 0xb5ffff80
 .word 0x17ffffcc
-.word 0xd2801b80
+.word 0xd2801b40
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_11c:
 .text
@@ -18633,7 +19745,7 @@ wrapper_delegate_invoke_System_Xml_Linq_XHashtable_1_ExtractKeyDelegate_System_W
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #432]
+ldr x0, [x16, #1664]
 .word 0xb9400000
 .word 0x35000660
 .word 0x14000001
@@ -18685,14 +19797,14 @@ ldr x0, [x16, #432]
 .word 0xa8c57bfd
 .word 0xd65f03c0
 .word 0xaa1803e0
-bl _p_10
-bl _p_38
+bl _p_9
+bl _p_218
 .word 0xaa0003f8
 .word 0xb5ffff80
 .word 0x17ffffcc
-.word 0xd2801b80
+.word 0xd2801b40
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_11d:
 .text
@@ -18710,7 +19822,7 @@ wrapper_delegate_invoke_System_EventHandler_1_System_Xml_Linq_XObjectChangeEvent
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #432]
+ldr x0, [x16, #1664]
 .word 0xb9400000
 .word 0x35000680
 .word 0x14000001
@@ -18763,23 +19875,23 @@ ldr x0, [x16, #432]
 .word 0xa8c57bfd
 .word 0xd65f03c0
 .word 0xaa1703e0
-bl _p_10
-bl _p_38
+bl _p_9
+bl _p_218
 .word 0xaa0003f7
 .word 0xb5ffff80
 .word 0x17ffffcb
-.word 0xd2801b80
+.word 0xd2801b40
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_11e:
 .text
 	.align 4
 	.no_dead_strip System_Array_InternalArray__IEnumerable_GetEnumerator_T_REF
 System_Array_InternalArray__IEnumerable_GetEnumerator_T_REF:
-.file 2 "/Library/Frameworks/Xamarin.iOS.framework/Versions/10.10.0.36/src/mono/mcs/class/corlib/System/Array.cs"
-.loc 2 78 0 prologue_end
-.word 0xa9ba7bfd
+.file 2 "/Library/Frameworks/Xamarin.iOS.framework/Versions/10.12.3.3/src/mono/mcs/class/corlib/System/Array.cs"
+.loc 2 71 0 prologue_end
+.word 0xa9bb7bfd
 .word 0x910003fd
 .word 0xf9001faf
 .word 0xf9000ba0
@@ -18787,11 +19899,11 @@ System_Array_InternalArray__IEnumerable_GetEnumerator_T_REF:
 .word 0xf90017a0
 .word 0xf9001ba0
 .word 0x9100a3a0
-.word 0xf9002fa0
+.word 0xf90023a0
 .word 0xf9401fa0
 bl _p_219
 .word 0xaa0003ef
-.word 0xf9402fa0
+.word 0xf94023a0
 .word 0xf9400ba1
 bl _p_220
 .word 0xf94017a0
@@ -18801,23 +19913,27 @@ bl _p_220
 .word 0xf9401fa0
 bl _p_219
 .word 0xd2800401
-bl _p_16
-.word 0xf90023a0
-.word 0x91004001
-.word 0xaa0103e0
+bl _p_15
+.word 0x91004003
+.word 0xaa0303e1
 .word 0xf9400fa2
-.word 0xf9002ba2
-.word 0xf9000022
-.word 0xf90027a0
-bl _p_1
-.word 0xf94023a0
-.word 0xf94027a1
-.word 0xf9402ba2
+.word 0xf9000062
+.word 0xd349fc23
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0063
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x4, [x16, #16]
+.word 0x8b040063
+.word 0xd280003e
+.word 0x3900007e
 .word 0x91002021
 .word 0xf94013a2
 .word 0xf9000022
 .word 0x910003bf
-.word 0xa8c67bfd
+.word 0xa8c57bfd
 .word 0xd65f03c0
 
 Lme_11f:
@@ -18825,7 +19941,7 @@ Lme_11f:
 	.align 4
 	.no_dead_strip System_Array_InternalArray__ICollection_get_Count
 System_Array_InternalArray__ICollection_get_Count:
-.loc 2 68 0 prologue_end
+.loc 2 61 0 prologue_end
 .word 0xa9be7bfd
 .word 0x910003fd
 .word 0xf9000ba0
@@ -18840,7 +19956,7 @@ Lme_120:
 	.align 4
 	.no_dead_strip System_Array_InternalArray__ICollection_get_IsReadOnly
 System_Array_InternalArray__ICollection_get_IsReadOnly:
-.loc 2 73 0 prologue_end
+.loc 2 66 0 prologue_end
 .word 0xa9be7bfd
 .word 0x910003fd
 .word 0xf9000ba0
@@ -18854,17 +19970,17 @@ Lme_121:
 	.align 4
 	.no_dead_strip System_Array_InternalArray__ICollection_Clear
 System_Array_InternalArray__ICollection_Clear:
-.loc 2 83 0 prologue_end
+.loc 2 76 0 prologue_end
 .word 0xa9be7bfd
 .word 0x910003fd
 .word 0xf9000ba0
-.word 0xd29a1c60
+.word 0xd299b200
 bl _p_221
 .word 0xaa0003e1
-.word 0xd2801de0
+.word 0xd2801da0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
@@ -18874,19 +19990,19 @@ Lme_122:
 	.align 4
 	.no_dead_strip System_Array_InternalArray__ICollection_Add_T_REF_T_REF
 System_Array_InternalArray__ICollection_Add_T_REF_T_REF:
-.loc 2 88 0 prologue_end
+.loc 2 81 0 prologue_end
 .word 0xa9bd7bfd
 .word 0x910003fd
 .word 0xf90013af
 .word 0xf9000ba0
 .word 0xf9000fa1
-.word 0xd29a2260
+.word 0xd299b800
 bl _p_221
 .word 0xaa0003e1
-.word 0xd2801de0
+.word 0xd2801da0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 .word 0x910003bf
 .word 0xa8c37bfd
 .word 0xd65f03c0
@@ -18896,19 +20012,19 @@ Lme_123:
 	.align 4
 	.no_dead_strip System_Array_InternalArray__ICollection_Remove_T_REF_T_REF
 System_Array_InternalArray__ICollection_Remove_T_REF_T_REF:
-.loc 2 93 0 prologue_end
+.loc 2 86 0 prologue_end
 .word 0xa9bd7bfd
 .word 0x910003fd
 .word 0xf90013af
 .word 0xf9000ba0
 .word 0xf9000fa1
-.word 0xd29a2260
+.word 0xd299b800
 bl _p_221
 .word 0xaa0003e1
-.word 0xd2801de0
+.word 0xd2801da0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 .word 0x910003bf
 .word 0xa8c37bfd
 .word 0xd65f03c0
@@ -18918,7 +20034,7 @@ Lme_124:
 	.align 4
 	.no_dead_strip System_Array_InternalArray__ICollection_Contains_T_REF_T_REF
 System_Array_InternalArray__ICollection_Contains_T_REF_T_REF:
-.loc 2 98 0 prologue_end
+.loc 2 91 0 prologue_end
 .word 0xa9bc7bfd
 .word 0x910003fd
 .word 0xa9015fb6
@@ -18932,12 +20048,12 @@ System_Array_InternalArray__ICollection_Contains_T_REF_T_REF:
 .word 0xd280003e
 .word 0x6b1e001f
 .word 0x5400044c
-.loc 2 101 0
+.loc 2 94 0
 .word 0xb9801b38
-.loc 2 102 0
+.loc 2 95 0
 .word 0xd2800017
 .word 0x14000016
-.loc 2 104 0
+.loc 2 97 0
 .word 0xf9401fa0
 bl _p_222
 .word 0x93407ee0
@@ -18945,14 +20061,14 @@ bl _p_222
 .word 0x8b000320
 .word 0x91008000
 .word 0xf9400016
-.loc 2 105 0
+.loc 2 98 0
 .word 0xb500009a
-.loc 2 106 0
+.loc 2 99 0
 .word 0xb5000196
-.loc 2 107 0
+.loc 2 100 0
 .word 0xd2800020
 .word 0x1400000e
-.loc 2 113 0
+.loc 2 106 0
 .word 0xaa1a03e0
 .word 0xaa1603e1
 .word 0xf9400342
@@ -18960,14 +20076,14 @@ bl _p_222
 .word 0xd63f0200
 .word 0x53001c00
 .word 0x34000060
-.loc 2 114 0
+.loc 2 107 0
 .word 0xd2800020
 .word 0x14000005
-.loc 2 102 0
+.loc 2 95 0
 .word 0x110006f7
 .word 0x6b1802ff
 .word 0x54fffd4b
-.loc 2 118 0
+.loc 2 111 0
 .word 0xd2800000
 .word 0xa9415fb6
 .word 0xa94267b8
@@ -18975,148 +20091,49 @@ bl _p_222
 .word 0x910003bf
 .word 0xa8c47bfd
 .word 0xd65f03c0
-.loc 2 99 0
-.word 0xd29a29e0
+.loc 2 92 0
+.word 0xd299bf80
 bl _p_221
 .word 0xaa0003e1
-.word 0xd2801f80
+.word 0xd2801f40
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
-bl _p_10
+bl _p_9
 
 Lme_125:
 .text
 	.align 4
 	.no_dead_strip System_Array_InternalArray__ICollection_CopyTo_T_REF_T_REF___int
 System_Array_InternalArray__ICollection_CopyTo_T_REF_T_REF___int:
-.loc 2 123 0 prologue_end
-.word 0xa9ba7bfd
+.loc 2 116 0 prologue_end
+.word 0xa9bc7bfd
 .word 0x910003fd
-.word 0xa90157b4
-.word 0xa9025fb6
-.word 0xa90367b8
-.word 0xf90023ba
-.word 0xf90027af
-.word 0xaa0003f8
-.word 0xaa0103f9
-.word 0xaa0203fa
-.word 0xb4000879
-.loc 2 128 0
-.word 0xf9400300
-.word 0x3940b000
-.word 0xd280003e
-.word 0x6b1e001f
-.word 0x540008ac
-.loc 2 130 0
-.word 0xaa1a03f7
-.word 0xaa1803f6
-.word 0xf9400b15
-.word 0xeb1f02bf
-.word 0x54000060
-.word 0xb98002b5
-.word 0x14000002
-.word 0xb9801ad5
-.word 0xb1502f6
-.word 0xf9400b37
-.word 0xeb1f02ff
-.word 0x54000060
-.word 0xb98006f7
-.word 0x14000002
-.word 0xd2800017
-.word 0xaa1903f5
-.word 0xf9400b34
-.word 0xeb1f029f
-.word 0x54000060
-.word 0xb9800294
-.word 0x14000002
-.word 0xb9801ab4
-.word 0xb1402e0
-.word 0x6b0002df
-.word 0x5400066c
-.loc 2 134 0
-.word 0xf9400320
-.word 0x3940b000
-.word 0xd280003e
-.word 0x6b1e001f
-.word 0x540006ac
-.loc 2 136 0
-.word 0x6b1f035f
-.word 0x5400074b
-.loc 2 140 0
-.word 0xaa1803f7
-.word 0xf9400b16
+.word 0xf9000bb6
+.word 0xf9001faf
+.word 0xf9000fa0
+.word 0xf90013a1
+.word 0xf90017a2
+.word 0xf9400fa0
+.word 0xf9001ba0
+.word 0xf9400fa0
+.word 0xf9400816
 .word 0xeb1f02df
 .word 0x54000060
 .word 0xb98006d6
 .word 0x14000002
 .word 0xd2800016
-.word 0xaa1903f5
-.word 0xaa1a03f9
-.word 0xaa1803fa
-.word 0xf9400b14
-.word 0xeb1f029f
-.word 0x54000060
-.word 0xb9800298
-.word 0x14000002
-.word 0xb9801b58
-.word 0xaa1703e0
+.word 0xf9400fa0
+.word 0xb9801804
+.word 0xf9401ba0
 .word 0xaa1603e1
-.word 0xaa1503e2
-.word 0xaa1903e3
-.word 0xaa1803e4
+.word 0xf94013a2
+.word 0xb9802ba3
 bl _p_223
-.loc 2 141 0
-.word 0xa94157b4
-.word 0xa9425fb6
-.word 0xa94367b8
-.word 0xf94023ba
+.loc 2 117 0
+.word 0xf9400bb6
 .word 0x910003bf
-.word 0xa8c67bfd
+.word 0xa8c47bfd
 .word 0xd65f03c0
-.loc 2 124 0
-.word 0xd28709c0
-bl _p_221
-.word 0xaa0003e1
-.word 0xd2801120
-.word 0xf2a04000
-bl _mono_create_corlib_exception_1
-bl _p_10
-.loc 2 129 0
-.word 0xd29a29e0
-bl _p_221
-.word 0xaa0003e1
-.word 0xd2801f80
-.word 0xf2a04000
-bl _mono_create_corlib_exception_1
-bl _p_10
-.loc 2 131 0
-.word 0xd29a34e0
-bl _p_221
-.word 0xaa0003e1
-.word 0xd2801100
-.word 0xf2a04000
-bl _mono_create_corlib_exception_1
-bl _p_10
-.loc 2 135 0
-.word 0xd29a29e0
-bl _p_221
-.word 0xaa0003e1
-.word 0xd2801f80
-.word 0xf2a04000
-bl _mono_create_corlib_exception_1
-bl _p_10
-.loc 2 137 0
-.word 0xd2820880
-bl _p_221
-.word 0xf9002ba0
-.word 0xd29a4d40
-bl _p_221
-.word 0xaa0003e2
-.word 0xf9402ba1
-.word 0xd2801140
-.word 0xf2a04000
-bl _mono_create_corlib_exception_2
-bl _p_10
 
 Lme_126:
 .text
@@ -19133,7 +20150,7 @@ wrapper_delegate_invoke_System_Predicate_1_System_Xml_Linq_XAttribute_invoke_boo
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #432]
+ldr x0, [x16, #1664]
 .word 0xb9400000
 .word 0x350006a0
 .word 0x14000001
@@ -19187,14 +20204,14 @@ ldr x0, [x16, #432]
 .word 0xa8c57bfd
 .word 0xd65f03c0
 .word 0xaa1803e0
-bl _p_10
-bl _p_38
+bl _p_9
+bl _p_218
 .word 0xaa0003f8
 .word 0xb5ffff80
 .word 0x17ffffca
-.word 0xd2801b80
+.word 0xd2801b40
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_127:
 .text
@@ -19212,7 +20229,7 @@ wrapper_delegate_invoke_System_Comparison_1_System_Xml_Linq_XAttribute_invoke_in
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #432]
+ldr x0, [x16, #1664]
 .word 0xb9400000
 .word 0x35000720
 .word 0x14000001
@@ -19270,14 +20287,14 @@ ldr x0, [x16, #432]
 .word 0xa8c57bfd
 .word 0xd65f03c0
 .word 0xaa1703e0
-bl _p_10
-bl _p_38
+bl _p_9
+bl _p_218
 .word 0xaa0003f7
 .word 0xb5ffff80
 .word 0x17ffffc6
-.word 0xd2801b80
+.word 0xd2801b40
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_128:
 .text
@@ -19300,7 +20317,7 @@ bl _p_224
 
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x0, [x16, #432]
+ldr x0, [x16, #1664]
 .word 0xb9400000
 .word 0x35000920
 .word 0x14000001
@@ -19374,14 +20391,14 @@ bl _p_227
 .word 0xa8c67bfd
 .word 0xd65f03c0
 .word 0xaa1803e0
-bl _p_10
-bl _p_38
+bl _p_9
+bl _p_218
 .word 0xaa0003f8
 .word 0xb5ffff80
 .word 0x17ffffb6
-.word 0xd2801b80
+.word 0xd2801b40
 .word 0xaa1103e1
-bl _p_11
+bl _p_10
 
 Lme_129:
 .text
@@ -19494,7 +20511,7 @@ b System_Array_InternalEnumerator_1_T_REF__ctor_System_Array
 	.align 4
 	.no_dead_strip System_Array_InternalEnumerator_1_T_REF__ctor_System_Array
 System_Array_InternalEnumerator_1_T_REF__ctor_System_Array:
-.loc 2 239 0 prologue_end
+.loc 2 215 0 prologue_end
 .word 0xa9bd7bfd
 .word 0x910003fd
 .word 0xf90013af
@@ -19503,14 +20520,22 @@ System_Array_InternalEnumerator_1_T_REF__ctor_System_Array:
 .word 0xf9400fa1
 .word 0xf9400ba0
 .word 0xf9000001
-bl _p_1
-.word 0xf9400fa0
-.loc 2 240 0
-.word 0xf9400ba0
+.word 0xd349fc02
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0042
+
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x3, [x16, #16]
+.word 0x8b030042
+.word 0xd280003e
+.word 0x3900005e
+.loc 2 216 0
 .word 0x9280003e
 .word 0xf2bffffe
 .word 0xb900081e
-.loc 2 241 0
+.loc 2 217 0
 .word 0x910003bf
 .word 0xa8c37bfd
 .word 0xd65f03c0
@@ -19873,1906 +20898,1904 @@ unwind_info:
 
 	.byte 0,18,12,31,0,68,14,64,157,8,158,7,68,13,29,68,152,6,153,5,13,12,31,0,68,14,32,157,4,158,3,68
 	.byte 13,29,16,12,31,0,68,14,32,157,4,158,3,68,13,29,68,154,2,18,12,31,0,68,14,48,157,6,158,5,68,13
-	.byte 29,68,153,4,154,3,16,12,31,0,68,14,64,157,8,158,7,68,13,29,68,154,6,13,12,31,0,68,14,48,157,6
-	.byte 158,5,68,13,29,18,12,31,0,68,14,64,157,8,158,7,68,13,29,68,153,6,154,5,13,12,31,0,68,14,16,157
-	.byte 2,158,1,68,13,29,16,12,31,0,68,14,96,157,12,158,11,68,13,29,68,152,10,26,12,31,0,68,14,96,157,12
-	.byte 158,11,68,13,29,68,150,10,151,9,68,152,8,153,7,68,154,6,13,12,31,0,68,14,80,157,10,158,9,68,13,29
-	.byte 13,12,31,0,68,14,64,157,8,158,7,68,13,29,22,12,31,0,68,14,128,1,157,16,158,15,68,13,29,68,152,14
-	.byte 153,13,68,154,12,21,12,31,0,68,14,80,157,10,158,9,68,13,29,68,152,8,153,7,68,154,6,31,12,31,0,68
-	.byte 14,112,157,14,158,13,68,13,29,68,147,12,148,11,68,149,10,150,9,68,151,8,152,7,68,153,6,24,12,31,0,68
-	.byte 14,64,157,8,158,7,68,13,29,68,150,6,151,5,68,152,4,68,154,3,18,12,31,0,68,14,32,157,4,158,3,68
-	.byte 13,29,68,153,2,154,1,26,12,31,0,68,14,64,157,8,158,7,68,13,29,68,150,6,151,5,68,152,4,153,3,68
-	.byte 154,2,23,12,31,0,68,14,80,157,10,158,9,68,13,29,68,151,8,152,7,68,153,6,154,5,26,12,31,0,68,14
-	.byte 80,157,10,158,9,68,13,29,68,150,8,151,7,68,152,6,153,5,68,154,4,16,12,31,0,68,14,32,157,4,158,3
-	.byte 68,13,29,68,153,2,16,12,31,0,68,14,48,157,6,158,5,68,13,29,68,154,4,16,12,31,0,68,14,48,157,6
-	.byte 158,5,68,13,29,68,153,4,21,12,31,0,68,14,112,157,14,158,13,68,13,29,68,152,12,153,11,68,154,10,21,12
-	.byte 31,0,68,14,48,157,6,158,5,68,13,29,68,151,4,152,3,68,154,2,23,12,31,0,68,14,64,157,8,158,7,68
-	.byte 13,29,68,151,6,152,5,68,153,4,154,3,21,12,31,0,68,14,64,157,8,158,7,68,13,29,68,152,6,153,5,68
-	.byte 154,4,24,12,31,0,68,14,128,1,157,16,158,15,68,13,29,68,151,14,152,13,68,153,12,154,11,21,12,31,0,68
-	.byte 14,48,157,6,158,5,68,13,29,68,152,4,153,3,68,154,2,23,12,31,0,68,14,48,157,6,158,5,68,13,29,68
-	.byte 151,4,152,3,68,153,2,154,1,18,12,31,0,68,14,96,157,12,158,11,68,13,29,68,153,10,154,9,32,12,31,0
-	.byte 68,14,160,1,157,20,158,19,68,13,29,68,148,18,149,17,68,150,16,151,15,68,152,14,153,13,68,154,12,34,12,31
-	.byte 0,68,14,192,1,157,24,158,23,68,13,29,68,147,22,148,21,68,149,20,150,19,68,151,18,152,17,68,153,16,154,15
-	.byte 23,12,31,0,68,14,80,157,10,158,9,68,13,29,68,150,8,151,7,68,153,6,154,5,28,12,31,0,68,14,64,157
-	.byte 8,158,7,68,13,29,68,149,6,150,5,68,151,4,152,3,68,153,2,154,1,18,12,31,0,68,14,112,157,14,158,13
-	.byte 68,13,29,68,153,12,154,11,13,12,31,0,68,14,96,157,12,158,11,68,13,29,23,12,31,0,68,14,96,157,12,158
-	.byte 11,68,13,29,68,150,10,151,9,68,152,8,153,7,18,12,31,0,68,14,80,157,10,158,9,68,13,29,68,153,8,154
-	.byte 7,21,12,31,0,68,14,48,157,6,158,5,68,13,29,68,151,4,68,153,3,154,2,33,12,31,0,68,14,96,157,12
-	.byte 158,11,68,13,29,68,147,10,148,9,68,149,8,150,7,68,151,6,152,5,68,153,4,154,3,18,12,31,0,68,14,64
-	.byte 157,8,158,7,68,13,29,68,151,6,152,5,16,12,31,0,68,14,48,157,6,158,5,68,13,29,68,152,4,16,12,31
-	.byte 0,68,14,48,157,6,158,5,68,13,29,68,151,4,16,12,31,0,68,14,80,157,10,158,9,68,13,29,68,150,8,19
-	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,152,4,68,154,3,14,12,31,0,68,14,128,1,157,16,158,15,68
-	.byte 13,29,19,12,31,0,68,14,112,157,14,158,13,68,13,29,68,152,12,68,154,11,16,12,31,0,68,14,64,157,8,158
-	.byte 7,68,13,29,68,153,6,32,12,31,0,68,14,144,1,157,18,158,17,68,13,29,68,148,16,149,15,68,150,14,151,13
-	.byte 68,152,12,153,11,68,154,10,23,12,31,0,68,14,112,157,14,158,13,68,13,29,68,151,12,152,11,68,153,10,154,9
-	.byte 16,12,31,0,68,14,96,157,12,158,11,68,13,29,68,150,10,24,12,31,0,68,14,160,1,157,20,158,19,68,13,29
-	.byte 68,151,18,152,17,68,153,16,154,15,18,12,31,0,68,14,112,157,14,158,13,68,13,29,68,149,12,150,11,27,12,31
-	.byte 0,68,14,128,1,157,16,158,15,68,13,29,68,149,14,150,13,68,151,12,152,11,68,153,10,34,12,31,0,68,14,128
-	.byte 1,157,16,158,15,68,13,29,68,147,14,148,13,68,149,12,150,11,68,151,10,152,9,68,153,8,154,7,24,12,31,0
-	.byte 68,14,80,157,10,158,9,68,13,29,68,150,8,151,7,68,152,6,68,154,5,28,12,31,0,68,14,112,157,14,158,13
-	.byte 68,13,29,68,149,12,150,11,68,151,10,152,9,68,153,8,154,7,16,12,31,0,68,14,80,157,10,158,9,68,13,29
-	.byte 68,153,8,31,12,31,0,68,14,112,157,14,158,13,68,13,29,68,148,12,149,11,68,150,10,151,9,68,152,8,153,7
-	.byte 68,154,6,28,12,31,0,68,14,80,157,10,158,9,68,13,29,68,149,8,150,7,68,151,6,152,5,68,153,4,154,3
-	.byte 31,12,31,0,68,14,96,157,12,158,11,68,13,29,68,148,10,149,9,68,150,8,151,7,68,152,6,153,5,68,154,4
-	.byte 28,12,31,0,68,14,96,157,12,158,11,68,13,29,68,149,10,150,9,68,151,8,152,7,68,153,6,154,5,21,12,31
-	.byte 0,68,14,80,157,10,158,9,68,13,29,68,151,8,152,7,68,154,6
+	.byte 29,68,153,4,154,3,16,12,31,0,68,14,64,157,8,158,7,68,13,29,68,154,6,16,12,31,0,68,14,48,157,6
+	.byte 158,5,68,13,29,68,154,4,13,12,31,0,68,14,48,157,6,158,5,68,13,29,13,12,31,0,68,14,16,157,2,158
+	.byte 1,68,13,29,16,12,31,0,68,14,96,157,12,158,11,68,13,29,68,152,10,26,12,31,0,68,14,96,157,12,158,11
+	.byte 68,13,29,68,150,10,151,9,68,152,8,153,7,68,154,6,26,12,31,0,68,14,80,157,10,158,9,68,13,29,68,150
+	.byte 8,151,7,68,152,6,153,5,68,154,4,13,12,31,0,68,14,64,157,8,158,7,68,13,29,21,12,31,0,68,14,96
+	.byte 157,12,158,11,68,13,29,68,152,10,153,9,68,154,8,21,12,31,0,68,14,80,157,10,158,9,68,13,29,68,152,8
+	.byte 153,7,68,154,6,31,12,31,0,68,14,112,157,14,158,13,68,13,29,68,147,12,148,11,68,149,10,150,9,68,151,8
+	.byte 152,7,68,153,6,24,12,31,0,68,14,64,157,8,158,7,68,13,29,68,150,6,151,5,68,152,4,68,154,3,18,12
+	.byte 31,0,68,14,32,157,4,158,3,68,13,29,68,153,2,154,1,26,12,31,0,68,14,64,157,8,158,7,68,13,29,68
+	.byte 150,6,151,5,68,152,4,153,3,68,154,2,23,12,31,0,68,14,80,157,10,158,9,68,13,29,68,151,8,152,7,68
+	.byte 153,6,154,5,16,12,31,0,68,14,32,157,4,158,3,68,13,29,68,153,2,16,12,31,0,68,14,48,157,6,158,5
+	.byte 68,13,29,68,153,4,21,12,31,0,68,14,112,157,14,158,13,68,13,29,68,152,12,153,11,68,154,10,21,12,31,0
+	.byte 68,14,48,157,6,158,5,68,13,29,68,151,4,152,3,68,154,2,23,12,31,0,68,14,48,157,6,158,5,68,13,29
+	.byte 68,151,4,152,3,68,153,2,154,1,21,12,31,0,68,14,64,157,8,158,7,68,13,29,68,152,6,153,5,68,154,4
+	.byte 24,12,31,0,68,14,128,1,157,16,158,15,68,13,29,68,151,14,152,13,68,153,12,154,11,21,12,31,0,68,14,48
+	.byte 157,6,158,5,68,13,29,68,152,4,153,3,68,154,2,23,12,31,0,68,14,64,157,8,158,7,68,13,29,68,151,6
+	.byte 152,5,68,153,4,154,3,18,12,31,0,68,14,96,157,12,158,11,68,13,29,68,153,10,154,9,32,12,31,0,68,14
+	.byte 160,1,157,20,158,19,68,13,29,68,148,18,149,17,68,150,16,151,15,68,152,14,153,13,68,154,12,34,12,31,0,68
+	.byte 14,192,1,157,24,158,23,68,13,29,68,147,22,148,21,68,149,20,150,19,68,151,18,152,17,68,153,16,154,15,23,12
+	.byte 31,0,68,14,64,157,8,158,7,68,13,29,68,150,6,151,5,68,153,4,154,3,28,12,31,0,68,14,64,157,8,158
+	.byte 7,68,13,29,68,149,6,150,5,68,151,4,152,3,68,153,2,154,1,18,12,31,0,68,14,112,157,14,158,13,68,13
+	.byte 29,68,153,12,154,11,13,12,31,0,68,14,96,157,12,158,11,68,13,29,23,12,31,0,68,14,96,157,12,158,11,68
+	.byte 13,29,68,150,10,151,9,68,152,8,153,7,18,12,31,0,68,14,80,157,10,158,9,68,13,29,68,153,8,154,7,21
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,151,4,68,153,3,154,2,33,12,31,0,68,14,96,157,12,158,11
+	.byte 68,13,29,68,147,10,148,9,68,149,8,150,7,68,151,6,152,5,68,153,4,154,3,18,12,31,0,68,14,48,157,6
+	.byte 158,5,68,13,29,68,151,4,152,3,16,12,31,0,68,14,48,157,6,158,5,68,13,29,68,152,4,16,12,31,0,68
+	.byte 14,48,157,6,158,5,68,13,29,68,151,4,16,12,31,0,68,14,64,157,8,158,7,68,13,29,68,150,6,19,12,31
+	.byte 0,68,14,48,157,6,158,5,68,13,29,68,152,4,68,154,3,14,12,31,0,68,14,128,1,157,16,158,15,68,13,29
+	.byte 19,12,31,0,68,14,112,157,14,158,13,68,13,29,68,152,12,68,154,11,32,12,31,0,68,14,144,1,157,18,158,17
+	.byte 68,13,29,68,148,16,149,15,68,150,14,151,13,68,152,12,153,11,68,154,10,23,12,31,0,68,14,112,157,14,158,13
+	.byte 68,13,29,68,151,12,152,11,68,153,10,154,9,16,12,31,0,68,14,96,157,12,158,11,68,13,29,68,150,10,16,12
+	.byte 31,0,68,14,80,157,10,158,9,68,13,29,68,152,8,18,12,31,0,68,14,112,157,14,158,13,68,13,29,68,149,12
+	.byte 150,11,27,12,31,0,68,14,128,1,157,16,158,15,68,13,29,68,149,14,150,13,68,151,12,152,11,68,153,10,34,12
+	.byte 31,0,68,14,128,1,157,16,158,15,68,13,29,68,147,14,148,13,68,149,12,150,11,68,151,10,152,9,68,153,8,154
+	.byte 7,24,12,31,0,68,14,80,157,10,158,9,68,13,29,68,150,8,151,7,68,152,6,68,154,5,28,12,31,0,68,14
+	.byte 112,157,14,158,13,68,13,29,68,149,12,150,11,68,151,10,152,9,68,153,8,154,7,16,12,31,0,68,14,64,157,8
+	.byte 158,7,68,13,29,68,153,6,31,12,31,0,68,14,112,157,14,158,13,68,13,29,68,148,12,149,11,68,150,10,151,9
+	.byte 68,152,8,153,7,68,154,6,18,12,31,0,68,14,64,157,8,158,7,68,13,29,68,153,6,154,5,28,12,31,0,68
+	.byte 14,80,157,10,158,9,68,13,29,68,149,8,150,7,68,151,6,152,5,68,153,4,154,3,13,12,31,0,68,14,80,157
+	.byte 10,158,9,68,13,29,28,12,31,0,68,14,96,157,12,158,11,68,13,29,68,149,10,150,9,68,151,8,152,7,68,153
+	.byte 6,154,5,21,12,31,0,68,14,80,157,10,158,9,68,13,29,68,151,8,152,7,68,154,6
 
 .text
 	.align 4
 plt:
 mono_aot_System_Xml_Linq_plt:
-	.no_dead_strip plt_wrapper_write_barrier_object_wbarrier_conc_intptr
-plt_wrapper_write_barrier_object_wbarrier_conc_intptr:
+	.no_dead_strip plt_System_Xml_XmlConvert_VerifyNCName_string
+plt_System_Xml_XmlConvert_VerifyNCName_string:
 _p_1:
+adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
+add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
+ldr x16, [x16, #1680]
+br x16
+.word 3202
+	.no_dead_strip plt_string_Concat_string_string_string_string
+plt_string_Concat_string_string_string_string:
+_p_2:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1688]
 br x16
-.word 3178
-	.no_dead_strip plt_System_Xml_XmlConvert_VerifyNCName_string
-plt_System_Xml_XmlConvert_VerifyNCName_string:
-_p_2:
+.word 3207
+	.no_dead_strip plt_string_LastIndexOf_char
+plt_string_LastIndexOf_char:
+_p_3:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1696]
 br x16
-.word 3185
-	.no_dead_strip plt_string_Concat_string_string_string_string
-plt_string_Concat_string_string_string_string:
-_p_3:
+.word 3212
+	.no_dead_strip plt_System_Xml_Linq_XNamespace_Get_string_int_int
+plt_System_Xml_Linq_XNamespace_Get_string_int_int:
+_p_4:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1704]
 br x16
-.word 3190
-	.no_dead_strip plt_string_LastIndexOf_char
-plt_string_LastIndexOf_char:
-_p_4:
+.word 3217
+	.no_dead_strip plt_System_Xml_Linq_XNamespace_GetName_string_int_int
+plt_System_Xml_Linq_XNamespace_GetName_string_int_int:
+_p_5:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1712]
 br x16
-.word 3195
-	.no_dead_strip plt_System_Xml_Linq_XNamespace_Get_string_int_int
-plt_System_Xml_Linq_XNamespace_Get_string_int_int:
-_p_5:
+.word 3219
+	.no_dead_strip plt_System_Xml_Linq_XNamespace_get_None
+plt_System_Xml_Linq_XNamespace_get_None:
+_p_6:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1720]
 br x16
-.word 3200
-	.no_dead_strip plt_System_Xml_Linq_XNamespace_GetName_string_int_int
-plt_System_Xml_Linq_XNamespace_GetName_string_int_int:
-_p_6:
+.word 3221
+	.no_dead_strip plt__jit_icall_mono_helper_ldstr
+plt__jit_icall_mono_helper_ldstr:
+_p_7:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1728]
 br x16
-.word 3202
-	.no_dead_strip plt_System_Xml_Linq_XNamespace_get_None
-plt_System_Xml_Linq_XNamespace_get_None:
-_p_7:
+.word 3223
+	.no_dead_strip plt_wrapper_alloc_object_AllocVector_intptr_intptr
+plt_wrapper_alloc_object_AllocVector_intptr_intptr:
+_p_8:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1736]
 br x16
-.word 3204
-	.no_dead_strip plt__jit_icall_mono_helper_ldstr
-plt__jit_icall_mono_helper_ldstr:
-_p_8:
+.word 3243
+	.no_dead_strip plt__jit_icall_mono_arch_throw_exception
+plt__jit_icall_mono_arch_throw_exception:
+_p_9:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1744]
 br x16
-.word 3206
-	.no_dead_strip plt_wrapper_alloc_object_AllocVector_intptr_intptr
-plt_wrapper_alloc_object_AllocVector_intptr_intptr:
-_p_9:
+.word 3251
+	.no_dead_strip plt__jit_icall_mono_arch_throw_corlib_exception
+plt__jit_icall_mono_arch_throw_corlib_exception:
+_p_10:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1752]
 br x16
-.word 3226
-	.no_dead_strip plt__jit_icall_mono_arch_throw_exception
-plt__jit_icall_mono_arch_throw_exception:
-_p_10:
+.word 3279
+	.no_dead_strip plt_System_Xml_Linq_XName_Get_string
+plt_System_Xml_Linq_XName_Get_string:
+_p_11:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1760]
 br x16
-.word 3234
-	.no_dead_strip plt__jit_icall_mono_arch_throw_corlib_exception
-plt__jit_icall_mono_arch_throw_corlib_exception:
-_p_11:
+.word 3314
+	.no_dead_strip plt_System_Runtime_Serialization_SerializationInfo_AddValue_string_object
+plt_System_Runtime_Serialization_SerializationInfo_AddValue_string_object:
+_p_12:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1768]
 br x16
-.word 3262
-	.no_dead_strip plt_System_Xml_Linq_XName_Get_string
-plt_System_Xml_Linq_XName_Get_string:
-_p_12:
+.word 3316
+	.no_dead_strip plt_System_Runtime_Serialization_SerializationInfo_SetType_System_Type
+plt_System_Runtime_Serialization_SerializationInfo_SetType_System_Type:
+_p_13:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1776]
 br x16
-.word 3297
-	.no_dead_strip plt_System_Runtime_Serialization_SerializationInfo_AddValue_string_object
-plt_System_Runtime_Serialization_SerializationInfo_AddValue_string_object:
-_p_13:
+.word 3321
+	.no_dead_strip plt_System_Runtime_Serialization_SerializationInfo_GetString_string
+plt_System_Runtime_Serialization_SerializationInfo_GetString_string:
+_p_14:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1784]
 br x16
-.word 3299
-	.no_dead_strip plt_System_Runtime_Serialization_SerializationInfo_SetType_System_Type
-plt_System_Runtime_Serialization_SerializationInfo_SetType_System_Type:
-_p_14:
+.word 3326
+	.no_dead_strip plt_wrapper_alloc_object_AllocSmall_intptr_intptr
+plt_wrapper_alloc_object_AllocSmall_intptr_intptr:
+_p_15:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1792]
 br x16
-.word 3304
-	.no_dead_strip plt_System_Runtime_Serialization_SerializationInfo_GetString_string
-plt_System_Runtime_Serialization_SerializationInfo_GetString_string:
-_p_15:
+.word 3331
+	.no_dead_strip plt_System_Xml_Linq_XHashtable_1_System_Xml_Linq_XName__ctor_System_Xml_Linq_XHashtable_1_ExtractKeyDelegate_System_Xml_Linq_XName_int
+plt_System_Xml_Linq_XHashtable_1_System_Xml_Linq_XName__ctor_System_Xml_Linq_XHashtable_1_ExtractKeyDelegate_System_Xml_Linq_XName_int:
+_p_16:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1800]
 br x16
-.word 3309
-	.no_dead_strip plt_wrapper_alloc_object_AllocSmall_intptr_intptr
-plt_wrapper_alloc_object_AllocSmall_intptr_intptr:
-_p_16:
+.word 3339
+	.no_dead_strip plt_System_Xml_Linq_XNamespace_EnsureNamespace_System_WeakReference__string
+plt_System_Xml_Linq_XNamespace_EnsureNamespace_System_WeakReference__string:
+_p_17:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1808]
 br x16
-.word 3314
-	.no_dead_strip plt_System_Xml_Linq_XHashtable_1_System_Xml_Linq_XName__ctor_System_Xml_Linq_XHashtable_1_ExtractKeyDelegate_System_Xml_Linq_XName_int
-plt_System_Xml_Linq_XHashtable_1_System_Xml_Linq_XName__ctor_System_Xml_Linq_XHashtable_1_ExtractKeyDelegate_System_Xml_Linq_XName_int:
-_p_17:
+.word 3350
+	.no_dead_strip plt_System_Xml_Linq_XHashtable_1_System_Xml_Linq_XName_TryGetValue_string_int_int_System_Xml_Linq_XName_
+plt_System_Xml_Linq_XHashtable_1_System_Xml_Linq_XName_TryGetValue_string_int_int_System_Xml_Linq_XName_:
+_p_18:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1816]
 br x16
-.word 3322
-	.no_dead_strip plt_System_Xml_Linq_XNamespace_EnsureNamespace_System_WeakReference__string
-plt_System_Xml_Linq_XNamespace_EnsureNamespace_System_WeakReference__string:
-_p_18:
+.word 3352
+	.no_dead_strip plt_string_Substring_int_int
+plt_string_Substring_int_int:
+_p_19:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1824]
 br x16
-.word 3333
-	.no_dead_strip plt_System_Xml_Linq_XHashtable_1_System_Xml_Linq_XName_TryGetValue_string_int_int_System_Xml_Linq_XName_
-plt_System_Xml_Linq_XHashtable_1_System_Xml_Linq_XName_TryGetValue_string_int_int_System_Xml_Linq_XName_:
-_p_19:
+.word 3363
+	.no_dead_strip plt_System_Xml_Linq_XHashtable_1_System_Xml_Linq_XName_Add_System_Xml_Linq_XName
+plt_System_Xml_Linq_XHashtable_1_System_Xml_Linq_XName_Add_System_Xml_Linq_XName:
+_p_20:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1832]
 br x16
-.word 3335
-	.no_dead_strip plt_string_Substring_int_int
-plt_string_Substring_int_int:
-_p_20:
+.word 3368
+	.no_dead_strip plt_System_Xml_Linq_XHashtable_1_System_WeakReference__ctor_System_Xml_Linq_XHashtable_1_ExtractKeyDelegate_System_WeakReference_int
+plt_System_Xml_Linq_XHashtable_1_System_WeakReference__ctor_System_Xml_Linq_XHashtable_1_ExtractKeyDelegate_System_WeakReference_int:
+_p_21:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1840]
 br x16
-.word 3346
-	.no_dead_strip plt_System_Xml_Linq_XHashtable_1_System_Xml_Linq_XName_Add_System_Xml_Linq_XName
-plt_System_Xml_Linq_XHashtable_1_System_Xml_Linq_XName_Add_System_Xml_Linq_XName:
-_p_21:
+.word 3379
+	.no_dead_strip plt_System_Xml_Linq_XHashtable_1_System_WeakReference_TryGetValue_string_int_int_System_WeakReference_
+plt_System_Xml_Linq_XHashtable_1_System_WeakReference_TryGetValue_string_int_int_System_WeakReference_:
+_p_22:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1848]
 br x16
-.word 3351
-	.no_dead_strip plt_System_Xml_Linq_XHashtable_1_System_WeakReference__ctor_System_Xml_Linq_XHashtable_1_ExtractKeyDelegate_System_WeakReference_int
-plt_System_Xml_Linq_XHashtable_1_System_WeakReference__ctor_System_Xml_Linq_XHashtable_1_ExtractKeyDelegate_System_WeakReference_int:
-_p_22:
+.word 3390
+	.no_dead_strip plt_string_CompareOrdinal_string_int_string_int_int
+plt_string_CompareOrdinal_string_int_string_int_int:
+_p_23:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1856]
 br x16
-.word 3362
-	.no_dead_strip plt_System_Xml_Linq_XHashtable_1_System_WeakReference_TryGetValue_string_int_int_System_WeakReference_
-plt_System_Xml_Linq_XHashtable_1_System_WeakReference_TryGetValue_string_int_int_System_WeakReference_:
-_p_23:
+.word 3401
+	.no_dead_strip plt_System_Xml_Linq_XNamespace_get_Xml
+plt_System_Xml_Linq_XNamespace_get_Xml:
+_p_24:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1864]
 br x16
-.word 3373
-	.no_dead_strip plt_string_CompareOrdinal_string_int_string_int_int
-plt_string_CompareOrdinal_string_int_string_int_int:
-_p_24:
+.word 3406
+	.no_dead_strip plt_System_Xml_Linq_XNamespace_get_Xmlns
+plt_System_Xml_Linq_XNamespace_get_Xmlns:
+_p_25:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1872]
 br x16
-.word 3384
-	.no_dead_strip plt_System_Xml_Linq_XNamespace_get_Xml
-plt_System_Xml_Linq_XNamespace_get_Xml:
-_p_25:
+.word 3408
+	.no_dead_strip plt_System_Xml_Linq_XNamespace__ctor_string
+plt_System_Xml_Linq_XNamespace__ctor_string:
+_p_26:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1880]
 br x16
-.word 3389
-	.no_dead_strip plt_System_Xml_Linq_XNamespace_get_Xmlns
-plt_System_Xml_Linq_XNamespace_get_Xmlns:
-_p_26:
+.word 3410
+	.no_dead_strip plt__jit_icall_ves_icall_object_new_specific
+plt__jit_icall_ves_icall_object_new_specific:
+_p_27:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1888]
 br x16
-.word 3391
-	.no_dead_strip plt_System_Xml_Linq_XNamespace__ctor_string
-plt_System_Xml_Linq_XNamespace__ctor_string:
-_p_27:
+.word 3412
+	.no_dead_strip plt_System_WeakReference__ctor_object
+plt_System_WeakReference__ctor_object:
+_p_28:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1896]
 br x16
-.word 3393
-	.no_dead_strip plt__jit_icall_ves_icall_object_new_specific
-plt__jit_icall_ves_icall_object_new_specific:
-_p_28:
+.word 3444
+	.no_dead_strip plt_System_Xml_Linq_XHashtable_1_System_WeakReference_Add_System_WeakReference
+plt_System_Xml_Linq_XHashtable_1_System_WeakReference_Add_System_WeakReference:
+_p_29:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1904]
 br x16
-.word 3395
-	.no_dead_strip plt_System_WeakReference__ctor_object
-plt_System_WeakReference__ctor_object:
-_p_29:
+.word 3449
+	.no_dead_strip plt_System_WeakReference_get_Target
+plt_System_WeakReference_get_Target:
+_p_30:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1912]
 br x16
-.word 3427
-	.no_dead_strip plt_System_Xml_Linq_XHashtable_1_System_WeakReference_Add_System_WeakReference
-plt_System_Xml_Linq_XHashtable_1_System_WeakReference_Add_System_WeakReference:
-_p_30:
+.word 3460
+	.no_dead_strip plt__rgctx_fetch_0
+plt__rgctx_fetch_0:
+_p_31:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1920]
 br x16
-.word 3432
-	.no_dead_strip plt_System_WeakReference_get_Target
-plt_System_WeakReference_get_Target:
-_p_31:
+.word 3503
+	.no_dead_strip plt_System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF__ctor_System_Xml_Linq_XHashtable_1_ExtractKeyDelegate_TValue_REF_int
+plt_System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF__ctor_System_Xml_Linq_XHashtable_1_ExtractKeyDelegate_TValue_REF_int:
+_p_32:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1928]
 br x16
-.word 3443
-	.no_dead_strip plt__rgctx_fetch_0
-plt__rgctx_fetch_0:
-_p_32:
+.word 3511
+	.no_dead_strip plt_System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_TryGetValue_string_int_int_TValue_REF_
+plt_System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_TryGetValue_string_int_int_TValue_REF_:
+_p_33:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1936]
 br x16
-.word 3486
-	.no_dead_strip plt_System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF__ctor_System_Xml_Linq_XHashtable_1_ExtractKeyDelegate_TValue_REF_int
-plt_System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF__ctor_System_Xml_Linq_XHashtable_1_ExtractKeyDelegate_TValue_REF_int:
-_p_33:
+.word 3530
+	.no_dead_strip plt_System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_TryAdd_TValue_REF_TValue_REF_
+plt_System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_TryAdd_TValue_REF_TValue_REF_:
+_p_34:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1944]
 br x16
-.word 3494
-	.no_dead_strip plt_System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_TryGetValue_string_int_int_TValue_REF_
-plt_System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_TryGetValue_string_int_int_TValue_REF_:
-_p_34:
+.word 3549
+	.no_dead_strip plt__jit_icall_mono_monitor_enter_v4_internal
+plt__jit_icall_mono_monitor_enter_v4_internal:
+_p_35:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1952]
 br x16
-.word 3513
-	.no_dead_strip plt_System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_TryAdd_TValue_REF_TValue_REF_
-plt_System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_TryAdd_TValue_REF_TValue_REF_:
-_p_35:
+.word 3568
+	.no_dead_strip plt_System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_Resize
+plt_System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_Resize:
+_p_36:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1960]
 br x16
-.word 3532
-	.no_dead_strip plt__jit_icall_mono_monitor_enter_v4_internal
-plt__jit_icall_mono_monitor_enter_v4_internal:
-_p_36:
+.word 3601
+	.no_dead_strip plt_System_Threading_Monitor_Exit_object
+plt_System_Threading_Monitor_Exit_object:
+_p_37:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1968]
 br x16
-.word 3551
-	.no_dead_strip plt_System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_Resize
-plt_System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_Resize:
-_p_37:
+.word 3620
+	.no_dead_strip plt__rgctx_fetch_1
+plt__rgctx_fetch_1:
+_p_38:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1976]
 br x16
-.word 3584
-	.no_dead_strip plt__jit_icall_mono_thread_interruption_checkpoint
-plt__jit_icall_mono_thread_interruption_checkpoint:
-_p_38:
+.word 3663
+	.no_dead_strip plt__rgctx_fetch_2
+plt__rgctx_fetch_2:
+_p_39:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1984]
 br x16
-.word 3603
-	.no_dead_strip plt__rgctx_fetch_1
-plt__rgctx_fetch_1:
-_p_39:
+.word 3691
+	.no_dead_strip plt_System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF__ctor_System_Xml_Linq_XHashtable_1_ExtractKeyDelegate_TValue_REF_int_0
+plt_System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF__ctor_System_Xml_Linq_XHashtable_1_ExtractKeyDelegate_TValue_REF_int_0:
+_p_40:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #1992]
 br x16
-.word 3679
-	.no_dead_strip plt__rgctx_fetch_2
-plt__rgctx_fetch_2:
-_p_40:
+.word 3699
+	.no_dead_strip plt__rgctx_fetch_3
+plt__rgctx_fetch_3:
+_p_41:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2000]
 br x16
-.word 3707
-	.no_dead_strip plt_System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF__ctor_System_Xml_Linq_XHashtable_1_ExtractKeyDelegate_TValue_REF_int_0
-plt_System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF__ctor_System_Xml_Linq_XHashtable_1_ExtractKeyDelegate_TValue_REF_int_0:
-_p_41:
+.word 3736
+	.no_dead_strip plt__rgctx_fetch_4
+plt__rgctx_fetch_4:
+_p_42:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2008]
 br x16
-.word 3715
-	.no_dead_strip plt__rgctx_fetch_3
-plt__rgctx_fetch_3:
-_p_42:
+.word 3762
+	.no_dead_strip plt_System_Xml_Linq_XObject_Annotation_System_Xml_Linq_BaseUriAnnotation
+plt_System_Xml_Linq_XObject_Annotation_System_Xml_Linq_BaseUriAnnotation:
+_p_43:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2016]
 br x16
-.word 3752
-	.no_dead_strip plt__rgctx_fetch_4
-plt__rgctx_fetch_4:
-_p_43:
+.word 3770
+	.no_dead_strip plt_System_Array_Resize_object_object____int
+plt_System_Array_Resize_object_object____int:
+_p_44:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2024]
 br x16
-.word 3778
-	.no_dead_strip plt_System_Xml_Linq_XObject_Annotation_System_Xml_Linq_BaseUriAnnotation
-plt_System_Xml_Linq_XObject_Annotation_System_Xml_Linq_BaseUriAnnotation:
-_p_44:
+.word 3782
+	.no_dead_strip plt__rgctx_fetch_5
+plt__rgctx_fetch_5:
+_p_45:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2032]
 br x16
-.word 3786
-	.no_dead_strip plt_System_Array_Resize_object_object____int
-plt_System_Array_Resize_object_object____int:
-_p_45:
+.word 3817
+	.no_dead_strip plt_wrapper_castclass_object___isinst_with_cache_object_intptr_intptr
+plt_wrapper_castclass_object___isinst_with_cache_object_intptr_intptr:
+_p_46:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2040]
 br x16
-.word 3798
-	.no_dead_strip plt__rgctx_fetch_5
-plt__rgctx_fetch_5:
-_p_46:
+.word 3825
+	.no_dead_strip plt_wrapper_castclass_object___castclass_with_cache_object_intptr_intptr
+plt_wrapper_castclass_object___castclass_with_cache_object_intptr_intptr:
+_p_47:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2048]
 br x16
 .word 3833
-	.no_dead_strip plt_wrapper_castclass_object___isinst_with_cache_object_intptr_intptr
-plt_wrapper_castclass_object___isinst_with_cache_object_intptr_intptr:
-_p_47:
+	.no_dead_strip plt__rgctx_fetch_6
+plt__rgctx_fetch_6:
+_p_48:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2056]
 br x16
-.word 3841
-	.no_dead_strip plt_wrapper_castclass_object___castclass_with_cache_object_intptr_intptr
-plt_wrapper_castclass_object___castclass_with_cache_object_intptr_intptr:
-_p_48:
+.word 3871
+	.no_dead_strip plt_System_Xml_Linq_XObject__Annotationsd__16_1_T_REF__ctor_int
+plt_System_Xml_Linq_XObject__Annotationsd__16_1_T_REF__ctor_int:
+_p_49:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2064]
 br x16
-.word 3849
-	.no_dead_strip plt__rgctx_fetch_6
-plt__rgctx_fetch_6:
-_p_49:
+.word 3879
+	.no_dead_strip plt_System_Xml_Linq_XObject_Annotation_System_Xml_Linq_LineInfoAnnotation
+plt_System_Xml_Linq_XObject_Annotation_System_Xml_Linq_LineInfoAnnotation:
+_p_50:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2072]
 br x16
-.word 3887
-	.no_dead_strip plt_System_Xml_Linq_XObject__Annotationsd__16_1_T_REF__ctor_int
-plt_System_Xml_Linq_XObject__Annotationsd__16_1_T_REF__ctor_int:
-_p_50:
+.word 3898
+	.no_dead_strip plt_System_Xml_Linq_XObject_Annotation_System_Xml_Linq_XObjectChangeAnnotation
+plt_System_Xml_Linq_XObject_Annotation_System_Xml_Linq_XObjectChangeAnnotation:
+_p_51:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2080]
 br x16
-.word 3895
-	.no_dead_strip plt_System_Xml_Linq_XObject_Annotation_System_Xml_Linq_LineInfoAnnotation
-plt_System_Xml_Linq_XObject_Annotation_System_Xml_Linq_LineInfoAnnotation:
-_p_51:
+.word 3910
+	.no_dead_strip plt_System_Xml_Linq_XObject_AddAnnotation_object
+plt_System_Xml_Linq_XObject_AddAnnotation_object:
+_p_52:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2088]
 br x16
-.word 3914
-	.no_dead_strip plt_System_Xml_Linq_XObject_Annotation_System_Xml_Linq_XObjectChangeAnnotation
-plt_System_Xml_Linq_XObject_Annotation_System_Xml_Linq_XObjectChangeAnnotation:
-_p_52:
+.word 3922
+	.no_dead_strip plt_System_Xml_Linq_XObject_Annotations_System_Xml_Linq_XObjectChangeAnnotation
+plt_System_Xml_Linq_XObject_Annotations_System_Xml_Linq_XObjectChangeAnnotation:
+_p_53:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2096]
 br x16
-.word 3926
-	.no_dead_strip plt_System_Xml_Linq_XObject_AddAnnotation_object
-plt_System_Xml_Linq_XObject_AddAnnotation_object:
-_p_53:
+.word 3924
+	.no_dead_strip plt_System_Xml_Linq_XObject_Annotation_System_Type
+plt_System_Xml_Linq_XObject_Annotation_System_Type:
+_p_54:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2104]
 br x16
-.word 3938
-	.no_dead_strip plt_System_Xml_Linq_XObject_Annotations_System_Xml_Linq_XObjectChangeAnnotation
-plt_System_Xml_Linq_XObject_Annotations_System_Xml_Linq_XObjectChangeAnnotation:
-_p_54:
+.word 3936
+	.no_dead_strip plt_System_Environment_get_CurrentManagedThreadId
+plt_System_Environment_get_CurrentManagedThreadId:
+_p_55:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2112]
 br x16
-.word 3940
-	.no_dead_strip plt_System_Xml_Linq_XObject_Annotation_System_Type
-plt_System_Xml_Linq_XObject_Annotation_System_Type:
-_p_55:
+.word 3938
+	.no_dead_strip plt__rgctx_fetch_7
+plt__rgctx_fetch_7:
+_p_56:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2120]
 br x16
-.word 3952
-	.no_dead_strip plt_System_Environment_get_CurrentManagedThreadId
-plt_System_Environment_get_CurrentManagedThreadId:
-_p_56:
+.word 3974
+	.no_dead_strip plt__rgctx_fetch_8
+plt__rgctx_fetch_8:
+_p_57:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2128]
 br x16
-.word 3954
-	.no_dead_strip plt__rgctx_fetch_7
-plt__rgctx_fetch_7:
-_p_57:
+.word 4000
+	.no_dead_strip plt_System_Xml_Linq_XContainer_RemoveNode_System_Xml_Linq_XNode
+plt_System_Xml_Linq_XContainer_RemoveNode_System_Xml_Linq_XNode:
+_p_58:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2136]
 br x16
-.word 3990
-	.no_dead_strip plt__rgctx_fetch_8
-plt__rgctx_fetch_8:
-_p_58:
+.word 4008
+	.no_dead_strip plt_System_Xml_Linq_Res_GetString_string
+plt_System_Xml_Linq_Res_GetString_string:
+_p_59:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2144]
 br x16
-.word 4016
-	.no_dead_strip plt_System_Xml_Linq_XContainer_RemoveNode_System_Xml_Linq_XNode
-plt_System_Xml_Linq_XContainer_RemoveNode_System_Xml_Linq_XNode:
-_p_59:
+.word 4010
+	.no_dead_strip plt_System_Xml_Linq_XObject_GetSaveOptionsFromAnnotations
+plt_System_Xml_Linq_XObject_GetSaveOptionsFromAnnotations:
+_p_60:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2152]
 br x16
-.word 4024
-	.no_dead_strip plt_System_Xml_Linq_Res_GetString_string
-plt_System_Xml_Linq_Res_GetString_string:
-_p_60:
+.word 4013
+	.no_dead_strip plt_System_Xml_Linq_XNode_GetXmlString_System_Xml_Linq_SaveOptions
+plt_System_Xml_Linq_XNode_GetXmlString_System_Xml_Linq_SaveOptions:
+_p_61:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2160]
 br x16
-.word 4026
-	.no_dead_strip plt_System_Xml_Linq_XObject_GetSaveOptionsFromAnnotations
-plt_System_Xml_Linq_XObject_GetSaveOptionsFromAnnotations:
-_p_61:
+.word 4015
+	.no_dead_strip plt_System_Xml_XmlReaderSettings__ctor
+plt_System_Xml_XmlReaderSettings__ctor:
+_p_62:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2168]
 br x16
-.word 4029
-	.no_dead_strip plt_System_Xml_Linq_XNode_GetXmlString_System_Xml_Linq_SaveOptions
-plt_System_Xml_Linq_XNode_GetXmlString_System_Xml_Linq_SaveOptions:
-_p_62:
+.word 4017
+	.no_dead_strip plt_System_Xml_XmlReaderSettings_set_IgnoreWhitespace_bool
+plt_System_Xml_XmlReaderSettings_set_IgnoreWhitespace_bool:
+_p_63:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2176]
 br x16
-.word 4031
-	.no_dead_strip plt_System_Xml_XmlReaderSettings__ctor
-plt_System_Xml_XmlReaderSettings__ctor:
-_p_63:
+.word 4022
+	.no_dead_strip plt_System_Xml_XmlReaderSettings_set_DtdProcessing_System_Xml_DtdProcessing
+plt_System_Xml_XmlReaderSettings_set_DtdProcessing_System_Xml_DtdProcessing:
+_p_64:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2184]
 br x16
-.word 4033
-	.no_dead_strip plt_System_Xml_XmlReaderSettings_set_IgnoreWhitespace_bool
-plt_System_Xml_XmlReaderSettings_set_IgnoreWhitespace_bool:
-_p_64:
+.word 4027
+	.no_dead_strip plt_System_Xml_XmlReaderSettings_set_MaxCharactersFromEntities_long
+plt_System_Xml_XmlReaderSettings_set_MaxCharactersFromEntities_long:
+_p_65:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2192]
 br x16
-.word 4038
-	.no_dead_strip plt_System_Xml_XmlReaderSettings_set_DtdProcessing_System_Xml_DtdProcessing
-plt_System_Xml_XmlReaderSettings_set_DtdProcessing_System_Xml_DtdProcessing:
-_p_65:
+.word 4032
+	.no_dead_strip plt_System_Xml_XmlReaderSettings_set_XmlResolver_System_Xml_XmlResolver
+plt_System_Xml_XmlReaderSettings_set_XmlResolver_System_Xml_XmlResolver:
+_p_66:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2200]
 br x16
-.word 4043
-	.no_dead_strip plt_System_Xml_XmlReaderSettings_set_MaxCharactersFromEntities_long
-plt_System_Xml_XmlReaderSettings_set_MaxCharactersFromEntities_long:
-_p_66:
+.word 4037
+	.no_dead_strip plt__jit_icall_mono_generic_class_init
+plt__jit_icall_mono_generic_class_init:
+_p_67:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2208]
 br x16
-.word 4048
-	.no_dead_strip plt_System_Xml_XmlReaderSettings_set_XmlResolver_System_Xml_XmlResolver
-plt_System_Xml_XmlReaderSettings_set_XmlResolver_System_Xml_XmlResolver:
-_p_67:
+.word 4042
+	.no_dead_strip plt_System_IO_StringWriter__ctor_System_IFormatProvider
+plt_System_IO_StringWriter__ctor_System_IFormatProvider:
+_p_68:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2216]
 br x16
-.word 4053
-	.no_dead_strip plt__jit_icall_mono_generic_class_init
-plt__jit_icall_mono_generic_class_init:
-_p_68:
+.word 4068
+	.no_dead_strip plt_System_Xml_XmlWriterSettings__ctor
+plt_System_Xml_XmlWriterSettings__ctor:
+_p_69:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2224]
 br x16
-.word 4058
-	.no_dead_strip plt_System_IO_StringWriter__ctor_System_IFormatProvider
-plt_System_IO_StringWriter__ctor_System_IFormatProvider:
-_p_69:
+.word 4073
+	.no_dead_strip plt_System_Xml_XmlWriterSettings_set_OmitXmlDeclaration_bool
+plt_System_Xml_XmlWriterSettings_set_OmitXmlDeclaration_bool:
+_p_70:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2232]
 br x16
-.word 4084
-	.no_dead_strip plt_System_Xml_XmlWriterSettings__ctor
-plt_System_Xml_XmlWriterSettings__ctor:
-_p_70:
+.word 4078
+	.no_dead_strip plt_System_Xml_XmlWriterSettings_set_Indent_bool
+plt_System_Xml_XmlWriterSettings_set_Indent_bool:
+_p_71:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2240]
 br x16
-.word 4089
-	.no_dead_strip plt_System_Xml_XmlWriterSettings_set_OmitXmlDeclaration_bool
-plt_System_Xml_XmlWriterSettings_set_OmitXmlDeclaration_bool:
-_p_71:
+.word 4083
+	.no_dead_strip plt_System_Xml_XmlWriterSettings_set_NamespaceHandling_System_Xml_NamespaceHandling
+plt_System_Xml_XmlWriterSettings_set_NamespaceHandling_System_Xml_NamespaceHandling:
+_p_72:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2248]
 br x16
-.word 4094
-	.no_dead_strip plt_System_Xml_XmlWriterSettings_set_Indent_bool
-plt_System_Xml_XmlWriterSettings_set_Indent_bool:
-_p_72:
+.word 4088
+	.no_dead_strip plt_System_Xml_XmlWriterSettings_set_ConformanceLevel_System_Xml_ConformanceLevel
+plt_System_Xml_XmlWriterSettings_set_ConformanceLevel_System_Xml_ConformanceLevel:
+_p_73:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2256]
 br x16
-.word 4099
-	.no_dead_strip plt_System_Xml_XmlWriterSettings_set_NamespaceHandling_System_Xml_NamespaceHandling
-plt_System_Xml_XmlWriterSettings_set_NamespaceHandling_System_Xml_NamespaceHandling:
-_p_73:
+.word 4093
+	.no_dead_strip plt_System_Xml_XmlWriter_Create_System_IO_TextWriter_System_Xml_XmlWriterSettings
+plt_System_Xml_XmlWriter_Create_System_IO_TextWriter_System_Xml_XmlWriterSettings:
+_p_74:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2264]
 br x16
-.word 4104
-	.no_dead_strip plt_System_Xml_XmlWriterSettings_set_ConformanceLevel_System_Xml_ConformanceLevel
-plt_System_Xml_XmlWriterSettings_set_ConformanceLevel_System_Xml_ConformanceLevel:
-_p_74:
+.word 4098
+	.no_dead_strip plt_System_Xml_Linq_XContainer_WriteContentTo_System_Xml_XmlWriter
+plt_System_Xml_Linq_XContainer_WriteContentTo_System_Xml_XmlWriter:
+_p_75:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2272]
 br x16
-.word 4109
-	.no_dead_strip plt_System_Xml_XmlWriter_Create_System_IO_TextWriter_System_Xml_XmlWriterSettings
-plt_System_Xml_XmlWriter_Create_System_IO_TextWriter_System_Xml_XmlWriterSettings:
-_p_75:
+.word 4103
+	.no_dead_strip plt_System_Xml_Linq_XObject_NotifyChanging_object_System_Xml_Linq_XObjectChangeEventArgs
+plt_System_Xml_Linq_XObject_NotifyChanging_object_System_Xml_Linq_XObjectChangeEventArgs:
+_p_76:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2280]
 br x16
-.word 4114
-	.no_dead_strip plt_System_Xml_Linq_XContainer_WriteContentTo_System_Xml_XmlWriter
-plt_System_Xml_Linq_XContainer_WriteContentTo_System_Xml_XmlWriter:
-_p_76:
+.word 4105
+	.no_dead_strip plt_System_Xml_Linq_XObject_NotifyChanged_object_System_Xml_Linq_XObjectChangeEventArgs
+plt_System_Xml_Linq_XObject_NotifyChanged_object_System_Xml_Linq_XObjectChangeEventArgs:
+_p_77:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2288]
 br x16
-.word 4119
-	.no_dead_strip plt_System_Xml_Linq_XObject_NotifyChanging_object_System_Xml_Linq_XObjectChangeEventArgs
-plt_System_Xml_Linq_XObject_NotifyChanging_object_System_Xml_Linq_XObjectChangeEventArgs:
-_p_77:
+.word 4107
+	.no_dead_strip plt_System_Text_StringBuilder_Append_string
+plt_System_Text_StringBuilder_Append_string:
+_p_78:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2296]
 br x16
-.word 4121
-	.no_dead_strip plt_System_Xml_Linq_XObject_NotifyChanged_object_System_Xml_Linq_XObjectChangeEventArgs
-plt_System_Xml_Linq_XObject_NotifyChanged_object_System_Xml_Linq_XObjectChangeEventArgs:
-_p_78:
+.word 4109
+	.no_dead_strip plt_System_Xml_Linq_XContainer_AppendNodeSkipNotify_System_Xml_Linq_XNode
+plt_System_Xml_Linq_XContainer_AppendNodeSkipNotify_System_Xml_Linq_XNode:
+_p_79:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2304]
 br x16
-.word 4123
-	.no_dead_strip plt_System_Text_StringBuilder_Append_string
-plt_System_Text_StringBuilder_Append_string:
-_p_79:
+.word 4114
+	.no_dead_strip plt_System_Xml_Linq_XObject_SkipNotify
+plt_System_Xml_Linq_XObject_SkipNotify:
+_p_80:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2312]
 br x16
-.word 4125
-	.no_dead_strip plt_System_Xml_Linq_XContainer_AppendNodeSkipNotify_System_Xml_Linq_XNode
-plt_System_Xml_Linq_XContainer_AppendNodeSkipNotify_System_Xml_Linq_XNode:
-_p_80:
+.word 4116
+	.no_dead_strip plt_System_Xml_Linq_XContainer_AddContentSkipNotify_object
+plt_System_Xml_Linq_XContainer_AddContentSkipNotify_object:
+_p_81:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2320]
 br x16
-.word 4130
-	.no_dead_strip plt_System_Xml_Linq_XObject_SkipNotify
-plt_System_Xml_Linq_XObject_SkipNotify:
-_p_81:
+.word 4118
+	.no_dead_strip plt_System_Xml_Linq_XContainer_AddString_string
+plt_System_Xml_Linq_XContainer_AddString_string:
+_p_82:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2328]
 br x16
-.word 4132
-	.no_dead_strip plt_System_Xml_Linq_XContainer_AddContentSkipNotify_object
-plt_System_Xml_Linq_XContainer_AddContentSkipNotify_object:
-_p_82:
+.word 4120
+	.no_dead_strip plt_System_Xml_Linq_XContainer_Add_object
+plt_System_Xml_Linq_XContainer_Add_object:
+_p_83:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2336]
 br x16
-.word 4134
-	.no_dead_strip plt_System_Xml_Linq_XContainer_AddString_string
-plt_System_Xml_Linq_XContainer_AddString_string:
-_p_83:
+.word 4122
+	.no_dead_strip plt_System_Xml_Linq_XContainer_GetStringValue_object
+plt_System_Xml_Linq_XContainer_GetStringValue_object:
+_p_84:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2344]
 br x16
-.word 4136
-	.no_dead_strip plt_System_Xml_Linq_XContainer_Add_object
-plt_System_Xml_Linq_XContainer_Add_object:
-_p_84:
+.word 4124
+	.no_dead_strip plt_System_Xml_Linq_XContainer_RemoveNodesSkipNotify
+plt_System_Xml_Linq_XContainer_RemoveNodesSkipNotify:
+_p_85:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2352]
 br x16
-.word 4138
-	.no_dead_strip plt_System_Xml_Linq_XContainer_GetStringValue_object
-plt_System_Xml_Linq_XContainer_GetStringValue_object:
-_p_85:
+.word 4126
+	.no_dead_strip plt_System_Xml_Linq_XContainer_ConvertTextToNode
+plt_System_Xml_Linq_XContainer_ConvertTextToNode:
+_p_86:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2360]
 br x16
-.word 4140
-	.no_dead_strip plt_System_Xml_Linq_XContainer_RemoveNodesSkipNotify
-plt_System_Xml_Linq_XContainer_RemoveNodesSkipNotify:
-_p_86:
+.word 4128
+	.no_dead_strip plt_System_Xml_Linq_XContainer_AddStringSkipNotify_string
+plt_System_Xml_Linq_XContainer_AddStringSkipNotify_string:
+_p_87:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2368]
 br x16
-.word 4142
-	.no_dead_strip plt_System_Xml_Linq_XContainer_ConvertTextToNode
-plt_System_Xml_Linq_XContainer_ConvertTextToNode:
-_p_87:
+.word 4130
+	.no_dead_strip plt_System_Xml_Linq_XContainer_AppendNode_System_Xml_Linq_XNode
+plt_System_Xml_Linq_XContainer_AppendNode_System_Xml_Linq_XNode:
+_p_88:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2376]
 br x16
-.word 4144
-	.no_dead_strip plt_System_Xml_Linq_XContainer_AddStringSkipNotify_string
-plt_System_Xml_Linq_XContainer_AddStringSkipNotify_string:
-_p_88:
+.word 4132
+	.no_dead_strip plt_string_Concat_string_string
+plt_string_Concat_string_string:
+_p_89:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2384]
 br x16
-.word 4146
-	.no_dead_strip plt_System_Xml_Linq_XContainer_AppendNode_System_Xml_Linq_XNode
-plt_System_Xml_Linq_XContainer_AppendNode_System_Xml_Linq_XNode:
-_p_89:
+.word 4134
+	.no_dead_strip plt_System_Xml_Linq_XText_set_Value_string
+plt_System_Xml_Linq_XText_set_Value_string:
+_p_90:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2392]
 br x16
-.word 4148
-	.no_dead_strip plt_string_Concat_string_string
-plt_string_Concat_string_string:
-_p_90:
+.word 4139
+	.no_dead_strip plt_System_Xml_XmlConvert_ToString_System_DateTime_System_Xml_XmlDateTimeSerializationMode
+plt_System_Xml_XmlConvert_ToString_System_DateTime_System_Xml_XmlDateTimeSerializationMode:
+_p_91:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2400]
 br x16
-.word 4150
-	.no_dead_strip plt_System_Xml_Linq_XText_set_Value_string
-plt_System_Xml_Linq_XText_set_Value_string:
-_p_91:
+.word 4141
+	.no_dead_strip plt_System_Xml_XmlConvert_ToString_double
+plt_System_Xml_XmlConvert_ToString_double:
+_p_92:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2408]
 br x16
-.word 4155
-	.no_dead_strip plt_System_Xml_XmlConvert_ToString_System_DateTime_System_Xml_XmlDateTimeSerializationMode
-plt_System_Xml_XmlConvert_ToString_System_DateTime_System_Xml_XmlDateTimeSerializationMode:
-_p_92:
+.word 4146
+	.no_dead_strip plt_System_Xml_XmlConvert_ToString_single
+plt_System_Xml_XmlConvert_ToString_single:
+_p_93:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2416]
 br x16
-.word 4157
-	.no_dead_strip plt_System_Xml_XmlConvert_ToString_double
-plt_System_Xml_XmlConvert_ToString_double:
-_p_93:
+.word 4151
+	.no_dead_strip plt_System_Xml_XmlConvert_ToString_System_Decimal
+plt_System_Xml_XmlConvert_ToString_System_Decimal:
+_p_94:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2424]
 br x16
-.word 4162
-	.no_dead_strip plt_System_Xml_XmlConvert_ToString_single
-plt_System_Xml_XmlConvert_ToString_single:
-_p_94:
+.word 4156
+	.no_dead_strip plt_System_Xml_XmlConvert_ToString_System_DateTimeOffset
+plt_System_Xml_XmlConvert_ToString_System_DateTimeOffset:
+_p_95:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2432]
 br x16
-.word 4167
-	.no_dead_strip plt_System_Xml_XmlConvert_ToString_System_Decimal
-plt_System_Xml_XmlConvert_ToString_System_Decimal:
-_p_95:
+.word 4161
+	.no_dead_strip plt_System_Xml_XmlConvert_ToString_System_TimeSpan
+plt_System_Xml_XmlConvert_ToString_System_TimeSpan:
+_p_96:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2440]
 br x16
-.word 4172
-	.no_dead_strip plt_System_Xml_XmlConvert_ToString_System_DateTimeOffset
-plt_System_Xml_XmlConvert_ToString_System_DateTimeOffset:
-_p_96:
+.word 4166
+	.no_dead_strip plt_System_Xml_Linq_XContainer_ReadContentFrom_System_Xml_XmlReader
+plt_System_Xml_Linq_XContainer_ReadContentFrom_System_Xml_XmlReader:
+_p_97:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2448]
 br x16
-.word 4177
-	.no_dead_strip plt_System_Xml_XmlConvert_ToString_System_TimeSpan
-plt_System_Xml_XmlConvert_ToString_System_TimeSpan:
-_p_97:
+.word 4171
+	.no_dead_strip plt_string_op_Inequality_string_string
+plt_string_op_Inequality_string_string:
+_p_98:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2456]
 br x16
-.word 4182
-	.no_dead_strip plt_System_Xml_Linq_XContainer_ReadContentFrom_System_Xml_XmlReader
-plt_System_Xml_Linq_XContainer_ReadContentFrom_System_Xml_XmlReader:
-_p_98:
+.word 4173
+	.no_dead_strip plt_System_Xml_Linq_XObject_SetBaseUri_string
+plt_System_Xml_Linq_XObject_SetBaseUri_string:
+_p_99:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2464]
 br x16
-.word 4187
-	.no_dead_strip plt_string_op_Inequality_string_string
-plt_string_op_Inequality_string_string:
-_p_99:
+.word 4178
+	.no_dead_strip plt_System_Xml_Linq_XObject_SetLineInfo_int_int
+plt_System_Xml_Linq_XObject_SetLineInfo_int_int:
+_p_100:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2472]
 br x16
-.word 4189
-	.no_dead_strip plt_System_Xml_Linq_XObject_SetBaseUri_string
-plt_System_Xml_Linq_XObject_SetBaseUri_string:
-_p_100:
+.word 4180
+	.no_dead_strip plt_System_Xml_Linq_XElement_SetEndElementLineInfo_int_int
+plt_System_Xml_Linq_XElement_SetEndElementLineInfo_int_int:
+_p_101:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2480]
 br x16
-.word 4194
-	.no_dead_strip plt_System_Xml_Linq_XObject_SetLineInfo_int_int
-plt_System_Xml_Linq_XObject_SetLineInfo_int_int:
-_p_101:
+.word 4182
+	.no_dead_strip plt_System_Xml_Linq_XObject_get_HasBaseUri
+plt_System_Xml_Linq_XObject_get_HasBaseUri:
+_p_102:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2488]
 br x16
-.word 4196
-	.no_dead_strip plt_System_Xml_Linq_XElement_SetEndElementLineInfo_int_int
-plt_System_Xml_Linq_XElement_SetEndElementLineInfo_int_int:
-_p_102:
+.word 4185
+	.no_dead_strip plt_System_Xml_Linq_XObject_get_BaseUri
+plt_System_Xml_Linq_XObject_get_BaseUri:
+_p_103:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2496]
 br x16
-.word 4198
-	.no_dead_strip plt_System_Xml_Linq_XObject_get_HasBaseUri
-plt_System_Xml_Linq_XObject_get_HasBaseUri:
-_p_103:
+.word 4187
+	.no_dead_strip plt_System_Xml_Linq_XContainer_get_LastNode
+plt_System_Xml_Linq_XContainer_get_LastNode:
+_p_104:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2504]
 br x16
-.word 4201
-	.no_dead_strip plt_System_Xml_Linq_XObject_get_BaseUri
-plt_System_Xml_Linq_XObject_get_BaseUri:
-_p_104:
+.word 4189
+	.no_dead_strip plt_System_Xml_Linq_XContainer__Nodesd__18_System_Collections_Generic_IEnumerable_System_Xml_Linq_XNode_GetEnumerator
+plt_System_Xml_Linq_XContainer__Nodesd__18_System_Collections_Generic_IEnumerable_System_Xml_Linq_XNode_GetEnumerator:
+_p_105:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2512]
 br x16
-.word 4203
-	.no_dead_strip plt_System_Xml_Linq_XContainer_get_LastNode
-plt_System_Xml_Linq_XContainer_get_LastNode:
-_p_105:
+.word 4191
+	.no_dead_strip plt_System_Xml_Linq_XContainer__ctor_System_Xml_Linq_XContainer
+plt_System_Xml_Linq_XContainer__ctor_System_Xml_Linq_XContainer:
+_p_106:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2520]
 br x16
-.word 4205
-	.no_dead_strip plt_System_Xml_Linq_XContainer__Nodesd__18_System_Collections_Generic_IEnumerable_System_Xml_Linq_XNode_GetEnumerator
-plt_System_Xml_Linq_XContainer__Nodesd__18_System_Collections_Generic_IEnumerable_System_Xml_Linq_XNode_GetEnumerator:
-_p_106:
+.word 4194
+	.no_dead_strip plt_System_Xml_Linq_XElement_ReadElementFrom_System_Xml_XmlReader_System_Xml_Linq_LoadOptions
+plt_System_Xml_Linq_XElement_ReadElementFrom_System_Xml_XmlReader_System_Xml_Linq_LoadOptions:
+_p_107:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2528]
 br x16
-.word 4207
-	.no_dead_strip plt_System_Xml_Linq_XContainer__ctor_System_Xml_Linq_XContainer
-plt_System_Xml_Linq_XContainer__ctor_System_Xml_Linq_XContainer:
-_p_107:
+.word 4196
+	.no_dead_strip plt_System_Xml_XmlDocument__ctor
+plt_System_Xml_XmlDocument__ctor:
+_p_108:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2536]
 br x16
-.word 4210
-	.no_dead_strip plt_System_Xml_Linq_XElement_ReadElementFrom_System_Xml_XmlReader_System_Xml_Linq_LoadOptions
-plt_System_Xml_Linq_XElement_ReadElementFrom_System_Xml_XmlReader_System_Xml_Linq_LoadOptions:
-_p_108:
+.word 4199
+	.no_dead_strip plt_System_Xml_XmlDocument_ImportNode_System_Xml_XmlNode_bool
+plt_System_Xml_XmlDocument_ImportNode_System_Xml_XmlNode_bool:
+_p_109:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2544]
 br x16
-.word 4212
-	.no_dead_strip plt_System_Xml_XmlDocument__ctor
-plt_System_Xml_XmlDocument__ctor:
-_p_109:
+.word 4204
+	.no_dead_strip plt_System_Text_StringBuilder__ctor
+plt_System_Text_StringBuilder__ctor:
+_p_110:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2552]
 br x16
-.word 4215
-	.no_dead_strip plt_System_Xml_XmlDocument_ImportNode_System_Xml_XmlNode_bool
-plt_System_Xml_XmlDocument_ImportNode_System_Xml_XmlNode_bool:
-_p_110:
+.word 4209
+	.no_dead_strip plt_System_Xml_Linq_XContainer_RemoveNodes
+plt_System_Xml_Linq_XContainer_RemoveNodes:
+_p_111:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2560]
 br x16
-.word 4220
-	.no_dead_strip plt_System_Text_StringBuilder__ctor
-plt_System_Text_StringBuilder__ctor:
-_p_111:
+.word 4214
+	.no_dead_strip plt_System_Xml_Linq_XElement_GetAttributes_System_Xml_Linq_XName
+plt_System_Xml_Linq_XElement_GetAttributes_System_Xml_Linq_XName:
+_p_112:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2568]
 br x16
-.word 4225
-	.no_dead_strip plt_System_Xml_Linq_XContainer_RemoveNodes
-plt_System_Xml_Linq_XContainer_RemoveNodes:
-_p_112:
+.word 4216
+	.no_dead_strip plt_System_Xml_Linq_XAttribute_get_IsNamespaceDeclaration
+plt_System_Xml_Linq_XAttribute_get_IsNamespaceDeclaration:
+_p_113:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2576]
 br x16
-.word 4230
-	.no_dead_strip plt_System_Xml_Linq_XElement_GetAttributes_System_Xml_Linq_XName
-plt_System_Xml_Linq_XElement_GetAttributes_System_Xml_Linq_XName:
-_p_113:
+.word 4219
+	.no_dead_strip plt_string_op_Equality_string_string
+plt_string_op_Equality_string_string:
+_p_114:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2584]
 br x16
-.word 4232
-	.no_dead_strip plt_System_Xml_Linq_XAttribute_get_IsNamespaceDeclaration
-plt_System_Xml_Linq_XAttribute_get_IsNamespaceDeclaration:
-_p_114:
+.word 4222
+	.no_dead_strip plt_System_Xml_Linq_XElement_GetNamespaceOfPrefixInScope_string_System_Xml_Linq_XElement
+plt_System_Xml_Linq_XElement_GetNamespaceOfPrefixInScope_string_System_Xml_Linq_XElement:
+_p_115:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2592]
 br x16
-.word 4235
-	.no_dead_strip plt_string_op_Equality_string_string
-plt_string_op_Equality_string_string:
-_p_115:
+.word 4227
+	.no_dead_strip plt_System_Xml_Linq_XElement_Parse_string_System_Xml_Linq_LoadOptions
+plt_System_Xml_Linq_XElement_Parse_string_System_Xml_Linq_LoadOptions:
+_p_116:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2600]
 br x16
-.word 4238
-	.no_dead_strip plt_System_Xml_Linq_XElement_GetNamespaceOfPrefixInScope_string_System_Xml_Linq_XElement
-plt_System_Xml_Linq_XElement_GetNamespaceOfPrefixInScope_string_System_Xml_Linq_XElement:
-_p_116:
+.word 4230
+	.no_dead_strip plt_System_IO_StringReader__ctor_string
+plt_System_IO_StringReader__ctor_string:
+_p_117:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2608]
 br x16
-.word 4243
-	.no_dead_strip plt_System_Xml_Linq_XElement_Parse_string_System_Xml_Linq_LoadOptions
-plt_System_Xml_Linq_XElement_Parse_string_System_Xml_Linq_LoadOptions:
-_p_117:
+.word 4233
+	.no_dead_strip plt_System_Xml_Linq_XNode_GetXmlReaderSettings_System_Xml_Linq_LoadOptions
+plt_System_Xml_Linq_XNode_GetXmlReaderSettings_System_Xml_Linq_LoadOptions:
+_p_118:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2616]
 br x16
-.word 4246
-	.no_dead_strip plt_System_IO_StringReader__ctor_string
-plt_System_IO_StringReader__ctor_string:
-_p_118:
+.word 4238
+	.no_dead_strip plt_System_Xml_XmlReader_Create_System_IO_TextReader_System_Xml_XmlReaderSettings
+plt_System_Xml_XmlReader_Create_System_IO_TextReader_System_Xml_XmlReaderSettings:
+_p_119:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2624]
 br x16
-.word 4249
-	.no_dead_strip plt_System_Xml_Linq_XNode_GetXmlReaderSettings_System_Xml_Linq_LoadOptions
-plt_System_Xml_Linq_XNode_GetXmlReaderSettings_System_Xml_Linq_LoadOptions:
-_p_119:
+.word 4240
+	.no_dead_strip plt_System_Xml_Linq_XElement_Load_System_Xml_XmlReader_System_Xml_Linq_LoadOptions
+plt_System_Xml_Linq_XElement_Load_System_Xml_XmlReader_System_Xml_Linq_LoadOptions:
+_p_120:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2632]
 br x16
-.word 4254
-	.no_dead_strip plt_System_Xml_XmlReader_Create_System_IO_TextReader_System_Xml_XmlReaderSettings
-plt_System_Xml_XmlReader_Create_System_IO_TextReader_System_Xml_XmlReaderSettings:
-_p_120:
+.word 4245
+	.no_dead_strip plt_System_Xml_Linq_ElementWriter_WriteElement_System_Xml_Linq_XElement
+plt_System_Xml_Linq_ElementWriter_WriteElement_System_Xml_Linq_XElement:
+_p_121:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2640]
 br x16
-.word 4256
-	.no_dead_strip plt_System_Xml_Linq_XElement_Load_System_Xml_XmlReader_System_Xml_Linq_LoadOptions
-plt_System_Xml_Linq_XElement_Load_System_Xml_XmlReader_System_Xml_Linq_LoadOptions:
-_p_121:
+.word 4248
+	.no_dead_strip plt_System_Xml_Linq_XElement_AppendAttribute_System_Xml_Linq_XAttribute
+plt_System_Xml_Linq_XElement_AppendAttribute_System_Xml_Linq_XAttribute:
+_p_122:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2648]
 br x16
-.word 4261
-	.no_dead_strip plt_System_Xml_Linq_ElementWriter_WriteElement_System_Xml_Linq_XElement
-plt_System_Xml_Linq_ElementWriter_WriteElement_System_Xml_Linq_XElement:
-_p_122:
+.word 4251
+	.no_dead_strip plt_System_Xml_Linq_XElement__ctor_System_Xml_Linq_XElement
+plt_System_Xml_Linq_XElement__ctor_System_Xml_Linq_XElement:
+_p_123:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2656]
 br x16
-.word 4264
-	.no_dead_strip plt_System_Xml_Linq_XElement_AppendAttribute_System_Xml_Linq_XAttribute
-plt_System_Xml_Linq_XElement_AppendAttribute_System_Xml_Linq_XAttribute:
-_p_123:
+.word 4254
+	.no_dead_strip plt_System_Xml_Linq_XContainer_ReadContentFrom_System_Xml_XmlReader_System_Xml_Linq_LoadOptions
+plt_System_Xml_Linq_XContainer_ReadContentFrom_System_Xml_XmlReader_System_Xml_Linq_LoadOptions:
+_p_124:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2664]
 br x16
-.word 4267
-	.no_dead_strip plt_System_Xml_Linq_XElement__ctor_System_Xml_Linq_XElement
-plt_System_Xml_Linq_XElement__ctor_System_Xml_Linq_XElement:
-_p_124:
+.word 4257
+	.no_dead_strip plt_System_Xml_Linq_XElement__GetAttributesd__105_System_Collections_Generic_IEnumerable_System_Xml_Linq_XAttribute_GetEnumerator
+plt_System_Xml_Linq_XElement__GetAttributesd__105_System_Collections_Generic_IEnumerable_System_Xml_Linq_XAttribute_GetEnumerator:
+_p_125:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2672]
 br x16
-.word 4270
-	.no_dead_strip plt_System_Xml_Linq_XContainer_ReadContentFrom_System_Xml_XmlReader_System_Xml_Linq_LoadOptions
-plt_System_Xml_Linq_XContainer_ReadContentFrom_System_Xml_XmlReader_System_Xml_Linq_LoadOptions:
-_p_125:
+.word 4259
+	.no_dead_strip plt_System_Xml_Linq_ElementWriter_PushAncestors_System_Xml_Linq_XElement
+plt_System_Xml_Linq_ElementWriter_PushAncestors_System_Xml_Linq_XElement:
+_p_126:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2680]
 br x16
-.word 4273
-	.no_dead_strip plt_System_Xml_Linq_XElement__GetAttributesd__105_System_Collections_Generic_IEnumerable_System_Xml_Linq_XAttribute_GetEnumerator
-plt_System_Xml_Linq_XElement__GetAttributesd__105_System_Collections_Generic_IEnumerable_System_Xml_Linq_XAttribute_GetEnumerator:
-_p_126:
+.word 4262
+	.no_dead_strip plt_System_Xml_Linq_ElementWriter_WriteStartElement_System_Xml_Linq_XElement
+plt_System_Xml_Linq_ElementWriter_WriteStartElement_System_Xml_Linq_XElement:
+_p_127:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2688]
 br x16
-.word 4275
-	.no_dead_strip plt_System_Xml_Linq_ElementWriter_PushAncestors_System_Xml_Linq_XElement
-plt_System_Xml_Linq_ElementWriter_PushAncestors_System_Xml_Linq_XElement:
-_p_127:
+.word 4265
+	.no_dead_strip plt_System_Xml_Linq_NamespaceResolver_AddFirst_string_System_Xml_Linq_XNamespace
+plt_System_Xml_Linq_NamespaceResolver_AddFirst_string_System_Xml_Linq_XNamespace:
+_p_128:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2696]
 br x16
-.word 4278
-	.no_dead_strip plt_System_Xml_Linq_ElementWriter_WriteStartElement_System_Xml_Linq_XElement
-plt_System_Xml_Linq_ElementWriter_WriteStartElement_System_Xml_Linq_XElement:
-_p_128:
+.word 4268
+	.no_dead_strip plt_System_Xml_Linq_NamespaceResolver_Add_string_System_Xml_Linq_XNamespace
+plt_System_Xml_Linq_NamespaceResolver_Add_string_System_Xml_Linq_XNamespace:
+_p_129:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2704]
 br x16
-.word 4281
-	.no_dead_strip plt_System_Xml_Linq_NamespaceResolver_AddFirst_string_System_Xml_Linq_XNamespace
-plt_System_Xml_Linq_NamespaceResolver_AddFirst_string_System_Xml_Linq_XNamespace:
-_p_129:
+.word 4271
+	.no_dead_strip plt_System_Xml_Linq_ElementWriter_PushElement_System_Xml_Linq_XElement
+plt_System_Xml_Linq_ElementWriter_PushElement_System_Xml_Linq_XElement:
+_p_130:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2712]
 br x16
-.word 4284
-	.no_dead_strip plt_System_Xml_Linq_NamespaceResolver_Add_string_System_Xml_Linq_XNamespace
-plt_System_Xml_Linq_NamespaceResolver_Add_string_System_Xml_Linq_XNamespace:
-_p_130:
+.word 4274
+	.no_dead_strip plt_System_Xml_Linq_ElementWriter_GetPrefixOfNamespace_System_Xml_Linq_XNamespace_bool
+plt_System_Xml_Linq_ElementWriter_GetPrefixOfNamespace_System_Xml_Linq_XNamespace_bool:
+_p_131:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2720]
 br x16
-.word 4287
-	.no_dead_strip plt_System_Xml_Linq_ElementWriter_PushElement_System_Xml_Linq_XElement
-plt_System_Xml_Linq_ElementWriter_PushElement_System_Xml_Linq_XElement:
-_p_131:
+.word 4277
+	.no_dead_strip plt_System_Xml_XmlWriter_WriteAttributeString_string_string_string_string
+plt_System_Xml_XmlWriter_WriteAttributeString_string_string_string_string:
+_p_132:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2728]
 br x16
-.word 4290
-	.no_dead_strip plt_System_Xml_Linq_ElementWriter_GetPrefixOfNamespace_System_Xml_Linq_XNamespace_bool
-plt_System_Xml_Linq_ElementWriter_GetPrefixOfNamespace_System_Xml_Linq_XNamespace_bool:
-_p_132:
+.word 4280
+	.no_dead_strip plt_System_Xml_Linq_XDocument_GetFirstNode_System_Xml_Linq_XElement
+plt_System_Xml_Linq_XDocument_GetFirstNode_System_Xml_Linq_XElement:
+_p_133:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2736]
 br x16
-.word 4293
-	.no_dead_strip plt_System_Xml_XmlWriter_WriteAttributeString_string_string_string_string
-plt_System_Xml_XmlWriter_WriteAttributeString_string_string_string_string:
-_p_133:
+.word 4285
+	.no_dead_strip plt_System_Xml_Linq_XDocument__ctor_System_Xml_Linq_XDocument
+plt_System_Xml_Linq_XDocument__ctor_System_Xml_Linq_XDocument:
+_p_134:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2744]
 br x16
-.word 4296
-	.no_dead_strip plt_System_Xml_Linq_XDocument_GetFirstNode_System_Xml_Linq_XElement
-plt_System_Xml_Linq_XDocument_GetFirstNode_System_Xml_Linq_XElement:
-_p_134:
+.word 4297
+	.no_dead_strip plt__rgctx_fetch_9
+plt__rgctx_fetch_9:
+_p_135:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2752]
 br x16
-.word 4301
-	.no_dead_strip plt_System_Xml_Linq_XDocument__ctor_System_Xml_Linq_XDocument
-plt_System_Xml_Linq_XDocument__ctor_System_Xml_Linq_XDocument:
-_p_135:
+.word 4323
+	.no_dead_strip plt_System_Xml_Linq_XDocument_ValidateDocument_System_Xml_Linq_XNode_System_Xml_XmlNodeType_System_Xml_XmlNodeType
+plt_System_Xml_Linq_XDocument_ValidateDocument_System_Xml_Linq_XNode_System_Xml_XmlNodeType_System_Xml_XmlNodeType:
+_p_136:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2760]
 br x16
-.word 4313
-	.no_dead_strip plt__rgctx_fetch_9
-plt__rgctx_fetch_9:
-_p_136:
+.word 4331
+	.no_dead_strip plt_System_Xml_Linq_XProcessingInstruction_ValidateName_string
+plt_System_Xml_Linq_XProcessingInstruction_ValidateName_string:
+_p_137:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2768]
 br x16
-.word 4339
-	.no_dead_strip plt_System_Xml_Linq_XDocument_ValidateDocument_System_Xml_Linq_XNode_System_Xml_XmlNodeType_System_Xml_XmlNodeType
-plt_System_Xml_Linq_XDocument_ValidateDocument_System_Xml_Linq_XNode_System_Xml_XmlNodeType_System_Xml_XmlNodeType:
-_p_137:
+.word 4334
+	.no_dead_strip plt_string_Compare_string_string_System_StringComparison
+plt_string_Compare_string_string_System_StringComparison:
+_p_138:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2776]
 br x16
-.word 4347
-	.no_dead_strip plt_System_Xml_Linq_XProcessingInstruction_ValidateName_string
-plt_System_Xml_Linq_XProcessingInstruction_ValidateName_string:
-_p_138:
+.word 4337
+	.no_dead_strip plt_System_Text_StringBuilder__ctor_string
+plt_System_Text_StringBuilder__ctor_string:
+_p_139:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2784]
 br x16
-.word 4350
-	.no_dead_strip plt_string_Compare_string_string_System_StringComparison
-plt_string_Compare_string_string_System_StringComparison:
-_p_139:
+.word 4342
+	.no_dead_strip plt_System_Xml_XmlConvert_VerifyName_string
+plt_System_Xml_XmlConvert_VerifyName_string:
+_p_140:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2792]
 br x16
-.word 4353
-	.no_dead_strip plt_System_Text_StringBuilder__ctor_string
-plt_System_Text_StringBuilder__ctor_string:
-_p_140:
+.word 4347
+	.no_dead_strip plt_System_Xml_Linq_XAttribute_ValidateAttribute_System_Xml_Linq_XName_string
+plt_System_Xml_Linq_XAttribute_ValidateAttribute_System_Xml_Linq_XName_string:
+_p_141:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2800]
 br x16
-.word 4358
-	.no_dead_strip plt_System_Xml_XmlConvert_VerifyName_string
-plt_System_Xml_XmlConvert_VerifyName_string:
-_p_141:
+.word 4352
+	.no_dead_strip plt_System_Xml_Linq_XAttribute_GetPrefixOfNamespace_System_Xml_Linq_XNamespace
+plt_System_Xml_Linq_XAttribute_GetPrefixOfNamespace_System_Xml_Linq_XNamespace:
+_p_142:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2808]
 br x16
-.word 4363
-	.no_dead_strip plt_System_Xml_Linq_XAttribute_ValidateAttribute_System_Xml_Linq_XName_string
-plt_System_Xml_Linq_XAttribute_ValidateAttribute_System_Xml_Linq_XName_string:
-_p_142:
+.word 4355
+	.no_dead_strip plt_string_Trim
+plt_string_Trim:
+_p_143:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2816]
 br x16
-.word 4368
-	.no_dead_strip plt_System_Xml_Linq_XAttribute_GetPrefixOfNamespace_System_Xml_Linq_XNamespace
-plt_System_Xml_Linq_XAttribute_GetPrefixOfNamespace_System_Xml_Linq_XNamespace:
-_p_143:
+.word 4358
+	.no_dead_strip plt_System_Xml_Linq_XElement_GetPrefixOfNamespace_System_Xml_Linq_XNamespace
+plt_System_Xml_Linq_XElement_GetPrefixOfNamespace_System_Xml_Linq_XNamespace:
+_p_144:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2824]
 br x16
-.word 4371
-	.no_dead_strip plt_string_Trim
-plt_string_Trim:
-_p_144:
+.word 4363
+	.no_dead_strip plt_System_Xml_Linq_XStreamingElement_GetXmlString_System_Xml_Linq_SaveOptions
+plt_System_Xml_Linq_XStreamingElement_GetXmlString_System_Xml_Linq_SaveOptions:
+_p_145:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2832]
 br x16
-.word 4374
-	.no_dead_strip plt_System_Xml_Linq_XElement_GetPrefixOfNamespace_System_Xml_Linq_XNamespace
-plt_System_Xml_Linq_XElement_GetPrefixOfNamespace_System_Xml_Linq_XNamespace:
-_p_145:
+.word 4366
+	.no_dead_strip plt_System_Xml_Linq_StreamingElementWriter__ctor_System_Xml_XmlWriter
+plt_System_Xml_Linq_StreamingElementWriter__ctor_System_Xml_XmlWriter:
+_p_146:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2840]
 br x16
-.word 4379
-	.no_dead_strip plt_System_Xml_Linq_XStreamingElement_GetXmlString_System_Xml_Linq_SaveOptions
-plt_System_Xml_Linq_XStreamingElement_GetXmlString_System_Xml_Linq_SaveOptions:
-_p_146:
+.word 4369
+	.no_dead_strip plt_System_Xml_Linq_StreamingElementWriter_PushElement
+plt_System_Xml_Linq_StreamingElementWriter_PushElement:
+_p_147:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2848]
 br x16
-.word 4382
-	.no_dead_strip plt_System_Xml_Linq_StreamingElementWriter__ctor_System_Xml_XmlWriter
-plt_System_Xml_Linq_StreamingElementWriter__ctor_System_Xml_XmlWriter:
-_p_147:
+.word 4372
+	.no_dead_strip plt_System_Xml_Linq_StreamingElementWriter_GetPrefixOfNamespace_System_Xml_Linq_XNamespace_bool
+plt_System_Xml_Linq_StreamingElementWriter_GetPrefixOfNamespace_System_Xml_Linq_XNamespace_bool:
+_p_148:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2856]
 br x16
-.word 4385
-	.no_dead_strip plt_System_Xml_Linq_StreamingElementWriter_PushElement
-plt_System_Xml_Linq_StreamingElementWriter_PushElement:
-_p_148:
+.word 4375
+	.no_dead_strip plt_System_Collections_Generic_List_1_System_Xml_Linq_XAttribute_GetEnumerator
+plt_System_Collections_Generic_List_1_System_Xml_Linq_XAttribute_GetEnumerator:
+_p_149:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2864]
 br x16
-.word 4388
-	.no_dead_strip plt_System_Xml_Linq_StreamingElementWriter_GetPrefixOfNamespace_System_Xml_Linq_XNamespace_bool
-plt_System_Xml_Linq_StreamingElementWriter_GetPrefixOfNamespace_System_Xml_Linq_XNamespace_bool:
-_p_149:
+.word 4378
+	.no_dead_strip plt_System_Collections_Generic_List_1_Enumerator_System_Xml_Linq_XAttribute_MoveNext
+plt_System_Collections_Generic_List_1_Enumerator_System_Xml_Linq_XAttribute_MoveNext:
+_p_150:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2872]
 br x16
-.word 4391
-	.no_dead_strip plt_System_Collections_Generic_List_1_System_Xml_Linq_XAttribute_GetEnumerator
-plt_System_Collections_Generic_List_1_System_Xml_Linq_XAttribute_GetEnumerator:
-_p_150:
+.word 4389
+	.no_dead_strip plt_System_Collections_Generic_List_1_System_Xml_Linq_XAttribute_Clear
+plt_System_Collections_Generic_List_1_System_Xml_Linq_XAttribute_Clear:
+_p_151:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2880]
 br x16
-.word 4394
-	.no_dead_strip plt_System_Collections_Generic_List_1_Enumerator_System_Xml_Linq_XAttribute_MoveNext
-plt_System_Collections_Generic_List_1_Enumerator_System_Xml_Linq_XAttribute_MoveNext:
-_p_151:
+.word 4400
+	.no_dead_strip plt_System_Xml_Linq_StreamingElementWriter_Write_object
+plt_System_Xml_Linq_StreamingElementWriter_Write_object:
+_p_152:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2888]
 br x16
-.word 4405
-	.no_dead_strip plt_System_Collections_Generic_List_1_System_Xml_Linq_XAttribute_Clear
-plt_System_Collections_Generic_List_1_System_Xml_Linq_XAttribute_Clear:
-_p_152:
+.word 4411
+	.no_dead_strip plt_System_Collections_Generic_List_1_System_Xml_Linq_XAttribute_Add_System_Xml_Linq_XAttribute
+plt_System_Collections_Generic_List_1_System_Xml_Linq_XAttribute_Add_System_Xml_Linq_XAttribute:
+_p_153:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2896]
 br x16
-.word 4416
-	.no_dead_strip plt_System_Xml_Linq_StreamingElementWriter_Write_object
-plt_System_Xml_Linq_StreamingElementWriter_Write_object:
-_p_153:
+.word 4414
+	.no_dead_strip plt_System_Xml_Linq_StreamingElementWriter_FlushElement
+plt_System_Xml_Linq_StreamingElementWriter_FlushElement:
+_p_154:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2904]
 br x16
-.word 4427
-	.no_dead_strip plt_System_Collections_Generic_List_1_System_Xml_Linq_XAttribute_Add_System_Xml_Linq_XAttribute
-plt_System_Collections_Generic_List_1_System_Xml_Linq_XAttribute_Add_System_Xml_Linq_XAttribute:
-_p_154:
+.word 4425
+	.no_dead_strip plt__PrivateImplementationDetails_ComputeStringHash_string
+plt__PrivateImplementationDetails_ComputeStringHash_string:
+_p_155:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2912]
 br x16
-.word 4430
-	.no_dead_strip plt_System_Xml_Linq_StreamingElementWriter_FlushElement
-plt_System_Xml_Linq_StreamingElementWriter_FlushElement:
-_p_155:
+.word 4428
+	.no_dead_strip plt_System_Globalization_CultureInfo_get_CurrentCulture
+plt_System_Globalization_CultureInfo_get_CurrentCulture:
+_p_156:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2920]
 br x16
-.word 4441
-	.no_dead_strip plt__PrivateImplementationDetails_ComputeStringHash_string
-plt__PrivateImplementationDetails_ComputeStringHash_string:
-_p_156:
+.word 4431
+	.no_dead_strip plt_string_Format_System_IFormatProvider_string_object__
+plt_string_Format_System_IFormatProvider_string_object__:
+_p_157:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2928]
 br x16
-.word 4444
-	.no_dead_strip plt_System_Globalization_CultureInfo_get_CurrentCulture
-plt_System_Globalization_CultureInfo_get_CurrentCulture:
-_p_157:
+.word 4436
+	.no_dead_strip plt__rgctx_fetch_10
+plt__rgctx_fetch_10:
+_p_158:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2936]
 br x16
-.word 4447
-	.no_dead_strip plt_string_Format_System_IFormatProvider_string_object__
-plt_string_Format_System_IFormatProvider_string_object__:
-_p_158:
+.word 4459
+	.no_dead_strip plt__rgctx_fetch_11
+plt__rgctx_fetch_11:
+_p_159:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2944]
 br x16
-.word 4452
-	.no_dead_strip plt__rgctx_fetch_10
-plt__rgctx_fetch_10:
-_p_159:
+.word 4497
+	.no_dead_strip plt_wrapper_alloc_object_Alloc_intptr
+plt_wrapper_alloc_object_Alloc_intptr:
+_p_160:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2952]
 br x16
-.word 4475
-	.no_dead_strip plt__rgctx_fetch_11
-plt__rgctx_fetch_11:
-_p_160:
+.word 4505
+	.no_dead_strip plt__rgctx_fetch_12
+plt__rgctx_fetch_12:
+_p_161:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2960]
 br x16
 .word 4513
-	.no_dead_strip plt_wrapper_alloc_object_Alloc_intptr
-plt_wrapper_alloc_object_Alloc_intptr:
-_p_161:
+	.no_dead_strip plt__rgctx_fetch_13
+plt__rgctx_fetch_13:
+_p_162:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2968]
 br x16
-.word 4521
-	.no_dead_strip plt__rgctx_fetch_12
-plt__rgctx_fetch_12:
-_p_162:
+.word 4567
+	.no_dead_strip plt__rgctx_fetch_14
+plt__rgctx_fetch_14:
+_p_163:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2976]
 br x16
-.word 4529
-	.no_dead_strip plt__rgctx_fetch_13
-plt__rgctx_fetch_13:
-_p_163:
+.word 4598
+	.no_dead_strip plt__rgctx_fetch_15
+plt__rgctx_fetch_15:
+_p_164:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2984]
 br x16
-.word 4583
-	.no_dead_strip plt__rgctx_fetch_14
-plt__rgctx_fetch_14:
-_p_164:
+.word 4652
+	.no_dead_strip plt__rgctx_fetch_16
+plt__rgctx_fetch_16:
+_p_165:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #2992]
 br x16
-.word 4614
-	.no_dead_strip plt__rgctx_fetch_15
-plt__rgctx_fetch_15:
-_p_165:
+.word 4703
+	.no_dead_strip plt__rgctx_fetch_17
+plt__rgctx_fetch_17:
+_p_166:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3000]
 br x16
-.word 4668
-	.no_dead_strip plt__rgctx_fetch_16
-plt__rgctx_fetch_16:
-_p_166:
+.word 4740
+	.no_dead_strip plt__rgctx_fetch_18
+plt__rgctx_fetch_18:
+_p_167:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3008]
 br x16
-.word 4719
-	.no_dead_strip plt__rgctx_fetch_17
-plt__rgctx_fetch_17:
-_p_167:
+.word 4748
+	.no_dead_strip plt__rgctx_fetch_19
+plt__rgctx_fetch_19:
+_p_168:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3016]
 br x16
-.word 4756
-	.no_dead_strip plt__rgctx_fetch_18
-plt__rgctx_fetch_18:
-_p_168:
+.word 4800
+	.no_dead_strip plt__rgctx_fetch_20
+plt__rgctx_fetch_20:
+_p_169:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3024]
 br x16
-.word 4764
-	.no_dead_strip plt__rgctx_fetch_19
-plt__rgctx_fetch_19:
-_p_169:
+.word 4848
+	.no_dead_strip plt__rgctx_fetch_21
+plt__rgctx_fetch_21:
+_p_170:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3032]
 br x16
-.word 4816
-	.no_dead_strip plt__rgctx_fetch_20
-plt__rgctx_fetch_20:
-_p_170:
+.word 4876
+	.no_dead_strip plt__rgctx_fetch_22
+plt__rgctx_fetch_22:
+_p_171:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3040]
 br x16
-.word 4864
-	.no_dead_strip plt__rgctx_fetch_21
-plt__rgctx_fetch_21:
-_p_171:
+.word 4967
+	.no_dead_strip plt__rgctx_fetch_23
+plt__rgctx_fetch_23:
+_p_172:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3048]
 br x16
-.word 4892
-	.no_dead_strip plt__rgctx_fetch_22
-plt__rgctx_fetch_22:
-_p_172:
+.word 4999
+	.no_dead_strip plt__rgctx_fetch_24
+plt__rgctx_fetch_24:
+_p_173:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3056]
 br x16
-.word 4983
-	.no_dead_strip plt__rgctx_fetch_23
-plt__rgctx_fetch_23:
-_p_173:
+.word 5007
+	.no_dead_strip plt__rgctx_fetch_25
+plt__rgctx_fetch_25:
+_p_174:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3064]
 br x16
-.word 5015
-	.no_dead_strip plt__rgctx_fetch_24
-plt__rgctx_fetch_24:
-_p_174:
+.word 5043
+	.no_dead_strip plt__rgctx_fetch_26
+plt__rgctx_fetch_26:
+_p_175:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3072]
 br x16
-.word 5023
-	.no_dead_strip plt__rgctx_fetch_25
-plt__rgctx_fetch_25:
-_p_175:
+.word 5098
+	.no_dead_strip plt__rgctx_fetch_27
+plt__rgctx_fetch_27:
+_p_176:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3080]
 br x16
-.word 5059
-	.no_dead_strip plt__rgctx_fetch_26
-plt__rgctx_fetch_26:
-_p_176:
+.word 5154
+	.no_dead_strip plt__rgctx_fetch_28
+plt__rgctx_fetch_28:
+_p_177:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3088]
 br x16
-.word 5114
-	.no_dead_strip plt__rgctx_fetch_27
-plt__rgctx_fetch_27:
-_p_177:
+.word 5162
+	.no_dead_strip plt__rgctx_fetch_29
+plt__rgctx_fetch_29:
+_p_178:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3096]
 br x16
-.word 5170
-	.no_dead_strip plt__rgctx_fetch_28
-plt__rgctx_fetch_28:
-_p_178:
+.word 5193
+	.no_dead_strip plt__rgctx_fetch_30
+plt__rgctx_fetch_30:
+_p_179:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3104]
 br x16
-.word 5178
-	.no_dead_strip plt__rgctx_fetch_29
-plt__rgctx_fetch_29:
-_p_179:
+.word 5227
+	.no_dead_strip plt__rgctx_fetch_31
+plt__rgctx_fetch_31:
+_p_180:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3112]
 br x16
-.word 5209
-	.no_dead_strip plt__rgctx_fetch_30
-plt__rgctx_fetch_30:
-_p_180:
+.word 5253
+	.no_dead_strip plt__rgctx_fetch_32
+plt__rgctx_fetch_32:
+_p_181:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3120]
 br x16
-.word 5243
-	.no_dead_strip plt__rgctx_fetch_31
-plt__rgctx_fetch_31:
-_p_181:
+.word 5330
+	.no_dead_strip plt__rgctx_fetch_33
+plt__rgctx_fetch_33:
+_p_182:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3128]
 br x16
-.word 5269
-	.no_dead_strip plt__rgctx_fetch_32
-plt__rgctx_fetch_32:
-_p_182:
+.word 5338
+	.no_dead_strip plt__rgctx_fetch_34
+plt__rgctx_fetch_34:
+_p_183:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3136]
 br x16
-.word 5346
-	.no_dead_strip plt__rgctx_fetch_33
-plt__rgctx_fetch_33:
-_p_183:
+.word 5370
+	.no_dead_strip plt__rgctx_fetch_35
+plt__rgctx_fetch_35:
+_p_184:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3144]
 br x16
-.word 5354
-	.no_dead_strip plt__rgctx_fetch_34
-plt__rgctx_fetch_34:
-_p_184:
+.word 5378
+	.no_dead_strip plt__rgctx_fetch_36
+plt__rgctx_fetch_36:
+_p_185:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3152]
 br x16
-.word 5386
-	.no_dead_strip plt__rgctx_fetch_35
-plt__rgctx_fetch_35:
-_p_185:
+.word 5409
+	.no_dead_strip plt__rgctx_fetch_37
+plt__rgctx_fetch_37:
+_p_186:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3160]
 br x16
-.word 5394
-	.no_dead_strip plt__rgctx_fetch_36
-plt__rgctx_fetch_36:
-_p_186:
+.word 5461
+	.no_dead_strip plt__rgctx_fetch_38
+plt__rgctx_fetch_38:
+_p_187:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3168]
 br x16
-.word 5425
-	.no_dead_strip plt__rgctx_fetch_37
-plt__rgctx_fetch_37:
-_p_187:
+.word 5537
+	.no_dead_strip plt__rgctx_fetch_39
+plt__rgctx_fetch_39:
+_p_188:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3176]
 br x16
-.word 5477
-	.no_dead_strip plt__rgctx_fetch_38
-plt__rgctx_fetch_38:
-_p_188:
+.word 5587
+	.no_dead_strip plt__rgctx_fetch_40
+plt__rgctx_fetch_40:
+_p_189:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3184]
 br x16
-.word 5553
-	.no_dead_strip plt__rgctx_fetch_39
-plt__rgctx_fetch_39:
-_p_189:
+.word 5630
+	.no_dead_strip plt__rgctx_fetch_41
+plt__rgctx_fetch_41:
+_p_190:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3192]
 br x16
-.word 5603
-	.no_dead_strip plt__rgctx_fetch_40
-plt__rgctx_fetch_40:
-_p_190:
+.word 5719
+	.no_dead_strip plt__jit_icall_mono_object_castclass_unbox
+plt__jit_icall_mono_object_castclass_unbox:
+_p_191:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3200]
 br x16
-.word 5646
-	.no_dead_strip plt__rgctx_fetch_41
-plt__rgctx_fetch_41:
-_p_191:
+.word 5727
+	.no_dead_strip plt__rgctx_fetch_42
+plt__rgctx_fetch_42:
+_p_192:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3208]
 br x16
-.word 5735
-	.no_dead_strip plt__jit_icall_mono_object_castclass_unbox
-plt__jit_icall_mono_object_castclass_unbox:
-_p_192:
+.word 5757
+	.no_dead_strip plt__rgctx_fetch_43
+plt__rgctx_fetch_43:
+_p_193:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3216]
 br x16
-.word 5743
-	.no_dead_strip plt__rgctx_fetch_42
-plt__rgctx_fetch_42:
-_p_193:
+.word 5765
+	.no_dead_strip plt__rgctx_fetch_44
+plt__rgctx_fetch_44:
+_p_194:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3224]
 br x16
-.word 5773
-	.no_dead_strip plt__rgctx_fetch_43
-plt__rgctx_fetch_43:
-_p_194:
+.word 5797
+	.no_dead_strip plt__rgctx_fetch_45
+plt__rgctx_fetch_45:
+_p_195:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3232]
 br x16
-.word 5781
-	.no_dead_strip plt__rgctx_fetch_44
-plt__rgctx_fetch_44:
-_p_195:
+.word 5827
+	.no_dead_strip plt__rgctx_fetch_46
+plt__rgctx_fetch_46:
+_p_196:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3240]
 br x16
-.word 5813
-	.no_dead_strip plt__rgctx_fetch_45
-plt__rgctx_fetch_45:
-_p_196:
+.word 5835
+	.no_dead_strip plt__rgctx_fetch_47
+plt__rgctx_fetch_47:
+_p_197:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3248]
 br x16
-.word 5843
-	.no_dead_strip plt__rgctx_fetch_46
-plt__rgctx_fetch_46:
-_p_197:
+.word 5876
+	.no_dead_strip plt__rgctx_fetch_48
+plt__rgctx_fetch_48:
+_p_198:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3256]
 br x16
-.word 5851
-	.no_dead_strip plt__rgctx_fetch_47
-plt__rgctx_fetch_47:
-_p_198:
+.word 5930
+	.no_dead_strip plt__rgctx_fetch_49
+plt__rgctx_fetch_49:
+_p_199:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3264]
 br x16
-.word 5892
-	.no_dead_strip plt__rgctx_fetch_48
-plt__rgctx_fetch_48:
-_p_199:
+.word 5974
+	.no_dead_strip plt__rgctx_fetch_50
+plt__rgctx_fetch_50:
+_p_200:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3272]
 br x16
-.word 5946
-	.no_dead_strip plt__rgctx_fetch_49
-plt__rgctx_fetch_49:
-_p_200:
+.word 6085
+	.no_dead_strip plt__rgctx_fetch_51
+plt__rgctx_fetch_51:
+_p_201:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3280]
 br x16
-.word 5990
-	.no_dead_strip plt__rgctx_fetch_50
-plt__rgctx_fetch_50:
-_p_201:
+.word 6093
+	.no_dead_strip plt__rgctx_fetch_52
+plt__rgctx_fetch_52:
+_p_202:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3288]
 br x16
 .word 6101
-	.no_dead_strip plt__rgctx_fetch_51
-plt__rgctx_fetch_51:
-_p_202:
+	.no_dead_strip plt__rgctx_fetch_53
+plt__rgctx_fetch_53:
+_p_203:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3296]
 br x16
-.word 6109
-	.no_dead_strip plt__rgctx_fetch_52
-plt__rgctx_fetch_52:
-_p_203:
+.word 6127
+	.no_dead_strip plt__rgctx_fetch_54
+plt__rgctx_fetch_54:
+_p_204:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3304]
 br x16
-.word 6117
-	.no_dead_strip plt__rgctx_fetch_53
-plt__rgctx_fetch_53:
-_p_204:
+.word 6170
+	.no_dead_strip plt__rgctx_fetch_55
+plt__rgctx_fetch_55:
+_p_205:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3312]
 br x16
-.word 6143
-	.no_dead_strip plt__rgctx_fetch_54
-plt__rgctx_fetch_54:
-_p_205:
+.word 6196
+	.no_dead_strip plt__rgctx_fetch_56
+plt__rgctx_fetch_56:
+_p_206:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3320]
 br x16
-.word 6186
-	.no_dead_strip plt__rgctx_fetch_55
-plt__rgctx_fetch_55:
-_p_206:
+.word 6240
+	.no_dead_strip plt__rgctx_fetch_57
+plt__rgctx_fetch_57:
+_p_207:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3328]
 br x16
-.word 6212
-	.no_dead_strip plt__rgctx_fetch_56
-plt__rgctx_fetch_56:
-_p_207:
+.word 6291
+	.no_dead_strip plt__rgctx_fetch_58
+plt__rgctx_fetch_58:
+_p_208:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3336]
 br x16
-.word 6256
-	.no_dead_strip plt__rgctx_fetch_57
-plt__rgctx_fetch_57:
-_p_208:
+.word 6299
+	.no_dead_strip plt__rgctx_fetch_59
+plt__rgctx_fetch_59:
+_p_209:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3344]
 br x16
-.word 6307
-	.no_dead_strip plt__rgctx_fetch_58
-plt__rgctx_fetch_58:
-_p_209:
+.word 6325
+	.no_dead_strip plt__rgctx_fetch_60
+plt__rgctx_fetch_60:
+_p_210:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3352]
 br x16
-.word 6315
-	.no_dead_strip plt__rgctx_fetch_59
-plt__rgctx_fetch_59:
-_p_210:
+.word 6366
+	.no_dead_strip plt__rgctx_fetch_61
+plt__rgctx_fetch_61:
+_p_211:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3360]
 br x16
-.word 6341
-	.no_dead_strip plt__rgctx_fetch_60
-plt__rgctx_fetch_60:
-_p_211:
+.word 6374
+	.no_dead_strip plt__rgctx_fetch_62
+plt__rgctx_fetch_62:
+_p_212:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3368]
 br x16
-.word 6382
-	.no_dead_strip plt__rgctx_fetch_61
-plt__rgctx_fetch_61:
-_p_212:
+.word 6415
+	.no_dead_strip plt__rgctx_fetch_63
+plt__rgctx_fetch_63:
+_p_213:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3376]
 br x16
-.word 6390
-	.no_dead_strip plt__rgctx_fetch_62
-plt__rgctx_fetch_62:
-_p_213:
+.word 6441
+	.no_dead_strip plt__rgctx_fetch_64
+plt__rgctx_fetch_64:
+_p_214:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3384]
 br x16
-.word 6431
-	.no_dead_strip plt__rgctx_fetch_63
-plt__rgctx_fetch_63:
-_p_214:
+.word 6494
+	.no_dead_strip plt__rgctx_fetch_65
+plt__rgctx_fetch_65:
+_p_215:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3392]
 br x16
-.word 6457
-	.no_dead_strip plt__rgctx_fetch_64
-plt__rgctx_fetch_64:
-_p_215:
+.word 6571
+	.no_dead_strip plt__rgctx_fetch_66
+plt__rgctx_fetch_66:
+_p_216:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3400]
 br x16
-.word 6510
-	.no_dead_strip plt__rgctx_fetch_65
-plt__rgctx_fetch_65:
-_p_216:
+.word 6579
+	.no_dead_strip plt__rgctx_fetch_67
+plt__rgctx_fetch_67:
+_p_217:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3408]
 br x16
 .word 6587
-	.no_dead_strip plt__rgctx_fetch_66
-plt__rgctx_fetch_66:
-_p_217:
+	.no_dead_strip plt__jit_icall_mono_thread_interruption_checkpoint
+plt__jit_icall_mono_thread_interruption_checkpoint:
+_p_218:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
 ldr x16, [x16, #3416]
 br x16
 .word 6595
-	.no_dead_strip plt__rgctx_fetch_67
-plt__rgctx_fetch_67:
-_p_218:
-adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
-add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x16, [x16, #3424]
-br x16
-.word 6603
 	.no_dead_strip plt__rgctx_fetch_68
 plt__rgctx_fetch_68:
 _p_219:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x16, [x16, #3432]
+ldr x16, [x16, #3424]
 br x16
-.word 6639
+.word 6661
 	.no_dead_strip plt_System_Array_InternalEnumerator_1_T_REF__ctor_System_Array
 plt_System_Array_InternalEnumerator_1_T_REF__ctor_System_Array:
 _p_220:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x16, [x16, #3440]
+ldr x16, [x16, #3432]
 br x16
-.word 6647
+.word 6669
 	.no_dead_strip plt__jit_icall_mono_helper_ldstr_mscorlib
 plt__jit_icall_mono_helper_ldstr_mscorlib:
 _p_221:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x16, [x16, #3448]
+ldr x16, [x16, #3440]
 br x16
-.word 6666
+.word 6688
 	.no_dead_strip plt__rgctx_fetch_69
 plt__rgctx_fetch_69:
 _p_222:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x16, [x16, #3456]
+ldr x16, [x16, #3448]
 br x16
-.word 6714
+.word 6736
 	.no_dead_strip plt_System_Array_Copy_System_Array_int_System_Array_int_int
 plt_System_Array_Copy_System_Array_int_System_Array_int_int:
 _p_223:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x16, [x16, #3464]
+ldr x16, [x16, #3456]
 br x16
-.word 6738
+.word 6760
 	.no_dead_strip plt__rgctx_fetch_70
 plt__rgctx_fetch_70:
 _p_224:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x16, [x16, #3472]
+ldr x16, [x16, #3464]
 br x16
-.word 6753
+.word 6775
 	.no_dead_strip plt__rgctx_fetch_71
 plt__rgctx_fetch_71:
 _p_225:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x16, [x16, #3480]
+ldr x16, [x16, #3472]
 br x16
-.word 6771
+.word 6793
 	.no_dead_strip plt__rgctx_fetch_72
 plt__rgctx_fetch_72:
 _p_226:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x16, [x16, #3488]
+ldr x16, [x16, #3480]
 br x16
-.word 6785
+.word 6807
 	.no_dead_strip plt__rgctx_fetch_73
 plt__rgctx_fetch_73:
 _p_227:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x16, [x16, #3496]
+ldr x16, [x16, #3488]
 br x16
-.word 6799
+.word 6821
 	.no_dead_strip plt__rgctx_fetch_74
 plt__rgctx_fetch_74:
 _p_228:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x16, [x16, #3504]
+ldr x16, [x16, #3496]
 br x16
-.word 6841
+.word 6863
 	.no_dead_strip plt__jit_icall_mono_delegate_begin_invoke
 plt__jit_icall_mono_delegate_begin_invoke:
 _p_229:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x16, [x16, #3512]
+ldr x16, [x16, #3504]
 br x16
-.word 6859
+.word 6881
 	.no_dead_strip plt__rgctx_fetch_75
 plt__rgctx_fetch_75:
 _p_230:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x16, [x16, #3520]
+ldr x16, [x16, #3512]
 br x16
-.word 6898
+.word 6920
 	.no_dead_strip plt__jit_icall_mono_delegate_end_invoke
 plt__jit_icall_mono_delegate_end_invoke:
 _p_231:
 adrp x16, mono_aot_System_Xml_Linq_got@PAGE+0
 add x16, x16, mono_aot_System_Xml_Linq_got@PAGEOFF
-ldr x16, [x16, #3528]
+ldr x16, [x16, #3520]
 br x16
-.word 6916
+.word 6938
 plt_end:
 .section __DATA, __bss
 	.align 3
-.lcomm mono_aot_System_Xml_Linq_got, 3536
+.lcomm mono_aot_System_Xml_Linq_got, 3528
 got_end:
 .section __TEXT, __const
 	.align 3
@@ -21803,7 +22826,7 @@ runtime_version:
 .section __TEXT, __const
 	.align 2
 assembly_guid:
-	.asciz "DACA9CB8-3607-45CC-96E9-1EE0DAC6D063"
+	.asciz "63A56A12-32B0-4FE4-8134-642582BD0521"
 .section __TEXT, __const
 	.align 2
 assembly_name:
@@ -21880,13 +22903,13 @@ _mono_aot_file_info:
 	.align 3
 	.quad unbox_trampoline_addresses
 
-	.long 210,3536,232,301,66,391195135,0,10365
-	.long 128,8,8,10,0,26,13520,3144
+	.long 209,3528,232,301,66,391195135,0,10386
+	.long 128,8,8,10,0,25,13536,3144
 	.long 2864,1736,0,2352,2792,2056,0,1400
 	.long 440,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0
-	.byte 18,249,136,147,90,47,126,76,201,175,149,175,192,108,56,35
+	.byte 59,88,63,133,216,162,193,148,132,9,63,236,29,221,161,249
 	.globl _mono_aot_module_System_Xml_Linq_info
 	.align 3
 _mono_aot_module_System_Xml_Linq_info:
@@ -23206,7 +24229,7 @@ Lfde13_start:
 LDIFF_SYM199=Lme_d - System_Xml_Linq_NameSerializer__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext
 	.long LDIFF_SYM199
 	.long 0
-	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,154,6
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,154,4
 	.align 3
 Lfde13_end:
 
@@ -23328,7 +24351,7 @@ Lfde16_start:
 LDIFF_SYM212=Lme_10 - System_Xml_Linq_XNamespace__ctor_string
 	.long LDIFF_SYM212
 	.long 0
-	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,153,6,154,5
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,153,4,154,3
 	.align 3
 Lfde16_end:
 
@@ -24003,7 +25026,7 @@ Lfde33_start:
 LDIFF_SYM282=Lme_21 - System_Xml_Linq_XNamespace_EnsureNamespace_System_WeakReference__string
 	.long LDIFF_SYM282
 	.long 0
-	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29,68,150,10,151,9,68,152,8,153,7,68,154,6
+	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,150,8,151,7,68,152,6,153,5,68,154,4
 	.align 3
 Lfde33_end:
 
@@ -24140,7 +25163,7 @@ Lfde34_start:
 LDIFF_SYM304=Lme_22 - System_Xml_Linq_XHashtable_1_TValue_REF__ctor_System_Xml_Linq_XHashtable_1_ExtractKeyDelegate_TValue_REF_int
 	.long LDIFF_SYM304
 	.long 0
-	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29
 	.align 3
 Lfde34_end:
 
@@ -24253,7 +25276,7 @@ Lfde36_start:
 LDIFF_SYM319=Lme_24 - System_Xml_Linq_XHashtable_1_TValue_REF_Add_TValue_REF
 	.long LDIFF_SYM319
 	.long 0
-	.byte 12,31,0,68,14,128,1,157,16,158,15,68,13,29,68,152,14,153,13,68,154,12
+	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29,68,152,10,153,9,68,154,8
 	.align 3
 Lfde36_end:
 
@@ -24362,7 +25385,7 @@ Lfde37_start:
 LDIFF_SYM336=Lme_29 - System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF__ctor_System_Xml_Linq_XHashtable_1_ExtractKeyDelegate_TValue_REF_int
 	.long LDIFF_SYM336
 	.long 0
-	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29
 	.align 3
 Lfde37_end:
 
@@ -24495,7 +25518,7 @@ Lfde39_start:
 LDIFF_SYM355=Lme_2b - System_Xml_Linq_XHashtable_1_XHashtableState_TValue_REF_TryGetValue_string_int_int_TValue_REF_
 	.long LDIFF_SYM355
 	.long 0
-	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29
 	.align 3
 Lfde39_end:
 
@@ -24968,7 +25991,7 @@ Lfde46_start:
 LDIFF_SYM421=Lme_33 - System_Xml_Linq_XObject_AddAnnotation_object
 	.long LDIFF_SYM421
 	.long 0
-	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29,68,150,10,151,9,68,152,8,153,7,68,154,6
+	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,150,8,151,7,68,152,6,153,5,68,154,4
 	.align 3
 Lfde46_end:
 
@@ -25591,7 +26614,7 @@ Lfde56_start:
 LDIFF_SYM502=Lme_3d - System_Xml_Linq_XObject_SetBaseUri_string
 	.long LDIFF_SYM502
 	.long 0
-	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
 Lfde56_end:
 
@@ -31395,7 +32418,7 @@ Lfde80_start:
 LDIFF_SYM1434=Lme_57 - System_Xml_Linq_XText__ctor_System_Xml_Linq_XText
 	.long LDIFF_SYM1434
 	.long 0
-	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
 Lfde80_end:
 
@@ -31502,7 +32525,7 @@ Lfde83_start:
 LDIFF_SYM1444=Lme_5a - System_Xml_Linq_XText_set_Value_string
 	.long LDIFF_SYM1444
 	.long 0
-	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,153,4
+	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29,68,153,2
 	.align 3
 Lfde83_end:
 
@@ -31899,7 +32922,7 @@ Lfde93_start:
 LDIFF_SYM1485=Lme_64 - System_Xml_Linq_XContainer__ctor_System_Xml_Linq_XContainer
 	.long LDIFF_SYM1485
 	.long 0
-	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,151,6,152,5,68,153,4,154,3
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,151,4,152,3,68,153,2,154,1
 	.align 3
 Lfde93_end:
 
@@ -32260,7 +33283,7 @@ Lfde97_start:
 LDIFF_SYM1538=Lme_68 - System_Xml_Linq_XContainer_RemoveNodes
 	.long LDIFF_SYM1538
 	.long 0
-	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,152,6,153,5,68,154,4
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,152,4,153,3,68,154,2
 	.align 3
 Lfde97_end:
 
@@ -32696,7 +33719,7 @@ Lfde106_start:
 LDIFF_SYM1591=Lme_71 - System_Xml_Linq_XContainer_AppendNodeSkipNotify_System_Xml_Linq_XNode
 	.long LDIFF_SYM1591
 	.long 0
-	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,151,6,152,5,68,153,4,154,3
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,151,4,152,3,68,153,2,154,1
 	.align 3
 Lfde106_end:
 
@@ -33226,7 +34249,7 @@ Lfde113_start:
 LDIFF_SYM1657=Lme_78 - System_Xml_Linq_XContainer_RemoveNode_System_Xml_Linq_XNode
 	.long LDIFF_SYM1657
 	.long 0
-	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,150,8,151,7,68,153,6,154,5
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,150,6,151,5,68,153,4,154,3
 	.align 3
 Lfde113_end:
 
@@ -33561,7 +34584,7 @@ Lfde120_start:
 LDIFF_SYM1697=Lme_7f - System_Xml_Linq_XContainer__Nodesd__18_MoveNext
 	.long LDIFF_SYM1697
 	.long 0
-	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,152,6,153,5,68,154,4
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,152,4,153,3,68,154,2
 	.align 3
 Lfde120_end:
 
@@ -33807,7 +34830,7 @@ Lfde126_start:
 LDIFF_SYM1723=Lme_85 - System_Xml_Linq_NamespaceCache_Get_string
 	.long LDIFF_SYM1723
 	.long 0
-	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,153,4,154,3
+	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29,68,153,2,154,1
 	.align 3
 Lfde126_end:
 
@@ -33929,7 +34952,7 @@ Lfde129_start:
 LDIFF_SYM1736=Lme_88 - System_Xml_Linq_XElement__ctor_System_Xml_Linq_XStreamingElement
 	.long LDIFF_SYM1736
 	.long 0
-	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
 Lfde129_end:
 
@@ -34765,7 +35788,7 @@ Lfde148_start:
 LDIFF_SYM1830=Lme_9b - System_Xml_Linq_XElement_AppendAttributeSkipNotify_System_Xml_Linq_XAttribute
 	.long LDIFF_SYM1830
 	.long 0
-	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,153,4,154,3
+	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29,68,153,2,154,1
 	.align 3
 Lfde148_end:
 
@@ -34838,7 +35861,7 @@ Lfde150_start:
 LDIFF_SYM1837=Lme_9d - System_Xml_Linq_XElement_GetAttributes_System_Xml_Linq_XName
 	.long LDIFF_SYM1837
 	.long 0
-	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
 	.align 3
 Lfde150_end:
 
@@ -35213,7 +36236,7 @@ Lfde157_start:
 LDIFF_SYM1885=Lme_a4 - System_Xml_Linq_XElement__GetAttributesd__105_MoveNext
 	.long LDIFF_SYM1885
 	.long 0
-	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,152,6,153,5,68,154,4
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,152,4,153,3,68,154,2
 	.align 3
 Lfde157_end:
 
@@ -35936,7 +36959,7 @@ Lfde172_start:
 LDIFF_SYM1971=Lme_b3 - System_Xml_Linq_NamespaceResolver_PopScope
 	.long LDIFF_SYM1971
 	.long 0
-	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,153,4,154,3
+	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29,68,153,2,154,1
 	.align 3
 Lfde172_end:
 
@@ -35985,7 +37008,7 @@ Lfde173_start:
 LDIFF_SYM1977=Lme_b4 - System_Xml_Linq_NamespaceResolver_Add_string_System_Xml_Linq_XNamespace
 	.long LDIFF_SYM1977
 	.long 0
-	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,151,6,152,5
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,151,4,152,3
 	.align 3
 Lfde173_end:
 
@@ -36034,7 +37057,7 @@ Lfde174_start:
 LDIFF_SYM1983=Lme_b5 - System_Xml_Linq_NamespaceResolver_AddFirst_string_System_Xml_Linq_XNamespace
 	.long LDIFF_SYM1983
 	.long 0
-	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,151,6,152,5
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,151,4,152,3
 	.align 3
 Lfde174_end:
 
@@ -36195,7 +37218,7 @@ Lfde178_start:
 LDIFF_SYM2000=Lme_b9 - System_Xml_Linq_XDocument__ctor_System_Xml_Linq_XDocument
 	.long LDIFF_SYM2000
 	.long 0
-	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
 	.align 3
 Lfde178_end:
 
@@ -36864,7 +37887,7 @@ Lfde193_start:
 LDIFF_SYM2076=Lme_c8 - System_Xml_Linq_XComment__ctor_System_Xml_Linq_XComment
 	.long LDIFF_SYM2076
 	.long 0
-	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
 Lfde193_end:
 
@@ -36971,7 +37994,7 @@ Lfde196_start:
 LDIFF_SYM2086=Lme_cb - System_Xml_Linq_XComment_set_Value_string
 	.long LDIFF_SYM2086
 	.long 0
-	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,153,4
+	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29,68,153,2
 	.align 3
 Lfde196_end:
 
@@ -37159,7 +38182,7 @@ Lfde200_start:
 LDIFF_SYM2108=Lme_cf - System_Xml_Linq_XProcessingInstruction__ctor_System_Xml_Linq_XProcessingInstruction
 	.long LDIFF_SYM2108
 	.long 0
-	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,153,4
+	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29,68,153,2
 	.align 3
 Lfde200_end:
 
@@ -37232,7 +38255,7 @@ Lfde202_start:
 LDIFF_SYM2115=Lme_d1 - System_Xml_Linq_XProcessingInstruction_set_Data_string
 	.long LDIFF_SYM2115
 	.long 0
-	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,153,4
+	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29,68,153,2
 	.align 3
 Lfde202_end:
 
@@ -37495,7 +38518,7 @@ Lfde209_start:
 LDIFF_SYM2141=Lme_d8 - System_Xml_Linq_XDeclaration__ctor_System_Xml_Linq_XDeclaration
 	.long LDIFF_SYM2141
 	.long 0
-	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,153,6,154,5
+	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29,68,153,2,154,1
 	.align 3
 Lfde209_end:
 
@@ -37835,7 +38858,7 @@ Lfde216_start:
 LDIFF_SYM2181=Lme_df - System_Xml_Linq_XDocumentType__ctor_string_string_string_string
 	.long LDIFF_SYM2181
 	.long 0
-	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,150,8
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,150,6
 	.align 3
 Lfde216_end:
 
@@ -37874,7 +38897,7 @@ Lfde217_start:
 LDIFF_SYM2185=Lme_e0 - System_Xml_Linq_XDocumentType__ctor_System_Xml_Linq_XDocumentType
 	.long LDIFF_SYM2185
 	.long 0
-	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,153,8,154,7
+	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29,68,153,2,154,1
 	.align 3
 Lfde217_end:
 
@@ -38264,7 +39287,7 @@ Lfde227_start:
 LDIFF_SYM2225=Lme_ea - System_Xml_Linq_XAttribute__ctor_System_Xml_Linq_XAttribute
 	.long LDIFF_SYM2225
 	.long 0
-	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,153,4
+	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29,68,153,2
 	.align 3
 Lfde227_end:
 
@@ -38444,7 +39467,7 @@ Lfde232_start:
 LDIFF_SYM2242=Lme_ef - System_Xml_Linq_XAttribute_set_Value_string
 	.long LDIFF_SYM2242
 	.long 0
-	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,153,4,154,3
+	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29,68,153,2,154,1
 	.align 3
 Lfde232_end:
 
@@ -38886,7 +39909,7 @@ Lfde240_start:
 LDIFF_SYM2299=Lme_f7 - System_Xml_Linq_StreamingElementWriter__ctor_System_Xml_XmlWriter
 	.long LDIFF_SYM2299
 	.long 0
-	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,153,6
+	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29,68,153,2
 	.align 3
 Lfde240_end:
 
@@ -39675,7 +40698,7 @@ Lfde254_start:
 LDIFF_SYM2402=Lme_106 - System_Xml_Linq_XHashtable_1_TValue_GSHAREDVT_Add_TValue_GSHAREDVT
 	.long LDIFF_SYM2402
 	.long 0
-	.byte 12,31,0,68,14,160,1,157,20,158,19,68,13,29,68,151,18,152,17,68,153,16,154,15
+	.byte 12,31,0,68,14,128,1,157,16,158,15,68,13,29,68,151,14,152,13,68,153,12,154,11
 	.align 3
 Lfde254_end:
 
@@ -39784,7 +40807,7 @@ Lfde255_start:
 LDIFF_SYM2419=Lme_10b - System_Xml_Linq_XHashtable_1_XHashtableState_TValue_GSHAREDVT__ctor_System_Xml_Linq_XHashtable_1_ExtractKeyDelegate_TValue_GSHAREDVT_int
 	.long LDIFF_SYM2419
 	.long 0
-	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29,68,152,10
+	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,152,8
 	.align 3
 Lfde255_end:
 
@@ -40208,7 +41231,7 @@ Lfde262_start:
 LDIFF_SYM2477=Lme_112 - System_Xml_Linq_XObject_Annotations_T_GSHAREDVT
 	.long LDIFF_SYM2477
 	.long 0
-	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,153,8
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,153,6
 	.align 3
 Lfde262_end:
 
@@ -40538,7 +41561,7 @@ Lfde269_start:
 LDIFF_SYM2516=Lme_119 - System_Xml_Linq_XObject__Annotationsd__16_1_T_GSHAREDVT_System_Collections_Generic_IEnumerable_T_GetEnumerator
 	.long LDIFF_SYM2516
 	.long 0
-	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,153,8,154,7
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,153,6,154,5
 	.align 3
 Lfde269_end:
 
@@ -40882,7 +41905,7 @@ Lfde274_end:
 	.asciz "System.Array:InternalArray__IEnumerable_GetEnumerator<T_REF>"
 	.asciz "System_Array_InternalArray__IEnumerable_GetEnumerator_T_REF"
 
-	.byte 2,78
+	.byte 2,71
 	.quad System_Array_InternalArray__IEnumerable_GetEnumerator_T_REF
 	.quad Lme_11f
 
@@ -40906,7 +41929,7 @@ Lfde275_start:
 LDIFF_SYM2566=Lme_11f - System_Array_InternalArray__IEnumerable_GetEnumerator_T_REF
 	.long LDIFF_SYM2566
 	.long 0
-	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29
+	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29
 	.align 3
 Lfde275_end:
 
@@ -40916,7 +41939,7 @@ Lfde275_end:
 	.asciz "System.Array:InternalArray__ICollection_get_Count"
 	.asciz "System_Array_InternalArray__ICollection_get_Count"
 
-	.byte 2,68
+	.byte 2,61
 	.quad System_Array_InternalArray__ICollection_get_Count
 	.quad Lme_120
 
@@ -40950,7 +41973,7 @@ Lfde276_end:
 	.asciz "System.Array:InternalArray__ICollection_get_IsReadOnly"
 	.asciz "System_Array_InternalArray__ICollection_get_IsReadOnly"
 
-	.byte 2,73
+	.byte 2,66
 	.quad System_Array_InternalArray__ICollection_get_IsReadOnly
 	.quad Lme_121
 
@@ -40984,7 +42007,7 @@ Lfde277_end:
 	.asciz "System.Array:InternalArray__ICollection_Clear"
 	.asciz "System_Array_InternalArray__ICollection_Clear"
 
-	.byte 2,83
+	.byte 2,76
 	.quad System_Array_InternalArray__ICollection_Clear
 	.quad Lme_122
 
@@ -41018,7 +42041,7 @@ Lfde278_end:
 	.asciz "System.Array:InternalArray__ICollection_Add<T_REF>"
 	.asciz "System_Array_InternalArray__ICollection_Add_T_REF_T_REF"
 
-	.byte 2,88
+	.byte 2,81
 	.quad System_Array_InternalArray__ICollection_Add_T_REF_T_REF
 	.quad Lme_123
 
@@ -41057,7 +42080,7 @@ Lfde279_end:
 	.asciz "System.Array:InternalArray__ICollection_Remove<T_REF>"
 	.asciz "System_Array_InternalArray__ICollection_Remove_T_REF_T_REF"
 
-	.byte 2,93
+	.byte 2,86
 	.quad System_Array_InternalArray__ICollection_Remove_T_REF_T_REF
 	.quad Lme_124
 
@@ -41096,7 +42119,7 @@ Lfde280_end:
 	.asciz "System.Array:InternalArray__ICollection_Contains<T_REF>"
 	.asciz "System_Array_InternalArray__ICollection_Contains_T_REF_T_REF"
 
-	.byte 2,98
+	.byte 2,91
 	.quad System_Array_InternalArray__ICollection_Contains_T_REF_T_REF
 	.quad Lme_125
 
@@ -41150,7 +42173,7 @@ Lfde281_end:
 	.asciz "System.Array:InternalArray__ICollection_CopyTo<T_REF>"
 	.asciz "System_Array_InternalArray__ICollection_CopyTo_T_REF_T_REF___int"
 
-	.byte 2,123
+	.byte 2,116
 	.quad System_Array_InternalArray__ICollection_CopyTo_T_REF_T_REF___int
 	.quad Lme_126
 
@@ -41159,17 +42182,17 @@ Lfde281_end:
 
 LDIFF_SYM2591=LTDIE_160_REFERENCE - Ldebug_info_start
 	.long LDIFF_SYM2591
-	.byte 1,104,3
+	.byte 2,141,24,3
 	.asciz "array"
 
 LDIFF_SYM2592=LDIE_SZARRAY - Ldebug_info_start
 	.long LDIFF_SYM2592
-	.byte 1,105,3
-	.asciz "index"
+	.byte 2,141,32,3
+	.asciz "arrayIndex"
 
 LDIFF_SYM2593=LDIE_I4 - Ldebug_info_start
 	.long LDIFF_SYM2593
-	.byte 1,106,0
+	.byte 2,141,40,0
 
 .section __DWARF, __debug_frame,regular,debug
 
@@ -41184,7 +42207,7 @@ Lfde282_start:
 LDIFF_SYM2595=Lme_126 - System_Array_InternalArray__ICollection_CopyTo_T_REF_T_REF___int
 	.long LDIFF_SYM2595
 	.long 0
-	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29,68,148,10,149,9,68,150,8,151,7,68,152,6,153,5,68,154,4
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,150,6
 	.align 3
 Lfde282_end:
 
@@ -41653,7 +42676,7 @@ LDIFF_SYM2665=LTDIE_167 - Ldebug_info_start
 	.asciz "System.Array/InternalEnumerator`1<T_REF>:.ctor"
 	.asciz "System_Array_InternalEnumerator_1_T_REF__ctor_System_Array"
 
-	.byte 2,239,1
+	.byte 2,215,1
 	.quad System_Array_InternalEnumerator_1_T_REF__ctor_System_Array
 	.quad Lme_12c
 

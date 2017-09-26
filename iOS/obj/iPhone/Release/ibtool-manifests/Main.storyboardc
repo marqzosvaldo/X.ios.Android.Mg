@@ -24,6 +24,33 @@
 				<integer>9</integer>
 			</dict>
 		</array>
+		<key>2bT-0G-TVx</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>2bT-0G-TVx</string>
+				</array>
+				<key>message</key>
+				<string>Automatically Adjusts Font before iOS 10.0</string>
+				<key>type</key>
+				<string>IBAttributeUnavailable</string>
+				<key>type-value</key>
+				<integer>5</integer>
+			</dict>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>2bT-0G-TVx</string>
+				</array>
+				<key>message</key>
+				<string>Automatically Adjusts Font requires using a Dynamic Type text style</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
 		<key>3UW-PO-umO</key>
 		<array>
 			<dict>
@@ -48,6 +75,21 @@
 				</array>
 				<key>message</key>
 				<string>“Root View Controller“ is unreachable because it has no entry points, and no identifier for runtime access via -[UIStoryboard instantiateViewControllerWithIdentifier:].</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>8Zb-GJ-4Eo</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>8Zb-GJ-4Eo</string>
+				</array>
+				<key>message</key>
+				<string>“item“ is unreachable because it has no entry points, and no identifier for runtime access via -[UIStoryboard instantiateViewControllerWithIdentifier:].</string>
 				<key>type</key>
 				<string>IBUnsupportedConfiguration</string>
 				<key>type-value</key>
@@ -84,15 +126,135 @@
 				<integer>9</integer>
 			</dict>
 		</array>
-		<key>Arm-IO-kDs</key>
+		<key>Qk2-73-YrM</key>
 		<array>
 			<dict>
 				<key>affected-objects</key>
 				<array>
-					<string>Arm-IO-kDs</string>
+					<string>Qk2-73-YrM</string>
 				</array>
 				<key>message</key>
-				<string>Prototype table cells must have reuse identifiers</string>
+				<string>Automatically Adjusts Font before iOS 10.0</string>
+				<key>type</key>
+				<string>IBAttributeUnavailable</string>
+				<key>type-value</key>
+				<integer>5</integer>
+			</dict>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>Qk2-73-YrM</string>
+				</array>
+				<key>message</key>
+				<string>Automatically Adjusts Font requires using a Dynamic Type text style</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>an2-Fp-DJY</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>an2-Fp-DJY</string>
+				</array>
+				<key>message</key>
+				<string>Automatically Adjusts Font before iOS 10.0</string>
+				<key>type</key>
+				<string>IBAttributeUnavailable</string>
+				<key>type-value</key>
+				<integer>5</integer>
+			</dict>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>an2-Fp-DJY</string>
+				</array>
+				<key>message</key>
+				<string>Automatically Adjusts Font requires using a Dynamic Type text style</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>cpk-rE-GcZ</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>cpk-rE-GcZ</string>
+				</array>
+				<key>message</key>
+				<string>Automatically Adjusts Font before iOS 10.0</string>
+				<key>type</key>
+				<string>IBAttributeUnavailable</string>
+				<key>type-value</key>
+				<integer>5</integer>
+			</dict>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>cpk-rE-GcZ</string>
+				</array>
+				<key>message</key>
+				<string>Automatically Adjusts Font requires using a Dynamic Type text style</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>dDn-sE-Ygt</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>dDn-sE-Ygt</string>
+				</array>
+				<key>message</key>
+				<string>Automatically Adjusts Font before iOS 10.0</string>
+				<key>type</key>
+				<string>IBAttributeUnavailable</string>
+				<key>type-value</key>
+				<integer>5</integer>
+			</dict>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>dDn-sE-Ygt</string>
+				</array>
+				<key>message</key>
+				<string>Automatically Adjusts Font requires using a Dynamic Type text style</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>dLB-Wl-GMi</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>dLB-Wl-GMi</string>
+				</array>
+				<key>message</key>
+				<string>Automatically Adjusts Font before iOS 10.0</string>
+				<key>type</key>
+				<string>IBAttributeUnavailable</string>
+				<key>type-value</key>
+				<integer>5</integer>
+			</dict>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>dLB-Wl-GMi</string>
+				</array>
+				<key>message</key>
+				<string>Automatically Adjusts Font requires using a Dynamic Type text style</string>
 				<key>type</key>
 				<string>IBUnsupportedConfiguration</string>
 				<key>type-value</key>
@@ -114,6 +276,21 @@
 				<integer>9</integer>
 			</dict>
 		</array>
+		<key>mux-nE-qK0</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>mux-nE-qK0</string>
+				</array>
+				<key>message</key>
+				<string>“View Controller“ is unreachable because it has no entry points, and no identifier for runtime access via -[UIStoryboard instantiateViewControllerWithIdentifier:].</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
 		<key>nDq-f7-uOc</key>
 		<array>
 			<dict>
@@ -129,12 +306,57 @@
 				<integer>9</integer>
 			</dict>
 		</array>
+		<key>nYH-cU-GQI</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>nYH-cU-GQI</string>
+				</array>
+				<key>message</key>
+				<string>“Navigation Controller“ is unreachable because it has no entry points, and no identifier for runtime access via -[UIStoryboard instantiateViewControllerWithIdentifier:].</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
 		<key>rnY-GQ-DCp</key>
 		<array>
 			<dict>
 				<key>affected-objects</key>
 				<array>
 					<string>rnY-GQ-DCp</string>
+				</array>
+				<key>message</key>
+				<string>Prototype table cells must have reuse identifiers</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>sj9-Dd-4dN</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>sj9-Dd-4dN</string>
+				</array>
+				<key>message</key>
+				<string>“View Controller“ is unreachable because it has no entry points, and no identifier for runtime access via -[UIStoryboard instantiateViewControllerWithIdentifier:].</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>yJF-g3-O3n</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>yJF-g3-O3n</string>
 				</array>
 				<key>message</key>
 				<string>Prototype table cells must have reuse identifiers</string>

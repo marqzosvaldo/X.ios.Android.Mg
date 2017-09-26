@@ -43,8 +43,10 @@ namespace maringuizarapp.iOS
 
 			searchBarItems.TextChanged += SearchBarItems_TextChanged;
 			searchBarItems.CancelButtonClicked += SearchBarItems_CancelButtonClicked;
+
 			buttonBarCodeReader.Clicked += ButtonBarCodeReader_Clicked;
 			buttonLogOut.Clicked += ButtonLogOut_Clicked;
+
 			buttonSaveJasonData.Clicked += ButtonSaveJasonData_Clicked;
 			buttonFilterAR.Clicked += ButtonFilterAR_Clicked;
 			Console.WriteLine(CurrentSession.admin_dispositivo);
