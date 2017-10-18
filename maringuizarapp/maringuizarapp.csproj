@@ -39,6 +39,7 @@
     <Compile Include="Cart.cs" />
     <Compile Include="Model\Planes.cs" />
     <Compile Include="Model\Aumentos.cs" />
+    <Compile Include="Service\SearchLinq.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />

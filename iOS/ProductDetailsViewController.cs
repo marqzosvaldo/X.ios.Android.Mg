@@ -87,7 +87,7 @@ namespace maringuizarapp.iOS{
 			badgeCount ++;
 
 		}
-
+       
 		public async  override void ViewWillAppear(bool animated) {
 			base.ViewWillAppear(animated);
 

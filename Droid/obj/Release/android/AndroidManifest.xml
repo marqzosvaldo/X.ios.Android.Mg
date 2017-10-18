@@ -2,10 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.hb.maringuizarapp">
   <!--suppress UsesMinSdkAttributes-->
   <uses-sdk android:minSdkVersion="15" />
+  <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.CAMERA" />
-  <uses-permission android:name="android.permission.FLASHLIGHT" />
   <application android:label="maringuizarapp" android:theme="@style/MyTheme" android:name="android.app.Application" android:allowBackup="true" android:icon="@mipmap/icon">
-    <activity android:icon="@mipmap/icon" android:label="TestRelease" android:name="md550dc2e7fa2051892c05cf53419471620.MainActivity">
+    <activity android:icon="@mipmap/icon" android:label="MaringuizarApp" android:name="md550dc2e7fa2051892c05cf53419471620.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

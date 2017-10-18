@@ -17,7 +17,7 @@ public class CorridaFinancieraFragment
 	}
 
 
-	public CorridaFinancieraFragment () throws java.lang.Throwable
+	public CorridaFinancieraFragment ()
 	{
 		super ();
 		if (getClass () == CorridaFinancieraFragment.class)

@@ -18,7 +18,7 @@ public class ProductsAdapter
 	}
 
 
-	public ProductsAdapter () throws java.lang.Throwable
+	public ProductsAdapter ()
 	{
 		super ();
 		if (getClass () == ProductsAdapter.class)

@@ -59,5 +59,7 @@
 /Users/osvaldo/Projects/maringuizarapp/Droid/obj/Debug/res/layout/productsfragment.xml
 /Users/osvaldo/Projects/maringuizarapp/Droid/obj/Debug/res/layout/cartfragment.xml
 /Users/osvaldo/Projects/maringuizarapp/Droid/obj/Debug/res/layout/corridafinancierafragment.xml
+/Users/osvaldo/Projects/maringuizarapp/Droid/obj/Debug/res/layout/productcardview.xml
+/Users/osvaldo/Projects/maringuizarapp/Droid/obj/Debug/res/layout/productdetailsactivity.xml
 /Users/osvaldo/Projects/maringuizarapp/Droid/obj/Debug/R.cs.flag
 /Users/osvaldo/Projects/maringuizarapp/Droid/obj/Debug/uploadflags.txt

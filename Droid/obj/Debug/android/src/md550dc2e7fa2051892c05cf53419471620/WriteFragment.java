@@ -17,7 +17,7 @@ public class WriteFragment
 	}
 
 
-	public WriteFragment () throws java.lang.Throwable
+	public WriteFragment ()
 	{
 		super ();
 		if (getClass () == WriteFragment.class)

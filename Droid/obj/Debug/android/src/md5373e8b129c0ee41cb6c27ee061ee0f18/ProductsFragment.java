@@ -24,7 +24,7 @@ public class ProductsFragment
 	}
 
 
-	public ProductsFragment () throws java.lang.Throwable
+	public ProductsFragment ()
 	{
 		super ();
 		if (getClass () == ProductsFragment.class)

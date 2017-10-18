@@ -17,7 +17,7 @@ public class CartFragment
 	}
 
 
-	public CartFragment () throws java.lang.Throwable
+	public CartFragment ()
 	{
 		super ();
 		if (getClass () == CartFragment.class)

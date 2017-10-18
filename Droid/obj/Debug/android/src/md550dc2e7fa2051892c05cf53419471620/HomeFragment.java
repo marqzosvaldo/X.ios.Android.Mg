@@ -17,7 +17,7 @@ public class HomeFragment
 	}
 
 
-	public HomeFragment () throws java.lang.Throwable
+	public HomeFragment ()
 	{
 		super ();
 		if (getClass () == HomeFragment.class)

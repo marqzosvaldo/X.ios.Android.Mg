@@ -1,3 +1,5 @@
+/Users/osvaldo/Projects/maringuizarapp/maringuizarapp/obj/Debug/maringuizarapp.csproj.App.config
+/Users/osvaldo/Projects/maringuizarapp/maringuizarapp/obj/Debug/maringuizarapp.csproj.CoreCompileInputs.cache
 /Users/osvaldo/Projects/maringuizarapp/maringuizarapp/bin/Debug/maringuizarapp.dll.config
 /Users/osvaldo/Projects/maringuizarapp/maringuizarapp/bin/Debug/maringuizarapp.dll
 /Users/osvaldo/Projects/maringuizarapp/maringuizarapp/bin/Debug/maringuizarapp.pdb
@@ -7,7 +9,6 @@
 /Users/osvaldo/Projects/maringuizarapp/maringuizarapp/bin/Debug/System.Net.Http.Extensions.xml
 /Users/osvaldo/Projects/maringuizarapp/maringuizarapp/bin/Debug/System.Net.Http.Primitives.xml
 /Users/osvaldo/Projects/maringuizarapp/maringuizarapp/bin/Debug/Newtonsoft.Json.xml
-/Users/osvaldo/Projects/maringuizarapp/maringuizarapp/obj/Debug/maringuizarapp.csproj.App.config
-/Users/osvaldo/Projects/maringuizarapp/maringuizarapp/obj/Debug/maringuizarapp.csproj.CoreCompileInputs.cache
 /Users/osvaldo/Projects/maringuizarapp/maringuizarapp/obj/Debug/maringuizarapp.dll
 /Users/osvaldo/Projects/maringuizarapp/maringuizarapp/obj/Debug/maringuizarapp.pdb
+/Users/osvaldo/Projects/maringuizarapp/maringuizarapp/obj/Debug/maringuizarapp.csprojResolveAssemblyReference.cache

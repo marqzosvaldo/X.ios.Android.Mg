@@ -14,7 +14,8 @@ using System.Text;
 //http://maringuizar.highbits.com/serviceLogin?F02765E81969
 
 namespace maringuizarapp.Service {
-	public class Service {
+
+    public class Service {
 		public List<Session> Items { get; private set; }
 
 		public Session s;
@@ -166,6 +167,16 @@ namespace maringuizarapp.Service {
 			//var toJson = JsonConvert.SerializeObject(respuesta, Formatting.Indented);
 			return jsonResult;
 		}
+        public static string SerializeObj(Object obj){
+            return JsonConvert.SerializeObject(obj);
+            
+        }
+
+        public static T DeserialObj<T>(string strJson) {
+            var dS = JsonConvert.DeserializeObject<T>(strJson);
+
+            return dS;
+        }
 
 		public List<ProductsGeneral> serializeStringJson(string str) {
 			

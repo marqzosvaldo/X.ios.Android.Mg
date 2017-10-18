@@ -16,6 +16,9 @@ using SupportFragment = Android.Support.V4.App.Fragment;
 using System.Collections.Generic;
 using Android.Runtime;
 
+
+using System.IO;
+
 using maringuizarapp.Droid.Fragments;
 namespace maringuizarapp.Droid {
 [Activity(Label = "MaringuizarApp", MainLauncher = true, Icon = "@mipmap/icon")]
@@ -48,7 +51,7 @@ namespace maringuizarapp.Droid {
 		protected override void OnCreate(Bundle savedInstanceState) {
 			//Status Bar Color
 			this.Window.AddFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);
-			Console.WriteLine("Status Bar Color! ");
+            Console.WriteLine("Status Bar Color! ");
 
 			base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.Main);
@@ -87,7 +90,6 @@ namespace maringuizarapp.Droid {
             //ft.AddToBackStack(null);
             //ft.Add(Resource.Id.HomeFrameLayout, new HomeFragment());
             //ft.Commit();
-
             var trans = FragmentManager.BeginTransaction();
             //trans.AddToBackStack(null);
             trans.Add(Resource.Id.HomeFrameLayout, cartFragment, "Carrito Compras");
@@ -112,6 +114,7 @@ namespace maringuizarapp.Droid {
 			base.OnResume();
 		}
 
+		
 		//define action for navigation menu selection
 		void NavigationView_NavigationItemSelected(object sender, NavigationView.NavigationItemSelectedEventArgs e) {
 			switch (e.MenuItem.ItemId) {

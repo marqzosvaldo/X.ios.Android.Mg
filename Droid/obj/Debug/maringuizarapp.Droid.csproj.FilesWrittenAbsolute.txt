@@ -55,3 +55,7 @@
 /Users/osvaldo/Projects/maringuizarapp/Droid/bin/Debug/maringuizarapp.pdb
 /Users/osvaldo/Projects/maringuizarapp/Droid/bin/Debug/Newtonsoft.Json.dll
 /Users/osvaldo/Projects/maringuizarapp/Droid/bin/Debug/Newtonsoft.Json.xml
+/Users/osvaldo/Projects/maringuizarapp/Droid/obj/Debug/res/layout/productsfragment.xml
+/Users/osvaldo/Projects/maringuizarapp/Droid/obj/Debug/res/layout/cartfragment.xml
+/Users/osvaldo/Projects/maringuizarapp/Droid/obj/Debug/res/layout/corridafinancierafragment.xml
+/Users/osvaldo/Projects/maringuizarapp/Droid/obj/Debug/res/layout/productcardview.xml

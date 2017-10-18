@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace maringuizarapp {
 	public class Producto {
 		public string IDCODIGO { get; set; }

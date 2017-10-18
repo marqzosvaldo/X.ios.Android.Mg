@@ -15,297 +15,296 @@ using maringuizarapp.Service;
 //Mac pruebas  F0:27:65:E8:19:69
 namespace maringuizarapp.iOS
 {
-	public partial class ItemsTableViewController : UITableViewController {
-		List<ProductsGeneral> lstProducto;
-		List<ProductsGeneral> searchItems;
+    public partial class ItemsTableViewController : UITableViewController {
+        List<ProductsGeneral> lstProducto;
+        List<ProductsGeneral> searchItems;
 
-		bool filter = false; 
+        bool filter = false;
 
-		ItemsTableViewSource tableSource;
-		UITableView table;
-		//List<string> names = new List<string> {
-		//				"Ricardo", "Alan","Wiliam","Gabriel","Juan Carlos", "Osvaldo","Emmanuel",
-		//								"Jose Luis","Juan Carlos", "Osvaldo","Emmanuel",
-		//								"Jose Luis","Juan Carlos", "Osvaldo","Emmanuel",
-		//								"Jose Luis","Juan Carlos", "Osvaldo","Emmanuel",
-		//								"Jose Luis"
-		//			};
+        ItemsTableViewSource tableSource;
+        UITableView table;
+        //List<string> names = new List<string> {
+        //				"Ricardo", "Alan","Wiliam","Gabriel","Juan Carlos", "Osvaldo","Emmanuel",
+        //								"Jose Luis","Juan Carlos", "Osvaldo","Emmanuel",
+        //								"Jose Luis","Juan Carlos", "Osvaldo","Emmanuel",
+        //								"Jose Luis","Juan Carlos", "Osvaldo","Emmanuel",
+        //								"Jose Luis"
+        //			};
 
 
-		public override void ViewDidLoad() {
-			base.ViewDidLoad();
+        public override void ViewDidLoad() {
+            base.ViewDidLoad();
 
-			//Set cuantity on shoppingCart
-			this.TabBarController.ViewControllers[1].TabBarItem.BadgeValue = "0";
+            //Set cuantity on shoppingCart
+            this.TabBarController.ViewControllers[1].TabBarItem.BadgeValue = "0";
 
-			this.Title = "Productos";
-			Console.WriteLine("Iniciando ItemsTableViewController...");
+            this.Title = "Productos";
+            Console.WriteLine("Iniciando ItemsTableViewController...");
 
-			searchBarItems.TextChanged += SearchBarItems_TextChanged;
-			searchBarItems.CancelButtonClicked += SearchBarItems_CancelButtonClicked;
+            searchBarItems.TextChanged += SearchBarItems_TextChanged;
+            searchBarItems.CancelButtonClicked += SearchBarItems_CancelButtonClicked;
 
-			buttonBarCodeReader.Clicked += ButtonBarCodeReader_Clicked;
-			buttonLogOut.Clicked += ButtonLogOut_Clicked;
+            buttonBarCodeReader.Clicked += ButtonBarCodeReader_Clicked;
+            buttonLogOut.Clicked += ButtonLogOut_Clicked;
 
-			buttonSaveJasonData.Clicked += ButtonSaveJasonData_Clicked;
-			buttonFilterAR.Clicked += ButtonFilterAR_Clicked;
-			Console.WriteLine(CurrentSession.admin_dispositivo);
+            buttonSaveJasonData.Clicked += ButtonSaveJasonData_Clicked;
+            buttonFilterAR.Clicked += ButtonFilterAR_Clicked;
+            Console.WriteLine(CurrentSession.admin_dispositivo);
 
 
-		}
+        }
 
-		void ButtonFilterAR_Clicked(object sender, EventArgs e) {
-			if (filter == false) {
-				filter = true;
-				buttonFilterAR.TintColor = UIColor.Green;
+        void ButtonFilterAR_Clicked(object sender, EventArgs e) {
+            if (filter == false) {
+                filter = true;
+                buttonFilterAR.TintColor = UIColor.Green;
 
-			} else {
-				if (filter == true) {
-					filter = false;
-					buttonFilterAR.TintColor = UIColor.Red;
-				}
-			}
-		}
+            } else {
+                if (filter == true) {
+                    filter = false;
+                    buttonFilterAR.TintColor = UIColor.Red;
+                }
+            }
+        }
 
-		void ButtonSaveJasonData_Clicked(object sender, EventArgs e) {
-			SaveFile();
-		}
+        void ButtonSaveJasonData_Clicked(object sender, EventArgs e) {
+            SaveFile();
+        }
 
 
 
-		void ButtonLogOut_Clicked(object sender, EventArgs e) {
-			var appDelegate = UIApplication.SharedApplication.Delegate as AppDelegate;
-			var Login = (PrincipalNavViewController)Storyboard.InstantiateViewController("PrincipalNavViewController");
+        void ButtonLogOut_Clicked(object sender, EventArgs e) {
+            var appDelegate = UIApplication.SharedApplication.Delegate as AppDelegate;
+            var Login = (PrincipalNavViewController)Storyboard.InstantiateViewController("PrincipalNavViewController");
 
-			appDelegate.SetRootViewController(Login, true);
-		}
+            appDelegate.SetRootViewController(Login, true);
+        }
 
 
-		async void ButtonBarCodeReader_Clicked(object sender, EventArgs e) {
-			Console.WriteLine("Button Barcode!");
+        async void ButtonBarCodeReader_Clicked(object sender, EventArgs e) {
+            Console.WriteLine("Button Barcode!");
 
 
 
 
-			//SearchOn();
+            //SearchOn();
 
-			//var option = new ZXing.Mobile.MobileBarcodeScanningOptions();
+            //var option = new ZXing.Mobile.MobileBarcodeScanningOptions();
 
 
-			//option.DelayBetweenContinuousScans = 3000;
-			//option.PureBarcode = true;
-			//await scanner.Scan(option, true);
+            //option.DelayBetweenContinuousScans = 3000;
+            //option.PureBarcode = true;
+            //await scanner.Scan(option, true);
 
 
-			//Configuracion de formatos soportados por el lector 
-			var options = new ZXing.Mobile.MobileBarcodeScanningOptions();
-			options.PossibleFormats = new List<ZXing.BarcodeFormat>() {
-				ZXing.BarcodeFormat.EAN_8, ZXing.BarcodeFormat.EAN_13,
-				ZXing.BarcodeFormat.CODE_128, ZXing.BarcodeFormat.QR_CODE,
-				ZXing.BarcodeFormat.CODE_39
-			};
+            //Configuracion de formatos soportados por el lector 
+            var options = new ZXing.Mobile.MobileBarcodeScanningOptions();
+            options.PossibleFormats = new List<ZXing.BarcodeFormat>() {
+                ZXing.BarcodeFormat.EAN_8, ZXing.BarcodeFormat.EAN_13,
+                ZXing.BarcodeFormat.CODE_128, ZXing.BarcodeFormat.QR_CODE,
+                ZXing.BarcodeFormat.CODE_39
+            };
 
-			var scanner = new ZXing.Mobile.MobileBarcodeScanner();
-			scanner.FlashButtonText = "Flash";
-			scanner.TopText = "Manten la camara sobre el código QR/Barras";
-			scanner.BottomText = "Espera a que la camara lea automaticamente el código";
-			scanner.AutoFocus();
+            var scanner = new ZXing.Mobile.MobileBarcodeScanner();
+            scanner.FlashButtonText = "Flash";
+            scanner.TopText = "Manten la camara sobre el código QR/Barras";
+            scanner.BottomText = "Espera a que la camara lea automaticamente el código";
+            scanner.AutoFocus();
 
-			var result = await scanner.Scan(options, true);
+            var result = await scanner.Scan(options, true);
 
-			if (result != null) {
-				Console.WriteLine("Scaned Barcode " + result.Text);
-				searchBarItems.Text = result.Text.ToLower().Trim();//
-				SearchOn(searchBarItems.Text);
-			}
-		}
+            if (result != null) {
+                Console.WriteLine("Scaned Barcode " + result.Text);
+                searchBarItems.Text = result.Text.ToLower().Trim();//
+                SearchOn(searchBarItems.Text);
+            }
+        }
 
 
-		public ItemsTableViewController ItemsTableDataSource {
-			get { return TableView.DataSource as ItemsTableViewController; }
-		}
+        public ItemsTableViewController ItemsTableDataSource {
+            get { return TableView.DataSource as ItemsTableViewController; }
+        }
 
 
-		public async override void ViewWillAppear(bool animated) {
-			base.ViewWillAppear(animated);
-			try {
+        public async override void ViewWillAppear(bool animated) {
+            base.ViewWillAppear(animated);
+            try {
 
-				Service.Service servicio = new Service.Service();
-				var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                Service.Service servicio = new Service.Service();
+                var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
-				if (File.Exists(documents + "/allItems.json") == false) {
-					
-								
-					var ok = File.Exists(documents + "/allItems.json");
-					long ll = tx.Length;
+                if (File.Exists(documents + "/allItems.json") == false) {
 
-					Console.WriteLine("Peso de archivo " + ll + " " + ok);
 
+                    var ok = File.Exists(documents + "/allItems.json");
+                    long ll = tx.Length;
 
-				}
-				if (File.Exists(documents + "/allItems.json")) {
-				
-					tx = System.IO.File.ReadAllText(documents + "/allItems.json");//Aun falta validar que el archivo exista en la carpeta
+                    Console.WriteLine("Peso de archivo " + ll + " " + ok);
 
-					if (lstProducto == null) { 
-						lstProducto = servicio.serializeStringJson(tx);
 
-					}
-			}
-			}
-			catch(Exception e) {
-				Console.WriteLine(e);
-				var sessioErrorAlert = UIAlertController.Create("No hay datos locales", "Presione el boton actualizar, para descargar localmente", UIAlertControllerStyle.Alert);
 
-				sessioErrorAlert.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Default, null));
-				PresentViewController(sessioErrorAlert, true, null);
-			}
+                }
+                if (File.Exists(documents + "/allItems.json")) {
 
+                    tx = System.IO.File.ReadAllText(documents + "/allItems.json");//Aun falta validar que el archivo exista en la carpeta
 
+                    if (lstProducto == null) {
+                        lstProducto = servicio.serializeStringJson(tx);
 
+                    }
+                }
+            } catch (Exception e) {
+                Console.WriteLine(e);
+                var sessioErrorAlert = UIAlertController.Create("No hay datos locales", "Presione el boton actualizar, para descargar localmente", UIAlertControllerStyle.Alert);
 
+                sessioErrorAlert.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Default, null));
+                PresentViewController(sessioErrorAlert, true, null);
+            }
 
-			//Console.WriteLine("Cantidad de lstProducto"+ lstProducto.Count);
 
-			//if (await ProductoReadyAsync("a") == true) {
-			//	Console.WriteLine("REady async TRUE!");
-			//} else {
-			//	Console.WriteLine("READY ASYNC false");
-			//}
 
-		}
 
-		void SearchBarItems_CancelButtonClicked(object sender, EventArgs e) {
-			searchBarItems.ShowsCancelButton = false;
-			searchBarItems.Text = "";
-			searchBarItems.ResignFirstResponder();
-			TableView.ReloadData();
 
+            //Console.WriteLine("Cantidad de lstProducto"+ lstProducto.Count);
 
-		}
+            //if (await ProductoReadyAsync("a") == true) {
+            //	Console.WriteLine("REady async TRUE!");
+            //} else {
+            //	Console.WriteLine("READY ASYNC false");
+            //}
 
-		async void SearchBarItems_TextChanged(object sender, UISearchBarTextChangedEventArgs e) {
-			Console.WriteLine(searchBarItems.Text + "---------" + e.SearchText);
-			//searchTable();
-			SearchOn(searchBarItems.Text.ToLower());
-			TableView.ReloadData();
+        }
 
-			searchBarItems.ShowsCancelButton = true;
+        void SearchBarItems_CancelButtonClicked(object sender, EventArgs e) {
+            searchBarItems.ShowsCancelButton = false;
+            searchBarItems.Text = "";
+            searchBarItems.ResignFirstResponder();
+            TableView.ReloadData();
 
-			//await ProductoReadyAsync(e.SearchText);
-			//TableView.ReloadData();
 
-		}
+        }
 
-		//async Task<bool> ProductoReadyAsync(string o) {
+        async void SearchBarItems_TextChanged(object sender, UISearchBarTextChangedEventArgs e) {
+            Console.WriteLine(searchBarItems.Text + "---------" + e.SearchText);
+            //searchTable();
+            SearchOn(searchBarItems.Text.ToLower());
+            TableView.ReloadData();
 
-		//	try {
-		//		Service.Service servicio = new Service.Service();
-		//		List<ProductsGeneral> product = await servicio.AllProducts();
+            searchBarItems.ShowsCancelButton = true;
 
+            //await ProductoReadyAsync(e.SearchText);
+            //TableView.ReloadData();
 
-		//		lstProducto = product.ToList();
+        }
 
+        //async Task<bool> ProductoReadyAsync(string o) {
 
-		//		if (String.IsNullOrEmpty(product[0].DESCRIPCION)) {
-		//			Console.WriteLine("NO HAY PRODUCTOS DESERIALIZADOS!");
+        //	try {
+        //		Service.Service servicio = new Service.Service();
+        //		List<ProductsGeneral> product = await servicio.AllProducts();
 
-		//			return false;
-		//		} else {
-		//			Console.WriteLine("PRODUCTOS DESERIALIZADOS!");
 
-		//			TableView.DataSource = new ItemsTableViewSource(this, lstProducto);
-		//			TableView.ReloadData();
-		//			return true;
-		//		}
-		//	}
-		//	catch (Exception e) {
-		//		Console.WriteLine("Error de " + e);
-		//	}
-		//			return false;			}
+        //		lstProducto = product.ToList();
 
-		//async Task<bool> ProductoReadyAsync(string o) {
 
-		//	try {
-		//		Service.Service servicio = new Service.Service();
-		//		List<Producto> product = await servicio.ProductoAsync(o);
+        //		if (String.IsNullOrEmpty(product[0].DESCRIPCION)) {
+        //			Console.WriteLine("NO HAY PRODUCTOS DESERIALIZADOS!");
 
+        //			return false;
+        //		} else {
+        //			Console.WriteLine("PRODUCTOS DESERIALIZADOS!");
 
-		//		lstProducto = product.ToList();
+        //			TableView.DataSource = new ItemsTableViewSource(this, lstProducto);
+        //			TableView.ReloadData();
+        //			return true;
+        //		}
+        //	}
+        //	catch (Exception e) {
+        //		Console.WriteLine("Error de " + e);
+        //	}
+        //			return false;			}
 
+        //async Task<bool> ProductoReadyAsync(string o) {
 
-		//		if (String.IsNullOrEmpty(product[0].DESCRIPCION)) {
-		//			Console.WriteLine("NO HAY PRODUCTOS DESERIALIZADOS!");
+        //	try {
+        //		Service.Service servicio = new Service.Service();
+        //		List<Producto> product = await servicio.ProductoAsync(o);
 
-		//			return false;
-		//		} else {
-		//			Console.WriteLine("PRODUCTOS DESERIALIZADOS!");
 
-		//				TableView.DataSource = new ItemsTableViewSource(this, lstProducto);
-		//				TableView.ReloadData();
-		//			return true;
-		//		}
-		//	}
-		//	catch (Exception e) {
-		//		Console.WriteLine("Error de " + e);
-		//	}
-		//		return false;
-		//	}
+        //		lstProducto = product.ToList();
 
-		//async void SaveFile() {
-		//	try {
-		//		Service.Service servicio = new Service.Service();
-		//		var jsonStr = await servicio.saveJsonFile();
-		//		var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
-		//		var filename = Path.Combine(documents, "allItems.json");
-		//	}
-		//	catch(Exception e) {
-		//		Console.WriteLine("El archivo json no se ha podido guardar!");
-		//		Console.WriteLine(e);
-		//	}
-		//}
+        //		if (String.IsNullOrEmpty(product[0].DESCRIPCION)) {
+        //			Console.WriteLine("NO HAY PRODUCTOS DESERIALIZADOS!");
 
+        //			return false;
+        //		} else {
+        //			Console.WriteLine("PRODUCTOS DESERIALIZADOS!");
 
+        //				TableView.DataSource = new ItemsTableViewSource(this, lstProducto);
+        //				TableView.ReloadData();
+        //			return true;
+        //		}
+        //	}
+        //	catch (Exception e) {
+        //		Console.WriteLine("Error de " + e);
+        //	}
+        //		return false;
+        //	}
 
-		UIAlertView alert = new UIAlertView();
+        //async void SaveFile() {
+        //	try {
+        //		Service.Service servicio = new Service.Service();
+        //		var jsonStr = await servicio.saveJsonFile();
+        //		var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
-		public override void RowSelected(UITableView tableView, NSIndexPath indexPath) {
-			//base.RowSelected(tableView, indexPath);
+        //		var filename = Path.Combine(documents, "allItems.json");
+        //	}
+        //	catch(Exception e) {
+        //		Console.WriteLine("El archivo json no se ha podido guardar!");
+        //		Console.WriteLine(e);
+        //	}
+        //}
 
-			var productDetails = (ProductDetailsViewController)Storyboard.InstantiateViewController("ProductDetailsViewController");
 
-			productDetails.CostoFijo = "$" + searchItems[indexPath.Row].PRECIOCOSTOFIJO.ToString();
-			productDetails.NombreCorto = searchItems[indexPath.Row].NOMBRECORTO;
-			productDetails.Descripcion = searchItems[indexPath.Row].DESCRIPCION;
-			Console.WriteLine("LST PRODUCTO " + searchItems[indexPath.Row].IDCODIGO);
-			productDetails.idProduct = searchItems[indexPath.Row].IDCODIGO;
-			productDetails.PrecioVenta = searchItems[indexPath.Row].precioventa1.ToString();
 
+        UIAlertView alert = new UIAlertView();
 
+        public override void RowSelected(UITableView tableView, NSIndexPath indexPath) {
+            //base.RowSelected(tableView, indexPath);
 
-			this.NavigationController.PushViewController(productDetails, true);
-			//alert.Title = "titulo";
-			//alert.Message = "ookokko";
-			//alert.AddButton("ok");
-			//alert.Show();
+            var productDetails = (ProductDetailsViewController)Storyboard.InstantiateViewController("ProductDetailsViewController");
 
-		}
-		public void searchTable() {
+            productDetails.CostoFijo = "$" + searchItems[indexPath.Row].PRECIOCOSTOFIJO.ToString();
+            productDetails.NombreCorto = searchItems[indexPath.Row].NOMBRECORTO;
+            productDetails.Descripcion = searchItems[indexPath.Row].DESCRIPCION;
+            Console.WriteLine("LST PRODUCTO " + searchItems[indexPath.Row].IDCODIGO);
+            productDetails.idProduct = searchItems[indexPath.Row].IDCODIGO;
+            productDetails.PrecioVenta = searchItems[indexPath.Row].precioventa1.ToString();
 
-			PerformSearch(searchBarItems.Text);
 
-		}
-		public void PerformSearch(string searchText) {
 
-			searchText = searchText.ToLower();
-			//searchItems = lstProducto.Where(x => x.NOMBRECORTO.ToLower().Contains(searchText)).ToList();
-			Console.WriteLine(lstProducto.Count);
-			//TableView.DataSource = new ItemsTableViewSource(searchItems);
-			TableView.ReloadData();
+            this.NavigationController.PushViewController(productDetails, true);
+            //alert.Title = "titulo";
+            //alert.Message = "ookokko";
+            //alert.AddButton("ok");
+            //alert.Show();
 
-		}
+        }
+        public void searchTable() {
 
+            PerformSearch(searchBarItems.Text);
+
+        }
+        public void PerformSearch(string searchText) {
+
+            searchText = searchText.ToLower();
+            //searchItems = lstProducto.Where(x => x.NOMBRECORTO.ToLower().Contains(searchText)).ToList();
+            Console.WriteLine(lstProducto.Count);
+            //TableView.DataSource = new ItemsTableViewSource(searchItems);
+            TableView.ReloadData();
+
+        }
 		//var readJson = null; 
 		string tx = null;
 

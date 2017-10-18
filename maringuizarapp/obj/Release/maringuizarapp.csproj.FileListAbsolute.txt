@@ -1,0 +1,11 @@
+/Users/osvaldo/Projects/maringuizarapp/maringuizarapp/bin/Release/maringuizarapp.dll.config
+/Users/osvaldo/Projects/maringuizarapp/maringuizarapp/bin/Release/maringuizarapp.dll
+/Users/osvaldo/Projects/maringuizarapp/maringuizarapp/bin/Release/Newtonsoft.Json.dll
+/Users/osvaldo/Projects/maringuizarapp/maringuizarapp/bin/Release/System.Net.Http.Extensions.dll
+/Users/osvaldo/Projects/maringuizarapp/maringuizarapp/bin/Release/System.Net.Http.Primitives.dll
+/Users/osvaldo/Projects/maringuizarapp/maringuizarapp/bin/Release/System.Net.Http.Extensions.xml
+/Users/osvaldo/Projects/maringuizarapp/maringuizarapp/bin/Release/System.Net.Http.Primitives.xml
+/Users/osvaldo/Projects/maringuizarapp/maringuizarapp/bin/Release/Newtonsoft.Json.xml
+/Users/osvaldo/Projects/maringuizarapp/maringuizarapp/obj/Release/maringuizarapp.csproj.App.config
+/Users/osvaldo/Projects/maringuizarapp/maringuizarapp/obj/Release/maringuizarapp.csproj.CoreCompileInputs.cache
+/Users/osvaldo/Projects/maringuizarapp/maringuizarapp/obj/Release/maringuizarapp.dll
