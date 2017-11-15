@@ -155,6 +155,8 @@
     <AndroidResource Include="Resources\layout\CorridaFinancieraFragment.axml" />
     <AndroidResource Include="Resources\layout\ProductCardView.axml" />
     <AndroidResource Include="Resources\layout\ProductDetailsActivity.axml" />
+    <AndroidResource Include="Resources\values\dimens.xml" />
+    <AndroidResource Include="Resources\drawable\ic_shopping_cart.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

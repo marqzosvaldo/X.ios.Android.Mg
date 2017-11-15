@@ -46,5 +46,20 @@
 			<string>Inapplicable Content</string>
 		</dict>
 	</array>
+	<key>com.apple.actool.document.warnings</key>
+	<array>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/osvaldo/Projects/maringuizarapp/iOS/obj/iPhoneSimulator/Debug/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>A 1024x1024 app store icon is required for iOS apps</string>
+			<key>type</key>
+			<string>Missing Content</string>
+		</dict>
+	</array>
 </dict>
 </plist>

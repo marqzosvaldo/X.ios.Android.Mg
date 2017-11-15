@@ -1,28 +1,29 @@
 ﻿<Properties StartupConfiguration="{4B22008E-AA54-42EE-8F50-0F915B4998C2}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/Resources/menu/action_menu.axml">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Droid/Fragments/ProductsFragment.cs" Line="30" Column="119" NotebookId="4" />
+      <File FileName="Droid/Fragments/ProductsFragment.cs" Line="42" Column="9" NotebookId="4" />
       <File FileName="Droid/MainActivity.cs" Line="214" Column="6" NotebookId="4" />
-      <File FileName="maringuizarapp/Model/ProductsGeneral.cs" Line="19" Column="1" NotebookId="4" />
+      <File FileName="maringuizarapp/Model/ProductsGeneral.cs" Line="14" Column="30" NotebookId="4" />
       <File FileName="Droid/Fragments/CorridaFinancieraFragment.cs" Line="16" Column="56" NotebookId="4" />
       <File FileName="Droid/Resources/menu/action_menu.axml" Line="17" Column="8" NotebookId="4" />
-      <File FileName="Droid/ProductDetails.cs" Line="31" Column="1" NotebookId="5" />
+      <File FileName="Droid/Resources/values/Styles.xml" Line="7" Column="45" NotebookId="4" />
+      <File FileName="Droid/ProductDetails.cs" Line="63" Column="36" NotebookId="5" />
     </Files>
     <FloatingWindows>
-      <FloatingWindow WindowId="1" X="1280" Y="0" Width="1920" Height="1080">
+      <FloatingWindow WindowId="1" X="1280" Y="62" Width="1920" Height="991">
         <Files>
           <File FileName="Droid/ViewModels/Products.cs" Line="60" Column="38" />
-          <File FileName="Droid/Adapters/ProductsAdapter.cs" Line="27" Column="10" />
-          <File FileName="Droid/ViewModels/ProductsG.cs" Line="54" Column="43" />
-          <File FileName="Droid/ViewHolders/ProductViewHolder.cs" Line="31" Column="1" NotebookId="1" />
+          <File FileName="Droid/Adapters/ProductsAdapter.cs" Line="38" Column="1" />
+          <File FileName="Droid/ViewModels/ProductsG.cs" Line="43" Column="16" />
+          <File FileName="Droid/ViewHolders/ProductViewHolder.cs" Line="20" Column="7" NotebookId="1" />
         </Files>
       </FloatingWindow>
-      <FloatingWindow WindowId="2" X="1280" Y="0" Width="1920" Height="1080">
+      <FloatingWindow WindowId="2" X="1280" Y="40" Width="1920" Height="1080">
         <Files>
           <File FileName="Droid/Resources/values/Strings.xml" Line="15" Column="1" NotebookId="2" />
           <File FileName="iOS/ItemsTableViewController.cs" Line="328" Column="49" NotebookId="2" />
           <File FileName="maringuizarapp/Service/Service.cs" Line="1" Column="1" NotebookId="3" />
-          <File FileName="maringuizarapp/Service/SearchLinq.cs" Line="29" Column="1" NotebookId="3" />
+          <File FileName="maringuizarapp/Service/SearchLinq.cs" Line="19" Column="18" NotebookId="3" />
         </Files>
       </FloatingWindow>
     </FloatingWindows>
@@ -33,6 +34,6 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.maringuizarapp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.E16A99EC-AEF4-4C09-9D64-786E901ABA3E" />
-  <MonoDevelop.Ide.ItemProperties.maringuizarapp.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.28dcbd32" AndroidDesignerPreferredTheme="MyTheme" />
+  <MonoDevelop.Ide.ItemProperties.maringuizarapp.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.x8619" AndroidDesignerPreferredTheme="MyTheme" />
   <MultiItemStartupConfigurations />
 </Properties>

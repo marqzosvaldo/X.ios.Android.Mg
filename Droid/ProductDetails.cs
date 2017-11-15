@@ -16,6 +16,10 @@ using Android.Widget;
 using SupportActionBar = Android.Support.V7.App.ActionBar;
 using SupportSearchView = Android.Support.V7.Widget.SearchView;
 
+using Android.Support.Design.Widget;
+using V7Toolbar = Android.Support.V7.Widget.Toolbar;
+
+
 namespace maringuizarapp.Droid {
     [Activity(Label = "ProductDetails")]
     public class ProductDetails : AppCompatActivity {
@@ -28,13 +32,22 @@ namespace maringuizarapp.Droid {
 
 
             // Create your application here
-
-
             SetContentView(Resource.Layout.ProductDetailsActivity);
 
-            var nombre = FindViewById<TextView>(Resource.Id.title_Text_View);
-            var description = FindViewById<TextView>(Resource.Id.description_Text_View);
-            var idCode = FindViewById<TextView>(Resource.Id.idCodigo_Text_View);
+            var toolbar = FindViewById<V7Toolbar>(Resource.Id.toolbar);
+            var nombre = FindViewById<TextView>(Resource.Id.nombre_corto);
+            nombre.Text = "Subtitle";
+            SetSupportActionBar(toolbar);
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            var collapsingToolbar = FindViewById<CollapsingToolbarLayout>(Resource.Id.collapsing_toolbar);
+            collapsingToolbar.Title = "Title";
+          
+
+            var description = FindViewById<TextView>(Resource.Id.description);
+
+
+            nombre = FindViewById<TextView>(Resource.Id.nombre_corto);
+            description = FindViewById<TextView>(Resource.Id.description);
 
             string producto = Intent.GetStringExtra("Producto");
 
@@ -45,9 +58,12 @@ namespace maringuizarapp.Droid {
 
                 var desProduct = Service.Service.DeserialObj<ProductsGeneral>(producto);
                 Console.WriteLine("ID producto: {0}", desProduct.IDCODIGO);
-                nombre.Text = desProduct.NOMBRECORTO;
+                nombre.Text =  desProduct.GRUPO;
+                collapsingToolbar.Title = desProduct.NOMBRECORTO;;
                 description.Text = desProduct.DESCRIPCION;
-                idCode.Text ="ID: "+ desProduct.IDCODIGO;
+               
+
+                //idCode.Text ="ID: "+ desProduct.IDCODIGO;
 
 
 
@@ -56,11 +72,11 @@ namespace maringuizarapp.Droid {
             }
              
             // Init toolbar
-            var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.app_bar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.SetTitle(Resource.String.product_details);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetDisplayShowHomeEnabled(true);
+            //var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.app_bar);
+            //SetSupportActionBar(toolbar);
+            //SupportActionBar.SetTitle(Resource.String.product_details);
+            //SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            //SupportActionBar.SetDisplayShowHomeEnabled(true);
         }
 
         public override bool OnSupportNavigateUp() {

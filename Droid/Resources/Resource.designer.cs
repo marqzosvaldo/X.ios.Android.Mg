@@ -1668,6 +1668,9 @@ namespace maringuizarapp.Droid
 			// aapt resource value: 0x7f07000a
 			public const int abc_text_size_title_material_toolbar = 2131165194;
 			
+			// aapt resource value: 0x7f070090
+			public const int card_margin = 2131165328;
+			
 			// aapt resource value: 0x7f070003
 			public const int cardview_compat_inset_shadow = 2131165187;
 			
@@ -1791,11 +1794,20 @@ namespace maringuizarapp.Droid
 			// aapt resource value: 0x7f07008d
 			public const int design_tab_text_size_2line = 2131165325;
 			
+			// aapt resource value: 0x7f07008f
+			public const int detail_backdrop_height = 2131165327;
+			
 			// aapt resource value: 0x7f070054
 			public const int disabled_alpha_material_dark = 2131165268;
 			
 			// aapt resource value: 0x7f070055
 			public const int disabled_alpha_material_light = 2131165269;
+			
+			// aapt resource value: 0x7f07008e
+			public const int drawer_width = 2131165326;
+			
+			// aapt resource value: 0x7f070091
+			public const int fab_margin = 2131165329;
 			
 			// aapt resource value: 0x7f070056
 			public const int highlight_alpha_material_colored = 2131165270;
@@ -1826,6 +1838,9 @@ namespace maringuizarapp.Droid
 			
 			// aapt resource value: 0x7f070002
 			public const int item_touch_helper_swipe_escape_velocity = 2131165186;
+			
+			// aapt resource value: 0x7f070092
+			public const int list_item_avatar_size = 2131165330;
 			
 			// aapt resource value: 0x7f07005d
 			public const int notification_action_icon_size = 2131165277;
@@ -2180,49 +2195,52 @@ namespace maringuizarapp.Droid
 			public const int ic_question_answer_black_24dp = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int ic_supervisor_account_black_24dp = 2130837602;
+			public const int ic_shopping_cart = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int imgBg = 2130837603;
+			public const int ic_supervisor_account_black_24dp = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int navigation_empty_icon = 2130837604;
+			public const int imgBg = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int notification_action_background = 2130837605;
+			public const int navigation_empty_icon = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int notification_bg = 2130837606;
+			public const int notification_action_background = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int notification_bg_low = 2130837607;
+			public const int notification_bg = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int notification_bg_low_normal = 2130837608;
+			public const int notification_bg_low = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public const int notification_bg_low_pressed = 2130837609;
+			public const int notification_bg_low_normal = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int notification_bg_normal = 2130837610;
+			public const int notification_bg_low_pressed = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int notification_bg_normal_pressed = 2130837611;
+			public const int notification_bg_normal = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int notification_icon_background = 2130837612;
-			
-			// aapt resource value: 0x7f02006f
-			public const int notification_template_icon_bg = 2130837615;
-			
-			// aapt resource value: 0x7f020070
-			public const int notification_template_icon_low_bg = 2130837616;
+			public const int notification_bg_normal_pressed = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int notification_tile_bg = 2130837613;
+			public const int notification_icon_background = 2130837613;
+			
+			// aapt resource value: 0x7f020070
+			public const int notification_template_icon_bg = 2130837616;
+			
+			// aapt resource value: 0x7f020071
+			public const int notification_template_icon_low_bg = 2130837617;
 			
 			// aapt resource value: 0x7f02006e
-			public const int notify_panel_notification_icon_bg = 2130837614;
+			public const int notification_tile_bg = 2130837614;
+			
+			// aapt resource value: 0x7f02006f
+			public const int notify_panel_notification_icon_bg = 2130837615;
 			
 			static Drawable()
 			{
@@ -2243,8 +2261,8 @@ namespace maringuizarapp.Droid
 			// aapt resource value: 0x7f08008a
 			public const int action0 = 2131230858;
 			
-			// aapt resource value: 0x7f0800aa
-			public const int action_attach = 2131230890;
+			// aapt resource value: 0x7f0800ac
+			public const int action_attach = 2131230892;
 			
 			// aapt resource value: 0x7f080064
 			public const int action_bar = 2131230820;
@@ -2267,8 +2285,8 @@ namespace maringuizarapp.Droid
 			// aapt resource value: 0x7f080041
 			public const int action_bar_title = 2131230785;
 			
-			// aapt resource value: 0x7f0800a9
-			public const int action_barcode = 2131230889;
+			// aapt resource value: 0x7f0800ab
+			public const int action_barcode = 2131230891;
 			
 			// aapt resource value: 0x7f080087
 			public const int action_container = 2131230855;
@@ -2321,6 +2339,9 @@ namespace maringuizarapp.Droid
 			// aapt resource value: 0x7f080073
 			public const int app_bar = 2131230835;
 			
+			// aapt resource value: 0x7f0800a2
+			public const int appbar = 2131230882;
+			
 			// aapt resource value: 0x7f08002f
 			public const int auto = 2131230767;
 			
@@ -2363,11 +2384,14 @@ namespace maringuizarapp.Droid
 			// aapt resource value: 0x7f080024
 			public const int collapseActionView = 2131230756;
 			
+			// aapt resource value: 0x7f0800a3
+			public const int collapsing_toolbar = 2131230883;
+			
 			// aapt resource value: 0x7f080076
 			public const int container = 2131230838;
 			
-			// aapt resource value: 0x7f0800a6
-			public const int contentFrame = 2131230886;
+			// aapt resource value: 0x7f0800a8
+			public const int contentFrame = 2131230888;
 			
 			// aapt resource value: 0x7f08004e
 			public const int contentPanel = 2131230798;
@@ -2387,8 +2411,8 @@ namespace maringuizarapp.Droid
 			// aapt resource value: 0x7f080047
 			public const int default_activity_button = 2131230791;
 			
-			// aapt resource value: 0x7f0800a4
-			public const int description_Text_View = 2131230884;
+			// aapt resource value: 0x7f0800a5
+			public const int description = 2131230885;
 			
 			// aapt resource value: 0x7f080079
 			public const int design_bottom_sheet = 2131230841;
@@ -2459,9 +2483,6 @@ namespace maringuizarapp.Droid
 			// aapt resource value: 0x7f080098
 			public const int icon_group = 2131230872;
 			
-			// aapt resource value: 0x7f0800a3
-			public const int idCodigo_Text_View = 2131230883;
-			
 			// aapt resource value: 0x7f080025
 			public const int ifRoom = 2131230757;
 			
@@ -2489,23 +2510,23 @@ namespace maringuizarapp.Droid
 			// aapt resource value: 0x7f08009b
 			public const int line3 = 2131230875;
 			
-			// aapt resource value: 0x7f0800a1
-			public const int linearLayout1 = 2131230881;
-			
 			// aapt resource value: 0x7f08000f
 			public const int listMode = 2131230735;
 			
 			// aapt resource value: 0x7f080048
 			public const int list_item = 2131230792;
 			
-			// aapt resource value: 0x7f0800a8
-			public const int masked = 2131230888;
+			// aapt resource value: 0x7f0800a1
+			public const int main_content = 2131230881;
+			
+			// aapt resource value: 0x7f0800aa
+			public const int masked = 2131230890;
 			
 			// aapt resource value: 0x7f08008d
 			public const int media_actions = 2131230861;
 			
-			// aapt resource value: 0x7f0800ab
-			public const int menuSearch = 2131230891;
+			// aapt resource value: 0x7f0800ad
+			public const int menuSearch = 2131230893;
 			
 			// aapt resource value: 0x7f080022
 			public const int middle = 2131230754;
@@ -2516,17 +2537,17 @@ namespace maringuizarapp.Droid
 			// aapt resource value: 0x7f080019
 			public const int multiply = 2131230745;
 			
-			// aapt resource value: 0x7f0800af
-			public const int nav_SearchApartment = 2131230895;
+			// aapt resource value: 0x7f0800b1
+			public const int nav_SearchApartment = 2131230897;
+			
+			// aapt resource value: 0x7f0800b0
+			public const int nav_friends = 2131230896;
 			
 			// aapt resource value: 0x7f0800ae
-			public const int nav_friends = 2131230894;
+			public const int nav_home = 2131230894;
 			
-			// aapt resource value: 0x7f0800ac
-			public const int nav_home = 2131230892;
-			
-			// aapt resource value: 0x7f0800ad
-			public const int nav_messages = 2131230893;
+			// aapt resource value: 0x7f0800af
+			public const int nav_messages = 2131230895;
 			
 			// aapt resource value: 0x7f080086
 			public const int nav_view = 2131230854;
@@ -2536,6 +2557,9 @@ namespace maringuizarapp.Droid
 			
 			// aapt resource value: 0x7f080026
 			public const int never = 2131230758;
+			
+			// aapt resource value: 0x7f0800a4
+			public const int nombre_corto = 2131230884;
 			
 			// aapt resource value: 0x7f080014
 			public const int none = 2131230740;
@@ -2561,8 +2585,8 @@ namespace maringuizarapp.Droid
 			// aapt resource value: 0x7f080038
 			public const int pin = 2131230776;
 			
-			// aapt resource value: 0x7f0800a5
-			public const int productRecyclerView = 2131230885;
+			// aapt resource value: 0x7f0800a7
+			public const int productRecyclerView = 2131230887;
 			
 			// aapt resource value: 0x7f080006
 			public const int progress_circular = 2131230726;
@@ -2726,11 +2750,11 @@ namespace maringuizarapp.Droid
 			// aapt resource value: 0x7f080059
 			public const int titleDividerNoCustom = 2131230809;
 			
-			// aapt resource value: 0x7f0800a2
-			public const int title_Text_View = 2131230882;
-			
 			// aapt resource value: 0x7f080057
 			public const int title_template = 2131230807;
+			
+			// aapt resource value: 0x7f0800a6
+			public const int toolbar = 2131230886;
 			
 			// aapt resource value: 0x7f080029
 			public const int top = 2131230761;
@@ -2756,8 +2780,8 @@ namespace maringuizarapp.Droid
 			// aapt resource value: 0x7f08000e
 			public const int view_offset_helper = 2131230734;
 			
-			// aapt resource value: 0x7f0800a7
-			public const int visible = 2131230887;
+			// aapt resource value: 0x7f0800a9
+			public const int visible = 2131230889;
 			
 			// aapt resource value: 0x7f080027
 			public const int withText = 2131230759;
@@ -4366,6 +4390,9 @@ namespace maringuizarapp.Droid
 			
 			// aapt resource value: 0x7f090162
 			public const int Widget_AppCompat_Toolbar_Button_Navigation = 2131296610;
+			
+			// aapt resource value: 0x7f090180
+			public const int Widget_CardContent = 2131296640;
 			
 			// aapt resource value: 0x7f090164
 			public const int Widget_Design_AppBarLayout = 2131296612;
